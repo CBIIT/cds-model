@@ -1,5 +1,5 @@
 # following line is key to prevent an endless build/deploy cycle
-# when travis commits to pages:
+# when travis commits to pages: 
 if: commit_message !~ ^Deploy.*
 dist: xenial
 env:
