@@ -1,0 +1,79 @@
+node	property	value_or_TYPE
+diagnosis	age_at_diagnosis	NA
+diagnosis	days_to_last_known_status	NA
+diagnosis	days_to_recurrence	NA
+diagnosis	diagnosis_id	NA
+diagnosis	incidence_type	NA
+diagnosis	morphology	NA
+diagnosis	primary_diagnosis	NA
+diagnosis	primary_site	NA
+diagnosis	tumor_grade	NA
+diagnosis	tumor_stage	NA
+experiment	experiment_name	NA
+experiment	experiment_type	NA
+experiment	genome_reference	NA
+experiment	image_modality	NA
+experiment	image_series_id	NA
+experiment	instrument_mfr	NA
+experiment	library_id	NA
+experiment	library_layout	NA
+experiment	library_source	NA
+experiment	platform_or_instrument	NA
+experiment	protocol	NA
+experiment	software_packages	NA
+experiment	sra_experiment_accession	NA
+file	drs_url	NA
+file	file_description	NA
+file	file_id	NA
+file	file_name	NA
+file	file_size	NA
+file	file_type	NA
+file	internal_url	NA
+file	md5sum	NA
+file	sra_run_accession	NA
+file	sra_study_accession	NA
+project	bioproject_id	NA
+project	dbgap_accession_number	NA
+project	index_date_type	NA
+project	project_acronym	NA
+project	project_external_url	NA
+project	project_full_description	NA
+project	project_id	NA
+project	project_name	NA
+project	project_short_description	NA
+project_admin	cds_requestor	NA
+project_admin	data_access_level	NA
+project_admin	data_types	NA
+project_admin	file_types	NA
+project_admin	funding_agency	NA
+project_admin	project_type	NA
+project_admin	species	NA
+sample	biosample_accession	NA
+sample	days_to_collection	NA
+sample	sample_anatomic_site	NA
+sample	sample_id	NA
+sample	sample_tumor_status	NA
+sample	sample_type	NA
+specimen	specimen_anatomic_site	NA
+specimen	specimen_id	NA
+study_subject	ethnicity	NA
+study_subject	gender	NA
+study_subject	race	NA
+study_subject	study_subject_id	NA
+study_subject	vital_status	NA
+therapeutic_procedure	days_to_treatment	NA
+therapeutic_procedure	treatment_outcome	NA
+therapeutic_procedure	treatment_type	NA
+
+relationship	source_node	destination_node	property	value_or_TYPE
+from_experiment	file	experiment	NA	NA
+from_sample	file	sample	NA	NA
+in_experiment	sample	experiment	NA	NA
+of_project	project_admin	project	NA	NA
+of_project	study_subject	project	NA	NA
+of_specimen	sample	specimen	NA	NA
+of_study_subject	therapeutic_procedure	study_subject	NA	NA
+of_study_subject	diagnosis	study_subject	NA	NA
+of_study_subject	specimen	study_subject	NA	NA
+
+property	description
