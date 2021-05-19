@@ -1,0 +1,133 @@
+Nodes:
+  project:
+    Props:
+      - project_id
+      - project_name
+      - project_acronym
+      - project_full_description
+      - project_short_description
+      - project_external_url
+      - dbgap_accession_number
+      - bioproject_id
+      - index_date_type # what are relative dates relative to? dx date, collection date, etc.
+  project_admin:
+    Props:
+      - cds_requestor
+      - funding_agency
+      - species
+      - project_type # adult, pediatric - needs review
+      - data_types # list from enumerated values
+      - file_types # list from enumerated values
+      - data_access_level
+  study_subject:
+    Props:
+      - study_subject_id
+      - race
+      - gender
+      - ethnicity
+      - vital_status
+      
+  diagnosis: # may have multiple dxs for multiple timepoints?
+    Props:
+      - diagnosis_id
+      - primary_diagnosis
+      - primary_site
+      - age_at_diagnosis
+      # - site_of_resection_or_biospy - actually would be sample.anatomic_site
+      - tumor_grade
+      - tumor_stage
+      - morphology
+      - incidence_type # primary, metastatic, recurrence, progression
+      - days_to_recurrence
+      - days_to_last_known_status
+  therapeutic_procedure:
+    Props:
+      - treatment_type
+      - treatment_outcome
+      - days_to_treatment
+  specimen:
+    Props:
+      - specimen_id
+      - specimen_anatomic_site # new
+  sample: # aka subspecimen (CMB)
+    Props:
+      - sample_id
+      - sample_type
+      - sample_tumor_status # tumor or normal
+      - sample_anatomic_site
+      - days_to_collection
+      - biosample_accession
+      
+  file:
+    Props:
+      - file_id
+      - file_name
+      - file_type
+      - file_description
+      - file_size
+      - md5sum
+      - sra_study_accession # here?
+      - sra_run_accession
+      - internal_url
+      - drs_url
+
+  experiment:
+    Props:
+      - experiment_name
+      - experiment_type # genomic, proteomic, imaging
+      - sra_experiment_accession
+      - library_id
+      - library_layout # paired end, single
+      - library_source # genomic, transcriptome, metagenomic, viral, synthetic
+      - genome_reference
+      - protocol
+      - image_series_id
+      - image_modality
+      - platform_or_instrument
+      - instrument_mfr
+      - software_packages # list of free text I guess
+
+
+Relationships:
+  of_project:
+    Ends:
+      - Src: project_admin
+        Dst: project
+        Mul: one_to_one
+      - Src: study_subject
+        Dst: project
+        Mul: many_to_one
+  of_study_subject:
+    Mul: many_to_one
+    Ends:
+      - Src: diagnosis
+        Dst: study_subject
+      - Src: therapeutic_procedure
+        Dst: study_subject
+      - Src: specimen
+        Dst: study_subject
+  of_specimen:
+    Mul: many_to_one
+    Ends:
+      - Src: sample
+        Dst: specimen
+  from_sample:
+    Mul: many_to_many
+    Ends:
+      - Src: file
+        Dst: sample
+  from_experiment:
+    Mul: many_to_many
+    Ends:
+      - Src: file
+        Dst: experiment
+  in_experiment:
+    Mul: many_to_many
+    Ends:
+      - Src: sample
+        Dst: experiment
+
+        
+        
+          
+
