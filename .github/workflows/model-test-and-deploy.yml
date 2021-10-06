@@ -1,0 +1,21 @@
+name: Model Validate and Build
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate-and-build:
+    uses: CBIIT/bento-workflows/.github/workflows/model-test-and-deploy.yml@v1.0.0
+    with:
+      model_files: |
+        cds-model.yml cds-model-props.yml
+      model_prefix: cds-model
+    secrets:
+      docker_repo: ${{ secrets.REPO }}
+      docker_svc: ${{ secrets.RSVC }}
+      repo_user: ${{ secrets.REPO_USER }}
+      repo_pw: ${{ secrets.REPO_PW }}
