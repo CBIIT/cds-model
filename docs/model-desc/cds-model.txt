@@ -1,22 +1,32 @@
 repo https://github.com/CBIIT/cds-model
-commit 74ebbbd
+commit 8275ca0
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	NUMBER (yr)
 diagnosis	age_at_diagnosis	NUMBER (mon)
 diagnosis	days_to_last_known_status	INTEGER
 diagnosis	days_to_recurrence	INTEGER
-diagnosis	incidence_type	NA
-diagnosis	last_known_disease_status	NA
-diagnosis	primary_diagnosis	NA
-diagnosis	primary_site	NA
-diagnosis	tumor_grade	NA
-diagnosis	tumor_morphology	NA
-diagnosis	tumor_stage	NA
+diagnosis	incidence_type	metastasis
+diagnosis	incidence_type	no_disease
+diagnosis	incidence_type	primary
+diagnosis	incidence_type	progression
+diagnosis	incidence_type	recurrence
+diagnosis	incidence_type	remission
+diagnosis	last_known_disease_status	metastasis
+diagnosis	last_known_disease_status	no_disease
+diagnosis	last_known_disease_status	primary
+diagnosis	last_known_disease_status	progression
+diagnosis	last_known_disease_status	recurrence
+diagnosis	last_known_disease_status	remission
+diagnosis	primary_diagnosis	TBD
+diagnosis	primary_site	TBD
+diagnosis	tumor_grade	TBD
+diagnosis	tumor_morphology	TBD
+diagnosis	tumor_stage	TBD
 file	drs_url	URL
 file	file_description	STRING
 file	file_name	STRING
 file	file_size	INTEGER
-file	file_type	NA
+file	file_type	TBD
 file	internal_url	URL
 file	md5sum	REGEXP /^[0-9a-fA-F]{32}$/
 file	sra_run_accession	REGEXP /^SRR[0-9]+$/
@@ -28,41 +38,162 @@ genomic_details	number_of_bp	INTEGER
 genomic_details	number_of_reads	INTEGER
 sample	biosample_accession	REGEXP /^SAMN[0-9]+$/
 sample	days_to_collection	INTEGER
-sample	sample_anatomic_site	NA
+sample	sample_anatomic_site	TBD
 sample	sample_id	STRING
-sample	sample_tumor_status	NA
-sample	sample_type	NA
+sample	sample_tumor_status	normal
+sample	sample_tumor_status	tumor
+sample	sample_type	TBD
 specimen	specimen_id	STRING
 study	bioproject_id	REGEXP /^PRJNA[0-9]+$/
-study	index_date	NA
+study	index_date	date_of_birth
+study	index_date	date_of_collection
+study	index_date	date_of_diagnosis
+study	index_date	date_of_enrollment
 study	phs_accession	REGEXP /^phs[0-9]+([.]v[0-9]+)*$/
 study	study_acronym	STRING
 study	study_description	STRING
 study	study_external_url	URL
 study	study_title	STRING
 study_admin	cds_requestor	STRING
-study_admin	data_access_level	NA
+study_admin	data_access_level	controlled
+study_admin	data_access_level	mixed
+study_admin	data_access_level	open
 study_admin	funding_agency	STRING
 study_admin	species	STRING
-study_admin	study_type	NA
-study_subject	ethnicity	NA
-study_subject	gender	NA
+study_admin	study_type	adult
+study_admin	study_type	other
+study_admin	study_type	pediatric
+study_subject	ethnicity	TBD
+study_subject	gender	Female
+study_subject	gender	Male
+study_subject	gender	Unknown
 study_subject	subject_id	STRING
-study_subject	vital_status	NA
+study_subject	vital_status	Alive
+study_subject	vital_status	Deceased
+study_subject	vital_status	Unknown
 submission	design_description	STRING
 submission	image_modality	STRING
 submission	image_series_id	STRING
-submission	instrument_model	NA
+submission	instrument_model	454 GS
+submission	instrument_model	454 GS 20
+submission	instrument_model	454 GS FLX
+submission	instrument_model	454 GS FLX Titanium
+submission	instrument_model	454 GS FLX+
+submission	instrument_model	454 GS Junior
+submission	instrument_model	AB 310 Genetic Analyzer
+submission	instrument_model	AB 3130 Genetic Analyzer
+submission	instrument_model	AB 3130xL Genetic Analyzer
+submission	instrument_model	AB 3500 Genetic Analyzer
+submission	instrument_model	AB 3500xL Genetic Analyzer
+submission	instrument_model	AB 3730 Genetic Analyzer
+submission	instrument_model	AB 3730xL Genetic Analyzer
+submission	instrument_model	AB 5500 Genetic Analyzer
+submission	instrument_model	AB 5500x-Wl Genetic Analyzer
+submission	instrument_model	AB 5500xl Genetic Analyzer
+submission	instrument_model	AB SOLiD 3 Plus System
+submission	instrument_model	AB SOLiD 4 System
+submission	instrument_model	AB SOLiD 4hq System
+submission	instrument_model	AB SOLiD PI System
+submission	instrument_model	AB SOLiD System
+submission	instrument_model	AB SOLiD System 2.0
+submission	instrument_model	AB SOLiD System 3.0
+submission	instrument_model	BGISEQ-500
+submission	instrument_model	Complete Genomics
+submission	instrument_model	DNBSEQ-G400
+submission	instrument_model	DNBSEQ-G50
+submission	instrument_model	DNBSEQ-T7
+submission	instrument_model	GridION
+submission	instrument_model	Helicos HeliScope
+submission	instrument_model	HiSeq X Five
+submission	instrument_model	HiSeq X Ten
+submission	instrument_model	Illumina Genome Analyzer
+submission	instrument_model	Illumina Genome Analyzer II
+submission	instrument_model	Illumina Genome Analyzer IIx
+submission	instrument_model	Illumina HiScanSQ
+submission	instrument_model	Illumina HiSeq 1000
+submission	instrument_model	Illumina HiSeq 1500
+submission	instrument_model	Illumina HiSeq 2000
+submission	instrument_model	Illumina HiSeq 2500
+submission	instrument_model	Illumina HiSeq 3000
+submission	instrument_model	Illumina HiSeq 4000
+submission	instrument_model	Illumina MiSeq
+submission	instrument_model	Illumina MiniSeq
+submission	instrument_model	Illumina NovaSeq 6000
+submission	instrument_model	Illumina iSeq 100
+submission	instrument_model	Ion Torrent PGM
+submission	instrument_model	Ion Torrent Proton
+submission	instrument_model	Ion Torrent S5
+submission	instrument_model	Ion Torrent S5 XL
+submission	instrument_model	MGISEQ-2000RS
+submission	instrument_model	MinION
+submission	instrument_model	NextSeq 500
+submission	instrument_model	NextSeq 550
+submission	instrument_model	PacBio RS
+submission	instrument_model	PacBio RS II
+submission	instrument_model	PacBio Sequel
+submission	instrument_model	PacBio Sequel II
+submission	instrument_model	PromethION
 submission	library_id	STRING
 submission	library_layout	STRING
-submission	library_source	NA
-submission	library_strategy	NA
-submission	platform	NA
+submission	library_source	GENOMIC
+submission	library_source	GENOMIC SINGLE CELL
+submission	library_source	METAGENOMIC
+submission	library_source	METATRANSCRIPTOMIC
+submission	library_source	OTHER
+submission	library_source	SYNTHETIC
+submission	library_source	TRANSCRIPTOMIC
+submission	library_source	TRANSCRIPTOMIC SINGLE CELL
+submission	library_source	VIRAL RNA
+submission	library_strategy	AMPLICON
+submission	library_strategy	ATAC-seq
+submission	library_strategy	Bisulfite-Seq
+submission	library_strategy	CLONE
+submission	library_strategy	CLONEEND
+submission	library_strategy	CTS
+submission	library_strategy	ChIA-PET
+submission	library_strategy	ChIP-Seq
+submission	library_strategy	DNase-Hypersensitivity
+submission	library_strategy	EST
+submission	library_strategy	FAIRE-seq
+submission	library_strategy	FINISHING
+submission	library_strategy	FL-cDNA
+submission	library_strategy	Hi-C
+submission	library_strategy	MBD-Seq
+submission	library_strategy	MNase-Seq
+submission	library_strategy	MRE-Seq
+submission	library_strategy	MeDIP-Seq
+submission	library_strategy	OTHER
+submission	library_strategy	POOLCLONE
+submission	library_strategy	RAD-Seq
+submission	library_strategy	RIP-Seq
+submission	library_strategy	RNA-Seq
+submission	library_strategy	SELEX
+submission	library_strategy	Synthetic-Long-Read
+submission	library_strategy	Targeted-Capture
+submission	library_strategy	Tethered Chromatin Conformation Capture
+submission	library_strategy	Tn-Seq
+submission	library_strategy	WCS
+submission	library_strategy	WGA
+submission	library_strategy	WGS
+submission	library_strategy	WXS
+submission	library_strategy	miRNA-Seq
+submission	library_strategy	ncRNA-Seq
+submission	library_strategy	ssRNA-seq
+submission	platform	ABI_SOLID
+submission	platform	BGISEQ
+submission	platform	CAPILLARY
+submission	platform	COMPLETE_GENOMICS
+submission	platform	HELICOS
+submission	platform	ILLUMINA
+submission	platform	ION_TORRENT
+submission	platform	LS454
+submission	platform	OXFORD_NANOPORE
+submission	platform	PACBIO_SMRT
 submission	protocol	URL
 submission	sra_experiment_accession	REGEXP /^SRX[0-9]+$/
 therapeutic_procedure	days_to_treatment	INTEGER
-therapeutic_procedure	treatment_outcome	NA
-therapeutic_procedure	treatment_type	NA
+therapeutic_procedure	treatment_outcome	TBD
+therapeutic_procedure	treatment_type	TBD
 
 relationship	source_node	destination_node	property	value_or_TYPE
 from_sample	file	sample	NA	NA
