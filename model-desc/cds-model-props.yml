@@ -218,7 +218,6 @@ PropDefinitions:
       - MinION
       - PromethION
       - BGISEQ-500
-      - BGISEQ-500
       - DNBSEQ-G400
       - DNBSEQ-T7
       - DNBSEQ-G50
