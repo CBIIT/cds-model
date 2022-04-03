@@ -1,48 +1,75 @@
-Handle: CDA
+Handle: CDS
 Nodes:
   study:
     Props:
-      - study_title
+      - study_name
       - study_acronym
       - study_description
+      - short_description
       - study_external_url
+      - primary_investigator_name
+      - primary_investigator_email
+      - co_investigator_name
+      - co_investigator_email
       - phs_accession
-      - bioproject_id
+      - bioproject_accession
       - index_date # what are relative dates relative to? dx date, collection date, etc.
-  study_admin:
-    Props:
       - cds_requestor
       - funding_agency
-      - species
-      - study_type # adult, pediatric - needs review
+      - funding_source_program_name
+      - grant_id
+      - clinical_trial_system
+      - clinical_trial_identifier
+      - clinical_trial_arm
+      - organism_species
+      - adult_or_childhood_study # adult, pediatric
       - data_types # list from enumerated values
       - file_types # list from enumerated values
       - data_access_level
-  study_subject:
+      - cds_primary_bucket
+      - cds_secondary_bucket
+      - cds_tertiary_bucket      
+      - number_of_participants
+      - number_of_samples
+      - study_data_types
+      - experimental_strategy_and_data_subtypes
+      - file_types_and_format
+      - size_of_data_being_uploaded
+  participant:
     Props:
-      - subject_id
+      - participant_id
       - race
       - gender
       - ethnicity
-      - vital_status
+      #  - vital_status
+      - dbGaP_subject_id
       
   diagnosis: # may have multiple dxs for multiple timepoints?
     Props:
+      - diagnosis_id
+      - disease_type
+      - vital_status
       - primary_diagnosis
       - primary_site
       - age_at_diagnosis
       - tumor_grade
-      - tumor_stage
-      - tumor_morphology
+      - tumor_stage_clinical_m
+      - tumor_stage_clinical_n
+      - tumor_stage_clinical_t
+      - morphology
       - incidence_type # primary, metastatic, recurrence, progression
+      - progression_or_recurrence
       - days_to_recurrence
+      - days_to_last_followup
       - last_known_disease_status
       - days_to_last_known_status
-  therapeutic_procedure:
+  treatment:
     Props:
+      - treatment_id
       - treatment_type
       - treatment_outcome
       - days_to_treatment
+      - therapeutic_agents
   specimen:
     Props:
       - specimen_id
@@ -52,63 +79,54 @@ Nodes:
       - sample_type
       - sample_tumor_status # tumor or normal
       - sample_anatomic_site
-      - days_to_collection
+      - sample_age_at_collection
+      - derived_from_specimen
       - biosample_accession
       
   file:
     Props:
+      - file_id
       - file_name
       - file_type
       - file_description
       - file_size
       - md5sum
-      - sra_study_accession # here?
-      - sra_run_accession
-      - internal_url
-      - drs_url
+      - file_url_in_cds
 
-  genomic_details:
+  genomic_info:
     Props:
-      - number_of_bp
-      - number_of_reads
-      - average_read_length
-      - coverage
-      - genome_reference_or_accession
-
-  submission:
-    Props:
-      - design_description
-      - sra_experiment_accession
       - library_id
+      - bases
+      - number_of_reads
+      - avg_read_length
+      - coverage
+      - reference_genome_assembly
+      - custom_assembly_fasta_file_for_alignment
+      - design_description
       - library_strategy
-      - library_layout # paired end, single
-      - library_source # genomic, transcriptome, metagenomic, viral, synthetic
-      - protocol
-      - image_series_id
-      - image_modality
+      - library_layout
+      - library_source
+      - library_selection
       - platform
       - instrument_model
-      - software_packages # list of free text I guess
+      - sequence_alignment_software
 Relationships:
   of_study:
     Props: null
     Mul: many_to_one
     Ends:
-      - Src: study_admin
+      - Src: participant
         Dst: study
-        Mul: one_to_one
-      - Src: study_subject
-        Dst: study
-  of_study_subject:
+  of_participant:
     Props: null
     Mul: many_to_one
     Ends:
       - Src: diagnosis
-        Dst: study_subject
+        Dst: participant
       - Src: specimen
-        Dst: study_subject
+        Dst: participant
       - Src: sample
-        Dst: study_subject
+        Dst: participant
   of_specimen:
     Props: null
     Mul: many_to_one
@@ -121,21 +139,21 @@ Relationships:
     Ends:
       - Src: file
         Dst: sample
-  from_submission:
+  from_genomic_info:
     Props: null
     Mul: many_to_many
     Ends:
       - Src: file
-        Dst: submission
-  in_submission:
+        Dst: genomic_info
+  in_genomic_info:
     Props: null
     Mul: many_to_many
     Ends:
       - Src: sample
-        Dst: submission
+        Dst: genomic_info
   of_file:
     Props: null
     Mul: one_to_one
     Ends:
-      - Src: genomic_details
+      - Src: genomic_info
         Dst: file
