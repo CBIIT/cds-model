@@ -20,7 +20,6 @@ Zoom to Node: <select id="node_select">
 <a href="./model-desc/cds-model.svg">SVG file (in view above)</a>
 <p>
 <a href="./model-desc">Additional model files</a>
-<div id='graph' style='display:off;'>
 <svg width="1416pt" height="1327pt"
  viewBox="0.00 0.00 1415.50 1327.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1323)">
@@ -328,4 +327,4 @@ Zoom to Node: <select id="node_select">
 </g>
 </g>
 </svg>
-</div>
+
