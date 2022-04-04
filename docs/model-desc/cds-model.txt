@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit d88f250
+commit d12b234
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -226,9 +226,9 @@ from_genomic_info	file	genomic_info	NA	NA
 from_sample	file	sample	NA	NA
 in_genomic_info	sample	genomic_info	NA	NA
 of_file	genomic_info	file	NA	NA
-of_participant	sample	participant	NA	NA
 of_participant	diagnosis	participant	NA	NA
 of_participant	specimen	participant	NA	NA
+of_participant	sample	participant	NA	NA
 of_specimen	sample	specimen	NA	NA
 of_study	participant	study	NA	NA
 
