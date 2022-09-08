@@ -1,5 +1,13 @@
 Handle: CDS
 Nodes:
+  program:
+    Props:
+      - program_name
+      - program_acronym
+      - program_short_description
+      - program_full_description
+      - program_external_url
+      - program_sort_order
   study:
     Props:
       - study_name
@@ -111,6 +119,12 @@ Nodes:
       - instrument_model
       - sequence_alignment_software
 Relationships:
+  of_program:
+    Props: null
+    Mul: many_to_one
+    Ends:
+      - Src: study
+        Dst: program
   of_study:
     Props: null
     Mul: many_to_one

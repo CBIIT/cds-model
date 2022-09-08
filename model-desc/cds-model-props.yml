@@ -529,3 +529,36 @@ PropDefinitions:
       value_type: number
       units: [ 'GB', 'TB', 'PB' ]
     Req: Preferred
+
+  # program props
+  program_acronym:
+    Desc: The name of the program under which related studies will be grouped, expressed in the form of the acronym by which it will identified within the UI. <br>This property is used as the key via which study records can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+    Key: true
+  program_external_url:
+    Desc: The external url to which users should be directed in order to learn more about the program.
+    Src: Internally-curated 
+    Type: string
+    Req: Preferred
+  program_full_description:
+    Desc: A more detailed, multiple sentence description of the program.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+  program_name:
+    Desc: The name of the program under which related studies will be grouped, in full text and unabbreviated form, exactly as it will be displayed within the UI.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+  program_short_description:
+    Desc: An abbreviated, single sentence description of the program.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+  program_sort_order:
+    Desc: An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
+    Src: Internally-curated
+    Type: integer
+    Req: 'No'
