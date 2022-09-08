@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit 5654edc
+commit a5ba66c
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -170,6 +170,12 @@ participant	gender	Female
 participant	gender	Male
 participant	gender	Unknown
 participant	participant_id	STRING
+program	program_acronym	STRING
+program	program_external_url	STRING
+program	program_full_description	STRING
+program	program_name	STRING
+program	program_short_description	STRING
+program	program_sort_order	INTEGER
 sample	biosample_accession	REGEXP /^SAMN[0-9]+$/
 sample	derived_from_specimen	STRING
 sample	sample_age_at_collection	INTEGER
@@ -226,9 +232,10 @@ from_genomic_info	file	genomic_info	NA	NA
 from_sample	file	sample	NA	NA
 in_genomic_info	sample	genomic_info	NA	NA
 of_file	genomic_info	file	NA	NA
+of_participant	diagnosis	participant	NA	NA
 of_participant	sample	participant	NA	NA
 of_participant	specimen	participant	NA	NA
-of_participant	diagnosis	participant	NA	NA
+of_program	study	program	NA	NA
 of_specimen	sample	specimen	NA	NA
 of_study	participant	study	NA	NA
 
@@ -294,6 +301,12 @@ primary_diagnosis	Primary disease diagnosed for this diagnosis and subject
 primary_investigator_email	Email of principal investigator
 primary_investigator_name	Name of principal investigator
 primary_site	Anatomical site of disease in primary diagnosis for this diagnosis
+program_acronym	The name of the program under which related studies will be grouped, expressed in the form of the acronym by which it will identified within the UI. <br>This property is used as the key via which study records can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
+program_external_url	The external url to which users should be directed in order to learn more about the program.
+program_full_description	A more detailed, multiple sentence description of the program.
+program_name	The name of the program under which related studies will be grouped, in full text and unabbreviated form, exactly as it will be displayed within the UI.
+program_short_description	An abbreviated, single sentence description of the program.
+program_sort_order	An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
 progression_or_recurrence	Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
 race	OMB Race designator
 reference_genome_assembly	Accession or name of genome reference or assembly used for alignment
