@@ -19,11 +19,13 @@ PropDefinitions:
   file_size:
     Desc: File size in bytes
     Type: integer
-    Req: true
+    Req: false
   file_type:
     Desc: File type from enumerated list
     Enum:
-      - TBD
+      - bam
+      - bai
+      - fastq
     Req: true
   md5sum:
     Desc: MD5 hex digest for this file
@@ -35,7 +37,7 @@ PropDefinitions:
   ethnicity:
     Desc: OMB Ethinicity designator
     Enum:
-      - TBD
+      - not reported
     Req: true
   gender:
     Desc: Biological gender at birth
@@ -182,11 +184,11 @@ PropDefinitions:
   primary_investigator_name:
     Desc: Name of principal investigator
     Type: string
-    Req: 'Yes'
+    Req: Preferred
   primary_investigator_email:
     Desc: Email of principal investigator
     Type: string
-    Req: 'Yes'
+    Req: Preferred 
   co_investigator_name:
     Desc: Name of co-principal investigator
     Type: string
@@ -196,7 +198,7 @@ PropDefinitions:
   cds_primary_bucket:
     Desc: The primary bucket for depositing data
     Type: string
-    Req: 'Yes'
+    Req: Preferred
   cds_secondary_bucket:
     Desc: Secondary bucket for depositing data (non-sequence files)
     Type: string
@@ -217,7 +219,68 @@ PropDefinitions:
     Desc: Anatomic site from which sample was collected
     Enum:
       # use GDC anatomic site list
-      - TBD
+      - Bone marrow
+      - post mortem blood
+      - post mortem liver
+      - Frontal Lobe
+      - Peripheral blood
+      - Lung
+      - tumor
+      - post mortem liver tumor
+      - Left Bone marrow
+      - Right Bone marrow
+      - Left thigh
+      - Lung/pleura
+      - R. femur/rib/verebra
+      - Femur
+      - Paraspinal mass
+      - Abdominal mass
+      - Kidney
+      - Brain stem
+      - Cerebrum
+      - Cerebellum
+      - R. Buttock
+      - Shoulder
+      - L. Kidney
+      - R. Kidney
+      - Ventricular mass
+      - Bilateral
+      - Retroperitoneal mass
+      - Adrenal mass
+      - R. Breast metastasis
+      - Paracaval Lymph Node metastasis
+      - Transverse Colon
+      - Lymph Node met
+      - Orbit
+      - Lung met
+      - Liver
+      - 4th ventricle
+      - L. Occipital mass
+      - Posterior mediastil mass (mediastinum)
+      - R. Proximal Ulna
+      - R. Sylvian Fissure
+      - Lung metastasis
+      - Liver metastasis
+      - R. Parietal Lobe
+      - Tibia
+      - Humerus
+      - Lung mass
+      - R. Distal Femur
+      - R. Humerus
+      - L. Femur
+      - Distal femur
+      - L. Distal Femur
+      - Os frontalis
+      - L. Proximal Tibia
+      - Arm
+      - Perineum
+      - Bone Marrow metastasis
+      - Paratesticular
+      - Cervical node
+      - R. Neck mass
+      - Pleural effusion met
+      - not reported
+
   sample_id:
     Desc: Sample identifier as submitted by requestor
     Type: string
@@ -231,7 +294,9 @@ PropDefinitions:
     Desc: Tissue type of this sample
     Enum:
       # use GDC list of tissue types
-      - TBD
+      - DNA_and_RNA
+      - DNA
+      - RNA
     Req: 'Yes'
   derived_from_specimen:
     Desc: Identier of the parent specimen of this sample
@@ -369,8 +434,8 @@ PropDefinitions:
     Desc: Library layout as submitted by requestor
     Req: 'Yes'
     Enum:
-      - paired_end
-      - single_end
+      - Paired-end
+      - Single-end
   library_source:
     Desc: Source material used to create library
     Req: 'Yes'
@@ -546,7 +611,7 @@ PropDefinitions:
     Desc: A more detailed, multiple sentence description of the program.
     Src: Internally-curated
     Type: string
-    Req: 'Yes'
+    Req: 'No'
   program_name:
     Desc: The name of the program under which related studies will be grouped, in full text and unabbreviated form, exactly as it will be displayed within the UI.
     Src: Internally-curated
@@ -556,7 +621,7 @@ PropDefinitions:
     Desc: An abbreviated, single sentence description of the program.
     Src: Internally-curated
     Type: string
-    Req: 'Yes'
+    Req: Preferred
   program_sort_order:
     Desc: An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
     Src: Internally-curated
