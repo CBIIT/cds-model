@@ -19,11 +19,13 @@ PropDefinitions:
   file_size:
     Desc: File size in bytes
     Type: integer
-    Req: true
+    Req: false
   file_type:
     Desc: File type from enumerated list
     Enum:
       - bam
+      - bai
+      - fastq
     Req: true
   md5sum:
     Desc: MD5 hex digest for this file
