@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit a5ba66c
+commit 69cc8e6
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -36,7 +36,9 @@ file	file_description	STRING
 file	file_id	STRING
 file	file_name	STRING
 file	file_size	INTEGER
-file	file_type	TBD
+file	file_type	bai
+file	file_type	bam
+file	file_type	fastq
 file	file_url_in_cds	STRING
 file	md5sum	REGEXP /^[0-9a-fA-F]{32}$/
 genomic_info	avg_read_length	NUMBER
@@ -104,8 +106,8 @@ genomic_info	instrument_model	PacBio Sequel
 genomic_info	instrument_model	PacBio Sequel II
 genomic_info	instrument_model	PromethION
 genomic_info	library_id	STRING
-genomic_info	library_layout	paired_end
-genomic_info	library_layout	single_end
+genomic_info	library_layout	Paired-end
+genomic_info	library_layout	Single-end
 genomic_info	library_selection	STRING
 genomic_info	library_source	GENOMIC
 genomic_info	library_source	GENOMIC SINGLE CELL
@@ -165,7 +167,7 @@ genomic_info	platform	PACBIO_SMRT
 genomic_info	reference_genome_assembly	STRING
 genomic_info	sequence_alignment_software	STRING
 participant	dbGaP_subject_id	STRING
-participant	ethnicity	TBD
+participant	ethnicity	not reported
 participant	gender	Female
 participant	gender	Male
 participant	gender	Unknown
@@ -179,11 +181,73 @@ program	program_sort_order	INTEGER
 sample	biosample_accession	REGEXP /^SAMN[0-9]+$/
 sample	derived_from_specimen	STRING
 sample	sample_age_at_collection	INTEGER
-sample	sample_anatomic_site	TBD
+sample	sample_anatomic_site	4th ventricle
+sample	sample_anatomic_site	Abdominal mass
+sample	sample_anatomic_site	Adrenal mass
+sample	sample_anatomic_site	Arm
+sample	sample_anatomic_site	Bilateral
+sample	sample_anatomic_site	Bone Marrow metastasis
+sample	sample_anatomic_site	Bone marrow
+sample	sample_anatomic_site	Brain stem
+sample	sample_anatomic_site	Cerebellum
+sample	sample_anatomic_site	Cerebrum
+sample	sample_anatomic_site	Cervical node
+sample	sample_anatomic_site	Distal femur
+sample	sample_anatomic_site	Femur
+sample	sample_anatomic_site	Frontal Lobe
+sample	sample_anatomic_site	Humerus
+sample	sample_anatomic_site	Kidney
+sample	sample_anatomic_site	L. Distal Femur
+sample	sample_anatomic_site	L. Femur
+sample	sample_anatomic_site	L. Kidney
+sample	sample_anatomic_site	L. Occipital mass
+sample	sample_anatomic_site	L. Proximal Tibia
+sample	sample_anatomic_site	Left Bone marrow
+sample	sample_anatomic_site	Left thigh
+sample	sample_anatomic_site	Liver
+sample	sample_anatomic_site	Liver metastasis
+sample	sample_anatomic_site	Lung
+sample	sample_anatomic_site	Lung mass
+sample	sample_anatomic_site	Lung met
+sample	sample_anatomic_site	Lung metastasis
+sample	sample_anatomic_site	Lung/pleura
+sample	sample_anatomic_site	Lymph Node met
+sample	sample_anatomic_site	Orbit
+sample	sample_anatomic_site	Os frontalis
+sample	sample_anatomic_site	Paracaval Lymph Node metastasis
+sample	sample_anatomic_site	Paraspinal mass
+sample	sample_anatomic_site	Paratesticular
+sample	sample_anatomic_site	Perineum
+sample	sample_anatomic_site	Peripheral blood
+sample	sample_anatomic_site	Pleural effusion met
+sample	sample_anatomic_site	Posterior mediastil mass (mediastinum)
+sample	sample_anatomic_site	R. Breast metastasis
+sample	sample_anatomic_site	R. Buttock
+sample	sample_anatomic_site	R. Distal Femur
+sample	sample_anatomic_site	R. Humerus
+sample	sample_anatomic_site	R. Kidney
+sample	sample_anatomic_site	R. Neck mass
+sample	sample_anatomic_site	R. Parietal Lobe
+sample	sample_anatomic_site	R. Proximal Ulna
+sample	sample_anatomic_site	R. Sylvian Fissure
+sample	sample_anatomic_site	R. femur/rib/verebra
+sample	sample_anatomic_site	Retroperitoneal mass
+sample	sample_anatomic_site	Right Bone marrow
+sample	sample_anatomic_site	Shoulder
+sample	sample_anatomic_site	Tibia
+sample	sample_anatomic_site	Transverse Colon
+sample	sample_anatomic_site	Ventricular mass
+sample	sample_anatomic_site	not reported
+sample	sample_anatomic_site	post mortem blood
+sample	sample_anatomic_site	post mortem liver
+sample	sample_anatomic_site	post mortem liver tumor
+sample	sample_anatomic_site	tumor
 sample	sample_id	STRING
 sample	sample_tumor_status	normal
 sample	sample_tumor_status	tumor
-sample	sample_type	TBD
+sample	sample_type	DNA
+sample	sample_type	DNA_and_RNA
+sample	sample_type	RNA
 specimen	specimen_id	STRING
 study	adult_or_childhood_study	Adult
 study	adult_or_childhood_study	Other
@@ -233,8 +297,8 @@ from_sample	file	sample	NA	NA
 in_genomic_info	sample	genomic_info	NA	NA
 of_file	genomic_info	file	NA	NA
 of_participant	diagnosis	participant	NA	NA
-of_participant	sample	participant	NA	NA
 of_participant	specimen	participant	NA	NA
+of_participant	sample	participant	NA	NA
 of_program	study	program	NA	NA
 of_specimen	sample	specimen	NA	NA
 of_study	participant	study	NA	NA
