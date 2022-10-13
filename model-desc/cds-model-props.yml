@@ -596,7 +596,7 @@ PropDefinitions:
     Req: Preferred
 
   # program props
-  program_acronym:
+  program_alias:
     Desc: The name of the program under which related studies will be grouped, expressed in the form of the acronym by which it will identified within the UI. <br>This property is used as the key via which study records can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
     Src: Internally-curated
     Type: string
