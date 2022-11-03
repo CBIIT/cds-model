@@ -35,7 +35,7 @@ file	sra_study_accession	NA
 project	bioproject_id	NA
 project	dbgap_accession_number	NA
 project	index_date_type	NA
-project	project_acronym	NA
+project	project_alias	NA
 project	project_external_url	NA
 project	project_full_description	NA
 project	project_id	NA
