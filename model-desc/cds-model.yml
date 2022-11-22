@@ -40,7 +40,6 @@ Nodes:
       - number_of_participants
       - number_of_samples
       - study_data_types
-      - experimental_strategy_and_data_subtypes
       - file_types_and_format
       - size_of_data_being_uploaded
   participant:
@@ -90,6 +89,7 @@ Nodes:
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
+      - experimental_strategy_and_data_subtypes
       
   file:
     Props:
