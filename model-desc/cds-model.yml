@@ -41,6 +41,7 @@ Nodes:
       - number_of_samples
       - study_data_types
       - experimental_strategy_and_data_subtypes
+      - acl
       - file_types_and_format
       - size_of_data_being_uploaded
   participant:
