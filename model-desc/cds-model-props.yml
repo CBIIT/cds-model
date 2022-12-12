@@ -174,6 +174,11 @@ PropDefinitions:
       {methodology} of {organism}: {sample info}
     Type: string
     Req: 'Yes'
+    acl:
+    Desc: Open or restricted access to data
+    Enum:
+      - Open
+      - "phs001234"
   study_external_url:
     Desc: Website or other url relevant to study
     Type: url
