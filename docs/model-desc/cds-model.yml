@@ -43,6 +43,7 @@ Nodes:
       - experimental_strategy_and_data_subtypes
       - file_types_and_format
       - size_of_data_being_uploaded
+      - acl
   participant:
     Props:
       - participant_id

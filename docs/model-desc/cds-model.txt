@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit 69cc8e6
+commit 6d22b6c
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -249,6 +249,8 @@ sample	sample_type	DNA
 sample	sample_type	DNA_and_RNA
 sample	sample_type	RNA
 specimen	specimen_id	STRING
+study	acl	controlled
+study	acl	open
 study	adult_or_childhood_study	Adult
 study	adult_or_childhood_study	Other
 study	adult_or_childhood_study	Pediatric
@@ -296,14 +298,15 @@ from_genomic_info	file	genomic_info	NA	NA
 from_sample	file	sample	NA	NA
 in_genomic_info	sample	genomic_info	NA	NA
 of_file	genomic_info	file	NA	NA
+of_participant	sample	participant	NA	NA
 of_participant	diagnosis	participant	NA	NA
 of_participant	specimen	participant	NA	NA
-of_participant	sample	participant	NA	NA
 of_program	study	program	NA	NA
 of_specimen	sample	specimen	NA	NA
 of_study	participant	study	NA	NA
 
 property	description
+acl	open or restricted access to data
 adult_or_childhood_study	Study participants are adult, pediatric, or other
 age_at_diagnosis	Participant age at relevant diagnosis
 avg_read_length	Average sequence read length
