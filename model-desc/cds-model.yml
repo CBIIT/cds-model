@@ -119,6 +119,10 @@ Nodes:
       - platform
       - instrument_model
       - sequence_alignment_software
+   methylation:
+    Props:
+      - reporter_label
+      - methylation_platform
 Relationships:
   of_program:
     Props: null
@@ -172,3 +176,15 @@ Relationships:
     Ends:
       - Src: genomic_info
         Dst: file
+from_methylation:
+    Props: null
+    Mul: many_to_many
+    Ends:
+      - Src: file
+        Dst: methylation
+  in_methylation:
+    Props: null
+    Mul: many_to_many
+    Ends:
+      - Src: sample
+        Dst: methylation
