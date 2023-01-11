@@ -185,11 +185,11 @@ PropDefinitions:
     Desc: Name of principal investigator
     Type: string
     Req: Preferred
-  acl:
-    Desc: open or restricted access to data
-    Enum:
-      - open
-      - controlled
+  # acl:
+  #   Desc: open or restricted access to data
+  #   Enum:
+  #     - open
+  #     - controlled
   primary_investigator_email:
     Desc: Email of principal investigator
     Type: string
