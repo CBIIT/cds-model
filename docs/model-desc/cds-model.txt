@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit 6d22b6c
+commit dd8598e
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -166,6 +166,8 @@ genomic_info	platform	OXFORD_NANOPORE
 genomic_info	platform	PACBIO_SMRT
 genomic_info	reference_genome_assembly	STRING
 genomic_info	sequence_alignment_software	STRING
+methylation	methylation_platform	STRING
+methylation	reporter_label	STRING
 participant	dbGaP_subject_id	STRING
 participant	ethnicity	not reported
 participant	gender	Female
@@ -295,11 +297,14 @@ treatment	treatment_type	TBD
 
 relationship	source_node	destination_node	property	value_or_TYPE
 from_genomic_info	file	genomic_info	NA	NA
+from_methylation	file	methylation	NA	NA
 from_sample	file	sample	NA	NA
 in_genomic_info	sample	genomic_info	NA	NA
+in_methylation	sample	methylation	NA	NA
 of_file	genomic_info	file	NA	NA
-of_participant	sample	participant	NA	NA
+of_file	methylation	file	NA	NA
 of_participant	diagnosis	participant	NA	NA
+of_participant	sample	participant	NA	NA
 of_participant	specimen	participant	NA	NA
 of_program	study	program	NA	NA
 of_specimen	sample	specimen	NA	NA
@@ -356,6 +361,7 @@ library_selection	Library selection method
 library_source	Source material used to create library
 library_strategy	Nucleic acid capture or processing strategy for this library
 md5sum	MD5 hex digest for this file
+methylation_platform	Need description and type enumeration
 morphology	ICD-O-3 Morphology term associated with this diagnosis
 number_of_participants	How many participants in the study
 number_of_reads	Total number of reads performed
@@ -377,6 +383,7 @@ program_sort_order	An arbitrarily-assigned value used to dictate the order in wh
 progression_or_recurrence	Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
 race	OMB Race designator
 reference_genome_assembly	Accession or name of genome reference or assembly used for alignment
+reporter_label	Needs description
 sample_age_at_collection	Number of days to collection, relative to index date
 sample_anatomic_site	Anatomic site from which sample was collected
 sample_id	Sample identifier as submitted by requestor
@@ -393,7 +400,7 @@ study_external_url	Website or other url relevant to study
 study_name	Official name of study
 therapeutic_agents	Text identification of the individual agent(s) used as part of a treatment regimen.
 treatment_id	Internal identifier
-treatment_outcome	Text term that describes the patient's final outcome after the treatment was administered
+treatment_outcome	Text term that describes the patient\'s final outcome after the treatment was administered
 treatment_type	Text term that describes the kind of treatment administered
 tumor_grade	Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
 tumor_stage_clinical_m	Extent of the distant metastasis for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
