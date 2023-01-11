@@ -120,7 +120,7 @@ Nodes:
       - instrument_model
       - sequence_alignment_software
       
-  methylation:
+ methylation:
    Props:
      - reporter_label
      - methylation_platform
