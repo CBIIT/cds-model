@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit dd8598e
+commit b1690a0
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -301,11 +301,11 @@ from_methylation	file	methylation	NA	NA
 from_sample	file	sample	NA	NA
 in_genomic_info	sample	genomic_info	NA	NA
 in_methylation	sample	methylation	NA	NA
-of_file	genomic_info	file	NA	NA
 of_file	methylation	file	NA	NA
+of_file	genomic_info	file	NA	NA
+of_participant	specimen	participant	NA	NA
 of_participant	diagnosis	participant	NA	NA
 of_participant	sample	participant	NA	NA
-of_participant	specimen	participant	NA	NA
 of_program	study	program	NA	NA
 of_specimen	sample	specimen	NA	NA
 of_study	participant	study	NA	NA

@@ -40,7 +40,6 @@ Nodes:
       - number_of_participants
       - number_of_samples
       - study_data_types
-      - experimental_strategy_and_data_subtypes
       - file_types_and_format
       - size_of_data_being_uploaded
       - acl
@@ -101,6 +100,7 @@ Nodes:
       - file_size
       - md5sum
       - file_url_in_cds
+      - experimental_strategy_and_data_subtypes
 
   genomic_info:
     Props:
