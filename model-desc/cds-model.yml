@@ -177,6 +177,8 @@ Relationships:
     Ends:
       - Src: genomic_info
         Dst: file
+      - Src: methylation
+        Dst: file
   from_methylation:
     Props: null
     Mul: many_to_many
@@ -189,9 +191,3 @@ Relationships:
     Ends:
       - Src: sample
         Dst: methylation
-  of_file:
-    Props: null
-    Mul: one_to_one
-    Ends:
-      - Src: methylation
-        Dst: file
