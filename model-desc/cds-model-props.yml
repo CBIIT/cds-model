@@ -210,6 +210,9 @@ PropDefinitions:
   cds_tertiary_bucket:
     Desc: Secondary bucket for depositing data (non-sequence files)
     Type: string
+  acl:
+    Desc: Access Control List
+    Type: string
 
   # sample
   biosample_accession:
