@@ -635,4 +635,6 @@ PropDefinitions:
   reporter_label:
     Desc: Needs description
     Type: string
-    
+  methylation_platform:
+    Desc: Need description and type enumeration
+    Type: string
