@@ -314,7 +314,7 @@ PropDefinitions:
     Desc: Days to start of treatment, relative to index date
     Type: integer
   treatment_outcome:
-    Desc: Text term that describes the patient's final outcome after the treatment was administered
+    Desc: Text term that describes the patient\'s final outcome after the treatment was administered
     Enum:
       # use GDC outcome list?
       - TBD
@@ -632,3 +632,9 @@ PropDefinitions:
     Src: Internally-curated
     Type: integer
     Req: 'No'
+  reporter_label:
+    Desc: Needs description
+    Type: string
+  methylation_platform:
+    Desc: Need description and type enumeration
+    Type: string
