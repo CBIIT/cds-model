@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit 9528411
+commit 79fbd92
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -247,6 +247,7 @@ sample	sample_anatomic_site	tumor
 sample	sample_id	STRING
 sample	sample_tumor_status	normal
 sample	sample_tumor_status	tumor
+sample	sample_tumor_status	unknown
 sample	sample_type	DNA
 sample	sample_type	DNA_and_RNA
 sample	sample_type	RNA
