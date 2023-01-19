@@ -298,6 +298,7 @@ PropDefinitions:
     Enum:
       - tumor
       - normal
+      - unknown
   sample_type:
     Desc: Tissue type of this sample
     Enum:
