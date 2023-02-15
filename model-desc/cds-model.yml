@@ -138,6 +138,8 @@ Relationships:
     Ends:
       - Src: participant
         Dst: study
+      - Src: file
+        Dst: study
   of_participant:
     Props: null
     Mul: many_to_one
