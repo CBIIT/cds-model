@@ -43,6 +43,7 @@ Nodes:
       - file_types_and_format
       - size_of_data_being_uploaded
       - acl
+      - study_access
   participant:
     Props:
       - participant_id
@@ -90,7 +91,6 @@ Nodes:
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
-      - experimental_strategy_and_data_subtypes
       
   file:
     Props:
@@ -102,6 +102,7 @@ Nodes:
       - md5sum
       - file_url_in_cds
       - experimental_strategy_and_data_subtypes
+      -file_access
 
   genomic_info:
     Props:
