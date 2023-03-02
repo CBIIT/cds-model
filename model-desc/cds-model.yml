@@ -43,6 +43,7 @@ Nodes:
       - file_types_and_format
       - size_of_data_being_uploaded
       - acl
+      - study_access
   participant:
     Props:
       - participant_id
@@ -90,8 +91,7 @@ Nodes:
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
-      - experimental_strategy_and_data_subtypes
-      
+
   file:
     Props:
       - file_id
@@ -102,6 +102,7 @@ Nodes:
       - md5sum
       - file_url_in_cds
       - experimental_strategy_and_data_subtypes
+      - file_access
 
   genomic_info:
     Props:
@@ -120,11 +121,6 @@ Nodes:
       - platform
       - instrument_model
       - sequence_alignment_software
-      
-  methylation:
-    Props:
-      - reporter_label
-      - methylation_platform
 Relationships:
   of_program:
     Props: null
@@ -180,17 +176,3 @@ Relationships:
     Ends:
       - Src: genomic_info
         Dst: file
-      - Src: methylation
-        Dst: file
-  from_methylation:
-    Props: null
-    Mul: many_to_many
-    Ends:
-      - Src: file
-        Dst: methylation
-  in_methylation:
-    Props: null
-    Mul: many_to_many
-    Ends:
-      - Src: sample
-        Dst: methylation
