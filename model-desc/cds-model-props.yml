@@ -27,6 +27,12 @@ PropDefinitions:
       - bai
       - fastq
     Req: true
+  file_access:
+    Desc: File access
+    Enum:
+      - Open
+      - Controlled
+    Req: true
   md5sum:
     Desc: MD5 hex digest for this file
     Type:
@@ -110,7 +116,16 @@ PropDefinitions:
     Desc: Primary disease diagnosed for this diagnosis and subject
     Enum:
       # reuse ICD-O-3 value_set
-      - TBD
+      - Diffuse Glioma
+      - Dysembryoplastic Neuroepithelial Tumor
+      - Astrocytic Glioma
+      - Glial Neoplasm
+      - Brain Tumor
+      - Atypical Teratoid/Rhabdoid Tumor
+      - Diffuse Glioma
+      - Pilocytic Astrocytoma
+      - Diffuse low-grade glioma
+      - Alveolar Rhabdomyosarcoma
   primary_site:
     Desc: Anatomical site of disease in primary diagnosis for this diagnosis
     Enum:
@@ -167,6 +182,12 @@ PropDefinitions:
   study_description:
     Desc: Human-readable study description
     Type: string
+  study_access:
+    Desc: Study access
+    Enum:
+      - Open
+      - Controlled
+    Req: true
   short_description:
     Desc: |
       Short description that will identify the dataset on public pages
