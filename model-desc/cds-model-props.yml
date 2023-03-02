@@ -23,9 +23,9 @@ PropDefinitions:
   file_type:
     Desc: File type from enumerated list
     Enum:
-      - bam
-      - bai
-      - fastq
+      - BAM
+      - BAI
+      - FASTQ
     Req: true
   file_access:
     Desc: File access
@@ -206,11 +206,11 @@ PropDefinitions:
     Desc: Name of principal investigator
     Type: string
     Req: Preferred
-  # acl:
-  #   Desc: open or restricted access to data
-  #   Enum:
-  #     - open
-  #     - controlled
+  acl:
+    Desc: open or restricted access to data
+    Enum:
+      - open
+      - controlled
   primary_investigator_email:
     Desc: Email of principal investigator
     Type: string
@@ -230,9 +230,6 @@ PropDefinitions:
     Type: string
   cds_tertiary_bucket:
     Desc: Secondary bucket for depositing data (non-sequence files)
-    Type: string
-  acl:
-    Desc: Access Control List
     Type: string
 
   # sample
@@ -317,9 +314,9 @@ PropDefinitions:
   sample_tumor_status:
     Desc: Tumor or normal status
     Enum:
-      - tumor
-      - normal
-      - unknown
+      - Tumor
+      - Normal
+      - Unknown
   sample_type:
     Desc: Tissue type of this sample
     Enum:
@@ -339,7 +336,7 @@ PropDefinitions:
     Desc: Days to start of treatment, relative to index date
     Type: integer
   treatment_outcome:
-    Desc: Text term that describes the patient\'s final outcome after the treatment was administered
+    Desc: Text term that describes the patient's final outcome after the treatment was administered
     Enum:
       # use GDC outcome list?
       - TBD
@@ -455,7 +452,7 @@ PropDefinitions:
       - DNBSEQ-G400
       - DNBSEQ-T7
       - DNBSEQ-G50
-      - MGISEQ-2000RS      
+      - MGISEQ-2000RS
   library_id:
     Desc: Library identifier as submitted by requestor
     Type: string
@@ -464,21 +461,21 @@ PropDefinitions:
     Desc: Library layout as submitted by requestor
     Req: 'Yes'
     Enum:
-      - Paired-end
-      - Single-end
+      - paired-end
+      - single-end
   library_source:
     Desc: Source material used to create library
     Req: 'Yes'
     Enum:
-      - GENOMIC
-      - TRANSCRIPTOMIC
-      - METAGENOMIC
-      - METATRANSCRIPTOMIC
-      - SYNTHETIC
-      - VIRAL RNA
-      - GENOMIC SINGLE CELL
-      - TRANSCRIPTOMIC SINGLE CELL
-      - OTHER        
+      - Genomic
+      - Transcriptomic
+      - Metagenomic
+      - Metatranscriptomic
+      - Synthetic
+      - Viral RNA
+      - Genomic Single Cell
+      - Transcriptomic Single Cell
+      - Other
   library_selection:
     Desc: Library selection method
     Type: string
@@ -602,6 +599,10 @@ PropDefinitions:
     Type:
       value_type: list
       item_type: string
+    Enum:
+      - Genomic
+      - Proteomic
+      - Imaging
     Req: 'Yes'
   experimental_strategy_and_data_subtypes:
     Desc: |
@@ -657,9 +658,3 @@ PropDefinitions:
     Src: Internally-curated
     Type: integer
     Req: 'No'
-  reporter_label:
-    Desc: Needs description
-    Type: string
-  methylation_platform:
-    Desc: Need description and type enumeration
-    Type: string
