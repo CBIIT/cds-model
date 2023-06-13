@@ -43,6 +43,7 @@ Nodes:
       - file_types_and_format
       - size_of_data_being_uploaded
       - acl
+      - study_access
   participant:
     Props:
       - participant_id
