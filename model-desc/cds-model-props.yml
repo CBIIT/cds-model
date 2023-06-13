@@ -23,10 +23,27 @@ PropDefinitions:
   file_type:
     Desc: File type from enumerated list
     Enum:
-      - bam
-      - bai
-      - fastq
+      - BAM
+      - BAI
+      - FASTQ
+      - BW
+      - CRAI
+      - CRAM
+      - HTML
+      - IDAT
+      - JSON
+      - PDF
+      - TSV
+      - TXT
+      - VCF
+      - XLSX
     Req: true
+  file_access:
+    Desc: File access
+    Enum:
+      - Open
+      - Controlled
+     Req: true
   md5sum:
     Desc: MD5 hex digest for this file
     Type:
@@ -59,6 +76,10 @@ PropDefinitions:
       who has taken part in the investigation or study.
     Type: string
     Req: true
+  study_participant_id:
+    Desc: TBD
+    Type: string
+    Req:  true
   vital_status:
     Desc: Vital status as of last known follow up
     Enum:
@@ -72,6 +93,9 @@ PropDefinitions:
   # diagnosis
   diagnosis_id:
     Desc: Internal identifier
+    Type: string
+  study_diagnosis_id:
+    Desc: TBD
     Type: string
   disease_type:
     Desc: Type of disease [?]
@@ -110,7 +134,14 @@ PropDefinitions:
     Desc: Primary disease diagnosed for this diagnosis and subject
     Enum:
       # reuse ICD-O-3 value_set
-      - TBD
+      - Dysembryoplastics Neuroepithelial Tumor
+      - Astrocytic Glioma
+      - Glial Neoplasm
+      - Brain Tumor
+      - Atypical Teratoid/Rhabdoid Tumor
+      - Diffuse Glioma
+      - Pilocytic Astrocytoma
+      - Alveolar Rhabdomyosarcoma
   primary_site:
     Desc: Anatomical site of disease in primary diagnosis for this diagnosis
     Enum:
@@ -167,6 +198,12 @@ PropDefinitions:
   study_description:
     Desc: Human-readable study description
     Type: string
+  study_access:
+    Desc: Study access
+    Enum:
+      - Open
+      - Controlled
+     Req: true
   short_description:
     Desc: |
       Short description that will identify the dataset on public pages
@@ -456,6 +493,7 @@ PropDefinitions:
       - SYNTHETIC
       - VIRAL RNA
       - GENOMIC SINGLE CELL
+      - Single Nucleus
       - TRANSCRIPTOMIC SINGLE CELL
       - OTHER        
   library_selection:
@@ -590,6 +628,13 @@ PropDefinitions:
       value_type: list
       item_type: string
     Req: 'Yes'
+    Enum:
+      - WXS
+      - RNA-Seq
+      - GWA
+      - WGS, WXS, RNA-Seq
+      - Methylation Array
+      - Archer Fusion
   file_types_and_format:
     Desc: |
       Specific kinds of files in the dataset that will be uploaded to CDS
