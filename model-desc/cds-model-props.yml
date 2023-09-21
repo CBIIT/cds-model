@@ -7161,7 +7161,6 @@ PropDefinitions:
   reference_genome_assembly:
     Desc: Accession or name of genome reference or assembly used for alignment
     Type: string
-    Req: 'Yes'
     Enum:
      - GRCh37
      - GRCh37-lite
