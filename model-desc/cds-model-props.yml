@@ -7331,7 +7331,6 @@ PropDefinitions:
       - Oligo-dT
       - Padlock probes capture method
       - Race
-      - Random
       - Random PCR
       - Reduced Representation
       - repeat fractionation
