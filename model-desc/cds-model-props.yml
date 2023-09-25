@@ -89,10 +89,6 @@ PropDefinitions:
     Req: true
   race:
     Desc: OMB Race designator
-    Type:
-      value_type: list
-      item_type:
-        - TBD
     Enum:
       - White
       - American Indian or Alaska Native
