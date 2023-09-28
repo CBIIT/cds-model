@@ -46,6 +46,7 @@ Nodes:
       - acl
       - study_access
       - authz
+      - study_version
   participant:
     Props:
       - study_participant_id
@@ -103,6 +104,7 @@ Nodes:
       - md5sum
       - file_url_in_cds
       - experimental_strategy_and_data_subtypes
+      - submission_version
       #- file_access
 
   genomic_info:
