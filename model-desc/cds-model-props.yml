@@ -1,5 +1,9 @@
 PropDefinitions:
   # file
+  submission_version:
+    Desc: Raw data file submission
+    Type: string
+    Req: true
   file_id:
     Desc: File identifier
     Type: string
@@ -2040,6 +2044,10 @@ PropDefinitions:
       - Not Reported
       - Not Allowed To Collect
   # study
+  study_version:
+    Desc: The version of the phs accession
+    Type: string
+    Req: true
   bioproject_accession:
     Desc: NCBI BioProject accession ID
     Type:
