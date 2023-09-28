@@ -1,5 +1,9 @@
 PropDefinitions:
   # file
+  submission_version:
+    Desc: Raw data file submission
+    Type: string
+    Req: true
   file_id:
     Desc: File identifier
     Type: string
@@ -52,9 +56,6 @@ PropDefinitions:
     Desc: |
       What is the experimental strategy used for the study (or what
       type of data subtypes exist in the study)?
-    Type:
-      value_type: list
-      item_type: string
     Req: 'Yes'
     Enum:
       - Amplicon
@@ -89,10 +90,6 @@ PropDefinitions:
     Req: true
   race:
     Desc: OMB Race designator
-    Type:
-      value_type: list
-      item_type:
-        - TBD
     Enum:
       - White
       - American Indian or Alaska Native
@@ -138,7 +135,6 @@ PropDefinitions:
     Req: true
   disease_type:
     Desc: Type of disease [?]
-    Type: string
     Enum:
       - Acinar Cell Neoplasm
       - Basal Cell Neoplasm
@@ -2048,6 +2044,10 @@ PropDefinitions:
       - Not Reported
       - Not Allowed To Collect
   # study
+  study_version:
+    Desc: The version of the phs accession
+    Type: string
+    Req: true
   bioproject_accession:
     Desc: NCBI BioProject accession ID
     Type:
@@ -2055,9 +2055,6 @@ PropDefinitions:
     Req: 'Preferred'
   study_data_types:
     Desc: Types of scientific data in the study
-    Type:
-      value_type: list
-      item_type: string
     Enum:
       - Genomic
       - Proteomic
@@ -2116,6 +2113,7 @@ PropDefinitions:
     Req: Preferred
   acl:
     Desc: open or restricted access to data
+    Type: list
   primary_investigator_email:
     Desc: Email of principal investigator
     Type: string
@@ -2138,6 +2136,7 @@ PropDefinitions:
     Type: string
   authz:
     Desc: multifactor authorization
+    Type: string
   # sample
   biosample_accession:
     Desc: NCBI BioSample accession ID (SAMN) for this sample
@@ -2674,9 +2673,6 @@ PropDefinitions:
       - Not Reported
   therapeutic_agents:
     Desc: Text identification of the individual agent(s) used as part of a treatment regimen.
-    Type:
-      value_type: list
-      item_type: string
     Enum:
       - 10-Deacetyltaxol
       - 11C Topotecan
@@ -7160,8 +7156,6 @@ PropDefinitions:
     Req: true
   reference_genome_assembly:
     Desc: Accession or name of genome reference or assembly used for alignment
-    Type: string
-    Req: 'Yes'
     Enum:
      - GRCh37
      - GRCh37-lite
@@ -7302,7 +7296,6 @@ PropDefinitions:
       - Single Cell
   library_selection:
     Desc: Library selection method
-    Type: string
     Req: Preferred
     Enum:
       - Hybrid Selection
@@ -7332,7 +7325,6 @@ PropDefinitions:
       - Oligo-dT
       - Padlock probes capture method
       - Race
-      - Random
       - Random PCR
       - Reduced Representation
       - repeat fractionation
