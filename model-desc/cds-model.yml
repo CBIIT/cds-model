@@ -103,7 +103,6 @@ Nodes:
       - md5sum
       - file_url_in_cds
       - experimental_strategy_and_data_subtypes
-      - submission_version
       #- file_access
 
   genomic_info:
