@@ -148,7 +148,7 @@ Relationships:
         Dst: participant
       - Src: sample
         Dst: participant
-  of_sample:
+  from_sample:
     Props: null
     Mul: many_to_one
     Ends:
