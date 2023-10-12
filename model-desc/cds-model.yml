@@ -46,7 +46,6 @@ Nodes:
       - acl
       - study_access
       - authz
-      - study_version
   participant:
     Props:
       - study_participant_id
