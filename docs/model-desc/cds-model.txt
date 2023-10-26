@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit fbd09f5
+commit 1e15f68
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -1904,6 +1904,7 @@ file	file_type	VCF
 file	file_type	XLSX
 file	file_url_in_cds	STRING
 file	md5sum	REGEXP /^[0-9a-fA-F]{32}$/
+file	submission_version	STRING
 genomic_info	avg_read_length	NUMBER
 genomic_info	bases	INTEGER
 genomic_info	coverage	NUMBER
@@ -2566,6 +2567,7 @@ study	study_data_types	Proteomic
 study	study_description	STRING
 study	study_external_url	URL
 study	study_name	STRING
+study	study_version	STRING
 treatment	days_to_treatment	INTEGER
 treatment	therapeutic_agents	10-Deacetyltaxol
 treatment	therapeutic_agents	11C Topotecan
