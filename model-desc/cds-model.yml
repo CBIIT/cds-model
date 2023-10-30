@@ -150,13 +150,13 @@ Relationships:
         Dst: participant
   from_sample:
     Props: null
-    Mul: many_to_one
+    Mul: many_to_many
     Ends:
       - Src: file
         Dst: sample
   of_file:
     Props: null
-    Mul: one_to_one
+    Mul: many_to_one
     Ends:
       - Src: genomic_info
         Dst: file
