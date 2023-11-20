@@ -129,7 +129,7 @@ Nodes:
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
-​
+
   file:
     Desc: "A set of related records kept together provided by a submitter."
     Tags:
@@ -148,7 +148,7 @@ Nodes:
       - experimental_strategy_and_data_subtypes
       - submission_version
       #- file_access
-​
+
   genomic_info:
     Desc: "In CDS genomic info refers to the sequencing methodsm techniques and equipment."
     Tags:
