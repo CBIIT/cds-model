@@ -1,6 +1,12 @@
 Handle: CDS
 Nodes:
   program:
+    Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
+    Tags:
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - program_name
       - program_acronym
@@ -10,6 +16,12 @@ Nodes:
       - program_sort_order
       - institution
   study:
+    Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
+    Tags:
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - study_name
       - study_acronym
@@ -48,6 +60,12 @@ Nodes:
       - authz
       - study_version
   participant:
+    Desc: "Individual who takes part in the study"
+    Tags:
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - study_participant_id
       - participant_id
@@ -58,6 +76,12 @@ Nodes:
       - dbGaP_subject_id
 
   diagnosis: # may have multiple dxs for multiple timepoints?
+    Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
+    Tags:
+      Category: case
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - study_diagnosis_id
       - diagnosis_id
@@ -78,6 +102,12 @@ Nodes:
       - last_known_disease_status
       - days_to_last_known_status
   treatment:
+    Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
+    Tags:
+      Category: case
+      Assignment: core
+      Class: secondary
+      Template: 'No'
     Props:
       - treatment_id
       - treatment_type
@@ -85,6 +115,12 @@ Nodes:
       - days_to_treatment
       - therapeutic_agents
   sample: # aka subspecimen (CMB)
+    Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
+    Tags:
+      Category: case
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - sample_id
       - sample_type
@@ -93,8 +129,14 @@ Nodes:
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
-
+​
   file:
+    Desc: "A set of related records kept together provided by a submitter."
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - file_id
       - file_name
@@ -106,8 +148,14 @@ Nodes:
       - experimental_strategy_and_data_subtypes
       - submission_version
       #- file_access
-
+​
   genomic_info:
+    Desc: "In CDS genomic info refers to the sequencing methodsm techniques and equipment."
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
       - genomic_info_id
       - library_id
@@ -150,13 +198,13 @@ Relationships:
         Dst: participant
   from_sample:
     Props: null
-    Mul: many_to_one
+    Mul: many_to_many
     Ends:
       - Src: file
         Dst: sample
   of_file:
     Props: null
-    Mul: one_to_one
+    Mul: many_to_one
     Ends:
       - Src: genomic_info
         Dst: file
