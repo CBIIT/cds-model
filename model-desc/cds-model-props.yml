@@ -8,6 +8,7 @@ PropDefinitions:
     Desc: File identifier
     Type: string
     Req: true
+    Key: true
   file_url_in_cds:
     Desc: Location of the file on the CDS cloud, using AWS S3 protocol
     Type: string
@@ -112,6 +113,7 @@ PropDefinitions:
       It is the ID property for the node participant. The reason why we are doing that is because is some cases, there are same participant id in different studies repersent different participants.
     Type: string
     Req: true
+    Key: true
   vital_status:
     Desc: Vital status as of last known follow up
     Enum:
@@ -133,6 +135,7 @@ PropDefinitions:
       It is the ID property for the node diagnosis.
     Type: string
     Req: true
+    Key: true
   disease_type:
     Desc: Type of disease [?]
     Enum:
@@ -2077,6 +2080,7 @@ PropDefinitions:
   phs_accession:
     Desc: PHS accession number (a.k.a dbGaP accession)
     Req: true
+    Key: true
     Type:
       pattern: "^phs[0-9]+([.]v[0-9]+)*$"
   study_acronym:
@@ -2494,6 +2498,7 @@ PropDefinitions:
     Desc: Sample identifier as submitted by requestor
     Type: string
     Req: 'Yes'
+    Key: true
   sample_tumor_status:
     Desc: Tumor or normal status
     Enum:
@@ -2582,6 +2587,7 @@ PropDefinitions:
   treatment_id:
     Desc: Internal identifier
     Type: string
+    Key: true
   days_to_treatment:
     Desc: Days to start of treatment, relative to index date
     Type: integer
@@ -7154,6 +7160,7 @@ PropDefinitions:
     Desc: Genomic info identifier, the ID property for the ndoe genomic_info.
     Type: string
     Req: true
+    Key: true
   reference_genome_assembly:
     Desc: Accession or name of genome reference or assembly used for alignment
     Enum:
@@ -7431,6 +7438,7 @@ PropDefinitions:
   specimen_id:
     Desc: Identifier for specimen (parent of sample) as provided by requestor
     Type: string
+    Key: true
   number_of_participants:
     Desc: How many participants in the study
     Type: number
