@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit eea4bf5
+commit fd7c1e3
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	days_to_last_followup	INTEGER
@@ -7127,11 +7127,11 @@ treatment	treatment_type	Unknown
 relationship	source_node	destination_node	property	value_or_TYPE
 from_sample	file	sample	NA	NA
 of_file	genomic_info	file	NA	NA
-of_participant	diagnosis	participant	NA	NA
 of_participant	sample	participant	NA	NA
+of_participant	diagnosis	participant	NA	NA
 of_program	study	program	NA	NA
-of_study	participant	study	NA	NA
 of_study	file	study	NA	NA
+of_study	participant	study	NA	NA
 
 property	description
 acl	open or restricted access to data
