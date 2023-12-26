@@ -16,10 +16,13 @@ Nodes:
       - study_description
       - short_description
       - study_external_url
-      - primary_investigator_name
-      - primary_investigator_email
-      - co_investigator_name
-      - co_investigator_email
+      - role_or_affiliation
+      - title
+      - first_name
+      - middle_name
+      - last_name
+      - suffix
+      - email
       - phs_accession
       - bioproject_accession
       - index_date # what are relative dates relative to? dx date, collection date, etc.
@@ -126,35 +129,45 @@ Nodes:
       - instrument_model
       - sequence_alignment_software
 Relationships:
-  of_program:
+  of_study:
     Props: null
     Mul: many_to_one
     Ends:
       - Src: study
         Dst: program
-  of_study:
+  of_participant:
     Props: null
     Mul: many_to_one
     Ends:
       - Src: participant
         Dst: study
-      - Src: file
-        Dst: study
-  of_participant:
+  of_diagnosis: 
     Props: null
     Mul: many_to_one
     Ends:
       - Src: diagnosis
         Dst: participant
-      - Src: sample
-        Dst: participant
   from_sample:
     Props: null
     Mul: many_to_one
     Ends:
-      - Src: file
-        Dst: sample
+      - Src: sample
+        Dst: participant
+  of_treatment:
+    Props: null
+    Mul: many_to_many
+    Ends:
+      - Src: treatment
+        Dst: participant
   of_file:
+    Props: null
+    Mul: many_to_one
+    Ends:
+      - Src: file
+        Dst: participant
+      - Src: file
+        Dst: study
+  of_genomic_info:
     Props: null
     Mul: one_to_one
     Ends:

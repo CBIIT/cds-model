@@ -8,7 +8,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   file_id:
     Desc: File identifier
@@ -18,17 +17,16 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
   file_url_in_cds:
     Desc: Location of the file on the CDS cloud, using AWS S3 protocol
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11556141'
+      Value: 'Electronic File Pathname Text'
     Type: string
     Req: true
-    Key: false
     Private: false
   file_description:
     Desc: Human-readable description of file
@@ -38,34 +36,31 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   file_name:
     Desc: Name of file
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11284037'
+      Value: 'Electronic Data File Name'
     Type: string
     Req: true
-    Key: false
     Private: false
   file_size:
     Desc: File size in bytes
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: 11479876'
+      Value: 'Electronic Data File Size Integer'
     Type: integer
     Req: false
-    Key: false
     Private: false
   file_type:
     Desc: File type from enumerated list
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11416926'
+      Value: Electronic Data File Format Type'
     Type:
       value_type: string
       Enum:
@@ -84,8 +79,8 @@ PropDefinitions:
         - TXT
         - VCF
         - XLSX
+    Strict: true
     Req: true
-    Key: false
     Private: false
   file_access:
     Desc: File access
@@ -98,19 +93,18 @@ PropDefinitions:
       Enum:
         - Open
         - Controlled
+    Strict: true
     Req: false
-    Key: false
     Private: false
   md5sum:
     Desc: MD5 hex digest for this file
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11556150'
+      Value: 'Electronic Data File MD5 Checksum Text'
     Type:
       pattern: "^[0-9a-fA-F]{32}$"
     Req: true
-    Key: false
     Private: false
   experimental_strategy_and_data_subtypes:
     Desc: |
@@ -118,8 +112,8 @@ PropDefinitions:
       type of data subtypes exist in the study)?
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '12373576'
+      Value: 'Research Activity Experimental Method Type'
     Type:
       value_type: string
       Enum:
@@ -134,16 +128,16 @@ PropDefinitions:
         - WGA
         - WGS
         - WXS
+    Strict: true
     Req: true
-    Key: false
     Private: false
   # participant
   ethnicity:
     Desc: OMB Ethinicity designator
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2192217'
+      Value: 'Ethnic Group Category Text'
     Type:
       value_type: string
       Enum:
@@ -152,15 +146,15 @@ PropDefinitions:
         - Unknown
         - Not Reported
         - Not Allowed to Collect
+    Strict: true
     Req: true
-    Key: false
     Private: false
   gender:
     Desc: Biological gender at birth
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2200604'
+      Value: 'Person Gender Text Type'
     Type:
       value_type: string
       Enum:
@@ -169,15 +163,15 @@ PropDefinitions:
         - Unknown
         - Unspecified
         - Not Reported
+    Strict: true
     Req: true
-    Key: false
     Private: false
   race:
     Desc: OMB Race designator
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2192199'
+      Value: 'Race Category Text'
     Type:
       value_type: string
       Enum:
@@ -189,8 +183,8 @@ PropDefinitions:
         - Unknown
         - Not Reported
         - Not Allowed to Collect
+    Strict: true
     Req: true
-    Key: false
     Private: false
   participant_id:
     Desc: |
@@ -198,11 +192,10 @@ PropDefinitions:
       who has taken part in the investigation or study.
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '12220014'
+      Value: 'Subject Alternate Data Origin Identifier'
     Type: string
     Req: true
-    Key: false
     Private: false
   study_participant_id:
     Desc: |
@@ -214,7 +207,7 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
   vital_status:
     Desc: Vital status as of last known follow up
@@ -229,18 +222,17 @@ PropDefinitions:
         - Dead
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   dbGaP_subject_id:
     Desc: Identifier for the participant as assigned by dbGaP
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524550'
+      Value: 'Study Participant dbGaP Accession Number Identifier'
     Type: string
     Req: false
-    Key: false
     Private: false
   # diagnosis
   diagnosis_id:
@@ -251,7 +243,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   study_diagnosis_id:
     Desc: |
@@ -263,7 +254,7 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
   disease_type:
     Desc: Type of disease [?]
@@ -313,8 +304,8 @@ PropDefinitions:
         - Trophoblastic Tumor
         - Unknown
         - Wolffian Tumor
+    Strict: true
     Req: false
-    Key: false
     Private: false
   age_at_diagnosis:
     Desc: Participant age at relevant diagnosis
@@ -324,7 +315,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   days_to_last_known_status:
     Desc: Days to last known status of participant, relative to study index date
@@ -334,7 +324,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   days_to_last_followup:
     Desc: Days to last participant followup, relative to study index date
@@ -344,7 +333,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   days_to_recurrence:
     Desc: Days to disease recurrence, relative to study index date
@@ -354,7 +342,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   incidence_type:
     Desc: For this diagnosis, disease incidence relative to prior status of subject
@@ -371,8 +358,8 @@ PropDefinitions:
         - metastasis
         - remission
         - no_disease
+    Strict: true
     Req: false
-    Key: false
     Private: false
   last_known_disease_status:
     Desc: Last known disease incidence for this subject and diagnosis
@@ -393,8 +380,8 @@ PropDefinitions:
         - Loco-regional recurrence/progression
         - Biochemical evidence of disease without structural correlate
         - Tumor free
+    Strict: true
     Req: false
-    Key: false
     Private: false
   primary_diagnosis:
     Desc: Primary disease diagnosed for this diagnosis and subject
@@ -912,8 +899,8 @@ PropDefinitions:
         - Well Differentiated Neuroendocrine Tumor
         - Well To Moderately Differentiated Colonic Adenocarcinoma
         - Yolk Sac Tumor
+    Strict: true
     Req: true
-    Key: false
     Private: false
   primary_site:
     Desc: Anatomical site of disease in primary diagnosis for this diagnosis
@@ -986,8 +973,8 @@ PropDefinitions:
         - Uterus
         - Vagina
         - Vulva
+    Strict: true
     Req: false
-    Key: false
     Private: false
   morphology:
     Desc: ICD-O-3 Morphology term associated with this diagnosis
@@ -2151,8 +2138,8 @@ PropDefinitions:
         - 9992/3
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   tumor_grade:
     Desc: Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
@@ -2174,8 +2161,8 @@ PropDefinitions:
         - Low Grade
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   tumor_stage_clinical_t:
     Desc: Extent of the primary cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
@@ -2222,8 +2209,8 @@ PropDefinitions:
         - Tis (Paget's)
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   tumor_stage_clinical_n:
     Desc: Extent of the regional lymph node involvement for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
@@ -2260,8 +2247,8 @@ PropDefinitions:
         - NX
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   tumor_stage_clinical_m:
     Desc: Extent of the distant metastasis for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
@@ -2281,8 +2268,8 @@ PropDefinitions:
         - cM0 (i+)
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   progression_or_recurrence:
     Desc: Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
@@ -2298,8 +2285,8 @@ PropDefinitions:
         - Unknown
         - Not Reported
         - Not Allowed To Collect
+    Strict: true
     Req: false
-    Key: false
     Private: false
   # study
   study_version:
@@ -2310,7 +2297,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   bioproject_accession:
     Desc: NCBI BioProject accession ID
@@ -2321,22 +2307,21 @@ PropDefinitions:
     Type:
       pattern: "^PRJNA[0-9]+$"
     Req: true
-    Key: false
     Private: false
   study_data_types:
     Desc: Types of scientific data in the study
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '12571096'
+      Value: 'Data Collection Scientific Data Type Category'
     Type:
       value_type: string
       Enum:
         - Genomic
         - Proteomic
         - Imaging
+    Strict: true
     Req: true
-    Key: false
     Private: false
   data_access_level:
     Desc: Is data open, controlled, or mixed?
@@ -2350,8 +2335,8 @@ PropDefinitions:
         - open
         - controlled
         - mixed
+    Strict: true
     Req: true
-    Key: false
     Private: false
   index_date:
     Desc: Index date (Day 0) to which all dates are relative, for this study
@@ -2366,29 +2351,27 @@ PropDefinitions:
         - date_of_enrollment
         - date_of_collection
         - date_of_birth
+    Strict: true
     Req: false
-    Key: false
     Private: false
   phs_accession:
     Desc: PHS accession number (a.k.a dbGaP accession)
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524544'
+      Value: 'Research Activity dbGaP Accession Number Identifier'
     Type:
       pattern: "^phs[0-9]+([.]v[0-9]+)*$"
     Req: false
-    Key: false
     Private: false
   study_acronym:
     Desc: Short acronym or other study desginator
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11459812'
+      Value: 'Study Short Name Text'
     Type: string
     Req: false
-    Key: false
     Private: false
   study_description:
     Desc: Human-readable study description
@@ -2398,7 +2381,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   study_access:
     Desc: Study access
@@ -2411,8 +2393,8 @@ PropDefinitions:
       Enum:
         - Open
         - Controlled
+    Strict: true
     Req: true
-    Key: false
     Private: false
   short_description:
     Desc: |
@@ -2425,7 +2407,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   study_external_url:
     Desc: Website or other url relevant to study
@@ -2435,47 +2416,88 @@ PropDefinitions:
       Value: ''
     Type: url
     Req: true
-    Key: false
     Private: false
   study_name:
     Desc: Official name of study
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11459810'
+      Value: 'Study Name Text'
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
-  primary_investigator_name:
-    Desc: Name of principal investigator
+  role_or_affiliation:
+    Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2201713'
+      Value: 'Person Affiliation Role Text Type'
     Type: string
     Req: true
-    Key: false
+    Private: false
+  title:
+    Desc: The abbreviation that represents an affix occurring at or before the beginning of an individual's name.
+    Term:
+    - Origin: caDSR
+      Code: '2663165'
+      Value: 'Person Name Prefix Abbreviation Text'
+    Type: string
+    Req: true
+    Private: false
+  first_name:
+    Desc: A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.
+    Term:
+    - Origin: caDSR
+      Code: '2179589'
+      Value: 'Person Given/First Name'
+    Type: string
+    Req: true
+    Private: false
+  middle_name:
+    Desc: A means of identifying an individual by using a word or group of words indicating a person's middle name.
+    Term:
+    - Origin: caDSR
+      Code: '2179590'
+      Value: 'Person Middle Name'
+    Type: string
+    Req: true
+    Private: false
+  last_name:
+    Desc: A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.
+    Term:
+    - Origin: caDSR
+      Code: '2179591'
+      Value: 'Person Family/Last Name'
+    Type: string
+    Req: true
+    Private: false
+  suffix:
+    Desc: Text term to represent an individual's position in a family lineage or pedigree.
+    Term:
+    - Origin: caDSR
+      Code: '2006475'
+      Value: 'Individual Genealogy Suffix Code'
+    Type: string
+    Req: false
     Private: false
   acl:
     Desc: open or restricted access to data
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11555664'
+      Value: 'Electronic Data File Access Level Text'
     Type: list
     Req: true
-    Key: false
     Private: false
-  primary_investigator_email:
-    Desc: Email of principal investigator
+  email:
+    Desc: The string of characters that represents the electronic mail address of a person.
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2517550'
+      Value: 'Person Email Address Text'
     Type: string
     Req: true
-    Key: false
     Private: false
   co_investigator_name:
     Desc: Name of co-principal investigator
@@ -2485,7 +2507,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   co_investigator_email:
     Desc: Email of co-principal investigator
@@ -2495,7 +2516,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   cds_primary_bucket:
     Desc: The primary bucket for depositing data
@@ -2505,7 +2525,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   cds_secondary_bucket:
     Desc: Secondary bucket for depositing data (non-sequence files)
@@ -2515,7 +2534,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   cds_tertiary_bucket:
     Desc: Secondary bucket for depositing data (non-sequence files)
@@ -2525,7 +2543,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   authz:
     Desc: multifactor authorization
@@ -2535,36 +2552,42 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   # sample
   biosample_accession:
     Desc: NCBI BioSample accession ID (SAMN) for this sample
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2230047'
+      Value: Specimen Accession Number'
     Type:
       pattern: "^SAMN[0-9]+$"
     Req: true
-    Key: false
     Private: false
   sample_age_at_collection:
     Desc: Number of days to collection, relative to index date
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11253404'
+      Value: 'Days from Specimen Collection To Initial Pathologic Diagnosis Day Count '
     Type: integer
     Req: false
-    Key: false
+    Private: false
+  sample_description:
+    Desc: Text description of a sample or specimen.
+    Term:
+    - Origin: caDSR
+      Code: '2003907'
+      Value: 'Sample Description Text'
+    Type: string
+    Req: false
     Private: false
   sample_anatomic_site:
     Desc: Anatomic site from which sample was collected
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '12083894'
+      Value: 'Specimen Original Anatomic Site Uberon Identifier'
     Type:
       value_type: string
       Enum:
@@ -2909,25 +2932,25 @@ PropDefinitions:
         - Wrist
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   sample_id:
     Desc: Sample identifier as submitted by requestor
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '6921892'
+      Value: 'Biospecimen Source Laboratory Identifier'
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
   sample_tumor_status:
     Desc: Tumor or normal status
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '5432687'
+      Value: 'Tissue Sample Description Category'
     Type:
       value_type: string
       Enum:
@@ -2936,15 +2959,15 @@ PropDefinitions:
         - Abnormal
         - Peritumoral
         - Unknown
+    Strict: true
     Req: true
-    Key: false
     Private: false
   sample_type:
     Desc: Tissue type of this sample
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '13255982'
+      Value: 'Specimen Material Type'
     Type:
       value_type: string
       Enum:
@@ -3016,18 +3039,17 @@ PropDefinitions:
         - Total RNA
         - Tumor Adjacent Normal - Post Neo-adjuvant Therapy
         - Not Reported
+    Strict: true
     Req: true
-    Key: false
     Private: false
   derived_from_specimen:
     Desc: Identier of the parent specimen of this sample
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '5581201'
+      Value: 'Parent Specimen Label Identifier'
     Type: string
     Req: false
-    Key: false
     Private: false
   # treatment
   treatment_id:
@@ -3037,8 +3059,8 @@ PropDefinitions:
       Code: ''
       Value: ''
     Type: string
-    Req: false
-    Key: false
+    Req: true
+    Key: true
     Private: false
   days_to_treatment:
     Desc: Days to start of treatment, relative to index date
@@ -3048,7 +3070,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   treatment_outcome:
     Desc: Text term that describes the patient's final outcome after the treatment was administered
@@ -3073,8 +3094,8 @@ PropDefinitions:
         - Treatment Stopped Due to Toxicity
         - Unknown
         - Very Good Partial Response
+    Strict: true
     Req: false
-    Key: false
     Private: false
   treatment_type:
     Desc: Text term that describes the kind of treatment administered
@@ -3151,8 +3172,8 @@ PropDefinitions:
         - Targeted Molecular Therapy
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   therapeutic_agents:
     Desc: Text identification of the individual agent(s) used as part of a treatment regimen.
@@ -7638,8 +7659,8 @@ PropDefinitions:
         - Zuclomiphene Citrate
         - Unknown
         - Not Reported
+    Strict: true
     Req: false
-    Key: false
     Private: false
   #genomic_info
   genomic_info_id:
@@ -7650,7 +7671,7 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
   reference_genome_assembly:
     Desc: Accession or name of genome reference or assembly used for alignment
@@ -7664,8 +7685,8 @@ PropDefinitions:
         - GRCh37
         - GRCh37-lite
         - GRCh38
+    Strict: true
     Req: true
-    Key: false
     Private: false
   avg_read_length:
     Desc: Average sequence read length
@@ -7675,7 +7696,6 @@ PropDefinitions:
       Value: ''
     Type: number
     Req: false
-    Key: false
     Private: false
   coverage:
     Desc: Average depth of coverage on reference used
@@ -7685,7 +7705,6 @@ PropDefinitions:
       Value: ''
     Type: number
     Req: false
-    Key: false
     Private: false
   bases:
     Desc: Total number of unique bases read
@@ -7695,7 +7714,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   number_of_reads:
     Desc: Total number of reads performed
@@ -7705,7 +7723,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   design_description:
     Desc: Human-readable description of methods used to create sequencing library
@@ -7715,7 +7732,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   platform:
     Desc: Instrument platform or manufacturer
@@ -7743,8 +7759,8 @@ PropDefinitions:
         - Illumina NextSeq
         - Illumina NovaSeq 6000
         - NovaSeqS4
+    Strict: true
     Req: true
-    Key: false
     Private: false
   instrument_model:
     Desc: Instrument model
@@ -7817,8 +7833,8 @@ PropDefinitions:
         - DNBSEQ-T7
         - DNBSEQ-G50
         - MGISEQ-2000RS
+    Strict: true
     Req: true
-    Key: false
     Private: false
   library_id:
     Desc: Library identifier as submitted by requestor
@@ -7828,7 +7844,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   library_layout:
     Desc: Library layout as submitted by requestor
@@ -7842,8 +7857,8 @@ PropDefinitions:
         - Paired-end
         - Single-end
         - Single-indexed
+    Strict: true
     Req: true
-    Key: false
     Private: false
   library_source:
     Desc: Source material used to create library
@@ -7866,8 +7881,8 @@ PropDefinitions:
         - Other
         - Bulk Whole Cell
         - Single Cell
+    Strict: true
     Req: true
-    Key: false
     Private: false
   library_selection:
     Desc: Library selection method
@@ -7912,8 +7927,8 @@ PropDefinitions:
         - RT-PCR
         - size fractionation
         - unspecified
+    Strict: true
     Req: true
-    Key: false
     Private: false
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
@@ -7959,8 +7974,8 @@ PropDefinitions:
         - WGA
         - WGS
         - WXS
+    Strict: true
     Req: true
-    Key: false
     Private: false
   sequence_alignment_software:
     Desc: Name of software program used to align nucleotide sequence data
@@ -7970,7 +7985,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   custom_assembly_fasta_file_for_alignment:
     Desc: File name of any custom assembly fasta file used during alignment
@@ -7980,7 +7994,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   # cds requestor
   cds_requestor:
@@ -7991,7 +8004,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   data_types:
     Desc: Data types for storage
@@ -8003,7 +8015,6 @@ PropDefinitions:
       value_type: list
       item_type: string
     Req: false
-    Key: false
     Private: false
   file_types:
     Desc: File types for storage
@@ -8015,37 +8026,33 @@ PropDefinitions:
       value_type: list
       item_type: string
     Req: false
-    Key: false
     Private: false
   funding_agency:
     Desc: Funding agency of the requestor study
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524545'
+      Value: 'Funding Agency Organization Name Text'
     Type: string
     Req: true
-    Key: false
     Private: false
   funding_source_program_name:
     Desc: The funding source organization/sponsor
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524546'
+      Value: 'Funding Agency Program Name Text'
     Type: string
     Req: true
-    Key: false
     Private: false
   grant_id:
     Desc: Grant or contract identifier
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '3434057'
+      Value: 'Grant Funding Identifier Number'
     Type: string
     Req: true
-    Key: false
     Private: false
   clinical_trial_system:
     Desc: |
@@ -8053,56 +8060,52 @@ PropDefinitions:
       is a clinical trial)
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524547'
+      Value: 'Digital Data Repository Owning Organization Name Text'
     Type: string
     Req: false
-    Key: false
     Private: false
   clinical_trial_identifier:
     Desc: |
       Study identifier in the given clinical trial system
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '2649415'
+      Value: 'Clinical Trial Protocol Identifier 64 Character Text'
     Type: string
     Req: false
-    Key: false
     Private: false
   clinical_trial_arm:
     Desc: Arm of clinical trial, if appropriate
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524548'
+      Value: 'Clinical Study Protocol Treatment Arm Text'
     Type: string
     Req: false
-    Key: false
     Private: false
   organism_species:
     Desc: Species binomial of study participants
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '6118266'
+      Value: 'Sample Organism Type'
     Type: string
     Req: true
-    Key: false
     Private: false
   adult_or_childhood_study:
     Desc: Study participants are adult, pediatric, or other
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11524549'
+      Value: 'Study Subject Legal Adult Or Pediatric Participant Type'
     Type:
       value_type: string
       Enum:
         - Adult
         - Pediatric
+    Strict: true
     Req: true
-    Key: false
     Private: false
   specimen_id:
     Desc: Identifier for specimen (parent of sample) as provided by requestor
@@ -8112,27 +8115,24 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: false
-    Key: false
     Private: false
   number_of_participants:
     Desc: How many participants in the study
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11555662'
+      Value: 'Research Activity Unique Subjects Count'
     Type: number
     Req: true
-    Key: false
     Private: false
   number_of_samples:
     Desc: How many total samples in the study
     Term:
     - Origin: caDSR
-      Code: ''
-      Value: ''
+      Code: '11555663'
+      Value: 'Research Activity Sample Size Count'
     Type: number
     Req: true
-    Key: false
     Private: false
   file_types_and_format:
     Desc: |
@@ -8145,7 +8145,6 @@ PropDefinitions:
       value_type: list
       item_type: string
     Req: true
-    Key: false
     Private: false
   size_of_data_being_uploaded:
     Desc: Size of the data being uploaded to CDS
@@ -8157,7 +8156,6 @@ PropDefinitions:
       value_type: number
       units: [ 'GB', 'TB', 'PB' ]
     Req: true
-    Key: false
     Private: false
   # program props
   program_acronym:
@@ -8169,7 +8167,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   program_external_url:
     Desc: The external url to which users should be directed in order to learn more about the program.
@@ -8180,7 +8177,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   program_full_description:
     Desc: A more detailed, multiple sentence description of the program.
@@ -8191,7 +8187,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   program_name:
     Desc: The name of the program under which related studies will be grouped, in full text and unabbreviated form, exactly as it will be displayed within the UI.
@@ -8202,7 +8197,7 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
+    Key: true
     Private: false
   program_short_description:
     Desc: An abbreviated, single sentence description of the program.
@@ -8213,7 +8208,6 @@ PropDefinitions:
       Value: ''
     Type: string
     Req: true
-    Key: false
     Private: false
   program_sort_order:
     Desc: An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
@@ -8224,7 +8218,6 @@ PropDefinitions:
       Value: ''
     Type: integer
     Req: false
-    Key: false
     Private: false
   institution:
     Desc: TBD
@@ -8234,5 +8227,5 @@ PropDefinitions:
       Value: ''
     Type: String
     Req: true
-    Key: false
     Private: false
+
