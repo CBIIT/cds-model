@@ -1,4 +1,524 @@
 PropDefinitions:
+  #image
+  study_link_id:
+    Desc: The study_link_id is a unique numerical identifier for each study listed on the collection information sheet. The sole purpose of the study_link_id is to indicate which participant described on worksheet 2 - Participant information belongs to what study/collection described on worksheet 1 - Collection information.
+    Req: true
+    Type: string
+    Key: true
+  de-identification_method_type:
+    Desc: General description of the de-identification method
+    Req: true
+    Enum:
+      - Manual
+      - Semiautomatic
+      - Automatic
+      - Not applicable
+  de-identification_method_description:
+    Desc: Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.
+    Type: string
+  de-identification_software:
+    Desc: Software that was used to de-identify the images (if used)
+    Type: string
+  license:
+    Desc: Official or legal permission to do or own a specified thing.
+    Req: true
+    Enum:
+      - CC BY 3.0    http://creativecommons.org/licenses/by/3.0/
+      - CC BY 4.0    https://creativecommons.org/licenses/by/4.0/
+      - CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
+      - CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+      - Other
+  citation_or_DOI:
+    Desc: Publication and/or digital object identifier of the publication for open access studies
+    Req: true
+    Type: string
+  species:
+    Desc: Use the NCBI Taxonomy ID to identify species. A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships.
+    Req: true
+    Type: string
+  image_modality:
+    Desc: The method in which the images are generated.
+    Req: true
+    Enum:
+      - AR
+      - BI
+      - BMD
+      - EPS
+      - CR
+      - CT
+      - CFM
+      - DMS
+      - DG
+      - DX
+      - ECG
+      - EEG
+      - EMG
+      - EOG
+      - ES
+      - XC
+      - GM
+      - HD
+      - IO
+      - IVOCT
+      - IVUS
+      - KER
+      - LS
+      - LEN
+      - MR
+      - MG
+      - NM
+      - OAM
+      - OPM
+      - OP
+      - OPT
+      - OPTBSV
+      - OPTENF
+      - OPV
+      - OCT
+      - OSS
+      - PX
+      - PA
+      - POS
+      - PT
+      - RF
+      - RG
+      - RESP
+      - RTIMAGE
+      - SM
+      - SRF
+      - TG
+      - US
+      - BDUS
+      - VA
+      - XA
+  imaging_equipment_manufacturer:
+    Desc: Producer of the imaging equipment that was used to generate the digital image
+    Req: true
+    Type: string
+  imaging_equipment_model:
+    Desc: The words used to describe the specific model of the instrument used to carry out an imaging experiment.
+    Type: string
+  imaging_sofware:
+    Desc: The name of the software package that was used to capture, generate, and process the image.
+    Type: string
+  imaging_protocol:
+    Desc: A rule which guides how an activity should be performed. Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration, lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the image was obtained or generated.
+    Type: string
+  organ_or_tissue:
+    Desc: Site where images are associated
+    Req: true
+    Type: string
+  performed_imaging_study_description:
+    Desc: The textual representation of the certain or salient aspects, characteristics, or features of the imaging study. [Adapted from www.businessdictionary.com]
+    Req: true
+    Type: string
+  performed_imaging_study_admittingDiagnosisCode:
+    Desc: The identified disease(s) or illness(es) at the time of the admission during which imaging was performed.
+    Req: true
+    Type: string
+  performed_imaging_study_nonAcquisitionModalitiesInStudyCode:
+    Desc: A coded value specifying the type of equipment that created the images in this imaging study other than that used to acquire the original data.
+    Req: true
+    Type: string
+  performed_imaging_study_ lossyImageCompressionIndicator:
+    Desc: Specifies whether any images in the study are irreversibly altered during encoding at any time during its life.
+    Req: true
+    Type: string
+  performed_imaging_study_ summary:
+    Desc: A brief statement about the characteristics of this element, which is intended for use by the radiologist, technologist and/or physicist during management of the imaging protocol to understand the characteristics of the element in the protocol.
+    Req: true
+    Type: string
+  performed_imaging_study_primaryAnatomicSiteCode:
+    Desc: A coded value specifying the anatomic location that is the focus of this imaging process protocol element.
+    Req: true
+    Type: string
+  performed_imaging_study_acquisitionTypeCode:
+    Desc: A coded value specifying spatial aspects of the mechanism of data collection.
+    Req: true
+    Type: string
+  performed_imaging_study_imageTypeCode:
+    Desc: A coded value that specifies the most important aspect of the images or their derivation.
+    Enum:
+      - DYNAMIC
+      - STRESS
+      - RCBV
+  performed_imaging_study_cardiacSynchronizationTechniqueCode:
+    Desc: The means used to coordinate the collection or reconstruction of data with the cardiac cycle.
+    Enum:
+      - REALTIME
+      - PROSPECTIVE
+      - RETROSPECTIVE
+      - PACED
+      - NONE
+  performed_imaging_study_dataCollectionDiameter:
+    Desc: The diameter of the region over which information is acquired.
+    Req: true
+    Type: string
+  performed_imaging_study_respiratoryMotionTechniqueCode:
+    Desc: The means to be used to coordinate the collection or reconstruction of data with breathing.
+    Req: true
+    Enum:
+      - BREATH-HOLD
+      - REALTIME
+      - GATING
+      - TRACKING
+      - RETROSPECTIVE
+      - CORRECTION
+      - NONE
+  performed_imaging_study_bodyPositionCode:
+    Desc: A coded value specifying the 3-dimensional spatial orientation of a subject during this imaging acquisition protocol element.
+    Enum:
+      - Supine
+      - Trendelenburg
+      - Standing
+  performed_imaging_study_typeCode:
+    Desc: A coded value specifying the kind of algorithm used when reconstructing the image from the data acquired during the acquisition process.
+    Req: true
+    Type: string
+  performed_imaging_study_algorithmCode:
+    Desc: A coded value specifying the algorithm to use when reconstructing the image from the data acquired during the acquisition process
+    Req: true
+    Type: string
+  performed_imaging_study_reconstructionFieldOfViewHeight:
+    Desc: The vertical dimension of the rectangular region from which data is used in creating the reconstruction of the image.
+    Req: true
+    Type: string
+  performed_imaging_study_reconstructionFieldOfViewWidth:
+    Desc: The horizontal dimension of the rectangular region from which data is used in creating the reconstruction of the image.
+    Req: true
+    Type: string
+  performed_imaging_study_reconstructionDiameter:
+    Desc: The diameter of the region from which data is used in creating the reconstruction of the image.
+    Req: true
+    Type: string
+  performed_imaging_study_sliceThickness:
+    Desc: The cross plane dimension of the reconstructed image.
+    Req: true
+    Type: string
+  performed_imaging_study_reconstructionInterval:
+    Desc: The cross plane distance between the centers of adjacent, parallel reconstructed images.
+    Req: true
+    Type: string
+  longitudinal_temporal_event_type:
+    Desc: The type of event to which Longitudinal Temporal Offset from Event is relative.
+    Type: number
+  longitudinal_temporal_event_offset:
+    Desc: An offset in days from a particular event of significance. May be fractional. In the context of a clinical trial, this is often the days since enrollment, or the baseline imaging Study.
+    Type: number
+  CTAquisitionProtocolElement_singleCollimationWidth:
+    Desc: The width of a single row of acquired data. The units are of linear distince, e.g. mm.
+    Type: string
+  CTAquisitionProtocolElement_totalCollimationWidth:
+    Desc: The width of the total collimation over the area of active x-ray detection. The units are of linear distince, e.g. mm.
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_gantryDetectorTilt:
+    Desc: Nominal angle of tilt in degrees of the scanning gantry. The units are of plane angle , e.g. degrees.  Zero degrees means the gantry is not tilted, negative degrees are when the top of the gantry is tilted away from where the table enters the gantry.
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_tableSpeed:
+    Desc: The distance that the table moves per unit of time during the gathering of data. The units are of linear distance divided by time.
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_spiralPitchFactor:
+    Desc: Ratio of the distance that the table moves during a complete revolution of the source around the gantry orbit, to the width of the total collimation over the area of active x-ray detection. The units are of unity.
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_ctdiVol:
+    Desc: The average dose over the total volume scanned for the selected CT conditions of operation (calculated according to IEC 60601-2-44, Ed.2.1 (Clause 29.1.103.4)). The units are energy dose, e.g. mGy.
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_ctdiPhantomTypeCode:
+    Desc: The type of phantom to use for CTDI measurement according to IEC 60601-2-44
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_kVp:
+    Desc: Peak kilovoltage output of the x-ray generator. The units are of electrical potential.
+    Req: true
+    Type: string
+  CTAquisitionProtocolElement_exposureModulationType Code:
+    Desc: The manner in which tube current is varied in order to limit the dose.
+    Enum:
+      - NONE
+      - ANGULAR
+      - LONGITUDINAL
+      - ECG-BASED
+      - ORGAN-BASED
+  CTImageReconstructionProtocolElement_convolutionKernel:
+    Desc: A label describing the mathematical operations used to reconstruct images from the acquired data. The values for this attribute are vendor specific and not coded.
+    Type: string
+  CTImageReconstructionProtocolElement_convolutionKernelGroupCode:
+    Desc: A coded value specifying the family of mathematical operations to use to reconstruct images from the acquired data
+    Type: string
+  MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode:
+    Desc: A coded value specifying an echo category of pulse sequences.
+    Enum:
+      - SPIN
+      - GRADIENT
+      - BOTH
+  MRImageAcquisitionProtocolElement_diffusionBValue:
+    Desc: The factor by which the acquisition is sensitized to the Brownian motion of water molecules. The units are of time/area, e.g. s/mm2
+    Type: string
+  MRImageAcquisitionProtocolElement_diffusionDirectionalityCode:
+    Desc: A coded value specifying whether diffusion conditions for the frame are directional, or isotropic with respect to direction
+    Enum:
+      - DIRECTIONAL
+      - BMATRIX
+      - ISOTROPIC
+      - NONE
+  MRImageAcquisitionProtocolElement_magneticFieldStrength:
+    Desc: "A vector quantity indicating the ability of a magnetic field to exert a force on moving electric charges. [The American Heritage\xAE Science Dictionary]. The units are of magnetic flux density, e.g. tesla."
+    Type: string
+  MRImageAcquisitionProtocolElement_resonantNucleusCode:
+    Desc: A coded value specifying the atomic nucleus that is the target of the acquisition
+    Enum:
+      - 1H
+      - 3HE
+      - 7LI
+      - 13C
+      - 19F
+      - 23NA
+      - 31P
+      - 129XE
+  MRImageAcquisitionProtocolElement_acquisitionContrastCode:
+    Desc: A coded value specifying the inherent (as opposed to exogenous) contrast in the acquisition.
+    Enum:
+      - DIFFUSION
+      - FLOW_ENCODED_Flow Encoded contrast
+      - FLUID_ATTENUATED_Fluid Attenuated T2 weighted contrast
+      - PERFUSION_Perfusion weighted contrast
+      - PROTON_DENSITY_Proton Density weighted contrast
+      - STIR_Short Tau Inversion Recovery
+      - TAGGING_Superposition of thin saturation bands onto image
+      - T1_T1 weighted contrast
+      - T2_T2 weighted contrast
+      - T2_STAR_T2* weighted contrast
+      - TOF_Time Of Flight weighted contrast
+  MRImageAcquisitionProtocolElement_inversionRecoveryIndicator:
+    Desc: Specifies whether an inversion recovery preparatory sequence is used in the acquisition.
+    Type: string
+  MRImageAcquisitionProtocolElement_pulseSequenceName:
+    Desc: Name of the pulse sequence that is used for the acquisition. This is usually a vendor-specific name.
+    Type: string
+  MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator:
+    Desc: Specifies whether different lines in k-space are collected for a single frame.
+    Type: string
+  MRImageAcquisitionProtocolElement_phaseContrastIndicator:
+    Desc: Specifies whether this is a pulse sequence in which the flowing spins are velocity encoded in phase.
+    Type: string
+  MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator:
+    Desc: Specifies whether contrast is created by the inflow of blood in the saturated plane.
+    Type: string
+  MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode:
+    Desc: A coded value specifying how arterial water is used as a diffusable tracer.
+    Type: string
+  MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode:
+    Desc: A coded value specifying how residual transverse magnetization is maintained during the acquisition.
+    Enum:
+      - FREE PRECESSION
+      - TRANSVERSE
+      - TIME REVERSED
+      - LONGITUDINAL
+      - NONE
+  MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator:
+    Desc: Specifies whether multiple echos of different phase steps are acquired using rephasing gradients instead of repeated 180-degree pulses.
+    Type: string
+  MRImageAcquisitionProtocolElement_saturationRecoveryIndicator:
+    Desc: Specifies whether a saturation recovery pulse sequence is used
+    Type: string
+  MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode:
+    Desc: A coded value specifying the type of substance-specific signal suppression is used.
+    Enum:
+      - FAT
+      - WATER
+      - FAT AND WATER
+      - SILICON GEL
+      - NONE
+  MRImageReconstructionProtocolElement_complexImageComponentCode:
+    Desc: A coded value specifying the channel of the quadrature detected data, or the combination derived from those channels, used to reconstruct the image
+    Enum:
+      - REAL
+      - IMAGINARY
+      - PHASE
+      - MAGNITUDE
+  PETImagingAcquisitionProtocolElement_gantryDetectorTilt:
+    Desc: Nominal angle of tilt in degrees of the scanning gantry. The units are of plane angle , e.g. degrees.  Zero degrees means the gantry is not tilted, negative degrees are when the top of the gantry is tilted away from where the table enters the gantry.
+    Type: string
+  Radiopharmaceutical_radionuclideCode:
+    Desc: A coded value that specifies the radioactive isotope in the radiophamaceutical.
+    Type: string
+  acquisition_method_type:
+    Desc: Records the method of acquisition or source for the specimen under consideration
+    Type: string
+  tumor_tissue_type:
+    Desc: Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint (add rows to select multiple values along with timepoints)
+    Type: string
+  tissue_fixative:
+    Desc: A compound that preserves tissues and cells for microscopic study.
+    Req: true
+    Enum:
+      - Acetone
+      - Alcohol
+      - Formalin
+      - Glutaraldehyde
+      - OCT media
+      - RNAlater
+      - Saline
+      - 95% Ethanol
+      - Dimidoester
+      - Carbodiimide
+      - Dimethylacetamide
+      - Para-benzoquinone
+      - PAXgene tissue
+      - TCL lysis buffer
+      - NP40 lysis buffer
+      - Methacarn
+      - Cryo-store
+      - Carnoy's Fixative
+      - Polaxamer
+      - Other
+      - None
+      - unknown
+  embedding_medium:
+    Desc: A material that infiltrates and supports a specimen and preserves its shape and structure for sectioning and microscopy.
+    Req: true
+    Enum:
+      - Paraffin wax
+      - Carbowax
+      - Methacrylate
+      - Epoxy Resin (Araldite)
+      - Agar embedding
+      - Celloidin media
+      - Gelatin
+      - Other
+      - None
+      - Unknown
+  staining_method:
+    Desc: Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.
+    Req: true
+    Type: string
+  objective:
+    Desc: "An\_objective\_is an optical element that gathers light from an object being observed and\_focuses\_the\_light rays\_from it to produce a\_real image\_of the object."
+    Type: string
+  nominal_magnification:
+    Desc: The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units)
+    Type: string
+  immersion:
+    Desc: Immersion medium
+    Type: string
+  lens_numerical_aperture:
+    Desc: The numerical aperture of the lens. Floating point value > 0.
+    Type: string
+  working_distance:
+    Desc: The working distance of the lens, expressed as a floating point number. Floating point > 0. Size needs to be specified in microns (um)
+    Type: string
+  imaging_assay_type:
+    Desc: Type of imaging assay
+    Req: true
+    Type: string
+  pyramid:
+    Desc: The data file contains an image pyramid
+    Type: string
+  physical_size_x:
+    Desc: Physical size (X-dimension) of a pixel. Floating point value > 0. Size needs to be specified in microns (um)
+    Type: string
+  physical_size_y:
+    Desc: Physical size (Y-dimension) of a pixel. Floating point value > 0. Size needs to be specified in microns (um)
+    Type: string
+  physical_size_z:
+    Desc: Physical size (Z-dimension) of a pixel. Floating point value > 0. Size needs to be specified in microns (um)
+    Type: string
+  size_c:
+    Desc: Number of channels. Integer >= 1
+    Type: string
+  size_t:
+    Desc: Number of time points. Integer >= 1
+    Type: string
+  size_x:
+    Desc: 'Size of image: X dimension (in pixels). Integer >= 1'
+    Type: string
+  size_y:
+    Desc: 'Size of image: Y dimension (in pixels). Integer >= 1'
+    Type: string
+  size_z:
+    Desc: 'Size of image: Z dimension (in pixels). Integer >= 1'
+    Type: string
+  channel_metadata_filename:
+    Desc: File name of uploaded companion CSV file containing channel-level metadata details
+    Req: true
+    Type: string
+  channel_metadata_file_url_in_cds:
+    Desc: ''
+    Req: true
+    Type: string
+  channel_id:
+    Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
+    Req: true
+    Type: string
+  channel_name:
+    Desc: Channel label for each channel in this image must match the corresponding field in the OME-TIFF header
+    Req: true
+    Type: string
+  cycle_number:
+    Desc: 'the cycle # in which the co-listed reagent(s) was(were) used'
+    Type: string
+  sub_cycle_number:
+    Desc: 'sub-cycle #'
+    Type: string
+  target_name:
+    Desc: short descriptive name (abbreviation) for this target (antigen)
+    Type: string
+  antibody_name:
+    Desc: short descriptive name for this antibody
+    Type: string
+  rrid_identifier:
+    Desc: Research Resource Identifier
+    Type: string
+  fluorophore:
+    Desc: Fluorescent dye label
+    Type: string
+  clone:
+    Desc: Unique clone identifier
+    Type: string
+  lot:
+    Desc: lot number from vendor
+    Type: string
+  vendor:
+    Desc: Vendor name
+    Type: string
+  catalog_number:
+    Desc: catalog number from vendor
+    Type: string
+  excitation_wavelength:
+    Desc: center/peak of the excitation spectrum (nm)
+    Type: string
+  emission_wavelength:
+    Desc: center/peak of the emission spectrum (nm)
+    Type: string
+  excitation_bandwidth:
+    Desc: nominal width of excitation spectrum (nm)
+    Type: string
+  emission_bandwidth:
+    Desc: nominal width of emission spectrum (nm)
+    Type: string
+  metal_isotope_element:
+    Desc: Element mass number
+    Type: string
+  oligo_barcode_upper_strand:
+    Desc: DNA barcode used for labeling
+    Type: string
+  oligo_barcode_lower_strand:
+    Desc: DNA barcode used for labeling
+    Type: string
+  diluation:
+    Desc: Final dilution ratio used in experiment
+    Type: string
+  concentration:
+    Desc: Final concentration used in experiment
+    Type: string
+  passes_qc:
+    Desc: Identify stains that did not pass QC but are included in the dataset.
+    Type: string
   # file
   submission_version:
     Desc: Raw data file submission

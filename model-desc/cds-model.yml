@@ -15,6 +15,7 @@ Nodes:
       - program_external_url
       - program_sort_order
       - institution
+
   study:
     Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
     Tags:
@@ -59,6 +60,7 @@ Nodes:
       - study_access
       - authz
       - study_version
+
   participant:
     Desc: "Individual who takes part in the study"
     Tags:
@@ -114,6 +116,7 @@ Nodes:
       - treatment_outcome
       - days_to_treatment
       - therapeutic_agents
+
   sample: # aka subspecimen (CMB)
     Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
     Tags:
@@ -173,6 +176,124 @@ Nodes:
       - platform
       - instrument_model
       - sequence_alignment_software
+
+  image:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: ''
+    Props:
+      - study_link_id
+      - de-identification_method_type
+      - de-identification_method_description
+      - de-identification_software
+      - license
+      - citation_or_DOI
+      - species
+      - image_modality
+      - imaging_equipment_manufacturer
+      - imaging_equipment_model
+      - imaging_sofware
+      - imaging_protocol
+      - organ_or_tissue
+      - performed_imaging_study_description
+      - performed_imaging_study_admittingDiagnosisCode
+      - performed_imaging_study_nonAcquisitionModalitiesInStudyCode
+      - performed_imaging_study_ lossyImageCompressionIndicator
+      - performed_imaging_study_ summary
+      - performed_imaging_study_primaryAnatomicSiteCode
+      - performed_imaging_study_acquisitionTypeCode
+      - performed_imaging_study_imageTypeCode
+      - performed_imaging_study_cardiacSynchronizationTechniqueCode
+      - performed_imaging_study_dataCollectionDiameter
+      - performed_imaging_study_respiratoryMotionTechniqueCode
+      - performed_imaging_study_bodyPositionCode
+      - performed_imaging_study_typeCode
+      - performed_imaging_study_algorithmCode
+      - performed_imaging_study_reconstructionFieldOfViewHeight
+      - performed_imaging_study_reconstructionFieldOfViewWidth
+      - performed_imaging_study_reconstructionDiameter
+      - performed_imaging_study_sliceThickness
+      - performed_imaging_study_reconstructionInterval
+      - longitudinal_temporal_event_type
+      - longitudinal_temporal_event_offset
+      - CTAquisitionProtocolElement_singleCollimationWidth
+      - CTAquisitionProtocolElement_totalCollimationWidth
+      - CTAquisitionProtocolElement_gantryDetectorTilt
+      - CTAquisitionProtocolElement_tableSpeed
+      - CTAquisitionProtocolElement_spiralPitchFactor
+      - CTAquisitionProtocolElement_ctdiVol
+      - CTAquisitionProtocolElement_ctdiPhantomTypeCode
+      - CTAquisitionProtocolElement_kVp
+      - CTAquisitionProtocolElement_exposureModulationType Code
+      - CTImageReconstructionProtocolElement_convolutionKernel
+      - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
+      - MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode
+      - MRImageAcquisitionProtocolElement_diffusionBValue
+      - MRImageAcquisitionProtocolElement_diffusionDirectionalityCode
+      - MRImageAcquisitionProtocolElement_magneticFieldStrength
+      - MRImageAcquisitionProtocolElement_resonantNucleusCode
+      - MRImageAcquisitionProtocolElement_acquisitionContrastCode
+      - MRImageAcquisitionProtocolElement_inversionRecoveryIndicator
+      - MRImageAcquisitionProtocolElement_pulseSequenceName
+      - MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator
+      - MRImageAcquisitionProtocolElement_phaseContrastIndicator
+      - MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator
+      - MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode
+      - MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode
+      - MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator
+      - MRImageAcquisitionProtocolElement_saturationRecoveryIndicator
+      - MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode
+      - MRImageReconstructionProtocolElement_complexImageComponentCode
+      - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
+      - Radiopharmaceutical_radionuclideCode
+      - acquisition_method_type
+      - tumor_tissue_type
+      - tissue_fixative
+      - embedding_medium
+      - staining_method
+      - objective
+      - nominal_magnification
+      - immersion
+      - lens_numerical_aperture
+      - working_distance
+      - imaging_assay_type
+      - pyramid
+      - physical_size_x
+      - physical_size_y
+      - physical_size_z
+      - size_c
+      - size_t
+      - size_x
+      - size_y
+      - size_z
+      - channel_metadata_filename
+      - channel_metadata_file_url_in_cds
+      - channel_id
+      - channel_name
+      - cycle_number
+      - sub_cycle_number
+      - target_name
+      - antibody_name
+      - rrid_identifier
+      - fluorophore
+      - clone
+      - lot
+      - vendor
+      - catalog_number
+      - excitation_wavelength
+      - emission_wavelength
+      - excitation_bandwidth
+      - emission_bandwidth
+      - metal_isotope_element
+      - oligo_barcode_upper_strand
+      - oligo_barcode_lower_strand
+      - diluation
+      - concentration
+      - passes_qc
+
 Relationships:
   of_program:
     Props: null
@@ -208,3 +329,7 @@ Relationships:
     Ends:
       - Src: genomic_info
         Dst: file
+      - Src: image
+        Dst: file
+        Mul: one_to_one
+
