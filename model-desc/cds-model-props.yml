@@ -3,7 +3,8 @@ PropDefinitions:
   study_link_id:
     Desc: The study_link_id is a unique numerical identifier for each study listed on the collection information sheet. The sole purpose of the study_link_id is to indicate which participant described on worksheet 2 - Participant information belongs to what study/collection described on worksheet 1 - Collection information.
     Req: true
-    Type: number
+    Type: string
+    Key: true
   de-identification_method_type:
     Desc: General description of the de-identification method
     Req: true
