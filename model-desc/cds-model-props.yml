@@ -5,7 +5,7 @@ PropDefinitions:
     Req: true
     Type: string
     Key: true
-  de-identification_method_type:
+  de_identification_method_type:
     Desc: General description of the de-identification method
     Req: true
     Enum:
@@ -13,10 +13,10 @@ PropDefinitions:
       - Semiautomatic
       - Automatic
       - Not applicable
-  de-identification_method_description:
+  de_identification_method_description:
     Desc: Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.
     Type: string
-  de-identification_software:
+  de_identification_software:
     Desc: Software that was used to de-identify the images (if used)
     Type: string
   license:

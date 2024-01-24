@@ -187,9 +187,9 @@ Nodes:
     Desc: ''
     Props:
       - study_link_id
-      - de-identification_method_type
-      - de-identification_method_description
-      - de-identification_software
+      - de_identification_method_type
+      - de_identification_method_description
+      - de_identification_software
       - license
       - citation_or_DOI
       - species
