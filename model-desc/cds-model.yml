@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v2.0.0
+Version: v2.1.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -193,7 +193,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: ''
+    Desc: "The imaging data from DICOM and non-DICOM standards into CDS."
     Props:
       - study_link_id
       - de_identification_method_type
@@ -327,6 +327,8 @@ Relationships:
       - Src: diagnosis
         Dst: participant
       - Src: sample
+        Dst: participant
+      - Src: file
         Dst: participant
   from_sample:
     Props: null
