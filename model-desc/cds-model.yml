@@ -328,6 +328,8 @@ Relationships:
         Dst: participant
       - Src: sample
         Dst: participant
+      - Src: file
+        Dst: participant
   from_sample:
     Props: null
     Mul: many_to_many
@@ -343,4 +345,3 @@ Relationships:
       - Src: image
         Dst: file
         Mul: one_to_one
-
