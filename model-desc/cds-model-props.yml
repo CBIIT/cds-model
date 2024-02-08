@@ -2641,7 +2641,7 @@ PropDefinitions:
     Req: Preferred
   acl:
     Desc: open or restricted access to data
-    Type: list
+    Type: string
   primary_investigator_email:
     Desc: Email of principal investigator
     Type: string
