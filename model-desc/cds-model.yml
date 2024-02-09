@@ -345,4 +345,3 @@ Relationships:
       - Src: image
         Dst: file
         Mul: one_to_one
-

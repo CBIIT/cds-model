@@ -7917,14 +7917,10 @@ PropDefinitions:
     Type: string
   data_types:
     Desc: Data types for storage
-    Type:
-      value_type: list
-      item_type: string
+    Type: string
   file_types:
     Desc: File types for storage
-    Type:
-      value_type: list
-      item_type: string
+    Type: string
   funding_agency:
     Desc: Funding agency of the requestor study
     Type: string
@@ -7974,9 +7970,7 @@ PropDefinitions:
   file_types_and_format:
     Desc: |
       Specific kinds of files in the dataset that will be uploaded to CDS
-    Type:
-      value_type: list
-      item_type: string
+    Type: string
     Req: 'Yes'
   size_of_data_being_uploaded:
     Desc: Size of the data being uploaded to CDS
