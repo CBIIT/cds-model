@@ -124,11 +124,11 @@ PropDefinitions:
     Desc: A coded value specifying the type of equipment that created the images in this imaging study other than that used to acquire the original data.
     Req: true
     Type: string
-  performed_imaging_study_ lossyImageCompressionIndicator:
+  performed_imaging_study_lossyImageCompressionIndicator:
     Desc: Specifies whether any images in the study are irreversibly altered during encoding at any time during its life.
     Req: true
     Type: string
-  performed_imaging_study_ summary:
+  performed_imaging_study_summary:
     Desc: A brief statement about the characteristics of this element, which is intended for use by the radiologist, technologist and/or physicist during management of the imaging protocol to understand the characteristics of the element in the protocol.
     Req: true
     Type: string
@@ -240,7 +240,7 @@ PropDefinitions:
     Desc: Peak kilovoltage output of the x-ray generator. The units are of electrical potential.
     Req: true
     Type: string
-  CTAquisitionProtocolElement_exposureModulationType Code:
+  CTAquisitionProtocolElement_exposureModulationType_Code:
     Desc: The manner in which tube current is varied in order to limit the dose.
     Enum:
       - NONE
