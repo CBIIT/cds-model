@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v2.1.0
+Version: v3.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -211,8 +211,8 @@ Nodes:
       - performed_imaging_study_description
       - performed_imaging_study_admittingDiagnosisCode
       - performed_imaging_study_nonAcquisitionModalitiesInStudyCode
-      - performed_imaging_study_ lossyImageCompressionIndicator
-      - performed_imaging_study_ summary
+      - performed_imaging_study_lossyImageCompressionIndicator
+      - performed_imaging_study_summary
       - performed_imaging_study_primaryAnatomicSiteCode
       - performed_imaging_study_acquisitionTypeCode
       - performed_imaging_study_imageTypeCode
@@ -237,7 +237,7 @@ Nodes:
       - CTAquisitionProtocolElement_ctdiVol
       - CTAquisitionProtocolElement_ctdiPhantomTypeCode
       - CTAquisitionProtocolElement_kVp
-      - CTAquisitionProtocolElement_exposureModulationType Code
+      - CTAquisitionProtocolElement_exposureModulationType_Code
       - CTImageReconstructionProtocolElement_convolutionKernel
       - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
       - MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode
