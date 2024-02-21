@@ -1,0 +1,648 @@
+ phs_accession:
+    Desc: |
+	  dbGaP study accession number
+    Term:
+      - Origin: caDSR
+        Code: '11524544'
+        Value: Research Activity dbGaP Accession Number Identifier
+         Type: string
+  study_name:
+    Desc: |
+	  Also known as Study Title
+    Term:
+      - Origin: caDSR
+        Code: '11459810'
+        Value: Study Name Text
+ study_acronym:
+    Desc: |
+	  short name or abbreviation of the study
+    Term:
+      - Origin: caDSR
+        Code: '11459812'
+        Value: Study Short Name Text
+  number_of_participants:
+    Desc: |
+	  How many participated in the study
+    Term:
+      - Origin: caDSR
+        Code: '11555662'
+        Value: Research Activity Unique Subjects Count
+  number_of_samples:
+    Desc: |
+	  How many samples in the study
+    Term:
+      - Origin: caDSR
+        Code: '11555663'
+        Value: Research Activity Sample Size Count
+  study_data_types:
+    Desc: |
+	  Type of scientific data is in the study
+    Term:
+      - Origin: caDSR
+        Code: '12571096'
+        Value: Data Collection Scientific Data Type Category
+  experimental_strategy_and_data_subtype:
+    Desc: |
+	  The experimental strategy used for the study (or what type of data subtypes exist in the study)
+    Term:
+      - Origin: caDSR
+        Code: '12373576'
+        Value: Research Activity Experimental Method Type  
+  acl:
+    Desc: |
+	  Is the data access controlled or open?
+    Term:
+      - Origin: caDSR
+        Code: '11555664'
+        Value: Electronic Data File Access Level Text 
+  role_or_affiliation:
+    Desc: |
+	  Institution that the submitter is affiliated with.
+    Term:
+      - Origin: caDSR
+        Code: '2201713'
+        Value: Person Affiliation Role Text Type                
+  title:
+    Desc: |
+	  Title of the data owner or submitter
+    Term:
+      - Origin: caDSR
+        Code: '2663165'
+        Value: Person Name Prefix Abbreviation Text
+  first_name:
+    Desc: |
+	  First name of the data owner or submitter
+    Term:
+      - Origin: caDSR
+        Code: '2179589'
+        Value: Person Given/First Name 
+  middle_name:
+    Desc: |
+	  Middle name of the data owner or submitter
+    Term:
+      - Origin: caDSR
+        Code: '2179590'
+        Value: Person Middle Name
+  last_name:
+    Desc: |
+	  Last name of the data owner or submitter
+    Term:
+      - Origin: caDSR
+        Code: '2179591'
+        Value: Person Family/Last Name
+  suffix:
+    Desc: |
+	  Suffix of the data owner or submitter
+    Term:
+      - Origin: caDSR
+        Code: '2006475'
+        Value: Individual Genealogy Suffix Code
+  email:
+    Desc: |
+	  Email of the Principal Investigator
+    Term:
+      - Origin: caDSR
+        Code: '2517550'
+        Value: Person Email Address Text
+  funding_agency:
+    Desc: |
+	  The funding source organization/Sponsor
+    Term:
+      - Origin: caDSR
+        Code: '11524545'
+        Value: Funding Agency Organization Name Text
+  funding_source_program_name:
+    Desc: |
+	  The name of the program that is providing funding 
+    Term:
+      - Origin: caDSR
+        Code: '11524546'
+        Value: Funding Agency Program Name Text
+  grant_id:
+    Desc: |
+	  The grant id or contract id 
+    Term:
+      - Origin: caDSR
+        Code: '3434057'
+        Value: Grant Funding Identifier Number
+  clinical_trial_repository:
+    Desc: |
+	  The name of the organization that provides the clinical trial identifier (use if the study is a clinical trial)
+    Term:
+      - Origin: caDSR
+        Code: '11524547'
+        Value: Digital Data Repository Owning Organization Name Text
+  clinical_trial_identifier:
+    Desc: |
+	  Identifier in the clinical trial system
+    Term:
+      - Origin: caDSR
+        Code: '14673514'
+        Value: Clinical Trial Study Protocol Unique Identifier
+  clinical_trial_arm:
+    Desc: |
+	  ARM of the clinical trial (if it exists)
+    Term:
+      - Origin: caDSR
+        Code: '11524548'
+        Value: Clinical Trial Treatment Arm Text
+  organism_species:
+    Desc: |
+	  The organism/species that is used for the experiment
+    Term:
+      - Origin: caDSR
+        Code: '6118266'
+        Value: Sample Organism Type
+  adult_or_childhood_study:
+    Desc: |
+	  If the study involves Adults or Children
+    Term:
+      - Origin: caDSR
+        Code: '11524549'
+        Value: Study Subject Legal Adult Or Pediatric Participant Type
+  participant_id:
+    Desc: |
+	  A sequence of letters, numbers, or characters that uniquely identifies the subject who has taken part in the investigation or research study.
+    Term:
+      - Origin: caDSR
+        Code: '12220014'
+        Value: Subject Data Origin Identifier
+  gender:
+    Desc: |
+	  Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]
+    Term:
+      - Origin: caDSR
+        Code: '2200604'
+        Value: Person Gender Text Type
+      - permissible value: 'PV'
+        Value:  Female
+                Male
+                Unknown
+                Unspecified
+                Not Reported
+    Type: string
+ race:
+    Desc: |
+	  Race of the participant
+    Term:
+      - Origin: caDSR
+        Code: '2192199'
+        Value: Race Category Text
+      - permissible value: 'PV'
+        Value:  White
+                American Indian or Alaska Native
+                Black or African American
+                Asian
+                Native Hawaiian or Other Pacific Islander
+                Unknown
+                Not Reported
+                Not Allowed to Collect
+    Type: string
+ethnicity:
+    Desc: |
+	  An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    Term:
+      - Origin: caDSR
+        Code: '2192217'
+        Value: Ethnic Group Category Text
+      - permissible value: 'PV'
+        Value:  Hispanic or Latino
+                Not Hispanic or Latino
+                Unknown
+                Not Reported
+                Not Allowed to Collect                         
+    Type: string 
+dbGaP_subject_id:
+    Desc: |
+	  This is the identifer assigned to the participant by dbGap
+    Term:
+      - Origin: caDSR
+        Code: '11524550'
+        Value: Study Participant dbGaP Accession Number Identifier
+    Type: string
+sample_id:
+    Desc: |
+	  sample identifier
+    Term:
+      - Origin: caDSR
+        Code: '6921892'
+        Value: Biospecimen Source Laboratory Identifier
+    Type: string
+sample_description:
+    Desc: |
+	  A description of the sample
+    Term:
+      - Origin: caDSR
+        Code: '2003907'
+        Value: Sample Description Text
+    Type: string
+biosample_accession:
+    Desc: |
+	  BioSample  (SAMN) accession number
+    Term:
+      - Origin: caDSR
+        Code: '2230047'
+        Value: Specimen Accession Number
+    Type: string
+sample_type:
+    Desc: |
+	  Text term to describe the source of a biospecimen used for a laboratory test.
+    Term:
+      - Origin: caDSR
+        Code: '13255982'
+        Value: Specimen Material Type
+      - permissible value: 'PV'
+        Value: Additional - New Primary
+              Additional Metastatic
+              Benign Neoplasms
+              Blood
+              Blood Biospecimen Type
+              Blood Buffy Coat
+              Blood Clot
+              Blood Derived Cancer - Bone Marrow
+              Blood Derived Cancer - Bone Marrow, Post-treatment
+              Blood Derived Cancer - Peripheral Blood
+              Blood Derived Cancer - Peripheral Blood, Post-treatment
+              Blood Derived Liquid Biopsy
+              Blood Derived Normal
+              Bone Marrow Biospecimen Type
+              Bone Marrow Normal
+              Buccal Cell Normal
+              Buccal Mucosa
+              Buffy Coat
+              Cell Line Derived Xenograft Tissue
+              Cell Lines
+              Control Analyte
+              DNA
+              EBV Immortalized Normal
+              Expanded Next Generation Cancer Model
+              FFPE Recurrent
+              FFPE Scrolls
+              Fibroblasts from Bone Marrow Normal
+              Fluids Biospecimen Type
+              GenomePlex (Rubicon) Amplified DNA
+              Granulocytes
+              Human Tumor Original Cells
+              In Situ Neoplasms
+              Lymphoid Normal
+              Metastatic
+              Mixed Adherent Suspension
+              Mononuclear Cells from Bone Marrow Normal
+              Mouthwash
+              Neoplasms of Uncertain and Unknown Behavior
+              Next Generation Cancer Model
+              Next Generation Cancer Model Expanded Under Non-conforming Conditions
+              Not Allowed To Collect
+              Pleural Effusion
+              Pleural Fluid
+              Post neo-adjuvant therapy
+              Primary Blood Derived Cancer - Bone Marrow
+              Primary Blood Derived Cancer - Peripheral Blood
+              Primary Tumor
+              Primary Xenograft Tissue
+              Recurrent Blood Derived Cancer - Bone Marrow
+              Recurrent Blood Derived Cancer - Peripheral Blood
+              Recurrent Tumor
+              Repli-G (Qiagen) DNA
+              Repli-G X (Qiagen) DNA
+              RNA
+              Saliva
+              Skin
+              Slides
+              Solid Tissue Normal
+              Tissue Biospecimen Type
+              Total RNA
+              Tumor
+              Tumor Adjacent Normal
+              Tumor Adjacent Normal - Post Neo-adjuvant Therapy
+              Whole Blood
+              Xenograft Tissue
+              Unknown
+              Not Reported 
+      Type: string
+sample_type_category:
+    Desc: |
+	  Category of the sample type
+    Term:
+      - Origin: caDSR
+        Code: '12445832'
+        Value: Specimen Material Category
+      Type: string
+sample_tumor_status:
+    Desc: |
+	  Normal or Tumor Sample Pathology Indicator
+    Term:
+      - Origin: caDSR
+        Code: '5432687'
+        Value: Tissue Sample Description Category
+      - permissible value: 'PV'
+        Value:  Hispanic or Latino
+                Not Hispanic or Latino
+                Unknown
+                Not Reported
+                Not Allowed to Collect                         
+    Type: string 
+sample_anatomic_site:
+    Desc: |
+	  Text term that represents the name of the primary disease site of the submitted tumor sample.
+    Term:
+      - Origin: caDSR
+        Code: '12083894'
+        Value: Specimen Original Anatomic Site Uberon Identifier
+      Type: string
+sample_age_at_collection:
+    Desc: |
+	  The number of days from the index date to the date a sample was collected for a specific study or project.
+    Term:
+      - Origin: caDSR
+        Code: '14473376'
+        Value: 
+      Type: string
+derived_from_specimen:
+    Desc: |
+	  Identifer of parent specimen for this sample
+    Term:
+      - Origin: caDSR
+        Code: '5581201'
+        Value: Parent Specimen Label Identifier
+      Type: string
+file_name:
+    Desc: |
+	  name of file
+    Term:
+      - Origin: caDSR
+        Code: '11284037'
+        Value: Electronic Data File Name
+      Type: string
+file_type:
+    Desc: |
+	  what type of file
+    Term:
+      - Origin: caDSR
+        Code: '11416926'
+        Value: Electronic Data File Format Type
+      Type: string
+file_size:
+    Desc: |
+	  size in bytes (not KB)
+    Term:
+      - Origin: caDSR
+        Code: '11479876'
+        Value: Electronic Data File Size Integer
+      Type: string
+md5sum:
+    Desc: |
+	  md5 hash
+    Term:
+      - Origin: caDSR
+        Code: '11556150'
+        Value: Electronic Data File MD5 Checksum Text
+      Type: string
+file_url_in_cds:
+    Desc: |
+	  location of the file on the CDS Cloud, using AWS S3 protocol
+    Term:
+      - Origin: caDSR
+        Code: '11556141'
+        Value: Electronic File Pathname Text
+      Type: string
+checksum_value:
+    Desc: |
+	  checksum (hash) for file (using checksum_algorithm) - if you want to use a checksum other than md5
+    Term:
+      - Origin: caDSR
+        Code: '11480133'
+        Value: Electronic Data File Checksum Value
+      Type: string
+checksum_algorithm:
+    Desc: |
+	  cryptographic checksum algorithm used for 'checksum_value' field -- if you want to use something other than md5
+    Term:
+      - Origin: caDSR
+        Code: '11475057'
+        Value: Electronic Data File Checksum Type
+      Type: string
+file_mapping_level:
+    Desc: |
+	  Describes if the file belongs to a Participant, a Sample, or a Study
+    Term:
+      - Origin: caDSR
+        Code: '11595478'
+        Value: Electronic File Relationship Type
+      Type: string
+library_id:
+    Desc: |
+	  Short unique identifier for the sequencing library.
+    Term:
+      - Origin: caDSR
+        Code: '11555660'
+        Value: Sequencing Library Unique Identifier Text
+      Type: string
+library_strategy:
+    Desc: |
+	  Library strategy
+    Term:
+      - Origin: caDSR
+        Code: '6273393'
+        Value: Sequencing Library Technique Type
+      Type: string
+library_source:
+    Desc: |
+	  The Library Source specifies the type of source material that is being sequenced
+    Term:
+      - Origin: caDSR
+        Code: '6285979'
+        Value: Sequencing Library Specimen Source
+      Type: string
+library_selection:
+    Desc: |
+	  Library Selection Method
+    Term:
+      - Origin: caDSR
+        Code: '6347743'
+        Value: Sequencing Library Creation Method Type
+      Type: string
+library_layout:
+    Desc: |
+	  Paired-end or Single
+    Term:
+      - Origin: caDSR
+        Code: '11527735'
+        Value: Sequencing Library Read Layout Type
+      Type: string
+platform:
+    Desc: |
+	  Sequencing Platform used for Sequencing
+    Term:
+      - Origin: caDSR
+        Code: '6347771'
+        Value: Sequencing Library Platform Name
+      Type: string
+instrument_model:
+    Desc: |
+	  Instrument model used for sequencing
+    Term:
+      - Origin: caDSR
+        Code: '6352164'
+        Value: Sequencing Library Platform Model Name
+      Type: string
+design_description:
+    Desc: |
+	  Free-form description of the methods used to create the sequencing library; a brief 'materials and methods' section.
+    Term:
+      - Origin: caDSR
+        Code: '11529028'
+        Value: Sequencing Library Design Description Text
+      Type: string
+reference_genome_assembly:
+    Desc: |
+	  This is only if you are submitting a bam file aligned against a NCBI assembly.
+    Term:
+      - Origin: caDSR
+        Code: '11529031'
+        Value: Genome Assembly NCBI Genetic Reference Sequence Identifier
+      Type: string
+custom_assembly_fasta_file_for_alignment:
+    Desc: |
+	  Please provide the name of the custom assembly fasta file used during alignment
+    Term:
+      - Origin: caDSR
+        Code: '11636299'
+        Value: Genome Assembly Custom FASTA File Name
+      Type: string
+bases:
+    Desc: |
+	  Count of unique basecalls present in the data. Please count each base only once if using secondary alignments.
+    Term:
+      - Origin: caDSR
+        Code: '12373573'
+        Value: Sequencing Library Unique Basecalling Count
+      Type: string
+number_of_reads:
+    Desc: |
+	  Count of the number of reads in the data. Please count each read only once if using secondary alignments.
+    Term:
+      - Origin: caDSR
+        Code: '11529035'
+        Value: Sequencing Library Sequence Read Count
+      Type: string
+coverage:
+    Desc: |
+	  Depth of coverage on assembly used. Found by (Unique Aligned Basecalls)/(Reference Length)
+    Term:
+      - Origin: caDSR
+        Code: '11556322'
+        Value: Genome Assembly Sequence Depth of Coverage Number
+      Type: string
+avg_read_length:
+    Desc: |
+	  Found by (Bases)/(Reads)
+    Term:
+      - Origin: caDSR
+        Code: '12426615'
+        Value: Nucleotide Sequence Average Read Length Count
+      Type: string
+sequence_alignment_software:
+    Desc: |
+	  The name of the software program used to align nucleotide sequencing data.
+    Term:
+      - Origin: caDSR
+        Code: '11529072'
+        Value: Nucleotide Sequence Alignment Software Name Text
+      Type: string
+reporter_label:
+    Desc: |
+	  The class of tags used in the methylation experiment.
+    Term:
+      - Origin: caDSR
+        Code: '12033929'
+        Value: Methylation Analysis Methyl Tag Text
+      Type: string
+methylation_platform:
+    Desc: |
+	  The instrument used to carry out a methylation experiment.
+    Term:
+      - Origin: caDSR
+        Code: '12033935'
+        Value: Methylation Analysis Instrument Text
+      Type: string
+disease_type:
+    Desc: |
+	  Type of Disease
+    Term:
+      - Origin: caDSR
+        Code: '13471160'
+        Value: Diagnosis Disease or Disorder Morphology Category
+      Type: string
+primary_diagnosis:
+    Desc: |
+	  Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
+    Term:
+      - Origin: caDSR
+        Code: '13279286'
+        Value: ICD Label/Name CDE 13606067
+      Type: string
+primary_site:
+    Desc: |
+	  Primary site in the body
+    Term:
+      - Origin: caDSR
+        Code: '14156279'
+        Value: Disease Anatomic Site ICD-O-3 Site Label Text
+      Type: string
+vital_status:
+    Desc: |
+	  living or deceased
+    Term:
+      - Origin: caDSR
+        Code: '2847330'
+        Value: Participant Vital Status Type
+      Type: string
+age_at_diagnosis:
+    Desc: |
+	  Age at the time of diagnosis since birth
+    Term:
+      - Origin: caDSR
+        Code: '10609539'
+        Value: Subject Age at Diagnosis Integer
+      Type: string
+days_to_last_followup:
+    Desc: |
+	  Number of days between the dates used for index
+    Term:
+      - Origin: caDSR
+        Code: '12426616'
+        Value: Subject Initial Cancer Diagnosis To Last Followup Day Count
+      Type: string
+morphology:
+    Desc: |
+	  The third edition of the International Classification of Diseases for Oncology, published in 2000 used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms. The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains. A system of numbered categories for representation of data.
+    Term:
+      - Origin: caDSR
+        Code: ''
+        Value: 
+      Type: string
+tissue_or_organ_of_origin:
+    Desc: |
+	  The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
+    Term:
+      - Origin: caDSR
+        Code: '12432573'
+        Value: Disease Malignant Neoplasm Origin ICD-O-3 Site Code
+      Type: string
+site_of_resection_or_biopsy:
+    Desc: |
+	  The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
+    Term:
+      - Origin: caDSR
+        Code: '12432572'
+        Value: Disease Malignant Neoplasm Excision Or Biopsy ICD-O-3 Site Code
+      Type: string
+tumor_grade:
+    Desc: |
+	  Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
+    Term:
+      - Origin: caDSR
+        Code: '11325685'
+        Value: Diagnosis Tumor Grade
+      Type: string
