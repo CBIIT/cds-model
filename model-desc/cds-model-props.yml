@@ -2573,7 +2573,9 @@ PropDefinitions:
   # study
   study_version:
     Desc: The version of the phs accession
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
     Req: true
   bioproject_accession:
     Desc: NCBI BioProject accession ID
