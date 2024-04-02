@@ -594,6 +594,9 @@ PropDefinitions:
       - WGA
       - WGS
       - WXS
+    Type:
+      item_type: string
+      value_type: list
   # participant
   ethnicity:
     Desc: OMB Ethinicity designator
