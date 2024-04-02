@@ -742,9 +742,6 @@ PropDefinitions:
     - WGS
     - WXS
     Req: 'Yes'
-    Type:
-      item_type: string
-      value_type: list
   file_access:
     Desc: File access
     Enum:
