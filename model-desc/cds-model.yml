@@ -330,6 +330,7 @@ Relationships:
         Dst: participant
       - Src: file
         Dst: participant
+        Mul: many_to_many
   from_sample:
     Props: null
     Mul: many_to_many
