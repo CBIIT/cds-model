@@ -1147,21 +1147,21 @@ PropDefinitions:
 
       '
     Req: 'Yes'
-    Enum:
-    - Amplicon
-    - Archer Fusion
-    - Bisulfite-Seq
-    - Methylation Array
-    - OTHER
-    - RNA-Seq
-    - Targeted Sequencing
-    - Targeted-Capture
-    - WGA
-    - WGS
-    - WXS
     Type:
       value_type: list
       item_type: string
+      Enum:
+        - Amplicon
+        - Archer Fusion
+        - Bisulfite-Seq
+        - Methylation Array
+        - OTHER
+        - RNA-Seq
+        - Targeted Sequencing
+        - Targeted-Capture
+        - WGA
+        - WGS
+        - WXS
   # participant
   ethnicity:
     Desc: OMB Ethinicity designator
