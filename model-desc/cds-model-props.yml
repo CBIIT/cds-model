@@ -120,6 +120,7 @@ PropDefinitions:
     - BDUS
     - VA
     - XA
+    - Not specified in data
     Term:
     - Origin: caDSR
       Original Source: DSS
@@ -1145,6 +1146,7 @@ PropDefinitions:
     - TIFF
     - PNG
     - CNS
+    - Not specified in data
     Req: true
     Term:
     - Origin: caDSR
@@ -1157,6 +1159,7 @@ PropDefinitions:
     Enum:
     - Open
     - Controlled
+    - Not specified in data
   md5sum:
     Desc: MD5 hex digest for this file
     Type:
@@ -1188,6 +1191,7 @@ PropDefinitions:
       - Pathological
       - Radiological
       - scRNA-Seq
+      - Not specified in data
   # participant
   ethnicity:
     Desc: OMB Ethinicity designator
@@ -1212,6 +1216,7 @@ PropDefinitions:
     - Unknown
     - Unspecified
     - Not Reported
+    - Not specified in data
     Req: true
     Term:
     - Origin: caDSR
@@ -5825,6 +5830,7 @@ PropDefinitions:
     - Vagina
     - Vulva
     - Bronchus and Lung
+    - Not specified in data
     Term:
     - Origin: caDSR
       Original Source: PCDC
@@ -7672,6 +7678,7 @@ PropDefinitions:
     - Abnormal
     - Peritumoral
     - Unknown
+    - Not specified in data
     Req: 'Yes'
     Term:
     - Origin: caDSR
@@ -7749,6 +7756,7 @@ PropDefinitions:
     - Total RNA
     - Tumor Adjacent Normal - Post Neo-adjuvant Therapy
     - Not Reported
+    - Not specified in data
     Req: 'Yes'
     Term:
     - Origin: caDSR
