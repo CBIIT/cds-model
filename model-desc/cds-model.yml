@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v3.1.2
+Version: v4.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -62,6 +62,14 @@ Nodes:
       - study_access
       - authz
       - study_version
+      - role_or_affiliation
+      - title
+      - first_name
+      - middle_name
+      - last_name
+      - suffix
+      - email
+      - clinical_trial_repository
       - crdc_id
 
   participant:
@@ -107,6 +115,9 @@ Nodes:
       - days_to_last_followup
       - last_known_disease_status
       - days_to_last_known_status
+      - tissue_or_organ_of_origin
+      - site_of_resection_or_biopsy
+      - days_to_last_known_disease_status
       - crdc_id
 
   treatment:
@@ -134,6 +145,8 @@ Nodes:
     Props:
       - sample_id
       - sample_type
+      - sample_description
+      - sample_type_category
       - sample_tumor_status # tumor or normal
       - sample_anatomic_site
       - sample_age_at_collection
@@ -158,7 +171,10 @@ Nodes:
       - file_url_in_cds
       - experimental_strategy_and_data_subtypes
       - submission_version
+      - checksum_value
+      - checksum_algorithm
       - crdc_id
+      - file_mapping_level
       #- file_access
 
   genomic_info:
@@ -185,6 +201,8 @@ Nodes:
       - platform
       - instrument_model
       - sequence_alignment_software
+      - reporter_label
+      - methylation_platform
       - crdc_id
 
   image:
@@ -331,6 +349,8 @@ Relationships:
       - Src: file
         Dst: participant
         Mul: many_to_many
+      - Src: treatment
+        Dst: participant
   from_sample:
     Props: null
     Mul: many_to_many
