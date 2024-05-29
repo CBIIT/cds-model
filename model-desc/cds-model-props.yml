@@ -1146,7 +1146,8 @@ PropDefinitions:
     - TIFF
     - PNG
     - CNS
-    - Not specified in data
+    - SVG
+    - DICT
     Req: true
     Term:
     - Origin: caDSR
@@ -12444,7 +12445,6 @@ PropDefinitions:
     - ILLUMINA
     - HELICOS
     - ABI_SOLID
-    - COMPLETE_GENOMICS
     - PACBIO_SMRT
     - ION_TORRENT
     - CAPILLARY
