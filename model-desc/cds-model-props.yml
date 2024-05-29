@@ -2896,6 +2896,7 @@ PropDefinitions:
     - 'Intraoperative Consultation: Calcified Glial Lesion Dx: Markedly Calcified Lesion'
     - Rhabdoid Tumor, NOS
     - Nodular Spindle Neoplasm
+    - '8806/3 : Desmoplastic Small Round Cell Tumor'
     - Favor Pilocytic Astrocytoma
     - Pediatric Type Diffuse Glioma With Angiocentric Pattern
     - Teratoma, malignant, NOS
@@ -2904,6 +2905,7 @@ PropDefinitions:
     - Adrenalcortical Carcinoma
     - Osteoblastoma
     - High-Grade Infiltrating Astrocytoma
+    - '9400/3 : Astrocytoma, NOS'
     - Small Round Cell Sarcoma
     - Desmoplastic Small Round Cell Tumor
     - Compact Neoplasm with MesenchymalFfeatures
@@ -2930,6 +2932,7 @@ PropDefinitions:
     - Oncocytic Adrenal Cortical Carcinoma
     - Multiple Myeloma
     - High Grade Neoplasm, Consistent With Metastatic Pleuropulmonary Blastoma
+    - '9040/3 : Synovial Sarcoma, NOS'
     - Mucoepidermoid Carcinoma Low Grade
     - Endometrioid Carcinoma, NOS
     - Diffuse Astrocytic Neoplasm
@@ -2943,8 +2946,10 @@ PropDefinitions:
     - Lung Squamous Cell Carcinoma, NOS
     - Low-grade Glial or Glioneuronal neoplasm
     - Epithelioid Sarcoma
+    - '8550/3 : Acinar Cell Carcinoma'
     - Acute Lymphoblastic Leukemia
     - Anaplastic Medulloblastoma WHO Grade 4
+    - '9421/1 : Pilocytic Astrocytoma'
     - IDH Mutant Gliomaa
     - Ganglioma, CNS WHO Grade 1
     - Synovial Sarcoma, NOS
@@ -2964,9 +2969,11 @@ PropDefinitions:
     - Bronchio-alveolar Carcinoma
     - Acute Myeloid Leukemia
     - Probable Pilocytic Astrocytoma
+    - '9413/0 : Dysembryoplastic Neuroepithelial Tumor'
     - Fibroblastic Spindle Cell Lesion
     - Diffuse Glioma High-grade
     - Ductal Carcinoma, NOS
+    - '9400/0 : Astrocytoma, Benign'
     - Choroid Plexus Carcinoma, TP53 Mutant
     - Medulloblastoma, Classic Histologic Type, Non-WNT/Non-SHH Molecular Subtype, WHO Grade 4
     - Atypical Lymphoid Infiltrate
@@ -2976,6 +2983,7 @@ PropDefinitions:
     - Myofibroblastic Tumor
     - Mucinous Adenocarcinoma
     - Omentum; Pancreatic Acinar Cell Carcinoma
+    - '9380/3 : Glioma, Malignant'
     - Embryonal Tumor With Multilayered Rosettes, CNS WHO Grade 4
     - Diffuse Hemispheric Glioma
     - Dermatofibrosarcoma Protuberans
@@ -2985,18 +2993,22 @@ PropDefinitions:
     - NTRK-1 Altered Mesenchymal Tumor
     - Myxopapillary Ependymoma WHO Grade 2
     - Small Cell Squamous Cell Carcinoma
+    - '9192/3 : Parosteal Osteosarcoma'
     - Basaloid Squamous Cell Carcinoma
     - Cervical Thoracic Spinal Cord Tumor.Ependymoma With High-Grade Features
     - Malignant Somatic Neoplasm With Multiphase Sarcomatous Components Consistent With Embryonal-Type Sarcoma
     - Pseudomyogenic Hemangioendothelioma
     - Hemangioma
     - Low-grade Astrocytic tumor
+    - '8171/3 : Hepatocellular Carcinoma, Fibrolamellar'
     - Medulloblastoma Classic Type CNS Who Grade 4
     - Precursor T-Cell Lymphoblastic Leukemia
     - Metastatic Secondary Tumors
     - Adenocarcinoma In Situ, Non-Mucinous
     - Diffuse Hemispheric Glioma CNS WHO Grade 4
+    - '9478/3 : Embryonal Tumor With Multilayered Rosettes With C19MC Alteration'
     - Ossifying Fibroma
+    - '8910/3 : Embryonal Rhabdomyosarcoma, NOS'
     - Small Cell Carcinoma of Ovary
     - Langerhans Cell Histiocytosis
     - Low Grade Glioma With Apparent BRAF V600E Expression
@@ -3017,23 +3029,30 @@ PropDefinitions:
     - Lobular carcinoma NOS
     - Low Grade Glial Neoplasm, Histologically Most Consistent With Pilocytic Astrosytoma, CNS WHO Grade 1
     - Epithelioid Hemangioendothelioma, NOS
+    - '8805/3 : Undifferentiated Sarcoma'
     - Dermoid Cyst
+    - '9181/3 : Chondroblastic Osteosarcoma'
     - Perineuroma
     - Ulcerated Nodular Melanoma
     - Choroid Plexus Carcinoma TP53 Altered CNS WHO Grade 3
     - Residual Pilocytic Astrocytoma (WHO Grade 1)
     - Morphologically Consistent With Low Grade Glial Neoplasm
+    - '8991/3 : Embryonal Sarcoma'
     - Embryonal Neoplasm With Focal Dystrophic Calcifications And Microvascular Proliferation
     - Carcinoma
     - Atypical Teratoid/ Rhabdoid Tumor, CNS WHO Grade 4
     - Polymorphous Low-Grade Neuroepithelial Tumor Of The Young, CNS WHO Grade 1
+    - '9392/3 : Ependymoma, Anaplastic'
+    - '9080/3 : Teratoma, Malignant, NOS'
     - Favor Low Grade Glioma
     - High-grade Carcinoma
     - Epitheloid Neoplasm
     - Adrenal Cortical Neoplasm
+    - '9071/3 : Yolk Sac Tumor, NOS'
     - Epithelial - Myoepithelial Carcinoma
     - Embryonal CNS Tumor
     - Chronic Myelogenous Leukemia
+    - '8170/3 : Hepatocellular Carcinoma, NOS'
     - Low Grade Glioneuronal Neoplasm, Including Ganglioglioma
     - Low-Grade Glioma Histologically, Favor Pilocytic Astrocytoma
     - Dysembryoplastic Neuroepithelial Tumor (DNET; WHO Grade 1)
@@ -3044,6 +3063,8 @@ PropDefinitions:
     - Atypical Meningioma
     - High-grade Serous Carcinoma
     - Adenocarcinoma, Metastatic, NOS
+    - '8430/3 : Mucoepidermoid Carcinoma'
+    - '8072/3 : Squamous Cell Carcinoma, Large Cell, Nonkeratinizing, NOS'
     - Medulloblastoma, Classic Histology, SHH Activated And TP53 Wild-Type, CNS WHO Grade 4
     - Rhabdomyosarcoma With Diffuse Anaplasia
     - Hypercellular Cortical Parenchyma, Features Suggestive Of Diffuse Glioma
@@ -3063,9 +3084,11 @@ PropDefinitions:
     - Malignant Neoplasia
     - Thyroid Papillary Carcinoma
     - Lung Adenocarcinoma, NOS
+    - '9384/1 : Subependymal Giant Cell Astrocytoma'
     - Glioneuronal Tumor NOS
     - Consistent With Meningioma
     - Clear Cell Adenocarcinoma
+    - '9473/3 : CNS Embryonal Tumor, NOS'
     - High-grade Fibrosarcoma
     - Metastatic Signet Ring Cell Carcinoma
     - Periosteal osteosarcoma
@@ -3074,12 +3097,15 @@ PropDefinitions:
     - Micropapillary Carcinoma
     - Tumor
     - Thymoma
+    - '8370/3 : Adrenal Cortical Carcinoma'
     - Lesional Tissue Present. Cannot Rule Out High Grade Neoplasm
     - Brain Neoplasm
     - Tubular Adenocarcinoma
     - Pineoblastoma, CNS WHO Grade 4
     - Consistent With Neoplasm, Morphologically Favor Low Grade Astrocytoma
+    - '8814/3 : Infantile Fibrosarcoma'
     - Malignant Neoplasm, Most Consistent With Atypical Teratoid/Rhabdoid Tumor, WHO Grade IV
+    - '8912/3 : Spindle Cell Rhabdomyosarcoma'
     - Malignant Small Blue Cell Tumor With Necrosis
     - Adenosquamous Carcinoma
     - Low Grade Spindle Cell Tumor, Favor Mesenchymal. Differential Chiefly Include STF, Meningiom, Schwannoma And Other Rare Mesenchymal Tumor
@@ -3098,7 +3124,9 @@ PropDefinitions:
     - High-grade Glial or Glioneuronal Neoplasm
     - Squamous Cell Carcinoma Nos
     - Nasopharyngeal Carcinoma
+    - '8821/1 : Aggressive Fibromatosis'
     - Medulloblastoma, Desmoplastic/Nodular Variant (WHO Grade 4).
+    - '9540/3 : Malignant Peripheral Nerve Sheath Tumor, NOS'
     - Undifferentiated Round Cell Malignancy
     - Leomorphic Xanthoastrocytoma
     - Epithelioid Cell Tumor
@@ -3106,6 +3134,7 @@ PropDefinitions:
     - Xanthogranuloma
     - Sertoli-Leydig Cell Tumor, Moderately Differentiated. Pathologic Stage PT1A, FIGO Stage 1A
     - Medulloblastoma, Classic Histology Type, WNT-Activated Molecular Group, CNS WHO Grade 4
+    - '9364/3 : Ewing Sarcoma'
     - High-grade Glioma
     - Retinoblastoma, Poorly Differentiated
     - Acute Leukemia, T/myeloid, NOS
@@ -3114,6 +3143,7 @@ PropDefinitions:
     - Adenocarcinoma In Situ, NOS
     - Hamartoma
     - Choroid Plexus Papilloma, Negative For Atypia And Malignancy
+    - '9183/3 : Telangiectatic Osteosarcoma'
     - Leydig Cell Tumor
     - Rhabdomyosarcoma With Focal Anaplasia
     - High Grade Mesenchymal Neoplasm
@@ -3124,6 +3154,8 @@ PropDefinitions:
     - Signet-ring Cell Carcinoma
     - Astrocytoma with Pilomyxoid Features
     - Myoepithelial Carcinoma
+    - '8720/3 : Malignant Melanoma, NOS'
+    - '8920/3 : Alveolar Rhabdomyosarcoma'
     - Telangiectatic Osteosarcoma
     - Small Cell Carcinoma
     - Combined Small Cell Large Carcinoma
@@ -3146,6 +3178,8 @@ PropDefinitions:
     - Hepatocellular Carcinoma, NOS
     - Ganglioglioma, WHO Grade I
     - Periosteal Osteosarcoma
+    - '9193/3 : Periosteal Osteosarcoma'
+    - '9385/3 : Diffuse Midline Glioma, H3 K27M-Mutant'
     - Infiltrative Fibromatosis
     - Papillary Carcinoma Diffuse Sclerosing Variant With Left Lobe Dominant Nodule And Diffuse Bilateral Intraglandular Spread
     - Prostate Cancer
