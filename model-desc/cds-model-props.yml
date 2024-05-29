@@ -1146,6 +1146,8 @@ PropDefinitions:
     - TIFF
     - PNG
     - CNS
+    - SVG
+    - DICT
     - Not specified in data
     Req: true
     Term:
@@ -12444,7 +12446,6 @@ PropDefinitions:
     - ILLUMINA
     - HELICOS
     - ABI_SOLID
-    - COMPLETE_GENOMICS
     - PACBIO_SMRT
     - ION_TORRENT
     - CAPILLARY
