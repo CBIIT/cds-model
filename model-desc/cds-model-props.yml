@@ -1148,7 +1148,6 @@ PropDefinitions:
     - CNS
     - SVG
     - DICT
-    - Not specified in data
     Req: true
     Term:
     - Origin: caDSR
