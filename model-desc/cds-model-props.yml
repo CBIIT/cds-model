@@ -7147,6 +7147,9 @@ PropDefinitions:
   last_name:
     Desc: A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.
     Type: string
+  suffix:
+    Desc: Text term to represent an individual's position in a family lineage or pedigree.
+    Type: string
   email:
     Desc: The string of characters that represents the electronic mail address of a person.
     Type: string
