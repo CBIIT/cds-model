@@ -5,7 +5,7 @@ PropDefinitions:
     Type: string
   #image
   study_link_id:
-    Desc: The study_link_id is a unique numerical identifier for each study listed on the collection information sheet. The sole purpose of the study_link_id is to indicate which participant described on worksheet 2 - Participant information belongs to what study/collection described on worksheet 1 - Collection information.
+    Desc: The study_link_id is ID property for the node image. It should consist of a string and a number.
     Req: true
     Type: string
     Key: true
@@ -892,7 +892,6 @@ PropDefinitions:
       Version: '1.00'
   channel_metadata_file_url_in_cds:
     Desc: ''
-    Req: true
     Type: string
     Term:
     - Origin: caDSR
@@ -1073,7 +1072,7 @@ PropDefinitions:
   submission_version:
     Desc: The version of the metadata file submitted to CDS
     Type: string
-    Req: true
+    Req: Preferred
   file_id:
     Desc: File identifier
     Type: string
@@ -1082,7 +1081,6 @@ PropDefinitions:
   file_url_in_cds:
     Desc: Location of the file on the CDS cloud, using AWS S3 protocol
     Type: string
-    Req: Preferred
     Term:
     - Origin: caDSR
       Original Source: CDS
@@ -1282,7 +1280,6 @@ PropDefinitions:
   dbGaP_subject_id:
     Desc: Identifier for the participant as assigned by dbGaP
     Type: string
-    Req: Preferred
     Term:
     - Origin: caDSR
       Original Source: CDS
