@@ -366,3 +366,9 @@ Relationships:
       - Src: image
         Dst: file
         Mul: one_to_one
+  associated_with:
+    Props: null
+    Mul: many_to_one
+    Ends:
+      - Src: file 
+        Dst: file
