@@ -195,7 +195,7 @@ PropDefinitions:
       Original Source: DICOM
       Code: '2902328'
       Value: Image Study Admitting Diagnosis Description 64 Character Text
-      Version: '3.00'
+      Version: '1.00'
   performed_imaging_study_nonAcquisitionModalitiesInStudyCode:
     Desc: A coded value specifying the type of equipment that created the images in this imaging study other than that used to acquire the original data.
     Req: true
