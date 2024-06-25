@@ -44,10 +44,6 @@ PropDefinitions:
     - CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
     - CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
     - Other
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   citation_or_DOI:
     Desc: Publication and/or digital object identifier of the publication for open access studies
     Req: true
@@ -246,11 +242,6 @@ PropDefinitions:
     - DYNAMIC
     - STRESS
     - RCBV
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: Pending
-      Version: '1.00'
   performed_imaging_study_cardiacSynchronizationTechniqueCode:
     Desc: The means used to coordinate the collection or reconstruction of data with the cardiac cycle.
     Enum:
@@ -308,10 +299,6 @@ PropDefinitions:
     Desc: A coded value specifying the kind of algorithm used when reconstructing the image from the data acquired during the acquisition process.
     Req: true
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   performed_imaging_study_algorithmCode:
     Desc: A coded value specifying the algorithm to use when reconstructing the image from the data acquired during the acquisition process
     Req: true
@@ -415,10 +402,6 @@ PropDefinitions:
     Desc: The distance that the table moves per unit of time during the gathering of data. The units are of linear distance divided by time.
     Req: true
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   CTAquisitionProtocolElement_spiralPitchFactor:
     Desc: Ratio of the distance that the table moves during a complete revolution of the source around the gantry orbit, to the width of the total collimation over the area of active x-ray detection. The units are of unity.
     Req: true
@@ -905,39 +888,19 @@ PropDefinitions:
     Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
     Req: true
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   channel_name:
     Desc: Channel label for each channel in this image must match the corresponding field in the OME-TIFF header
     Req: true
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   cycle_number:
     Desc: 'the cycle # in which the co-listed reagent(s) was(were) used'
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   sub_cycle_number:
     Desc: 'sub-cycle #'
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   target_name:
     Desc: short descriptive name (abbreviation) for this target (antigen)
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   antibody_name:
     Desc: short descriptive name for this antibody
     Type: string
@@ -949,115 +912,51 @@ PropDefinitions:
   rrid_identifier:
     Desc: Research Resource Identifier
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   fluorophore:
     Desc: Fluorescent dye label
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   clone:
     Desc: Unique clone identifier
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   lot:
     Desc: lot number from vendor
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   vendor:
     Desc: Vendor name
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   catalog_number:
     Desc: catalog number from vendor
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   excitation_wavelength:
     Desc: center/peak of the excitation spectrum (nm)
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   emission_wavelength:
     Desc: center/peak of the emission spectrum (nm)
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   excitation_bandwidth:
     Desc: nominal width of excitation spectrum (nm)
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   emission_bandwidth:
     Desc: nominal width of emission spectrum (nm)
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   metal_isotope_element:
     Desc: Element mass number
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   oligo_barcode_upper_strand:
     Desc: DNA barcode used for labeling
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   oligo_barcode_lower_strand:
     Desc: DNA barcode used for labeling
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   diluation:
     Desc: Final dilution ratio used in experiment
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   concentration:
     Desc: Final concentration used in experiment
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   passes_qc:
     Desc: Identify stains that did not pass QC but are included in the dataset.
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: Pending
-      Version: '1.00'
   # file
   checksum_value:
     Desc: checksum (hash) for file (using checksum_algorithm) - if you want to use a checksum other than md5
@@ -7287,11 +7186,6 @@ PropDefinitions:
   authz:
     Desc: multifactor authorization
     Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: Pending
-      Version: '1.00'
   # sample
   sample_description:
     Desc: Text description of a sample or specimen.
