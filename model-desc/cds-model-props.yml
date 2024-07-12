@@ -1114,7 +1114,7 @@ PropDefinitions:
       Code: '14765208'
       Value: Multiplex Imaging Oligonucleotide Barcode Lower Strand Text
       Version: '1.00'
-  diluation:
+  dilution:
     Desc: Final dilution ratio used in experiment
     Type: string
     Term:

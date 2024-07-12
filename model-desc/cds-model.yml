@@ -324,7 +324,7 @@ Nodes:
       - metal_isotope_element_mass
       - oligo_barcode_upper_strand
       - oligo_barcode_lower_strand
-      - diluation
+      - dilution
       - concentration
       - passes_qc
       - crdc_id
