@@ -26,15 +26,27 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Original Source: CDS
-      Code: 14607284
+      Code: "14607284"
       Value: Deidentification Method Type
       Version: '1.00'
   de_identification_method_description:
     Desc: Description of the process of removing potentially identifying data or data elements to render data into a form that does not identify individuals and where identification is not likely to take place.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: "14612655"
+      Value: Deidentification Method Description Text
+      Version: '1.00'
   de_identification_software:
     Desc: Software that was used to de-identify the images (if used)
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: "14612658"
+      Value: Deidentification Software Name Text
+      Version: '1.00'
   license:
     Desc: Official or legal permission to do or own a specified thing.
     Req: true
@@ -44,6 +56,12 @@ PropDefinitions:
     - CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
     - CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
     - Other
+    Term:
+    - Origin: caDSR
+      Original Source: DSS
+      Code: '14902606'
+      Value: Data Collection License Type
+      Version: '1.00'
   citation_or_DOI:
     Desc: Publication and/or digital object identifier of the publication for open access studies
     Req: true
@@ -205,7 +223,14 @@ PropDefinitions:
   performed_imaging_study_lossyImageCompressionIndicator:
     Desc: Specifies whether any images in the study are irreversibly altered during encoding at any time during its life.
     Req: true
-    Type: string
+    Enum:
+    - "0"
+    - "1"
+    Term:
+    - Origin: caDSR
+      Code: '2659474'
+      Value: Image Lossy Compression Code
+      Version: '1.00'
   performed_imaging_study_summary:
     Desc: A brief statement about the characteristics of this element, which is intended for use by the radiologist, technologist and/or physicist during management of the imaging protocol to understand the characteristics of the element in the protocol.
     Req: true
@@ -242,6 +267,11 @@ PropDefinitions:
     - DYNAMIC
     - STRESS
     - RCBV
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: Pending
+      Version: '1.00'
   performed_imaging_study_cardiacSynchronizationTechniqueCode:
     Desc: The means used to coordinate the collection or reconstruction of data with the cardiac cycle.
     Enum:
@@ -299,6 +329,10 @@ PropDefinitions:
     Desc: A coded value specifying the kind of algorithm used when reconstructing the image from the data acquired during the acquisition process.
     Req: true
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: Pending
+      Version: '1.00'
   performed_imaging_study_algorithmCode:
     Desc: A coded value specifying the algorithm to use when reconstructing the image from the data acquired during the acquisition process
     Req: true
@@ -402,6 +436,10 @@ PropDefinitions:
     Desc: The distance that the table moves per unit of time during the gathering of data. The units are of linear distance divided by time.
     Req: true
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: Pending
+      Version: '1.00'
   CTAquisitionProtocolElement_spiralPitchFactor:
     Desc: Ratio of the distance that the table moves during a complete revolution of the source around the gantry orbit, to the width of the total collimation over the area of active x-ray detection. The units are of unity.
     Req: true
@@ -446,6 +484,11 @@ PropDefinitions:
     - LONGITUDINAL
     - ECG-BASED
     - ORGAN-BASED
+    Term:
+    - Origin: caDSR
+      Code: '14617524'
+      Value: Imaging Technique Exposure Modulation Type
+      Version: '1.00'
   CTImageReconstructionProtocolElement_convolutionKernel:
     Desc: A label describing the mathematical operations used to reconstruct images from the acquired data. The values for this attribute are vendor specific and not coded.
     Type: string
@@ -677,28 +720,29 @@ PropDefinitions:
     Desc: A compound that preserves tissues and cells for microscopic study.
     Req: true
     Enum:
+    - 95% Ethanol
     - Acetone
     - Alcohol
+    - Carbodiimide
+    - Carnoy's Solution
+    - CryoStor
+    - Diimidoester
+    - Dimethylacetamide
     - Formalin
     - Glutaraldehyde
+    - Methacarn
+    - Not applicable
+    - Not recorded
+    - NP40 Lysis Buffer
     - OCT media
+    - Other
+    - Para-benzoquinone
+    - PAXgene Tissue
+    - Poloxamer
     - RNAlater
     - Saline
-    - 95% Ethanol
-    - Dimidoester
-    - Carbodiimide
-    - Dimethylacetamide
-    - Para-benzoquinone
-    - PAXgene tissue
-    - TCL lysis buffer
-    - NP40 lysis buffer
-    - Methacarn
-    - Cryo-store
-    - Carnoy's Fixative
-    - Polaxamer
-    - Other
-    - None
-    - unknown
+    - TCL Lysis Buffer
+    - Unknown
     Term:
     - Origin: caDSR
       Original Source: NCI Standard
@@ -728,7 +772,17 @@ PropDefinitions:
   staining_method:
     Desc: Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.
     Req: true
-    Type: string
+    Enum:
+    - CODEX
+    - GeoMX-DSP
+    - H&E
+    - IHC
+    - IMC
+    - MIBI
+    - mIHC
+    - MxIF
+    - SABER
+    - t-CyCIF
     Term:
     - Origin: caDSR
       Original Source: HTAN
@@ -888,75 +942,202 @@ PropDefinitions:
     Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
     Req: true
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: '14765171'
+      Value: OME Tagged Image File Format Channel Identifier
+      Version: '1.00'
   channel_name:
     Desc: Channel label for each channel in this image must match the corresponding field in the OME-TIFF header
     Req: true
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: '14765172'
+      Value: OME Tagged Image File Format Channel Name
+      Version: '1.00'
   cycle_number:
     Desc: 'the cycle # in which the co-listed reagent(s) was(were) used'
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765176'
+      Value: Multiplex Imaging Reagent Cycle Number Integer
+      Version: '1.00'
   sub_cycle_number:
     Desc: 'sub-cycle #'
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765180'
+      Value: Multiplex Imaging Reagent Sub-Cycle Number Integer
+      Version: '1.00'
   target_name:
     Desc: short descriptive name (abbreviation) for this target (antigen)
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: Pending
+      Version: '1.00'
   antibody_name:
     Desc: short descriptive name for this antibody
     Type: string
     Term:
     - Origin: caDSR
-      Code: '4588605'
+      Original Source: CDS
+      Code: '14765184'
       Value: Tissue Slide IHC Antibody Used Type
       Version: '1.00'
   rrid_identifier:
     Desc: Research Resource Identifier
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14767247'
+      Value: Multiplex Imaging Research Resource Identifier Text
+      Version: '1.00'
   fluorophore:
     Desc: Fluorescent dye label
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14767255'
+      Value: Multiplex Imaging Fluorescent Dye Text
+      Version: '1.00'
   clone:
     Desc: Unique clone identifier
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14767258'
+      Value: Multiplex Imaging Clone Unique Identifier
+      Version: '1.00'
   lot:
     Desc: lot number from vendor
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14769695'
+      Value: Multiplex Imaging Vendor Lot Number Text
+      Version: '1.00'
   vendor:
     Desc: Vendor name
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: Pending
+      Version: '1.00'
   catalog_number:
     Desc: catalog number from vendor
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14767261'
+      Value: Multiplex Imaging Vendor Catalog Number Text
+      Version: '1.00'
   excitation_wavelength:
     Desc: center/peak of the excitation spectrum (nm)
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765187'
+      Value: Multiplex Imaging Excitation Wavelength Number
+      Version: '1.00'
   emission_wavelength:
     Desc: center/peak of the emission spectrum (nm)
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14767264'
+      Value: Multiplex Imaging Emission Wavelength Number
+      Version: '1.00'
   excitation_bandwidth:
     Desc: nominal width of excitation spectrum (nm)
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765190'
+      Value: Multiplex Imaging Excitation Bandwidth Number
+      Version: '1.00'
   emission_bandwidth:
     Desc: nominal width of emission spectrum (nm)
     Type: string
-  metal_isotope_element:
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765193'
+      Value: Multiplex Imaging Emission Bandwidth Number
+      Version: '1.00'
+  metal_isotope_element_abbreviation:
+    Desc: Element abbreviation
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765198'
+      Value: Multiplex Imaging Isotope Abbreviation Name
+      Version: '1.00'
+  metal_isotope_element_mass:
     Desc: Element mass number
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765201'
+      Value: Multiplex Imaging Isotope Element Number Identifier
+      Version: '1.00'
   oligo_barcode_upper_strand:
     Desc: DNA barcode used for labeling
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765205'
+      Value: Multiplex Imaging Oligonucleotide Barcode Upper Strand Text
+      Version: '1.00'
   oligo_barcode_lower_strand:
     Desc: DNA barcode used for labeling
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14765208'
+      Value: Multiplex Imaging Oligonucleotide Barcode Lower Strand Text
+      Version: '1.00'
   diluation:
     Desc: Final dilution ratio used in experiment
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: '14767270'
+      Value: Multiplex Imaging Final Dilution Ratio Number
+      Version: '1.00'
   concentration:
     Desc: Final concentration used in experiment
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14768386'
+      Value: Multiplex Imaging Final Concentration Number
+      Version: '1.00'
   passes_qc:
     Desc: Identify stains that did not pass QC but are included in the dataset.
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: Pending
+      Version: '1.00'
   # file
   checksum_value:
     Desc: checksum (hash) for file (using checksum_algorithm) - if you want to use a checksum other than md5
@@ -970,6 +1151,12 @@ PropDefinitions:
     - Participiant
     - Sample
     - Study
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '11595478'
+      Value: Electronic File Relationship Type
+      Version: '1.00'
   submission_version:
     Desc: The version of the metadata file submitted to CDS
     Type: string
@@ -1069,6 +1256,12 @@ PropDefinitions:
     Type:
       pattern: ^[0-9a-fA-F]{32}$
     Req: true
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '11556150'
+      Value: Electronic Data File MD5 Checksum Text
+      Version: '1.00'
   experimental_strategy_and_data_subtypes:
     Desc: 'What is the experimental strategy used for the study (or what
 
@@ -1080,31 +1273,35 @@ PropDefinitions:
       value_type: list
       item_type: string
       Enum:
-      - Amplicon
       - Archer Fusion
       - Bisulfite-Seq
-      - Methylation Array
-      - OTHER
-      - RNA-Seq
-      - Targeted Sequencing
-      - Targeted-Capture
-      - WGA
-      - WGS
-      - WXS
       - DNA-Seq
+      - Methylation Analysis
+      - Methylation Array
       - Pathological
       - Radiological
+      - RNA-Seq
       - scRNA-Seq
-      - Not specified in data
+      - WGA
+      - WXS
   # participant
+  sex:
+    Desc: A textual description of a person's sex at birth.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC Standard
+      Code: "7572817"
+      Value: Person Sex at Birth Category
+      Version: '1.00'
   ethnicity:
     Desc: OMB Ethinicity designator
     Enum:
     - Hispanic or Latino
+    - Not allowed to collect
     - Not Hispanic or Latino
+    - Not reported
     - Unknown
-    - Not Reported
-    - Not Allowed to Collect
     Req: Preferred
     Term:
     - Origin: caDSR
@@ -1116,11 +1313,11 @@ PropDefinitions:
     Desc: Biological gender at birth
     Enum:
     - Female
+    - Intersex
     - Male
+    - Not Reported
     - Unknown
     - Unspecified
-    - Not Reported
-    - Not specified in data
     Req: true
     Term:
     - Origin: caDSR
@@ -1131,14 +1328,14 @@ PropDefinitions:
   race:
     Desc: OMB Race designator
     Enum:
-    - White
     - American Indian or Alaska Native
-    - Black or African American
     - Asian
-    - Native Hawaiian or Other Pacific Islander
-    - Unknown
+    - Black or African American
+    - Native Hawaiian or other Pacific Islander
+    - Not allowed to collect
     - Not Reported
-    - Not Allowed to Collect
+    - Unknown
+    - White
     Req: Preferred
     Term:
     - Origin: caDSR
@@ -1188,268 +1385,15 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Original Source: CDS
-      Code: '11524544'
-      Value: Research Activity dbGaP Accession Number Identifier
+      Code: '14940691'
+      Value: Research Activity dbGaP Subject Identifier Text
       Version: '1.00'
   # diagnosis
   tissue_or_organ_of_origin:
     Desc: The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
     Enum:
-    - Abdomen
-    - Abdominal Esophagus
-    - Adrenal Cortex
-    - Adrenal Gland
-    - Adrenal Medulla
-    - Ampulla of Vater
-    - Anal Canal
-    - Anal Transitional Zone
-    - Anterior Mediastinum
-    - Anterior Surface of the Epiglottis
-    - Anterior Wall of the Bladder
-    - Anterior Wall of the Nasopharynx
-    - Antrum Pylori
-    - Anus
-    - Appendage of the Uterus
-    - Appendix
-    - Ascending Colon
-    - Autonomic Nervous System
-    - Axillary Lymph Node
-    - Axillary Tail of the Breast
-    - Base of the Tongue
-    - Biliary Tract
-    - Bladder Neck
-    - Bladder Trigone
-    - Bladder
-    - Blood
-    - Body of Stomach
-    - Body of the Pancreas
-    - Body of the Penis
-    - Bone Marrow
-    - Bone of the Extremity
-    - Bone
-    - Brain Stem
-    - Brain Ventricle
-    - Brain
-    - Branchial Cleft Remnant
-    - Breast
-    - Broad Ligament
-    - Buccal Mucosa
-    - Carotid Body
-    - Cauda Equina
-    - Cecum
-    - Central Portion of the Breast
-    - Cerebellum
-    - Cerebral Hemisphere
-    - Cerebral Meninges
-    - Cervical Esophagus
-    - Cervix Uteri
-    - Choroid
-    - Ciliary Body
-    - Clitoris
-    - Cochlear Nerve
-    - Colon
-    - Commissure of the Lip
-    - Conjunctiva
-    - Cornea
-    - Corpus Uteri
-    - Cranial Nerve
-    - Craniopharyngeal Duct
-    - Descending Colon
-    - Dome of the Bladder
-    - Duodenum
-    - Ectocervix
-    - Endocervix
-    - Endocrine Gland
-    - Endometrium
-    - Epididymis
-    - Esophagus
-    - Ethmoid Sinus
-    - External Ear
-    - External Lip
-    - External Lower Lip
-    - External Upper Lip
-    - Extrahepatic Bile Duct
-    - Eyelid
-    - Eye
-    - Fallopian Tube
-    - Female Genitalia
-    - Floor of Mouth
-    - Frontal Lobe
-    - Frontal Sinus
-    - Fundus of the Stomach
-    - Fundus Uteri
-    - Gallbladder
-    - Gastric Cardia
-    - Gastrointestinal Tract
-    - Gingiva
-    - Glans Penis
-    - Glottis
-    - Greater Curvature of the Stomach
-    - Hard Palate
-    - Head and Neck Lymph Node
-    - Head of the Pancreas
-    - Heart
-    - Hematopoietic System
-    - Hepatic Flexure
-    - Hypopharynx
-    - Ileum
-    - Ill-Defined Anatomic Site
-    - Intestine
-    - Intra-Abdominal Lymph Node
-    - Intrahepatic Bile Duct
-    - Intrathoracic Lymph Node
-    - Islet of Langerhans
-    - Isthmus Uteri
-    - Jejunum
-    - Kidney
-    - Labium Majus
-    - Labium Minus
-    - Lacrimal Gland
-    - Laryngeal Cartilage
-    - Larynx
-    - Lateral Wall of the Bladder
-    - Lateral Wall of the Nasopharynx
-    - Lateral Wall of the Oropharynx
-    - Lesser Curvature of the Stomach
-    - Lingual Tonsil
-    - Lip
-    - Liver
-    - Lower Extremity
-    - Lower Gingiva
-    - Lower Lobe of the Lung
-    - Lower Third of the Esophagus
-    - Lower-Inner Quadrant of the Breast
-    - Lower-Outer Quadrant of the Breast
-    - Lung
-    - Lymph Node of Inguinal Region or Leg
-    - Lymph Node
-    - Main Bronchus
-    - Male Genitalia
-    - Mandible
-    - Maxillary Sinus
-    - Meckel Diverticulum
-    - Mediastinum
-    - Meninges
-    - Middle Ear
-    - Middle Lobe of the Right Lung
-    - Middle Third of the Esophagus
-    - Mucosa of the Lip
-    - Mucosa of the Lower Lip
-    - Mucosa of the Upper Lip
-    - Myometrium
-    - Nasal Cavity
-    - Nasopharynx
-    - Nervous System
-    - Nipple
-    - Not Reported
-    - Occipital Lobe
-    - Olfactory Nerve
-    - Optic Nerve
-    - Oral Cavity
-    - Orbit
-    - Oropharynx
-    - Other and Ill-Defined Sites within Respiratory System and Intrathoracic Organs ICD-O-3
-    - Other and Unspecified Female Genital Organs ICD-O-3
-    - Other and Unspecified Male Genital Organs ICD-O-3
-    - Other Specified Parts of Pancreas
-    - Ovary
-    - Palate
-    - Palatine Tonsil
-    - Pancreas
-    - Pancreatic Duct
-    - Parametrium
-    - Paranasal Sinus
-    - Parathyroid Gland
-    - Parietal Lobe
-    - Parotid Gland
-    - Pelvic Lymph Node
-    - Pelvis
-    - Penis
-    - Peritoneum
-    - Pharynx
-    - Pineal Gland
-    - Pituitary Gland
-    - Placenta
-    - Pleura
-    - Postcricoid Region
-    - Posterior Mediastinum
-    - Posterior Wall of the Bladder
-    - Posterior Wall of the Hypopharynx
-    - Posterior Wall of the Nasopharynx
-    - Posterior Wall of the Oropharynx
-    - Prepuce
-    - Primary Site Unknown
-    - Prostate Gland
-    - Pylorus
-    - Pyriform Sinus
-    - Rectosigmoid Region
-    - Rectum
-    - Renal Pelvis
-    - Reticuloendothelial System
-    - Retina
-    - Retromolar Trigone
-    - Retroperitoneum
-    - Round Ligament
-    - Salivary Gland
-    - Scrotum
-    - Sigmoid Colon
-    - Skene Gland
-    - Skin of the Face
-    - Skin of the Lip
-    - Skin of the Lower Limb and Hip
-    - Skin of the Scalp and Neck
-    - Skin of the Trunk
-    - Skin of the Upper Limb and Shoulder
-    - Skin
-    - Small Intestine
-    - Soft Palate
-    - Spermatic Cord
-    - Sphenoid Sinus
-    - Spinal Cord
-    - Spinal Meninges
-    - Spleen
-    - Splenic Flexure
-    - Stomach
-    - Subglottis
-    - Sublingual Salivary Gland
-    - Submandibular Gland
-    - Superior Wall of the Nasopharynx
-    - Supraglottis
-    - Tail of the Pancreas
-    - Temporal Lobe
-    - Testis
-    - Thoracic Esophagus
-    - Thorax
-    - Thymus Gland
-    - Thyroid Gland
-    - Tongue
-    - Tonsillar Fossa
-    - Tonsillar Pillar
-    - Trachea
-    - Transverse Colon
-    - Undescended Testes
-    - Unknown
-    - Upper Extremity
-    - Upper Gingiva
-    - Upper Lobe of the Lung
-    - Upper Respiratory System
-    - Upper Third of the Esophagus
-    - Upper-Inner Quadrant of the Breast
-    - Upper-Outer Quadrant of the Breast
-    - Urachus
-    - Ureteric Orifice
-    - Ureter
-    - Urethra
-    - Urinary System
-    - Uterus
-    - Uvula
-    - Vagina
-    - Vallecula
-    - Vertebral Column
-    - Vestibule of Mouth
-    - Vulva
-    - Waldeyer Ring
     - Abdominal Aorta
+    - Abdominal Esophagus
     - Abdominal Muscle
     - Abdominal Skin
     - Abdominal Wall
@@ -1458,37 +1402,74 @@ PropDefinitions:
     - Acetabulum
     - Acromioclavicular Joint
     - Adipose Tissue
+    - Adrenal Cortex
+    - Adrenal Gland
+    - Adrenal Medulla
+    - Ampulla of Vater
+    - Anal Canal
+    - Anal Transitional Zone
     - Ankle Joint
     - Ankle Skin
     - Antecubital Region
     - Anterior Cranial Fossa
+    - Anterior Mediastinum
+    - Anterior Surface of the Epiglottis
+    - Anterior Wall of the Bladder
+    - Anterior Wall of the Nasopharynx
+    - Antrum Pylori
+    - Anus
     - Aorta
     - Aortocaval Lymph Node
     - Apex of the Tongue
     - Aponeurosis
+    - Appendage of the Uterus
+    - Appendix
     - Areola
     - Arm Skin
     - Artery
     - Articular Cartilage
     - Aryepiglottic Fold
     - Arytenoid Cartilage
+    - Ascending Colon
+    - Autonomic Nervous System
     - Axilla
     - Axillary Artery
+    - Axillary Lymph Node
+    - Axillary Tail of the Breast
     - Back
     - Bartholin Gland
     - Basal Ganglia
+    - Base of the Tongue
     - Biceps
     - Biceps Femoris
     - Bile Canaliculus
     - Bile Duct
+    - Biliary Tract
+    - Bladder
+    - Bladder Neck
+    - Bladder Trigone
+    - Blood
     - Blood Vessel
+    - Body of Stomach
+    - Body of the Pancreas
+    - Body of the Penis
+    - Bone
+    - Bone Marrow
+    - Bone of the Extremity
     - Brachial Lymph Node
     - Brachial Plexus
     - Brachialis
+    - Brain
     - Brain Dura Mater
+    - Brain Stem
+    - Brain Ventricle
+    - Branchial Cleft Remnant
+    - Breast
+    - Broad Ligament
     - Bronchial Lymph Node
     - Bronchiole
     - Bronchus
+    - Buccal Mucosa
     - Buttock
     - C1 Vertebra
     - C2 Vertebra
@@ -1498,69 +1479,108 @@ PropDefinitions:
     - Cardiac Ventricle
     - Carina
     - Carotid Artery
+    - Carotid Body
     - Carpal Bone
     - Carpal Region
     - Cartilage
+    - Cauda Equina
+    - Cecum
     - Celiac Artery
     - Celiac Lymph Node
     - Central Nervous System
+    - Central Portion of the Breast
     - Cerebellopontine Angle
+    - Cerebellum
     - Cerebral Cortex
+    - Cerebral Hemisphere
+    - Cerebral Meninges
     - Cerebral Peduncle
     - Cerebral White Matter
     - Ceruminous Gland
+    - Cervical Esophagus
     - Cervical Gland
     - Cervical Lymph Node
+    - Cervix Uteri
     - Cheek
     - Chest
     - Chest Wall
+    - Choroid
     - Choroid Plexus
     - Choroid Plexus of the Fourth Ventricle
     - Choroid Plexus of the Lateral Ventricle
     - Choroid Plexus of the Third Ventricle
+    - Ciliary Body
+    - Clitoris
     - Coccyx
+    - Cochlear Nerve
+    - Colon
+    - Commissure of the Lip
     - Common Bile Duct
     - Concha
+    - Conjunctiva
     - Connective Tissue
     - Conus Medullaris
     - Coracobrachialis
+    - Cornea
     - Corneoscleral Limbus
     - Corpus Callosum
     - Corpus Striatum
+    - Corpus Uteri
     - Costal Cartilage
     - Costovertebral Joint
     - Cowper Gland
+    - Cranial Nerve
+    - Craniopharyngeal Duct
     - Cricoid Cartilage
     - Cul-de-sac
     - Cuneiform Cartilage
     - Cystic Duct
+    - Descending Colon
     - Diaphragm
     - Diaphragmatic Lymph Node
+    - Dome of the Bladder
     - Duct of Gartner
     - Ductus Santorini
+    - Duodenum
     - Dura Mater
     - Ear
     - Ear Skin
+    - Ectocervix
     - Elbow Joint
     - Elbow Skin
     - Endocardium
+    - Endocervix
+    - Endocrine Gland
     - Endometrial Stroma
+    - Endometrium
     - Ependyma
     - Epicardium
+    - Epididymis
     - Epidural Spinal Canal Space
     - Epiglottis
     - Epitrochlear Lymph Node
+    - Esophagus
     - Ethmoid Bone
+    - Ethmoid Sinus
     - Eustachian Tube
     - External Acoustic Meatus
+    - External Ear
+    - External Lip
+    - External Lower Lip
     - External Nose
+    - External Upper Lip
+    - Extrahepatic Bile Duct
+    - Eye
     - Eyebrow
+    - Eyelid
     - Facial Bone
     - Facial Nerve
+    - Fallopian Tube
     - False Vocal Cord
     - Falx Cerebelli
     - Falx Cerebri
     - Fascia
+    - Female Genitalia
     - Femoral Artery
     - Femoral Lymph Node
     - Femoral Nerve
@@ -1570,6 +1590,7 @@ PropDefinitions:
     - Finger
     - Fingernail
     - Flank
+    - Floor of Mouth
     - Foot
     - Foot Bone
     - Foot Phalanx
@@ -1578,22 +1599,39 @@ PropDefinitions:
     - Forehead
     - Fourth Ventricle
     - Frontal Bone
+    - Frontal Lobe
     - Frontal Pole
+    - Frontal Sinus
+    - Fundus of the Stomach
+    - Fundus Uteri
+    - Gallbladder
+    - Gastric Cardia
     - Gastric Lymph Node
     - Gastrocnemius Muscle
     - Gastroesophageal Junction
+    - Gastrointestinal Tract
+    - Gingiva
     - Gland of Littre
+    - Glans Penis
     - Globus Pallidus
     - Glossopharyngeal Nerve
+    - Glottis
     - Gluteus Maximus
+    - Greater Curvature of the Stomach
     - Hand
     - Hand Digit 1
     - Hand Phalanx
     - Hand Skin
+    - Hard Palate
+    - Head and Neck Lymph Node
+    - Head of the Pancreas
     - Head Skin
+    - Heart
     - Helix
+    - Hematopoietic System
     - Hepatic
     - Hepatic Duct
+    - Hepatic Flexure
     - Hepatic Lymph Node
     - Hip
     - Hip Joint
@@ -1602,8 +1640,10 @@ PropDefinitions:
     - Hymen
     - Hyoid Bone
     - Hypoglossal Nerve
+    - Hypopharynx
     - Hypothalamus
     - Ileocecal Valve
+    - Ileum
     - Iliac Artery
     - Iliac Lymph Node
     - Iliac Vein
@@ -1626,36 +1666,72 @@ PropDefinitions:
     - Internal Mammary Lymph Node
     - Internal Nare
     - Intervertebral Disc
+    - Intestine
+    - Intra-Abdominal Lymph Node
+    - Intrahepatic Bile Duct
     - Intraocular Route of Administration
+    - Intrathoracic Lymph Node
     - Iris
     - Ischiorectal Fossa
     - Ischium
+    - Islet of Langerhans
+    - Isthmus Uteri
     - Jaw Bone
     - Jaw Joint
+    - Jejunum
     - Joint
+    - Kidney
     - Knee Joint
     - Knee Skin
     - Labium
+    - Labium Majus
+    - Labium Minus
+    - Lacrimal Gland
     - Lacrimal Sac
     - Large Intestine
+    - Laryngeal Cartilage
+    - Larynx
     - Lateral Ventricle
+    - Lateral Wall of the Bladder
+    - Lateral Wall of the Nasopharynx
+    - Lateral Wall of the Oropharynx
     - Lateral Wall of the Pharynx
     - Leg Skin
     - Lens
+    - Lesser Curvature of the Stomach
     - Ligament
+    - Lingual Tonsil
     - Lingula of the Lung
+    - Lip
+    - Liver
     - Lobule of the Auricle
+    - Lower Extremity
+    - Lower Gingiva
+    - Lower Lobe of the Lung
+    - Lower Third of the Esophagus
+    - Lower-Inner Quadrant of the Breast
+    - Lower-Outer Quadrant of the Breast
     - Lumbar Nerve
     - Lumbosacral Plexus
+    - Lung
+    - Lymph Node
+    - Lymph Node of Inguinal Region or Leg
     - Lymphatic
+    - Main Bronchus
+    - Male Genitalia
     - Male Prepuce
     - Mammary Gland
+    - Mandible
     - Masseter Muscle
     - Maxilla
+    - Maxillary Sinus
+    - Meckel Diverticulum
     - Median Nerve
     - Mediastinal Lymph Node
+    - Mediastinum
     - Medulla Oblongata
     - Meibomian Gland
+    - Meninges
     - Meniscus Lateralis
     - Meniscus Medialis
     - Mentum
@@ -1669,57 +1745,101 @@ PropDefinitions:
     - Metacarpal Bone
     - Metatarsal Bone
     - Middle Cranial Fossa
+    - Middle Ear
+    - Middle Lobe of the Right Lung
+    - Middle Third of the Esophagus
     - Minor Salivary Gland
     - Mons Pubis
+    - Mucosa of the Lip
+    - Mucosa of the Lower Lip
+    - Mucosa of the Upper Lip
     - Muscle
     - Musculus Latissimus Dorsi
     - Myocardium
+    - Myometrium
     - Nasal Bone
     - Nasal Cartilage
+    - Nasal Cavity
     - Nasal Septum
     - Nasal Turbinate
     - Nasolacrimal Duct
+    - Nasopharynx
     - Neck Skin
     - Nerve
+    - Nervous System
+    - Nipple
     - Nose
     - Nostril
     - Obturator Lymph Node
     - Obturator Nerve
     - Occipital Bone
+    - Occipital Lobe
     - Occipital Lymph Node
     - Oculomotor Muscle
     - Oculomotor Nerve
+    - Olfactory Nerve
     - Omentum
     - Optic Chiasm
+    - Optic Nerve
     - Optic Tract
+    - Oral Cavity
+    - Orbit
+    - Oropharynx
+    - Other Specified Parts of Pancreas
     - Outer Canthus
+    - Ovary
+    - Palate
+    - Palatine Tonsil
     - Palmar Fascia
+    - Pancreas
+    - Pancreatic Duct
     - Pancreatic Lymph Node
     - Paraaortic Lymph Node
     - Paraganglion
+    - Parametrium
+    - Paranasal Sinus
     - Parasympathetic Nervous System
+    - Parathyroid Gland
     - Paratracheal Lymph Node
     - Parietal Bone
+    - Parietal Lobe
     - Parietal Pleura
     - Parotid Duct
+    - Parotid Gland
     - Parotid Gland Lymph Node
     - Patella
     - Pectoral Lymph Node
     - Pectoralis Major
+    - Pelvic Lymph Node
+    - Pelvis
+    - Penis
     - Pericardium
     - Perineum
     - Peripheral Nerve
     - Peritoneal Cavity
+    - Peritoneum
     - Pharyngeal Tonsil
+    - Pharynx
     - Pia Mater
+    - Pineal Gland
+    - Pituitary Gland
+    - Placenta
     - Plantar Fascia
     - Plantar Region
+    - Pleura
     - Pons Varolii
     - Popliteal Lymph Node
     - Portal Lymph Node
+    - Postcricoid Region
     - Posterior Cranial Fossa
+    - Posterior Mediastinum
+    - Posterior Wall of the Bladder
+    - Posterior Wall of the Hypopharynx
+    - Posterior Wall of the Nasopharynx
+    - Posterior Wall of the Oropharynx
     - Posterior Wall of the Pharynx
     - Preauricular Lymph Node
+    - Prostate Gland
     - Prostatic Utricle
     - Psoas Muscle
     - Pubic Bone
@@ -1727,75 +1847,119 @@ PropDefinitions:
     - Pulmonary
     - Pulmonary Hilar Lymph Node
     - Putamen
+    - Pylorus
+    - Pyriform Sinus
     - Quadriceps Muscle of the Thigh
     - Radial Artery
     - Radial Nerve
     - Radius Bone
     - Rathke Pouch
     - Rectosigmoid Colon
+    - Rectosigmoid Region
+    - Rectum
     - Rectus Abdominis
     - Renal
     - Renal Artery
     - Renal Calyx
+    - Renal Pelvis
+    - Reticuloendothelial System
+    - Retina
+    - Retromolar Trigone
     - Retroperitoneal Lymph Node
+    - Retroperitoneum
     - Retropharyngeal Lymph Node
     - Round Ligament of the Uterus
     - Sacral Bone
     - Sacral Lymph Node
     - Sacral Nerve
     - Sacral Plexus
+    - Salivary Gland
     - Scalene Lymph Node
     - Scalp
     - Scapula
     - Sciatic Nerve
     - Sclera
+    - Scrotum
     - Sella Turcica
     - Seminal Vesicle
     - Shoulder
     - Shoulder Girdle
     - Shoulder Joint
+    - Sigmoid Colon
     - Skeletal Muscle Tissue
+    - Skin
     - Skin Of The Axilla
+    - Skin of the Face
+    - Skin of the Lip
+    - Skin of the Lower Limb and Hip
+    - Skin of the Scalp and Neck
+    - Skin of the Trunk
+    - Skin of the Upper Limb and Shoulder
     - Skull
     - Skullcap
+    - Small Intestine
+    - Spermatic Cord
     - Sphenoid Bone
+    - Sphenoid Sinus
     - Sphincter of Oddi
+    - Spinal Cord
     - Spinal Cord Dura Mater
+    - Spinal Meninges
     - Spinal Nerve
+    - Spleen
+    - Splenic Flexure
     - Splenic Hilar Lymph Node
     - Sternocleidomastoid Muscle
     - Sternocostal Joint
+    - Stomach
     - Subclavian Artery
     - Subcutis
+    - Subglottis
     - Sublingual Lymph Node
+    - Sublingual Salivary Gland
     - Submandibular Duct
+    - Submandibular Gland
     - Submandibular Lymph Node
     - Superior Vena Cava
+    - Superior Wall of the Nasopharynx
     - Supraclavicular
     - Supraclavicular Lymph Node
+    - Supraglottis
     - Suprasellar Region
     - Supratentorial Brain
     - Sympathetic Nervous System
     - Synovial Bursa
     - Synovial Fluid
+    - Tail of the Pancreas
     - Tarsal Bone
     - Temporal Bone
+    - Temporal Lobe
     - Tendon
     - Tendon Sheath
     - Tentorium Cerebelli
+    - Testis
     - Thalamus
     - Thigh
     - Third Ventricle
     - Thoracic Duct
+    - Thoracic Esophagus
     - Thoracic Lymph Node
+    - Thorax
+    - Thymus Gland
     - Thyroglossal Duct
     - Thyroid Cartilage
+    - Thyroid Gland
     - Tibia
     - Toe
     - Toenail
+    - Tongue
+    - Tonsillar Fossa
+    - Tonsillar Pillar
     - Tooth Socket
+    - Trachea
     - Tracheobronchial Lymph Node
     - Tragus
+    - Transverse Colon
     - Trapezius Muscle
     - Triceps Brachii
     - Trigeminal Nerve
@@ -1808,361 +1972,678 @@ PropDefinitions:
     - Ulnar Nerve
     - Umbilicus
     - Uncus
+    - Undescended Testes
+    - Upper Extremity
+    - Upper Gingiva
+    - Upper Lobe of the Lung
+    - Upper Third of the Esophagus
+    - Upper-Inner Quadrant of the Breast
+    - Upper-Outer Quadrant of the Breast
+    - Urachus
+    - Ureter
+    - Ureteric Orifice
     - Ureteropelvic Junction
+    - Urethra
     - Uterine Gland
     - Uterine Ligament
+    - Uterus
     - Uvea
+    - Uvula
+    - Vagina
     - Vaginal Fornix
     - Vagus Nerve
+    - Vallecula
     - Vas Deferens
     - Vein
     - Vena Cava
     - Vermis
     - Vertebra
+    - Vertebral Column
     - Visceral Pleura
     - Vocal Cord
+    - Vulva
     - Waldeyer's Tonsillar Ring
     - Wall of the Pharynx
     - Wrist Joint
     - Wrist Skin
+  Term:
+  - Origin: caDSR
+    Original Source: CDS
+    Code: '14883058'
+    Value: Disease Tissue or Organ of Origin Anatomic Site Uberon Identifier
+    Version: '1.00'
   site_of_resection_or_biopsy:
     Desc: The organ or part of the body resected or biopsied, as described by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
     Enum:
-    - Abdomen, NOS
-    - Abdominal esophagus
-    - Accessory sinus, NOS
-    - Acoustic nerve
-    - Adrenal gland, NOS
+    - Abdominal Aorta
+    - Abdominal Esophagus
+    - Abdominal Muscle
+    - Abdominal Skin
+    - Abdominal Wall
+    - Abducens Nerve
+    - Accessory Nerve
+    - Acetabulum
+    - Acromioclavicular Joint
+    - Adipose Tissue
+    - Adrenal Cortex
+    - Adrenal Gland
+    - Adrenal Medulla
     - Ampulla of Vater
-    - Anal canal
-    - Anterior 2/3 of tongue, NOS
-    - Anterior floor of mouth
-    - Anterior mediastinum
-    - Anterior surface of epiglottis
-    - Anterior wall of bladder
-    - Anterior wall of nasopharynx
-    - Anus, NOS
-    - Aortic body and other paraganglia
+    - Anal Canal
+    - Anal Transitional Zone
+    - Ankle Joint
+    - Ankle Skin
+    - Antecubital Region
+    - Anterior Cranial Fossa
+    - Anterior Mediastinum
+    - Anterior Surface of the Epiglottis
+    - Anterior Wall of the Bladder
+    - Anterior Wall of the Nasopharynx
+    - Antrum Pylori
+    - Anus
+    - Aorta
+    - Aortocaval Lymph Node
+    - Apex of the Tongue
+    - Aponeurosis
+    - Appendage of the Uterus
     - Appendix
-    - Ascending colon
-    - Autonomic nervous system, NOS
-    - Axillary tail of breast
-    - Base of tongue, NOS
-    - Bladder neck
-    - Bladder, NOS
+    - Areola
+    - Arm Skin
+    - Artery
+    - Articular Cartilage
+    - Aryepiglottic Fold
+    - Arytenoid Cartilage
+    - Ascending Colon
+    - Autonomic Nervous System
+    - Axilla
+    - Axillary Artery
+    - Axillary Lymph Node
+    - Axillary Tail of the Breast
+    - Back
+    - Bartholin Gland
+    - Basal Ganglia
+    - Base of the Tongue
+    - Biceps
+    - Biceps Femoris
+    - Bile Canaliculus
+    - Bile Duct
+    - Biliary Tract
+    - Bladder
+    - Bladder Neck
+    - Bladder Trigone
     - Blood
-    - Body of pancreas
-    - Body of penis
-    - Body of stomach
-    - Bone marrow
-    - Bone of limb, NOS
-    - Bone, NOS
-    - Bones of skull and face and associated joints
-    - Border of tongue
-    - Brain stem
-    - Brain, NOS
-    - Branchial cleft
-    - Breast, NOS
-    - Broad ligament
-    - Cardia, NOS
-    - Carotid body
-    - Cauda equina
+    - Blood Vessel
+    - Body of Stomach
+    - Body of the Pancreas
+    - Body of the Penis
+    - Bone
+    - Bone Marrow
+    - Bone of the Extremity
+    - Brachial Lymph Node
+    - Brachial Plexus
+    - Brachialis
+    - Brain
+    - Brain Dura Mater
+    - Brain Stem
+    - Brain Ventricle
+    - Branchial Cleft Remnant
+    - Breast
+    - Broad Ligament
+    - Bronchial Lymph Node
+    - Bronchiole
+    - Bronchus
+    - Buccal Mucosa
+    - Buttock
+    - C1 Vertebra
+    - C2 Vertebra
+    - Calcaneum
+    - Calf
+    - Cardiac Atrium
+    - Cardiac Ventricle
+    - Carina
+    - Carotid Artery
+    - Carotid Body
+    - Carpal Bone
+    - Carpal Region
+    - Cartilage
+    - Cauda Equina
     - Cecum
-    - Central portion of breast
-    - Cerebellum, NOS
-    - Cerebral meninges
-    - Cerebrum
-    - Cervical esophagus
-    - Cervix uteri
+    - Celiac Artery
+    - Celiac Lymph Node
+    - Central Nervous System
+    - Central Portion of the Breast
+    - Cerebellopontine Angle
+    - Cerebellum
+    - Cerebral Cortex
+    - Cerebral Hemisphere
+    - Cerebral Meninges
+    - Cerebral Peduncle
+    - Cerebral White Matter
+    - Ceruminous Gland
+    - Cervical Esophagus
+    - Cervical Gland
+    - Cervical Lymph Node
+    - Cervix Uteri
+    - Cheek
+    - Chest
+    - Chest Wall
     - Choroid
-    - Ciliary body
-    - Cloacogenic zone
-    - Colon, NOS
-    - Commissure of lip
+    - Choroid Plexus
+    - Choroid Plexus of the Fourth Ventricle
+    - Choroid Plexus of the Lateral Ventricle
+    - Choroid Plexus of the Third Ventricle
+    - Ciliary Body
+    - Clitoris
+    - Coccyx
+    - Cochlear Nerve
+    - Colon
+    - Commissure of the Lip
+    - Common Bile Duct
+    - Concha
     - Conjunctiva
-    - Connective, subcutaneous and other soft tissues of abdomen
-    - Connective, subcutaneous and other soft tissues of head, face, and neck
-    - Connective, subcutaneous and other soft tissues of lower limb and hip
-    - Connective, subcutaneous and other soft tissues of pelvis
-    - Connective, subcutaneous and other soft tissues of thorax
-    - Connective, subcutaneous and other soft tissues of trunk, NOS
-    - Connective, subcutaneous and other soft tissues of upper limb and shoulder
-    - Connective, subcutaneous and other soft tissues, NOS
-    - Cornea, NOS
-    - Corpus uteri
-    - Cortex of adrenal gland
-    - Cranial nerve, NOS
-    - Craniopharyngeal duct
-    - Descended testis
-    - Descending colon
-    - Dome of bladder
-    - Dorsal surface of tongue, NOS
+    - Connective Tissue
+    - Conus Medullaris
+    - Coracobrachialis
+    - Cornea
+    - Corneoscleral Limbus
+    - Corpus Callosum
+    - Corpus Striatum
+    - Corpus Uteri
+    - Costal Cartilage
+    - Costovertebral Joint
+    - Cowper Gland
+    - Cranial Nerve
+    - Craniopharyngeal Duct
+    - Cricoid Cartilage
+    - Cul-de-sac
+    - Cuneiform Cartilage
+    - Cystic Duct
+    - Descending Colon
+    - Diaphragm
+    - Diaphragmatic Lymph Node
+    - Dome of the Bladder
+    - Duct of Gartner
+    - Ductus Santorini
     - Duodenum
+    - Dura Mater
+    - Ear
+    - Ear Skin
+    - Ectocervix
+    - Elbow Joint
+    - Elbow Skin
+    - Endocardium
     - Endocervix
-    - Endocrine gland, NOS
+    - Endocrine Gland
+    - Endometrial Stroma
     - Endometrium
+    - Ependyma
+    - Epicardium
     - Epididymis
-    - Esophagus, NOS
-    - Ethmoid sinus
-    - Exocervix
-    - External ear
-    - External lip, NOS
-    - External lower lip
-    - External upper lip
-    - Extrahepatic bile duct
-    - Eye, NOS
+    - Epidural Spinal Canal Space
+    - Epiglottis
+    - Epitrochlear Lymph Node
+    - Esophagus
+    - Ethmoid Bone
+    - Ethmoid Sinus
+    - Eustachian Tube
+    - External Acoustic Meatus
+    - External Ear
+    - External Lip
+    - External Lower Lip
+    - External Nose
+    - External Upper Lip
+    - Extrahepatic Bile Duct
+    - Eye
+    - Eyebrow
     - Eyelid
-    - Fallopian tube
-    - Female genital tract, NOS
-    - Floor of mouth, NOS
-    - Frontal lobe
-    - Frontal sinus
-    - Fundus of stomach
-    - Fundus uteri
+    - Facial Bone
+    - Facial Nerve
+    - Fallopian Tube
+    - False Vocal Cord
+    - Falx Cerebelli
+    - Falx Cerebri
+    - Fascia
+    - Female Genitalia
+    - Femoral Artery
+    - Femoral Lymph Node
+    - Femoral Nerve
+    - Femur
+    - Fibrous Tissue
+    - Fibula
+    - Finger
+    - Fingernail
+    - Flank
+    - Floor of Mouth
+    - Foot
+    - Foot Bone
+    - Foot Phalanx
+    - Foot Skin
+    - Forearm
+    - Forehead
+    - Fourth Ventricle
+    - Frontal Bone
+    - Frontal Lobe
+    - Frontal Pole
+    - Frontal Sinus
+    - Fundus of the Stomach
+    - Fundus Uteri
     - Gallbladder
-    - Gastric antrum
-    - Gastrointestinal tract, NOS
-    - Glans penis
+    - Gastric Cardia
+    - Gastric Lymph Node
+    - Gastrocnemius Muscle
+    - Gastroesophageal Junction
+    - Gastrointestinal Tract
+    - Gingiva
+    - Gland of Littre
+    - Glans Penis
+    - Globus Pallidus
+    - Glossopharyngeal Nerve
     - Glottis
-    - Greater curvature of stomach, NOS
-    - Gum, NOS
-    - Hard palate
-    - Head of pancreas
-    - Head, face or neck, NOS
+    - Gluteus Maximus
+    - Greater Curvature of the Stomach
+    - Hand
+    - Hand Digit 1
+    - Hand Phalanx
+    - Hand Skin
+    - Hard Palate
+    - Head and Neck Lymph Node
+    - Head of the Pancreas
+    - Head Skin
     - Heart
-    - Hematopoietic system, NOS
-    - Hepatic flexure of colon
-    - Hypopharyngeal aspect of aryepiglottic fold
-    - Hypopharynx, NOS
+    - Helix
+    - Hematopoietic System
+    - Hepatic
+    - Hepatic Duct
+    - Hepatic Flexure
+    - Hepatic Lymph Node
+    - Hip
+    - Hip Joint
+    - Hippocampus
+    - Humerus
+    - Hymen
+    - Hyoid Bone
+    - Hypoglossal Nerve
+    - Hypopharynx
+    - Hypothalamus
+    - Ileocecal Valve
     - Ileum
-    - Ill-defined sites within respiratory system
-    - Intestinal tract, NOS
-    - Intra-abdominal lymph nodes
-    - Intrahepatic bile duct
-    - Intrathoracic lymph nodes
-    - Islets of Langerhans
-    - Isthmus uteri
+    - Iliac Artery
+    - Iliac Lymph Node
+    - Iliac Vein
+    - Iliopsoas Muscle
+    - Ilium
+    - Inferior Vena Cava
+    - Infraclavicular Lymph Node
+    - Infraclavicular Region
+    - Infratentorial Brain
+    - Inguinal Lymph Node
+    - Inguinal Region
+    - Inner Canthus
+    - Inner Ear
+    - Intercostal Lymph Node
+    - Intercostal Muscle
+    - Intercostal Nerve
+    - Internal Capsule
+    - Internal Iliac Lymph Node
+    - Internal Mammary Artery
+    - Internal Mammary Lymph Node
+    - Internal Nare
+    - Intervertebral Disc
+    - Intestine
+    - Intra-Abdominal Lymph Node
+    - Intrahepatic Bile Duct
+    - Intraocular Route of Administration
+    - Intrathoracic Lymph Node
+    - Iris
+    - Ischiorectal Fossa
+    - Ischium
+    - Islet of Langerhans
+    - Isthmus Uteri
+    - Jaw Bone
+    - Jaw Joint
     - Jejunum
-    - Kidney, NOS
-    - Labium majus
-    - Labium minus
-    - Lacrimal gland
-    - Laryngeal cartilage
-    - Larynx, NOS
-    - Lateral floor of mouth
-    - Lateral wall of bladder
-    - Lateral wall of nasopharynx
-    - Lateral wall of oropharynx
-    - Lesser curvature of stomach, NOS
-    - Lingual tonsil
-    - Lip, NOS
+    - Joint
+    - Kidney
+    - Knee Joint
+    - Knee Skin
+    - Labium
+    - Labium Majus
+    - Labium Minus
+    - Lacrimal Gland
+    - Lacrimal Sac
+    - Large Intestine
+    - Laryngeal Cartilage
+    - Larynx
+    - Lateral Ventricle
+    - Lateral Wall of the Bladder
+    - Lateral Wall of the Nasopharynx
+    - Lateral Wall of the Oropharynx
+    - Lateral Wall of the Pharynx
+    - Leg Skin
+    - Lens
+    - Lesser Curvature of the Stomach
+    - Ligament
+    - Lingual Tonsil
+    - Lingula of the Lung
+    - Lip
     - Liver
-    - Long bones of lower limb and associated joints
-    - Long bones of upper limb, scapula and associated joints
-    - Lower gum
-    - Lower limb, NOS
-    - Lower lobe, lung
-    - Lower third of esophagus
-    - Lower-inner quadrant of breast
-    - Lower-outer quadrant of breast
-    - Lung, NOS
-    - Lymph node, NOS
-    - Lymph nodes of axilla or arm
-    - Lymph nodes of head, face and neck
-    - Lymph nodes of inguinal region or leg
-    - Lymph nodes of multiple regions
-    - Main bronchus
-    - Major salivary gland, NOS
-    - Male genital organs, NOS
+    - Lobule of the Auricle
+    - Lower Extremity
+    - Lower Gingiva
+    - Lower Lobe of the Lung
+    - Lower Third of the Esophagus
+    - Lower-Inner Quadrant of the Breast
+    - Lower-Outer Quadrant of the Breast
+    - Lumbar Nerve
+    - Lumbosacral Plexus
+    - Lung
+    - Lymph Node
+    - Lymph Node of Inguinal Region or Leg
+    - Lymphatic
+    - Main Bronchus
+    - Male Genitalia
+    - Male Prepuce
+    - Mammary Gland
     - Mandible
-    - Maxillary sinus
-    - Meckel diverticulum
-    - Mediastinum, NOS
-    - Medulla of adrenal gland
-    - Meninges, NOS
-    - Middle ear
-    - Middle lobe, lung
-    - Middle third of esophagus
-    - Mouth, NOS
-    - Mucosa of lip, NOS
-    - Mucosa of lower lip
-    - Mucosa of upper lip
+    - Masseter Muscle
+    - Maxilla
+    - Maxillary Sinus
+    - Meckel Diverticulum
+    - Median Nerve
+    - Mediastinal Lymph Node
+    - Mediastinum
+    - Medulla Oblongata
+    - Meibomian Gland
+    - Meninges
+    - Meniscus Lateralis
+    - Meniscus Medialis
+    - Mentum
+    - Mesencephalon
+    - Mesenteric Artery
+    - Mesenteric Lymph Node
+    - Mesentery
+    - Mesonephric Duct
+    - Mesonephros
+    - Mesovarium
+    - Metacarpal Bone
+    - Metatarsal Bone
+    - Middle Cranial Fossa
+    - Middle Ear
+    - Middle Lobe of the Right Lung
+    - Middle Third of the Esophagus
+    - Minor Salivary Gland
+    - Mons Pubis
+    - Mucosa of the Lip
+    - Mucosa of the Lower Lip
+    - Mucosa of the Upper Lip
+    - Muscle
+    - Musculus Latissimus Dorsi
+    - Myocardium
     - Myometrium
-    - Nasal cavity
-    - Nasopharynx, NOS
-    - Nervous system, NOS
+    - Nasal Bone
+    - Nasal Cartilage
+    - Nasal Cavity
+    - Nasal Septum
+    - Nasal Turbinate
+    - Nasolacrimal Duct
+    - Nasopharynx
+    - Neck Skin
+    - Nerve
+    - Nervous System
     - Nipple
-    - Occipital lobe
-    - Olfactory nerve
-    - Optic nerve
-    - Orbit, NOS
-    - Oropharynx, NOS
-    - Other ill-defined sites
-    - Other specified parts of female genital organs
-    - Other specified parts of male genital organs
-    - Other specified parts of pancreas
+    - Nose
+    - Nostril
+    - Obturator Lymph Node
+    - Obturator Nerve
+    - Occipital Bone
+    - Occipital Lobe
+    - Occipital Lymph Node
+    - Oculomotor Muscle
+    - Oculomotor Nerve
+    - Olfactory Nerve
+    - Omentum
+    - Optic Chiasm
+    - Optic Nerve
+    - Optic Tract
+    - Oral Cavity
+    - Orbit
+    - Oropharynx
+    - Other Specified Parts of Pancreas
+    - Outer Canthus
     - Ovary
-    - Overlapping lesion of accessory sinuses
-    - Overlapping lesion of bladder
-    - Overlapping lesion of bones, joints and articular cartilage
-    - Overlapping lesion of bones, joints and articular cartilage of limbs
-    - Overlapping lesion of brain
-    - Overlapping lesion of brain and central nervous system
-    - Overlapping lesion of breast
-    - Overlapping lesion of cervix uteri
-    - Overlapping lesion of colon
-    - Overlapping lesion of connective, subcutaneous and other soft tissues
-    - Overlapping lesion of corpus uteri
-    - Overlapping lesion of digestive system
-    - Overlapping lesion of endocrine glands and related structures
-    - Overlapping lesion of esophagus
-    - Overlapping lesion of eye and adnexa
-    - Overlapping lesion of female genital organs
-    - Overlapping lesion of floor of mouth
-    - Overlapping lesion of heart, mediastinum and pleura
-    - Overlapping lesion of hypopharynx
-    - Overlapping lesion of ill-defined sites
-    - Overlapping lesion of larynx
-    - Overlapping lesion of lip
-    - Overlapping lesion of lip, oral cavity and pharynx
-    - Overlapping lesion of lung
-    - Overlapping lesion of major salivary glands
-    - Overlapping lesion of male genital organs
-    - Overlapping lesion of nasopharynx
-    - Overlapping lesion of other and unspecified parts of mouth
-    - Overlapping lesion of palate
-    - Overlapping lesion of pancreas
-    - Overlapping lesion of penis
-    - Overlapping lesion of peripheral nerves and autonomic nervous system
-    - Overlapping lesion of rectum, anus and anal canal
-    - Overlapping lesion of respiratory system and intrathoracic organs
-    - Overlapping lesion of retroperitoneum and peritoneum
-    - Overlapping lesion of skin
-    - Overlapping lesion of small intestine
-    - Overlapping lesion of stomach
-    - Overlapping lesion of tongue
-    - Overlapping lesion of tonsil
-    - Overlapping lesion of urinary organs
-    - Overlapping lesion of vulva
-    - Overlapping lesions of oropharynx
-    - Palate, NOS
-    - Pancreas, NOS
-    - Pancreatic duct
+    - Palate
+    - Palatine Tonsil
+    - Palmar Fascia
+    - Pancreas
+    - Pancreatic Duct
+    - Pancreatic Lymph Node
+    - Paraaortic Lymph Node
+    - Paraganglion
     - Parametrium
-    - Parathyroid gland
-    - Paraurethral gland
-    - Parietal lobe
-    - Parotid gland
-    - Pelvic bones, sacrum, coccyx and associated joints
-    - Pelvic lymph nodes
-    - Pelvis, NOS
-    - Penis, NOS
-    - Peripheral nerves and autonomic nervous system of abdomen
-    - Peripheral nerves and autonomic nervous system of head, face, and neck
-    - Peripheral nerves and autonomic nervous system of lower limb and hip
-    - Peripheral nerves and autonomic nervous system of pelvis
-    - Peripheral nerves and autonomic nervous system of thorax
-    - Peripheral nerves and autonomic nervous system of trunk, NOS
-    - Peripheral nerves and autonomic nervous system of upper limb and shoulder
-    - Peritoneum, NOS
-    - Pharynx, NOS
-    - Pineal gland
-    - Pituitary gland
+    - Paranasal Sinus
+    - Parasympathetic Nervous System
+    - Parathyroid Gland
+    - Paratracheal Lymph Node
+    - Parietal Bone
+    - Parietal Lobe
+    - Parietal Pleura
+    - Parotid Duct
+    - Parotid Gland
+    - Parotid Gland Lymph Node
+    - Patella
+    - Pectoral Lymph Node
+    - Pectoralis Major
+    - Pelvic Lymph Node
+    - Pelvis
+    - Penis
+    - Pericardium
+    - Perineum
+    - Peripheral Nerve
+    - Peritoneal Cavity
+    - Peritoneum
+    - Pharyngeal Tonsil
+    - Pharynx
+    - Pia Mater
+    - Pineal Gland
+    - Pituitary Gland
     - Placenta
-    - Pleura, NOS
-    - Postcricoid region
-    - Posterior mediastinum
-    - Posterior wall of bladder
-    - Posterior wall of hypopharynx
-    - Posterior wall of nasopharynx
-    - Posterior wall of oropharynx
-    - Prepuce
-    - Prostate gland
+    - Plantar Fascia
+    - Plantar Region
+    - Pleura
+    - Pons Varolii
+    - Popliteal Lymph Node
+    - Portal Lymph Node
+    - Postcricoid Region
+    - Posterior Cranial Fossa
+    - Posterior Mediastinum
+    - Posterior Wall of the Bladder
+    - Posterior Wall of the Hypopharynx
+    - Posterior Wall of the Nasopharynx
+    - Posterior Wall of the Oropharynx
+    - Posterior Wall of the Pharynx
+    - Preauricular Lymph Node
+    - Prostate Gland
+    - Prostatic Utricle
+    - Psoas Muscle
+    - Pubic Bone
+    - Pubic Symphysis
+    - Pulmonary
+    - Pulmonary Hilar Lymph Node
+    - Putamen
     - Pylorus
-    - Pyriform sinus
-    - Rectosigmoid junction
-    - Rectum, NOS
-    - Renal pelvis
-    - Reticuloendothelial system, NOS
+    - Pyriform Sinus
+    - Quadriceps Muscle of the Thigh
+    - Radial Artery
+    - Radial Nerve
+    - Radius Bone
+    - Rathke Pouch
+    - Rectosigmoid Colon
+    - Rectosigmoid Region
+    - Rectum
+    - Rectus Abdominis
+    - Renal
+    - Renal Artery
+    - Renal Calyx
+    - Renal Pelvis
+    - Reticuloendothelial System
     - Retina
-    - Retromolar area
+    - Retromolar Trigone
+    - Retroperitoneal Lymph Node
     - Retroperitoneum
-    - Rib, sternum, clavicle and associated joints
-    - Round ligament
-    - Scrotum, NOS
-    - Short bones of lower limb and associated joints
-    - Short bones of upper limb and associated joints
-    - Sigmoid colon
-    - Skin of lip, NOS
-    - Skin of lower limb and hip
-    - Skin of other and unspecified parts of face
-    - Skin of scalp and neck
-    - Skin of trunk
-    - Skin of upper limb and shoulder
-    - Skin, NOS
-    - Small intestine, NOS
-    - Soft palate, NOS
-    - Specified parts of peritoneum
-    - Spermatic cord
-    - Sphenoid sinus
-    - Spinal cord
-    - Spinal meninges
+    - Retropharyngeal Lymph Node
+    - Round Ligament of the Uterus
+    - Sacral Bone
+    - Sacral Lymph Node
+    - Sacral Nerve
+    - Sacral Plexus
+    - Salivary Gland
+    - Scalene Lymph Node
+    - Scalp
+    - Scapula
+    - Sciatic Nerve
+    - Sclera
+    - Scrotum
+    - Sella Turcica
+    - Seminal Vesicle
+    - Shoulder
+    - Shoulder Girdle
+    - Shoulder Joint
+    - Sigmoid Colon
+    - Skeletal Muscle Tissue
+    - Skin
+    - Skin Of The Axilla
+    - Skin of the Face
+    - Skin of the Lip
+    - Skin of the Lower Limb and Hip
+    - Skin of the Scalp and Neck
+    - Skin of the Trunk
+    - Skin of the Upper Limb and Shoulder
+    - Skull
+    - Skullcap
+    - Small Intestine
+    - Spermatic Cord
+    - Sphenoid Bone
+    - Sphenoid Sinus
+    - Sphincter of Oddi
+    - Spinal Cord
+    - Spinal Cord Dura Mater
+    - Spinal Meninges
+    - Spinal Nerve
     - Spleen
-    - Splenic flexure of colon
-    - Stomach, NOS
+    - Splenic Flexure
+    - Splenic Hilar Lymph Node
+    - Sternocleidomastoid Muscle
+    - Sternocostal Joint
+    - Stomach
+    - Subclavian Artery
+    - Subcutis
     - Subglottis
-    - Sublingual gland
-    - Submandibular gland
-    - Superior wall of nasopharynx
+    - Sublingual Lymph Node
+    - Sublingual Salivary Gland
+    - Submandibular Duct
+    - Submandibular Gland
+    - Submandibular Lymph Node
+    - Superior Vena Cava
+    - Superior Wall of the Nasopharynx
+    - Supraclavicular
+    - Supraclavicular Lymph Node
     - Supraglottis
-    - Tail of pancreas
-    - Temporal lobe
-    - Testis, NOS
-    - Thoracic esophagus
-    - Thorax, NOS
-    - Thymus
-    - Thyroid gland
-    - Tongue, NOS
-    - Tonsil, NOS
-    - Tonsillar fossa
-    - Tonsillar pillar
+    - Suprasellar Region
+    - Supratentorial Brain
+    - Sympathetic Nervous System
+    - Synovial Bursa
+    - Synovial Fluid
+    - Tail of the Pancreas
+    - Tarsal Bone
+    - Temporal Bone
+    - Temporal Lobe
+    - Tendon
+    - Tendon Sheath
+    - Tentorium Cerebelli
+    - Testis
+    - Thalamus
+    - Thigh
+    - Third Ventricle
+    - Thoracic Duct
+    - Thoracic Esophagus
+    - Thoracic Lymph Node
+    - Thorax
+    - Thymus Gland
+    - Thyroglossal Duct
+    - Thyroid Cartilage
+    - Thyroid Gland
+    - Tibia
+    - Toe
+    - Toenail
+    - Tongue
+    - Tonsillar Fossa
+    - Tonsillar Pillar
+    - Tooth Socket
     - Trachea
-    - Transverse colon
-    - Trigone of bladder
-    - Undescended testis
-    - Unknown primary site
-    - Upper gum
-    - Upper limb, NOS
-    - Upper lobe, lung
-    - Upper respiratory tract, NOS
-    - Upper third of esophagus
-    - Upper-inner quadrant of breast
-    - Upper-outer quadrant of breast
+    - Tracheobronchial Lymph Node
+    - Tragus
+    - Transverse Colon
+    - Trapezius Muscle
+    - Triceps Brachii
+    - Trigeminal Nerve
+    - Trochlear Nerve
+    - True Vocal Cord
+    - Trunk
+    - Tunica Vaginalis
+    - Ulna
+    - Ulnar Artery
+    - Ulnar Nerve
+    - Umbilicus
+    - Uncus
+    - Undescended Testes
+    - Upper Extremity
+    - Upper Gingiva
+    - Upper Lobe of the Lung
+    - Upper Third of the Esophagus
+    - Upper-Inner Quadrant of the Breast
+    - Upper-Outer Quadrant of the Breast
     - Urachus
     - Ureter
-    - Ureteric orifice
+    - Ureteric Orifice
+    - Ureteropelvic Junction
     - Urethra
-    - Urinary system, NOS
-    - Uterine adnexa
-    - Uterus, NOS
+    - Uterine Gland
+    - Uterine Ligament
+    - Uterus
+    - Uvea
     - Uvula
-    - Vagina, NOS
+    - Vagina
+    - Vaginal Fornix
+    - Vagus Nerve
     - Vallecula
-    - Ventral surface of tongue, NOS
-    - Ventricle, NOS
-    - Vertebral column
-    - Vestibule of mouth
-    - Vulva, NOS
-    - Waldeyer ring
-    - Biliary tract, NOS
-    - Cheek mucosa
-    - Clitoris
-    - Overlapping lesion of biliary tract
-    - Unknown
-    - Not Reported
+    - Vas Deferens
+    - Vein
+    - Vena Cava
+    - Vermis
+    - Vertebra
+    - Vertebral Column
+    - Visceral Pleura
+    - Vocal Cord
+    - Vulva
+    - Waldeyer's Tonsillar Ring
+    - Wall of the Pharynx
+    - Wrist Joint
+    - Wrist Skin
+    Term:
+    - Origin: caDSR
+      Original Source: DSS
+      Code: '14883054'
+      Value: Disease Site of Resection or Biopsy Uberon Identifier
+      Version: '1.00'
   days_to_last_known_disease_status:
     Desc: The number of days from the date of the initial cancer diagnosis to the date of last known disease status.
     Type: number
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '12447170'
+      Value: Subject Initial Cancer Diagnosis To Last Known Disease Status Day Count
+      Version: '1.00'
   diagnosis_id:
     Desc: Internal identifier
     Type: string
@@ -2174,48 +2655,52 @@ PropDefinitions:
   disease_type:
     Desc: Type of disease [?]
     Enum:
-    - Acinar Cell Neoplasm
-    - Basal Cell Neoplasm
-    - Blood Vessel Neoplasm
-    - Bone Neoplasm
-    - Complex Epithelial Neoplasm
-    - Epithelial Neoplasm
-    - Fibroepithelial Neoplasm
-    - Germ Cell Tumor
-    - Giant Cell Tumor
-    - Glioma
-    - Hodgkin Lymphoma
-    - Leukemia
-    - Lipomatous Neoplasm
-    - Lymphatic Vessel Neoplasm
-    - Lymphoblastic Lymphoma
-    - Lymphoid Leukemia
-    - Lymphoma
+    - Acinar Cell Neoplasms
+    - Adenomas and Adenocarcinomas
+    - Adnexal and Skin Appendage Neoplasms
+    - Basal Cell Neoplasms
+    - Blood Vessel Tumors
+    - Complex Mixed and Stromal Neoplasms
+    - Cystic, Mucinous and Serous Neoplasms
+    - Ductal and Lobular Neoplasms
+    - Epithelial Neoplasms, NOS
+    - Fibroepithelial Neoplasms
+    - Fibromatous Neoplasms
+    - Germ Cell Neoplasms
+    - Giant Cell Tumors
+    - Gliomas
+    - Granular Cell Tumors and Alveolar Soft Part Sarcomas
+    - Immunoproliferative Diseases
+    - Leukemias
+    - Lipomatous Neoplasms
+    - Lymphatic Vessel Tumors
     - Mast Cell Neoplasm
-    - Mature B-Cell Non-Hodgkin Lymphoma
-    - Mature T-Cell and NK-Cell Non-Hodgkin Lymphoma
-    - Meningioma
-    - Mesothelial Neoplasm
-    - Myelodysplastic Syndrome
-    - Myeloid Leukemia
-    - Myeloproliferative Neoplasm
-    - Myomatous Neoplasm
-    - Neoplasm
-    - Nerve Sheath Neoplasm
-    - Neuroepithelial Neoplasm
+    - Meningiomas
+    - Mesothelial Neoplasms
+    - Miscellaneous Bone Tumors
+    - Miscellaneous Tumors
+    - Mucoepidermoid Neoplasms
+    - Myelodysplastic Syndromes
+    - Myomatous Neoplasms
+    - Myxomatous Neoplasms
+    - Neoplasms, NOS
+    - Nerve Sheath Tumors
+    - Neuroepitheliomatous Neoplasms
+    - Nevi and Melanomas
     - Not Applicable
+    - Not Otherwise Specified
     - Not Reported
-    - Odontogenic Neoplasm
+    - Odontogenic Tumors
+    - Osseous and Chondromatous Neoplasms
+    - Paragangliomas and Glomus Tumors
     - Plasma Cell Neoplasm
-    - Skin Appendage Neoplasm
-    - Squamous Cell Neoplasm
-    - Thymoma
-    - Trophoblastic Tumor
+    - Soft Tissue Tumors and Sarcomas, NOS
+    - Squamous Cell Neoplasms
+    - Synovial-like Neoplasms
+    - Thymic Epithelial Neoplasms
+    - Transitional Cell Papillomas and Carcinomas
+    - Trophoblastic neoplasms
     - Unknown
-    - Wolffian Tumor
-    - Carcinoma NOS
-    - Melanoma
-    - Adenocarcinoma
     Term:
     - Origin: caDSR
       Original Source: CDS
@@ -5664,81 +6149,263 @@ PropDefinitions:
     Req: true
     Term:
     - Origin: caDSR
-      Original Source: CDS
-      Code: 13606067
-      Value: ICD Label/Name
+      Code: '14905532'
+      Value: Disease Primary Diagnosis NCI Thesaurus Name
       Version: '1.00'
   primary_site:
     Desc: Anatomical site of disease in primary diagnosis for this diagnosis
     Enum:
+    - Abdomen
+    - Abdominal Wall
+    - Acetabulum
+    - Adjacent Organ
     - Adrenal Gland
-    - Base of the Tongue
+    - Anal/Perianal
+    - Ankle Joint
+    - Anterior Skull Base
+    - Anus
+    - Appendix
+    - Ascitic Fluid
+    - Axilla
+    - Axillary Nodes
     - Bladder
+    - Bladder/Prostate
+    - Bone
+    - Bone Face
+    - Bone Marrow
+    - Bone or Bone Marrow
     - Brain
+    - Brain/Leptomeninges
     - Breast
-    - Cervix Uteri
+    - Bronchus
+    - Buttock
+    - Calcaneum
+    - Carpal Bone
+    - Cauda Equina Spinal Cord
+    - Celiac Nodes
+    - Central Nervous System
+    - Cerebellum
+    - Cerebrospinal Fluid
+    - Cervical Nodes
+    - Cervical Spine
+    - Cervical Vertebra
+    - Cervix
+    - Cheek
+    - Chest
+    - Chest Wall
+    - Choroid
+    - Clavicle
+    - Coccyx
     - Colon
-    - Corpus Uteri
+    - Craniospinal
+    - Cutaneous
+    - Deep Facial Areas
+    - Deep Gray (e.g. Basal ganglia or Thalamus)
+    - Dermis
+    - Distant Lymph Nodes
+    - Dorsal Spine
+    - Duodenum
+    - Ear - Lateral Skull Base and Nasopharynx
+    - Elbow Joint
+    - Epididymis
+    - Epitrochlear
+    - Epitrochlear or Brachial Nodes
     - Esophagus
-    - Floor of Mouth
+    - Ethmoid Bone
+    - Eyelid
+    - Face
+    - Fallopian Tube
+    - Female Reproductive System Part
+    - Femur
+    - Fibula
+    - Fibula Head
+    - Finger
+    - Foot
+    - Foot Bone
+    - Foot Joint
+    - Foot Phalanges
+    - Forearm
+    - Fourth Ventricle
+    - Frontal Bone
+    - Frontal Cortex
+    - Frontal Lobe
     - Gallbladder
-    - Gingiva
+    - Gastrointestinal Tract
+    - Hand
+    - Hand Bone
+    - Hand Joint
+    - Hand Phalanges
+    - Head
+    - Head and Neck
+    - Heart
+    - Hip
+    - Hip/Inguinal Region
+    - Humerus
+    - Hypodermis
     - Hypopharynx
+    - Iliac Crest
+    - Ilium
+    - Inferior Limb
+    - Infraclavicular Nodes
+    - Inguinal
+    - Inguinal or Femoral Nodes
+    - Intra-abdominal
+    - Intraperitoneal
+    - Intraspinal
+    - Intrathoracic
+    - Ischium
     - Kidney
+    - Knee Joint
+    - Lacrimal Bone
+    - Large Vessels
     - Larynx
-    - Limb Skeletal System
-    - Lip
-    - Lung/Bronchus
+    - Larynx - Trachea
+    - Lateral Ventricle
+    - Leg
+    - Leptomeningeal
+    - Liver
+    - Liver/Biliary Tract
+    - Lower Arm
+    - Lower Extremity
+    - Lower Leg
+    - Lumbar Spinal Cord
+    - Lumbar Spine
+    - Lumbar Vertebra
+    - Lung
     - Lymph Node
+    - Lymphatic Basin
+    - Mandible
+    - Maxilla
+    - Mediastinum
+    - Medulla
     - Meninges
+    - Mesenteric Nodes
+    - Metacarpals
+    - Metatarsals
+    - Midbrain
+    - Middle Ear
+    - Nasal Bone
+    - Nasal Cavity
+    - Nasal Cavity and Paranasal Sinuses
+    - Nasal Septum
     - Nasopharynx
+    - Neck
     - Not Reported
+    - Occipital Bone
+    - Occipital Cortex
+    - Occipital Lobe
+    - Oculus Dexter (Right Eye)
+    - Oculus Sinister (Left Eye)
+    - Oculus Uterque (Both Eyes)
+    - Omentum
+    - Optic Chiasm
+    - Optic Nerve
+    - Oral Cavity
+    - Orbit
     - Oropharynx
-    - Other and Ill Defined Digestive Organs ICD-O-3
-    - Other and Ill-Defined Sites ICD-O-3
-    - Other and Ill-Defined Sites in Lip, Oral Cavity and Pharynx ICD-O-3
-    - Other and Ill-Defined Sites within Respiratory System and Intrathoracic Organs ICD-O-3
-    - Other and Unspecified Female Genital Organs ICD-O-3
-    - Other and Unspecified Major Salivary Glands ICD-O-3
-    - Other and Unspecified Male Genital Organs ICD-O-3
-    - Other and Unspecified Parts of Biliary Tract ICD-O-3
-    - Other and Unspecified Parts of Mouth ICD-O-3
-    - Other and Unspecified Parts of Tongue ICD-O-3
-    - Other and Unspecified Urinary Organs ICD-O-3
-    - Other Endocrine Glands and Related Structures ICD-O-3
+    - Other
     - Ovary
-    - Palate
     - Pancreas
+    - Para-Aortic Lymph Nodes
     - Paranasal Sinus
-    - Parotid Gland
+    - Parapharyngeal Area
+    - Paraspinal
+    - Paratesticular
+    - Parathyroid
+    - Parietal Bone
+    - Parietal Cortex
+    - Parietal Lobe
+    - Parotid
+    - Patella
+    - Pectoral Nodes
+    - Pelvis
+    - Pelvis/Sacrum
     - Penis
-    - Peritoneum and Retroperitoneum
-    - Placenta
-    - Prostate Gland
-    - Pyriform Sinus
-    - Rectosigmoid Region
+    - Perineum
+    - Peritoneum
+    - Pineal
+    - Pleura
+    - Pleura Thymus
+    - Pleural Effusion
+    - Pons Varolii
+    - Popliteal Nodes
+    - Pre-auricular Nodes
+    - Prostate
+    - Radius Bone
     - Rectum
-    - Renal Pelvis
+    - Regional Lymph Nodes
+    - Retroperitoneum
+    - Rib
+    - Sacrococcygeal
+    - Sacrum
+    - Salivary Gland
+    - Scalp
+    - Scapula
+    - Scapula/Clavicle
+    - Schlemm's Canal
+    - Shoulder
+    - Shoulder Girdle
+    - Shoulder Joint
     - Skin
+    - Skull
+    - Skull and Face Bone
     - Small Intestine
+    - Soft Tissue
+    - Soft Tissue, NOS
+    - Sphenoid Bone
+    - Spinal Cord
+    - Spine
+    - Spleen
+    - Splenic Hilar Nodes
+    - Sternum
+    - Sternum/Chest Wall
     - Stomach
+    - Superior Limb and Shoulder
+    - Superior Maxilla
+    - Supraclavicular Nodes
+    - Suprasellar Pituitary
+    - Talus
+    - Tarsal Bone
+    - Temporal Bone
+    - Temporal Cortex
+    - Temporal Lobe
     - Testis
-    - Thymus Gland
-    - Thyroid Gland
+    - Thalamus
+    - Thigh
+    - Third Ventricle
+    - Thoracic Spinal Cord
+    - Thoracic Vertebra
+    - Thorax
+    - Thymus
+    - Thyroid
+    - Thyroid and Parathyroid
+    - Tibia
+    - Toe
     - Tonsil
+    - Trabecular Meshwork
     - Trachea
+    - Trunk
+    - Trunk - Paraspinal
+    - Ulna
     - Unknown
+    - Upper Airway
+    - Upper Arm
+    - Upper Extremity
     - Ureter
+    - Urogenital
     - Uterus
     - Vagina
+    - Vasculo-Nervous
+    - Viscera
     - Vulva
-    - Bronchus and Lung
-    - Not specified in data
+    - Waldeyer's Ring
+    - Wrist Joint
+    - Zygomatic Bone
     Term:
     - Origin: caDSR
       Original Source: PCDC
-      Code: '13279286'
-      Value: Diagnosis Primary Anatomic Site ICD-O-3 Name
+      Code: '14883047'
+      Value: Disease Primary Site of Disease Uberon Identifier
       Version: '1.00'
   morphology:
     Desc: ICD-O-3 Morphology term associated with this diagnosis
@@ -7037,24 +7704,66 @@ PropDefinitions:
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2201713'
+      Value: Person Affiliation Role Text Type
+      Version: '2.00'
   title:
     Desc: The abbreviation that represents an affix occurring at or before the beginning of an individual's name.
     Type: String
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2663165'
+      Value: Person Name Prefix Abbreviation Text
+      Version: '1.00'
   first_name:
     Desc: A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2179589'
+      Value: Person Given/First Name
+      Version: '2.00'
   middle_name:
     Desc: A means of identifying an individual by using a word or group of words indicating a person's middle name.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2179590'
+      Value: Person Middle Name
+      Version: '2.00'
   last_name:
     Desc: A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2179591'
+      Value: Person Family/Last Name
+      Version: '2.00'
   suffix:
     Desc: Text term to represent an individual's position in a family lineage or pedigree.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2006475'
+      Value: Individual Genea
+      Version: '2.00'
   email:
     Desc: The string of characters that represents the electronic mail address of a person.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '2517550'
+      Value: Person Email
+      Version: '1.00'
   clinical_trial_repository:
     Desc: The name of the organization that provides the clinical trial identifier.
     Type: string
@@ -7186,13 +7895,30 @@ PropDefinitions:
   authz:
     Desc: multifactor authorization
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: DSS
+      Code: Pending
+      Version: '1.00'
   # sample
   sample_description:
     Desc: Text description of a sample or specimen.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CCR
+      Code: '2003907'
+      Value: Sample Description Text
+      Version: '3.00'
   sample_type_category:
     Desc: The kind of material that forms the sample.
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '12445832'
+      Value: Specimen Material Category
+      Version: '1.00'
   biosample_accession:
     Desc: NCBI BioSample accession ID (SAMN) for this sample
     Type:
@@ -7208,8 +7934,9 @@ PropDefinitions:
     Type: integer
     Term:
     - Origin: caDSR
-      Code: '11253404'
-      Value: Days from Specimen Collection To Initial Pathologic Diagnosis Day Count
+      Original Source: CDS
+      Code: '14473376'
+      Value: Subject Age At Specimen Collection Day Count
       Version: '1.00'
   sample_anatomic_site:
     Desc: Anatomic site from which sample was collected
@@ -7574,12 +8301,11 @@ PropDefinitions:
   sample_tumor_status:
     Desc: Tumor or normal status
     Enum:
-    - Tumor
     - Normal
-    - Abnormal
+    - Not Reported
     - Peritumoral
+    - Tumor
     - Unknown
-    - Not specified in data
     Req: 'Yes'
     Term:
     - Origin: caDSR
@@ -7590,78 +8316,23 @@ PropDefinitions:
   sample_type:
     Desc: Tissue type of this sample
     Enum:
+    - Analyte
     - Ascites
     - Blood
-    - Blood Derived Normal
     - Bone Marrow
-    - Buccal Mucosa
-    - Buffy Coat
-    - Cell Line Derived Xenograft Tissue
-    - DNA
+    - Cells
     - Fluids
-    - Metastatic
-    - Mouthwash
-    - Normal
-    - Pleural Fluid
-    - Primary Tumor
-    - Primary Xenograft Tissue
-    - RNA
-    - Saliva
-    - Skin
-    - Solid Tissue Normal
+    - Mouth Rinse
+    - Sputum
+    - Stool
     - Tissue
-    - Tumor
-    - Tumor Adjacent Normal
-    - Unknown
-    - Unspecified
-    - Xenograft Tissue
-    - Additional - New Primary
-    - Additional Metastatic
-    - Benign Neoplasms
-    - Blood Derived Cancer - Bone Marrow
-    - Blood Derived Cancer - Bone Marrow, Post-treatment
-    - Blood Derived Cancer - Peripheral Blood
-    - Blood Derived Cancer - Peripheral Blood, Post-treatment
-    - Blood Derived Liquid Biopsy
-    - Bone Marrow Normal
-    - Buccal Cell Normal
-    - Cell Lines
-    - Control Analyte
-    - EBV Immortalized Normal
-    - Expanded Next Generation Cancer Model
-    - FFPE Recurrent
-    - FFPE Scrolls
-    - Fibroblasts from Bone Marrow Normal
-    - GenomePlex (Rubicon) Amplified DNA
-    - Granulocytes
-    - Human Tumor Original Cells
-    - In Situ Neoplasms
-    - Lymphoid Normal
-    - Mixed Adherent Suspension
-    - Mononuclear Cells from Bone Marrow Normal
-    - Neoplasms of Uncertain and Unknown Behavior
-    - Next Generation Cancer Model
-    - Next Generation Cancer Model Expanded Under Non-conforming Conditions
-    - Not Allowed To Collect
-    - Pleural Effusion
-    - Post neo-adjuvant therapy
-    - Primary Blood Derived Cancer - Bone Marrow
-    - Primary Blood Derived Cancer - Peripheral Blood
-    - Recurrent Blood Derived Cancer - Bone Marrow
-    - Recurrent Blood Derived Cancer - Peripheral Blood
-    - Recurrent Tumor
-    - Repli-G (Qiagen) DNA
-    - Repli-G X (Qiagen) DNA
-    - Slides
-    - Total RNA
-    - Tumor Adjacent Normal - Post Neo-adjuvant Therapy
-    - Not Reported
-    - Not specified in data
+    - Urine
     Req: 'Yes'
     Term:
     - Origin: caDSR
-      Code: '13255982'
-      Value: Specimen Material Type
+      Original Source: DSS
+      Code: "11253427"
+      Value: Specimen Material OBIB Source
       Version: '1.00'
   derived_from_specimen:
     Desc: Identier of the parent specimen of this sample
@@ -7683,8 +8354,16 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Original Source: CDS
-      Code: '12447194'
-      Value: Subject Initial Cancer Diagnosis To Treatment Day Count
+      Code: '12305542'
+      Value: Subject Age at Treatment Assignment Day Count
+      Version: '1.00'
+  response:
+    Desc: Text term that describes the patient's final outcome after the treatment was administered.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: "13383448"
+      Value: Disease Response Assessment Outcome
       Version: '1.00'
   treatment_outcome:
     Desc: Text term that describes the patient's final outcome after the treatment was administered
@@ -12262,9 +12941,9 @@ PropDefinitions:
     - Not Reported
     Term:
     - Origin: caDSR
-      Original Source: CDS
-      Code: '13579886'
-      Value: Therapeutic Procedure Agent Name
+      Original Source: DSS
+      Code: '14913015'
+      Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
       Version: '1.00'
   # genomic_info
   reporter_label:
@@ -12288,6 +12967,7 @@ PropDefinitions:
     Req: Preferred
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '11529031'
       Value: Genome Assembly NCBI Genetic Reference Sequence Identifier
       Version: '1.00'
@@ -12333,6 +13013,7 @@ PropDefinitions:
     Req: Preferred
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '11529028'
       Value: Sequencing Library Platform Model Name
       Version: '1.00'
@@ -12340,25 +13021,20 @@ PropDefinitions:
     Desc: Instrument platform or manufacturer
     Req: Preferred
     Enum:
-    - LS454
-    - ILLUMINA
-    - HELICOS
-    - ABI_SOLID
-    - PACBIO_SMRT
-    - ION_TORRENT
-    - CAPILLARY
-    - OXFORD_NANOPORE
+    - ABI Solid
     - BGISEQ
-    - Illumina HiSeq 2500
-    - Illumina HiSeq X Ten
-    - Illumina Next Seq 500
-    - Illumina Next Seq 550
-    - Illumina NextSeq
-    - Illumina NovaSeq 6000
-    - NovaSeqS4
-    - Unknown
+    - Capillary
+    - Complete Genomics
+    - Helicos
+    - Illumina
+    - Ion Torrent
+    - LS 454
+    - Oxford Nanopore
+    - PacBio SMRT
+    - Ultima
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '6347771'
       Value: Sequencing Library Platform Name
       Version: '1.00'
@@ -12369,50 +13045,9 @@ PropDefinitions:
     - 454 GS
     - 454 GS 20
     - 454 GS FLX
-    - 454 GS FLX+
     - 454 GS FLX Titanium
+    - 454 GS FLX+
     - 454 GS Junior
-    - HiSeq X Five
-    - HiSeq X Ten
-    - Illumina Genome Analyzer
-    - Illumina Genome Analyzer II
-    - Illumina Genome Analyzer IIx
-    - Illumina HiScanSQ
-    - Illumina HiSeq
-    - Illumina HiSeq 1000
-    - Illumina HiSeq 1500
-    - Illumina HiSeq 2000
-    - Illumina HiSeq 2500
-    - Illumina HiSeq 3000
-    - Illumina HiSeq 4000
-    - Illumina iSeq 100
-    - Illumina NovaSeq 6000
-    - llumina NovaSeq
-    - Illumina MiniSeq
-    - Illumina MiSeq
-    - Illumina NextSeq
-    - NextSeq 500
-    - NextSeq 550
-    - Helicos HeliScope
-    - AB 5500 Genetic Analyzer
-    - AB 5500xl Genetic Analyzer
-    - AB 5500x-Wl Genetic Analyzer
-    - AB SOLiD 3 Plus System
-    - AB SOLiD 4 System
-    - AB SOLiD 4hq System
-    - AB SOLiD PI System
-    - AB SOLiD System
-    - AB SOLiD System 2.0
-    - AB SOLiD System 3.0
-    - Complete Genomics
-    - PacBio RS
-    - PacBio RS II
-    - PacBio Sequel
-    - PacBio Sequel II
-    - Ion Torrent PGM
-    - Ion Torrent Proton
-    - Ion Torrent S5 XL
-    - Ion Torrent S5
     - AB 310 Genetic Analyzer
     - AB 3130 Genetic Analyzer
     - AB 3130xL Genetic Analyzer
@@ -12420,16 +13055,62 @@ PropDefinitions:
     - AB 3500xL Genetic Analyzer
     - AB 3730 Genetic Analyzer
     - AB 3730xL Genetic Analyzer
-    - GridION
-    - MinION
-    - PromethION
+    - AB 5500 Genetic Analyzer
+    - AB 5500x-Wl Genetic Analyzer
+    - AB 5500xl Genetic Analyzer
+    - AB SOLiD 2
+    - AB SOLiD 3
+    - AB SOLiD 3 Plus System
+    - AB SOLiD 4
+    - AB SOLiD 4hq System
+    - AB SOLiD PI System
+    - AB SOLiD System
     - BGISEQ-500
+    - Complete Genomics
     - DNBSEQ-G400
-    - DNBSEQ-T7
     - DNBSEQ-G50
+    - DNBSEQ-T7
+    - GridION
+    - Helicos HeliScope
+    - Illumina Genome Analyzer
+    - Illumina Genome Analyzer II
+    - Illumina Genome Analyzer IIx
+    - Illumina HiScanSQ
+    - Illumina HiSeq 1000
+    - Illumina HiSeq 1500
+    - Illumina HiSeq 2000
+    - Illumina HiSeq 2500
+    - Illumina HiSeq 3000
+    - Illumina HiSeq 4000
+    - Illumina HiSeq X Five
+    - Illumina HiSeq X Ten
+    - Illumina iSeq 100
+    - Illumina MiniSeq
+    - Illumina MiSeq
+    - Illumina NextSeq
+    - Illumina NextSeq 2500
+    - Illumina NextSeq 500
+    - Illumina NextSeq 550
+    - Illumina NovaSeq
+    - Illumina NovaSeq 6000
+    - Ion Torrent PGM
+    - Ion Torrent Proton
+    - Ion Torrent S5
+    - Ion Torrent S5 XL
     - MGISEQ-2000RS
+    - MinION
+    - Not Reported
+    - Other
+    - PacBio RS
+    - PacBio RS II
+    - PacBio Sequel
+    - PacBio Sequel II
+    - PromethION
+    - Ultima Genomics UG100
+    - Unknown
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '6352164'
       Value: Sequencing Library Platform Model Name
       Version: '1.00'
@@ -12445,12 +13126,11 @@ PropDefinitions:
     Desc: Library layout as submitted by requestor
     Req: Preferred
     Enum:
-    - Paired-end
-    - Single-end
+    - Paired-End
     - Single-indexed
-    - Not Reported
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '11527735'
       Value: Sequencing Library Read Layout Type
       Version: '1.00'
@@ -12470,35 +13150,52 @@ PropDefinitions:
     - Other
     - Bulk Whole Cell
     - Single Cell
-    - GENOMIC
-    - GENOMIC SINGLE CELL
-    - METAGENOMIC
-    - METATRANSCRIPTOMIC
-    - OTHER
-    - SYNTHETIC
-    - TRANSCRIPTOMIC
-    - TRANSCRIPTOMIC SINGLE CELL
-    - VIRAL RNA
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '6285979'
       Value: Sequencing Library Specimen Source
+      Version: '1.00'
+  library_source_molecule:
+    Desc: Source Molecule
+    Req: Preferred
+    Enum:
+    - Genomic
+    - Metagenomic
+    - Metatranscriptomic
+    - Not Reported
+    - Transcriptomic
+    - Viral RNA
+    Term:
+    - Origin: caDSR
+      Code: '14808232'
+      Value: Sequencing Library Molecule Source
+      Version: '1.00'
+  library_source_material:
+    Desc: Source Material
+    Req: Preferred
+    Enum:
+    - Bulk Cells
+    - Bulk Nuclei
+    - Bulk Tissue
+    - Not Reported
+    - Single-cells
+    - Single-nuclei
+    Term:
+    - Origin: caDSR
+      Code: '14808227'
+      Value: Sequencing Library Cellular Material Source
       Version: '1.00'
   library_selection:
     Desc: Library selection method
     Req: Preferred
     Enum:
-    - Hybrid Selection
-    - other
-    - PCR
-    - Poly-T Enrichment
-    - PolyA
-    - Random
     - 5-methylcytidine antibody
+    - Affinity Enrichment
     - CAGE
     - cDNA
-    - cDNA_oligo_dT
-    - cDNA_randomPriming
+    - cDNA oligo_dT
+    - cDNA random priming
     - CF-H
     - CF-M
     - CF-S
@@ -12506,42 +13203,50 @@ PropDefinitions:
     - ChIP
     - DNAse
     - HMPR
+    - Hybrid Selection
     - Inverse rRNA
     - MBD2 protein methyl-CpG binding domain
     - MDA
     - MF
+    - miRNA Size Fractionation
     - MNase
     - MSLL
-    - Oligo-dT
+    - Not applicable
+    - Other
     - Padlock probes capture method
-    - Race
+    - PCR
+    - Poly-A Enriched Genomic Library
+    - RACE
+    - Random
     - Random PCR
     - Reduced Representation
-    - repeat fractionation
+    - Repeat fractionation
     - Restriction Digest
+    - rRNA Depletion
     - RT-PCR
-    - size fractionation
-    - unspecified
-    - RACE
-    - RANDOM
-    - RANDOM PCR
+    - Size fractionation
+    - Unspecified
     Term:
     - Origin: caDSR
+      Original Source: NCI Std
       Code: '6347743'
       Value: Sequencing Library Creation Method Type
       Version: '1.00'
+  library_source_material:
+
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
     Req: Preferred
     Enum:
     - AMPLICON
-    - ATAC-seq
+    - ATAC-Seq
     - Bisulfite-Seq
     - ChIA-PET
     - ChIP-Seq
     - CLONE
     - CLONEEND
     - CTS
+    - DNA-Seq
     - DNase-Hypersensitivity
     - EST
     - FAIRE-seq
@@ -12554,12 +13259,15 @@ PropDefinitions:
     - MNase-Seq
     - MRE-Seq
     - ncRNA-Seq
-    - OTHER
+    - Other
     - POOLCLONE
     - RAD-Seq
     - RIP-Seq
     - RNA-Seq
+    - scMultiome
     - SELEX
+    - snATAC-Seq
+    - Spatial-tx
     - ssRNA-seq
     - Synthetic-Long-Read
     - Targeted-Capture
@@ -12569,14 +13277,6 @@ PropDefinitions:
     - WGA
     - WGS
     - WXS
-    - DNA-Seq
-    - scMultiome
-    - snATAC-Seq
-    - Spatial-tx
-    - Archer Fusion
-    - Amplicon
-    - ATAC-Seq
-    - Other
     Term:
     - Origin: caDSR
       Code: '6273393'
@@ -12597,6 +13297,7 @@ PropDefinitions:
     Req: Preferred
     Term:
     - Origin: caDSR
+      Original Source: CDS
       Code: '11636299'
       Value: Genome Assembly Custom FASTA File Name
       Version: '1.00'
@@ -12670,14 +13371,21 @@ PropDefinitions:
     Desc: Species binomial of study participants
     Type: string
     Req: Preferred
+    Term:
+    - Origin: caDSR
+      Original Source: DSS
+      Code: '6118266'
+      Value: Sample Organism Type
+      Version: '1.00'
   adult_or_childhood_study:
     Desc: Study participants are adult, pediatric, or other
     Req: Preferred
     Enum:
-    - Adult
+    - Adult - legal age
     - Pediatric
     Term:
     - Origin: caDSR
+      Original Source: DSS
       Code: '11524549'
       Value: Study Subject Legal Adult Or Pediatric Participant Type
       Version: '1.00'
@@ -12763,3 +13471,12 @@ PropDefinitions:
     Desc: TBD
     Type: String
     Req: Preferred
+  program_short_name:
+    Desc: An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. Example - CPTAC
+    Type: String
+    Term:
+    - Origin: caDSR
+      Original Source: DSS
+      Code: "11459801"
+      Value: Program Short Name Text
+      Version: '1.00'
