@@ -320,7 +320,8 @@ Nodes:
       - emission_wavelength
       - excitation_bandwidth
       - emission_bandwidth
-      - metal_isotope_element
+      - metal_isotope_element_abbreviation
+      - metal_isotope_element_mass
       - oligo_barcode_upper_strand
       - oligo_barcode_lower_strand
       - diluation
