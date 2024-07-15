@@ -238,7 +238,6 @@ Nodes:
       - performed_imaging_study_summary
       - performed_imaging_study_primaryAnatomicSiteCode
       - performed_imaging_study_acquisitionTypeCode
-      - performed_imaging_study_imageTypeCode
       - performed_imaging_study_cardiacSynchronizationTechniqueCode
       - performed_imaging_study_dataCollectionDiameter
       - performed_imaging_study_respiratoryMotionTechniqueCode
@@ -255,7 +254,6 @@ Nodes:
       - CTAquisitionProtocolElement_singleCollimationWidth
       - CTAquisitionProtocolElement_totalCollimationWidth
       - CTAquisitionProtocolElement_gantryDetectorTilt
-      - CTAquisitionProtocolElement_tableSpeed
       - CTAquisitionProtocolElement_spiralPitchFactor
       - CTAquisitionProtocolElement_ctdiVol
       - CTAquisitionProtocolElement_ctdiPhantomTypeCode
@@ -314,7 +312,6 @@ Nodes:
       - fluorophore
       - clone
       - lot
-      - vendor
       - catalog_number
       - excitation_wavelength
       - emission_wavelength
@@ -326,7 +323,6 @@ Nodes:
       - oligo_barcode_lower_strand
       - dilution
       - concentration
-      - passes_qc
       - crdc_id
 
 Relationships:
