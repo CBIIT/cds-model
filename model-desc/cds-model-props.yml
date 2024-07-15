@@ -324,6 +324,12 @@ PropDefinitions:
     Desc: A coded value specifying the kind of algorithm used when reconstructing the image from the data acquired during the acquisition process.
     Req: true
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: "14617551"
+      Value: Imaging Reconstruction Protocol Type Code"
+      Version: '1.00'
   performed_imaging_study_algorithmCode:
     Desc: A coded value specifying the algorithm to use when reconstructing the image from the data acquired during the acquisition process
     Req: true
@@ -964,6 +970,12 @@ PropDefinitions:
   target_name:
     Desc: short descriptive name (abbreviation) for this target (antigen)
     Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: "14765180"
+      Value: "Multiplex Imaging Reagent Sub-Cycle Number Integer"
+      Version: '1.00'
   antibody_name:
     Desc: short descriptive name for this antibody
     Type: string
