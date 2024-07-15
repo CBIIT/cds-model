@@ -261,12 +261,6 @@ PropDefinitions:
       Code: '14670301'
       Value: Image Study Spatial Acquisition Type Code
       Version: '1.00'
-  performed_imaging_study_imageTypeCode:
-    Desc: A coded value that specifies the most important aspect of the images or their derivation.
-    Enum:
-    - DYNAMIC
-    - STRESS
-    - RCBV
   performed_imaging_study_cardiacSynchronizationTechniqueCode:
     Desc: The means used to coordinate the collection or reconstruction of data with the cardiac cycle.
     Enum:
@@ -429,10 +423,6 @@ PropDefinitions:
       Code: '2656117'
       Value: Image Gantry Detector Tilt 16 Character Number
       Version: '1.00'
-  CTAquisitionProtocolElement_tableSpeed:
-    Desc: The distance that the table moves per unit of time during the gathering of data. The units are of linear distance divided by time.
-    Req: true
-    Type: string
   CTAquisitionProtocolElement_spiralPitchFactor:
     Desc: Ratio of the distance that the table moves during a complete revolution of the source around the gantry orbit, to the width of the total collimation over the area of active x-ray detection. The units are of unity.
     Req: true
@@ -1021,9 +1011,6 @@ PropDefinitions:
       Code: '14769695'
       Value: Multiplex Imaging Vendor Lot Number Text
       Version: '1.00'
-  vendor:
-    Desc: Vendor name
-    Type: string
   catalog_number:
     Desc: catalog number from vendor
     Type: string
@@ -1122,9 +1109,6 @@ PropDefinitions:
       Code: '14768386'
       Value: Multiplex Imaging Final Concentration Number
       Version: '1.00'
-  passes_qc:
-    Desc: Identify stains that did not pass QC but are included in the dataset.
-    Type: string
   # file
   checksum_value:
     Desc: checksum (hash) for file (using checksum_algorithm) - if you want to use a checksum other than md5
