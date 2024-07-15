@@ -13232,7 +13232,6 @@ PropDefinitions:
       Code: '6347743'
       Value: Sequencing Library Creation Method Type
       Version: '1.00'
-  library_source_material:
 
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
