@@ -15,6 +15,7 @@ Nodes:
       - program_full_description
       - program_external_url
       - program_sort_order
+      - program_short_name
       - institution
       - crdc_id
 
@@ -87,6 +88,7 @@ Nodes:
       - ethnicity
       #  - vital_status
       - dbGaP_subject_id
+      - sex
       - crdc_id
 
   diagnosis: # may have multiple dxs for multiple timepoints?
@@ -133,6 +135,7 @@ Nodes:
       - treatment_outcome
       - days_to_treatment
       - therapeutic_agents
+      - response
       - crdc_id
 
   sample: # aka subspecimen (CMB)
@@ -203,6 +206,8 @@ Nodes:
       - sequence_alignment_software
       - reporter_label
       - methylation_platform
+      - library_source_material
+      - library_source_molecule
       - crdc_id
 
   image:
@@ -315,10 +320,11 @@ Nodes:
       - emission_wavelength
       - excitation_bandwidth
       - emission_bandwidth
-      - metal_isotope_element
+      - metal_isotope_element_abbreviation
+      - metal_isotope_element_mass
       - oligo_barcode_upper_strand
       - oligo_barcode_lower_strand
-      - diluation
+      - dilution
       - concentration
       - passes_qc
       - crdc_id
