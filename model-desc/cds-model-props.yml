@@ -70,6 +70,7 @@ PropDefinitions:
     - Origin: caDSR
       Original Source: CDS
       Code: '7787673'
+      Value: "Raw Data Protocol Or Digital Object Identifier Text"
       Version: '1.00'
   species:
     Desc: Use the NCBI Taxonomy ID to identify species. A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships.
@@ -187,7 +188,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Original Source: CDS
-      Code: 6161035
+      Code: '6161035'
       Value: ICD-O Origin of Disease Anatomic Site
       Version: '1.00'
   performed_imaging_study_description:
@@ -1977,12 +1978,12 @@ PropDefinitions:
     - Wall of the Pharynx
     - Wrist Joint
     - Wrist Skin
-  Term:
-  - Origin: caDSR
-    Original Source: CDS
-    Code: '14883058'
-    Value: Disease Tissue or Organ of Origin Anatomic Site Uberon Identifier
-    Version: '1.00'
+    Term:
+    - Origin: caDSR
+      Original Source: CDS
+      Code: '14883058'
+      Value: Disease Tissue or Organ of Origin Anatomic Site Uberon Identifier
+      Version: '1.00'
   site_of_resection_or_biopsy:
     Desc: The organ or part of the body resected or biopsied, as described by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
     Enum:
@@ -7668,7 +7669,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Original Source: DSS
-      Code: 13529783
+      Code: "13529783"
       Value: Disease Progression Or Recurrence Indicator
       Version: '1.00'
   # study
