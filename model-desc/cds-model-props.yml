@@ -11,10 +11,6 @@ PropDefinitions:
     Req: true
     Type: string
     Key: true
-    Term:
-    - Origin: caDSR
-      Code: New CDE
-      Version: '1.00'
   de_identification_method_type:
     Desc: General description of the de-identification method
     Req: true
