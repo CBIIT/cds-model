@@ -1,13 +1,6 @@
 Handle: CDS
-Version: v4.0.0
 Nodes:
   program:
-    Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
-    Tags:
-      Category: study
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - program_name
       - program_acronym
@@ -15,17 +8,8 @@ Nodes:
       - program_full_description
       - program_external_url
       - program_sort_order
-      - program_short_name
       - institution
-      - crdc_id
-
   study:
-    Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
-    Tags:
-      Category: study
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - study_name
       - study_acronym
@@ -63,23 +47,7 @@ Nodes:
       - study_access
       - authz
       - study_version
-      - role_or_affiliation
-      - title
-      - first_name
-      - middle_name
-      - last_name
-      - suffix
-      - email
-      - clinical_trial_repository
-      - crdc_id
-
   participant:
-    Desc: "Individual who takes part in the study"
-    Tags:
-      Category: study
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - study_participant_id
       - participant_id
@@ -88,16 +56,8 @@ Nodes:
       - ethnicity
       #  - vital_status
       - dbGaP_subject_id
-      - sex
-      - crdc_id
 
   diagnosis: # may have multiple dxs for multiple timepoints?
-    Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
-    Tags:
-      Category: case
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - study_diagnosis_id
       - diagnosis_id
@@ -117,53 +77,24 @@ Nodes:
       - days_to_last_followup
       - last_known_disease_status
       - days_to_last_known_status
-      - tissue_or_organ_of_origin
-      - site_of_resection_or_biopsy
-      - days_to_last_known_disease_status
-      - crdc_id
-
   treatment:
-    Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
-    Tags:
-      Category: case
-      Assignment: core
-      Class: secondary
-      Template: 'No'
     Props:
       - treatment_id
       - treatment_type
       - treatment_outcome
       - days_to_treatment
       - therapeutic_agents
-      - response
-      - crdc_id
-
   sample: # aka subspecimen (CMB)
-    Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
-    Tags:
-      Category: case
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - sample_id
       - sample_type
-      - sample_description
-      - sample_type_category
       - sample_tumor_status # tumor or normal
       - sample_anatomic_site
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
-      - crdc_id
 
   file:
-    Desc: "A set of related records kept together provided by a submitter."
-    Tags:
-      Category: data_file
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - file_id
       - file_name
@@ -174,19 +105,9 @@ Nodes:
       - file_url_in_cds
       - experimental_strategy_and_data_subtypes
       - submission_version
-      - checksum_value
-      - checksum_algorithm
-      - crdc_id
-      - file_mapping_level
       #- file_access
 
   genomic_info:
-    Desc: "In CDS genomic info refers to the sequencing methodsm techniques and equipment."
-    Tags:
-      Category: data_file
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
     Props:
       - genomic_info_id
       - library_id
@@ -204,127 +125,6 @@ Nodes:
       - platform
       - instrument_model
       - sequence_alignment_software
-      - reporter_label
-      - methylation_platform
-      - library_source_material
-      - library_source_molecule
-      - crdc_id
-
-  image:
-    Tags:
-      Category: data_file
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
-    Desc: "The imaging data from DICOM and non-DICOM standards into CDS."
-    Props:
-      - study_link_id
-      - de_identification_method_type
-      - de_identification_method_description
-      - de_identification_software
-      - license
-      - citation_or_DOI
-      - species
-      - image_modality
-      - imaging_equipment_manufacturer
-      - imaging_equipment_model
-      - imaging_sofware
-      - imaging_protocol
-      - organ_or_tissue
-      - performed_imaging_study_description
-      - performed_imaging_study_admittingDiagnosisCode
-      - performed_imaging_study_nonAcquisitionModalitiesInStudyCode
-      - performed_imaging_study_lossyImageCompressionIndicator
-      - performed_imaging_study_summary
-      - performed_imaging_study_primaryAnatomicSiteCode
-      - performed_imaging_study_acquisitionTypeCode
-      - performed_imaging_study_cardiacSynchronizationTechniqueCode
-      - performed_imaging_study_dataCollectionDiameter
-      - performed_imaging_study_respiratoryMotionTechniqueCode
-      - performed_imaging_study_bodyPositionCode
-      - performed_imaging_study_typeCode
-      - performed_imaging_study_algorithmCode
-      - performed_imaging_study_reconstructionFieldOfViewHeight
-      - performed_imaging_study_reconstructionFieldOfViewWidth
-      - performed_imaging_study_reconstructionDiameter
-      - performed_imaging_study_sliceThickness
-      - performed_imaging_study_reconstructionInterval
-      - longitudinal_temporal_event_type
-      - longitudinal_temporal_event_offset
-      - CTAquisitionProtocolElement_singleCollimationWidth
-      - CTAquisitionProtocolElement_totalCollimationWidth
-      - CTAquisitionProtocolElement_gantryDetectorTilt
-      - CTAquisitionProtocolElement_spiralPitchFactor
-      - CTAquisitionProtocolElement_ctdiVol
-      - CTAquisitionProtocolElement_ctdiPhantomTypeCode
-      - CTAquisitionProtocolElement_kVp
-      - CTAquisitionProtocolElement_exposureModulationType_Code
-      - CTImageReconstructionProtocolElement_convolutionKernel
-      - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
-      - MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode
-      - MRImageAcquisitionProtocolElement_diffusionBValue
-      - MRImageAcquisitionProtocolElement_diffusionDirectionalityCode
-      - MRImageAcquisitionProtocolElement_magneticFieldStrength
-      - MRImageAcquisitionProtocolElement_resonantNucleusCode
-      - MRImageAcquisitionProtocolElement_acquisitionContrastCode
-      - MRImageAcquisitionProtocolElement_inversionRecoveryIndicator
-      - MRImageAcquisitionProtocolElement_pulseSequenceName
-      - MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator
-      - MRImageAcquisitionProtocolElement_phaseContrastIndicator
-      - MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator
-      - MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode
-      - MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode
-      - MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator
-      - MRImageAcquisitionProtocolElement_saturationRecoveryIndicator
-      - MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode
-      - MRImageReconstructionProtocolElement_complexImageComponentCode
-      - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
-      - Radiopharmaceutical_radionuclideCode
-      - acquisition_method_type
-      - tumor_tissue_type
-      - tissue_fixative
-      - embedding_medium
-      - staining_method
-      - objective
-      - nominal_magnification
-      - immersion
-      - lens_numerical_aperture
-      - working_distance
-      - imaging_assay_type
-      - pyramid
-      - physical_size_x
-      - physical_size_y
-      - physical_size_z
-      - size_c
-      - size_t
-      - size_x
-      - size_y
-      - size_z
-      - channel_metadata_filename
-      - channel_metadata_file_url_in_cds
-      - channel_id
-      - channel_name
-      - cycle_number
-      - sub_cycle_number
-      - target_name
-      - antibody_name
-      - rrid_identifier
-      - fluorophore
-      - clone
-      - lot
-      - catalog_number
-      - excitation_wavelength
-      - emission_wavelength
-      - excitation_bandwidth
-      - emission_bandwidth
-      - metal_isotope_element_abbreviation
-      - metal_isotope_element_mass
-      - oligo_barcode_upper_strand
-      - oligo_barcode_lower_strand
-      - dilution
-      - concentration
-      - crdc_id
-
 Relationships:
   of_program:
     Props: null
@@ -348,29 +148,15 @@ Relationships:
         Dst: participant
       - Src: sample
         Dst: participant
-      - Src: file
-        Dst: participant
-        Mul: many_to_many
-      - Src: treatment
-        Dst: participant
   from_sample:
     Props: null
-    Mul: many_to_many
+    Mul: many_to_one
     Ends:
       - Src: file
         Dst: sample
   of_file:
     Props: null
-    Mul: many_to_one
+    Mul: one_to_one
     Ends:
       - Src: genomic_info
-        Dst: file
-      - Src: image
-        Dst: file
-        Mul: one_to_one
-  associated_with:
-    Props: null
-    Mul: many_to_one
-    Ends:
-      - Src: file 
         Dst: file
