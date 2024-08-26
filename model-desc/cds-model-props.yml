@@ -770,7 +770,7 @@ PropDefinitions:
       Value: Imaging Assay Technology Type
       Version: '1.00'
   objective:
-    Desc: "An\_objective\_is an optical element that gathers light from an object being observed and\_focuses\_the\_light rays\_from it to produce a\_real image\_of the object."
+    Desc: "An objective is an optical element that gathers light from an object being observed and focuses the light rays from it to produce a real image of the object."
     Type: string
     Term:
     - Origin: caDSR
@@ -2856,7 +2856,7 @@ PropDefinitions:
     - Neurocytoma
     - Ependymoma WHO Grade 2
     - Desmoplastic Melanoma, NOS
-    - "Neoplasm, Malignant, CNS Neuroblastoma,\_FOXR2-Activated, Other CNS Embryonal Tumors"
+    - "Neoplasm, Malignant, CNS Neuroblastoma, FOXR2-Activated, Other CNS Embryonal Tumors"
     - Bland Myofibroblastic Proliferation With Associated Florid Lymphoplasmacytic Inflammation
     - Carcinoid Tumor Of Uncertain Malignant Potential
     - Choroid Plexus Carcinoma, Choroid Plexus Tumors
@@ -2880,7 +2880,7 @@ PropDefinitions:
     - Giant Cell Tumor Of Bone, NOS
     - Pilocytic Astrocytoma, Low-Grade Glioma
     - Embryonal Carcinoma, NOS, Embryonal Tumor With Multilayered Rosettes, C19MC Altered, Other CNS Embryonal Tumors
-    - "Astroblastoma, Astroblastoma,\_MN1-Altered, High-Grade Glioma"
+    - "Astroblastoma, Astroblastoma, MN1-Altered, High-Grade Glioma"
     - Adenoma, NOS
     - Combined Small Cell-Adenocarcinoma
     - Combined Small Cell-Large Carcinoma
@@ -2963,7 +2963,7 @@ PropDefinitions:
     - Langerhans Cell Histiocytosis, Disseminated
     - Epithelial-Myoepithelial Carcinoma
     - Ependymoma (WHO Grade 2)
-    - "Medulloblastoma, NOS, Medulloblastoma, SHH-Activated And\_TP53-Mutant"
+    - "Medulloblastoma, NOS, Medulloblastoma, SHH-Activated And TP53-Mutant"
     - Neurofibroma, NOS, Other, Solitary Fibrous Tumor
     - Adenoma
     - Clear Cell Sarcoma, NOS
@@ -3072,7 +3072,7 @@ PropDefinitions:
     - Craniopharyngioma
     - Mesothelioma, Biphasic, Malignant, B Lymphoblastic Leukemia/Lymphoma, NOS
     - Neoplasm, Uncertain Whether Benign Or Malignant, Low-Grade Glioma, Oligodendroglioma, IDH-Mutant, And 1p/19q-Codeleted
-    - 'B Lymphoblastic Leukemia/Lymphoma With Hypodiploidy '
+    - 'B Lymphoblastic Leukemia/Lymphoma With Hypodiploidy'
     - Glioblastoma
     - Leydig Cell Tumor, NOS
     - Mixed Type Rhabdomyosarcoma
@@ -3119,13 +3119,13 @@ PropDefinitions:
     - Pilocytic Astrocytoma, Diffuse Leptomeningeal Glioneuronal Tumor, Glioneuronal And Neuronal Tumors
     - Diffuse Glioma
     - B Lymphoblastic Leukemia/Lymphoma With T(V;11q23); MLL Rearranged
-    - "Ependymoma, NOS, Supratentorial Ependymoma,\_ZFTA\_Fusion-Positive"
+    - "Ependymoma, NOS, Supratentorial Ependymoma, ZFTA Fusion-Positive"
     - Acinar Cell Carcinoma
     - Acute Myeloid Leukemia With Myelodysplasia-Related Changes, Juvenile Myelomonocytic Leukemia, NOS
-    - "Neoplasm, Uncertain Whether Benign Or Malignant, Medulloblastoma, Medulloblastoma, SHH-Activated And\_TP53-Wildtype"
+    - "Neoplasm, Uncertain Whether Benign Or Malignant, Medulloblastoma, Medulloblastoma, SHH-Activated And TP53-Wildtype"
     - Anaplastic Ganglioglioma
     - Squamous Cell Carcinoma, Small Cell, Nonkeratinizing
-    - "Ganglioglioma, NOS, Diffuse Astrocytoma,\_MYB- Or\_MYBL1-Altered, Low-Grade Glioma"
+    - "Ganglioglioma, NOS, Diffuse Astrocytoma, MYB- Or MYBL1-Altered, Low-Grade Glioma"
     - Unclassified Sarcoma With Round Cell Morphology
     - Pilomyxoid Astrocytoma
     - Lung Squamous Cell Carcinoma, NOS
@@ -3174,7 +3174,7 @@ PropDefinitions:
     - Infiltrating Duct Carcinoma NOS
     - Squamous Cell Carcinoma NOS
     - Posterior Fossa Ependymoma, CNS WHO Grade 2
-    - "Desmoplastic Nodular Medulloblastoma, Medulloblastoma, Medulloblastoma, SHH-Activated And\_TP53-Wildtype"
+    - "Desmoplastic Nodular Medulloblastoma, Medulloblastoma, Medulloblastoma, SHH-Activated And TP53-Wildtype"
     - Choroid Plexus Neoplasm
     - Chordoma, NOS, Ganglioneuroblastoma
     - Colon Adenocarcinoma
@@ -3385,7 +3385,7 @@ PropDefinitions:
     - Intraductal Carcinoma NOS
     - Poorly Differentiated Sertoli-Leydig Cell Tumor With Heterologous Rhabdomyosarcomatous Differentiation
     - Glioma, Malignant, Other, Other Low-Grade B-Cell Lymphomas Of The CNS
-    - "Medulloblastoma, NOS, Medulloblastoma, SHH-Activated And\_TP53-Wildtype"
+    - "Medulloblastoma, NOS, Medulloblastoma, SHH-Activated And TP53-Wildtype"
     - Gastrointestinal Stromal Tumor, Benign
     - Ependymoma, NOS, Supratentorial Ependymoma, NOS Or NEC
     - Prostate Cancer
