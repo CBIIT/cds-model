@@ -231,55 +231,19 @@ Nodes:
       - imaging_sofware
       - imaging_protocol
       - organ_or_tissue
-      - performed_imaging_study_description
-      - performed_imaging_study_admittingDiagnosisCode
-      - performed_imaging_study_nonAcquisitionModalitiesInStudyCode
-      - performed_imaging_study_lossyImageCompressionIndicator
-      - performed_imaging_study_summary
-      - performed_imaging_study_primaryAnatomicSiteCode
-      - performed_imaging_study_acquisitionTypeCode
-      - performed_imaging_study_cardiacSynchronizationTechniqueCode
-      - performed_imaging_study_dataCollectionDiameter
-      - performed_imaging_study_respiratoryMotionTechniqueCode
-      - performed_imaging_study_bodyPositionCode
       - performed_imaging_study_typeCode
-      - performed_imaging_study_algorithmCode
-      - performed_imaging_study_reconstructionFieldOfViewHeight
-      - performed_imaging_study_reconstructionFieldOfViewWidth
-      - performed_imaging_study_reconstructionDiameter
-      - performed_imaging_study_sliceThickness
-      - performed_imaging_study_reconstructionInterval
       - longitudinal_temporal_event_type
       - longitudinal_temporal_event_offset
-      - CTAquisitionProtocolElement_singleCollimationWidth
-      - CTAquisitionProtocolElement_totalCollimationWidth
-      - CTAquisitionProtocolElement_gantryDetectorTilt
-      - CTAquisitionProtocolElement_spiralPitchFactor
-      - CTAquisitionProtocolElement_ctdiVol
-      - CTAquisitionProtocolElement_ctdiPhantomTypeCode
-      - CTAquisitionProtocolElement_kVp
-      - CTAquisitionProtocolElement_exposureModulationType_Code
-      - CTImageReconstructionProtocolElement_convolutionKernel
-      - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
-      - MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode
-      - MRImageAcquisitionProtocolElement_diffusionBValue
-      - MRImageAcquisitionProtocolElement_diffusionDirectionalityCode
-      - MRImageAcquisitionProtocolElement_magneticFieldStrength
-      - MRImageAcquisitionProtocolElement_resonantNucleusCode
-      - MRImageAcquisitionProtocolElement_acquisitionContrastCode
-      - MRImageAcquisitionProtocolElement_inversionRecoveryIndicator
-      - MRImageAcquisitionProtocolElement_pulseSequenceName
-      - MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator
-      - MRImageAcquisitionProtocolElement_phaseContrastIndicator
-      - MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator
-      - MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode
-      - MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode
-      - MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator
-      - MRImageAcquisitionProtocolElement_saturationRecoveryIndicator
-      - MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode
-      - MRImageReconstructionProtocolElement_complexImageComponentCode
-      - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
-      - Radiopharmaceutical_radionuclideCode
+
+  MultiplexMicroscopy:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: ""
+    Props:
+      - MultiplexMicroscopy_id
       - acquisition_method_type
       - tumor_tissue_type
       - tissue_fixative
@@ -323,7 +287,111 @@ Nodes:
       - oligo_barcode_lower_strand
       - dilution
       - concentration
-      - crdc_id
+
+  NonDICOMCTimages:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: ""
+    Props:
+      - NonDICOMCTimages_id
+      - CTAquisitionProtocolElement_singleCollimationWidth
+      - CTAquisitionProtocolElement_totalCollimationWidth
+      - CTAquisitionProtocolElement_gantryDetectorTilt
+      - CTAquisitionProtocolElement_spiralPitchFactor
+      - CTAquisitionProtocolElement_ctdiVol
+      - CTAquisitionProtocolElement_ctdiPhantomTypeCode
+      - CTAquisitionProtocolElement_kVp
+      - CTAquisitionProtocolElement_exposureModulationType_Code
+      - CTImageReconstructionProtocolElement_convolutionKernel
+      - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
+
+  NonDICOMMRimages:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: ""
+    Props:
+      - NonDICOMMRimages_id
+      - MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode
+      - MRImageAcquisitionProtocolElement_diffusionBValue
+      - MRImageAcquisitionProtocolElement_diffusionDirectionalityCode
+      - MRImageAcquisitionProtocolElement_magneticFieldStrength
+      - MRImageAcquisitionProtocolElement_resonantNucleusCode
+      - MRImageAcquisitionProtocolElement_acquisitionContrastCode
+      - MRImageAcquisitionProtocolElement_inversionRecoveryIndicator
+      - MRImageAcquisitionProtocolElement_pulseSequenceName
+      - MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator
+      - MRImageAcquisitionProtocolElement_phaseContrastIndicator
+      - MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator
+      - MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode
+      - MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode
+      - MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator
+      - MRImageAcquisitionProtocolElement_saturationRecoveryIndicator
+      - MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode
+      - MRImageReconstructionProtocolElement_complexImageComponentCode
+
+  NonDICOMpathologyImages:
+    Tags:
+        Category: data_file
+        Assignment: core
+        Class: primary
+        Template: 'Yes'
+    Desc: ""
+    Props:
+      - NonDICOMpathologyImages_id
+      - acquisition_method_type
+      - tumor_tissue_type
+      - tissue_fixative
+      - embedding_medium
+      - staining_method
+      - objective
+      - nominal_magnification
+      - immersion
+      - lens_numerical_aperture
+
+  NonDICOMPETimages:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: ""
+    Props:
+      - NonDICOMPETimages_id
+      - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
+      - Radiopharmaceutical_radionuclideCode
+
+  NonDICOMradiologyAllModalities:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: ""
+    Props:
+      - NonDICOMradiologyAllModalities_id
+      - performed_imaging_study_description
+      - performed_imaging_study_admittingDiagnosisCode
+      - performed_imaging_study_nonAcquisitionModalitiesInStudyCode
+      - performed_imaging_study_lossyImageCompressionIndicator
+      - performed_imaging_study_summary
+      - performed_imaging_study_primaryAnatomicSiteCode
+      - performed_imaging_study_acquisitionTypeCode
+      - performed_imaging_study_cardiacSynchronizationTechniqueCode
+      - performed_imaging_study_dataCollectionDiameter
+      - performed_imaging_study_respiratoryMotionTechniqueCode
+      - performed_imaging_study_bodyPositionCode
+      - performed_imaging_study_algorithmCode
+      - performed_imaging_study_reconstructionFieldOfViewHeight
+      - performed_imaging_study_reconstructionFieldOfViewWidth
+      - performed_imaging_study_reconstructionDiameter
+      - performed_imaging_study_sliceThickness
+      - performed_imaging_study_reconstructionInterval
 
 Relationships:
   of_program:
@@ -368,6 +436,22 @@ Relationships:
       - Src: image
         Dst: file
         Mul: one_to_one
+  of_image:
+    Props: null
+    Mul: one_to_one
+    Ends:
+      - Src: MultiplexMicroscopy
+        Dst: image
+      - Src: NonDICOMCTimages
+        Dst: image
+      - Src: NonDICOMpathologyImages
+        Dst: image
+      - Src: NonDICOMMRimages
+        Dst: image
+      - Src: NonDICOMradiologyAllModalities
+        Dst: image
+      - Src: NonDICOMPETimages
+        Dst: image
   associated_with:
     Props: null
     Mul: many_to_one
