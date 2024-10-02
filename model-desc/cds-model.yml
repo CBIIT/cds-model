@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v4.0.2
+Version: v4.0.3
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -139,7 +139,7 @@ Nodes:
       - crdc_id
 
   sample: # aka subspecimen (CMB)
-    Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
+    Desc: "Specimen tissue type collected from the participant."
     Tags:
       Category: case
       Assignment: core
