@@ -11050,3 +11050,79 @@ PropDefinitions:
       Code: "11459801"
       Value: Program Short Name Text
       Version: '1.00'
+  # proteomic
+  aliquot_id:
+    Desc: Software that was used to de-identify the images (if used)
+    Req: true
+    Key: true
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC
+      Code: "15105438"
+      Value: Specimen Aliquot Identifier
+  analytical_fractions:
+    Desc: The portion of a specimen that was isolated from the whole and collected via a fractionation process to be subjected to further analysis.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC
+      Code: "15112968"
+      Value:Laboratory Procedure Proteomic Profiling Analytical Fraction Type 
+      Version: '1.00'
+  experimental_strategy:
+    Desc: The type of systematic investigation using controlled observations and measurements to test hypotheses or develop a plan of action based on the facts discovered.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC
+      Code: "12373576"
+      Value: Research Activity Experimental Method Experimental Method Type
+      Version: '1.00'
+  instrument_make:
+    Desc: The words that describe an entity that produces finished goods used to perform a diagnostic, therapeutic or research activity.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC
+      Code: "2866141"
+      Value: Equipment Manufacturer Name Text
+      Version: '1.00'
+  instrument_model:
+    Desc: The words that describe the style or design of an entity"s finished goods used to perform a diagnostic, therapeutic or research activity.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC
+      Code: "2413274"
+      Value: Equipment Manufacturer Model Name Text
+      Version: '2.10'
+  proteomic_design_description:
+    Desc: The description of the analysis of proteins using a combination of techniques to quantify and to characterize proteins.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Original Source: CRDC
+      Code: "15089939"
+      Value: Research Activity Proteomics Study Design Description Text
+      Version: '1.00'
+  # data_version
+  data_version_id:
+    Desc: A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
+    Type: string
+    Key: true
+    Req: true
+  version:
+    Desc: The version of the data that has been loaded. This should be similar to semantic versioning format (major.minor.patch).
+    Type: string
+    Req: true
+  datetime:
+    Desc: An ISO8601 formatted datetime that records when the dataset was last edited.
+    Type: string
+    Req: true
+  model_version:
+    Desc: The version of the model used to load the data
+    Type: string
+    Req: true
+  description:
+    Desc: Any additional information about the dataset that might be relevant formatted as a short sentence or paragraph
+    Type: string

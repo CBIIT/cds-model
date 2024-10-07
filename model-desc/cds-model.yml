@@ -241,7 +241,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: ""
+    Desc: "non DICOM standard multiplex images to analyze cellular interactions and spatial context in biological samples"
     Props:
       - MultiplexMicroscopy_id
       - acquisition_method_type
@@ -294,7 +294,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: ""
+    Desc: "non DICOM standard computed tomography images"
     Props:
       - NonDICOMCTimages_id
       - CTAquisitionProtocolElement_singleCollimationWidth
@@ -314,7 +314,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: ""
+    Desc: "non DICOM standard magnetic resonance images"
     Props:
       - NonDICOMMRimages_id
       - MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode
@@ -341,7 +341,7 @@ Nodes:
         Assignment: core
         Class: primary
         Template: 'Yes'
-    Desc: ""
+    Desc: "non DICOM standard used for the study of  examination of tissue samples and histological features"
     Props:
       - NonDICOMpathologyImages_id
       - acquisition_method_type
@@ -360,7 +360,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: ""
+    Desc: "non DICOM standard positron emission tomography used to study metabolic processes in tissues"
     Props:
       - NonDICOMPETimages_id
       - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
@@ -372,7 +372,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: ""
+    Desc: "non DICOM standard radiology images"
     Props:
       - NonDICOMradiologyAllModalities_id
       - performed_imaging_study_description
@@ -392,6 +392,35 @@ Nodes:
       - performed_imaging_study_reconstructionDiameter
       - performed_imaging_study_sliceThickness
       - performed_imaging_study_reconstructionInterval
+
+  proteomic:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: "proteo-genomic data submitted to CDS"
+    Props:
+      - aliquot_id
+      - analytical_fractions
+      - experimental_strategy
+      - instrument_make
+      - instrument_model
+      - proteomic_design_description
+
+  data_version:
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Desc: "version of the data being uploaded for release"
+    Props:
+      - data_version_id
+      - version
+      - datetime
+      - model_version
+      - description
 
 Relationships:
   of_program:
@@ -434,6 +463,9 @@ Relationships:
       - Src: genomic_info
         Dst: file
       - Src: image
+        Dst: file
+        Mul: one_to_one
+      - Src: proteomic
         Dst: file
         Mul: one_to_one
   of_image:
