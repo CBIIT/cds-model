@@ -11067,7 +11067,7 @@ PropDefinitions:
     - Origin: caDSR
       Original Source: CRDC
       Code: "15112968"
-      Value:Laboratory Procedure Proteomic Profiling Analytical Fraction Type 
+      Value: Laboratory Procedure Proteomic Profiling Analytical Fraction Type 
       Version: '1.00'
   experimental_strategy:
     Desc: The type of systematic investigation using controlled observations and measurements to test hypotheses or develop a plan of action based on the facts discovered.
