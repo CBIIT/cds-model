@@ -408,7 +408,7 @@ Nodes:
       - instrument_model
       - proteomic_design_description
 
-  data_version:
+  version:
     Tags:
       Category: data_file
       Assignment: core
@@ -417,7 +417,7 @@ Nodes:
     Desc: "version of the data being uploaded for release"
     Props:
       - data_version_id
-      - version
+      - data_version
       - datetime
       - model_version
       - description
