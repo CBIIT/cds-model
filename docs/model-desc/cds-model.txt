@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit a7d91f8
+commit 05a823c
 node	property	value_or_TYPE
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	crdc_id	STRING
@@ -9105,10 +9105,10 @@ associated_with	file	file	NA	NA
 from_sample	file	sample	NA	NA
 of_file	genomic_info	file	NA	NA
 of_file	image	file	NA	NA
-of_participant	sample	participant	NA	NA
-of_participant	file	participant	NA	NA
-of_participant	diagnosis	participant	NA	NA
 of_participant	treatment	participant	NA	NA
+of_participant	diagnosis	participant	NA	NA
+of_participant	file	participant	NA	NA
+of_participant	sample	participant	NA	NA
 of_program	study	program	NA	NA
 of_study	file	study	NA	NA
 of_study	participant	study	NA	NA
