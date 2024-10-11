@@ -128,7 +128,7 @@ Nodes:
       Category: case
       Assignment: core
       Class: secondary
-      Template: 'No'
+      Template: 'Yes'
     Props:
       - treatment_id
       - treatment_type
