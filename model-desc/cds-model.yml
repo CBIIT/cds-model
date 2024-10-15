@@ -403,9 +403,8 @@ Nodes:
     Props:
       - aliquot_id
       - analytical_fractions
-      - experimental_strategy
       - instrument_make
-      - instrument_model
+      - proteomic_instrument_model
       - proteomic_design_description
 
   version:
