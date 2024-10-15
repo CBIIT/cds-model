@@ -11012,15 +11012,6 @@ PropDefinitions:
       Code: "15112968"
       Value: Laboratory Procedure Proteomic Profiling Analytical Fraction Type 
       Version: '1.00'
-  experimental_strategy:
-    Desc: The type of systematic investigation using controlled observations and measurements to test hypotheses or develop a plan of action based on the facts discovered.
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CRDC
-      Code: "12373576"
-      Value: Research Activity Experimental Method Experimental Method Type
-      Version: '1.00'
   instrument_make:
     Desc: The words that describe an entity that produces finished goods used to perform a diagnostic, therapeutic or research activity.
     Type: string
@@ -11030,7 +11021,7 @@ PropDefinitions:
       Code: "2866141"
       Value: Equipment Manufacturer Name Text
       Version: '1.00'
-  instrument_model:
+  proteomic_instrument_model:
     Desc: The words that describe the style or design of an entity"s finished goods used to perform a diagnostic, therapeutic or research activity.
     Type: string
     Term:
