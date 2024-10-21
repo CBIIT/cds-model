@@ -5130,13 +5130,14 @@ PropDefinitions:
     - G2
     - G3
     - G4
-    - GX
     - GB
+    - GX
     - High Grade
     - Intermediate Grade
     - Low Grade
-    - Unknown
+    - Not Applicable
     - Not Reported
+    - Unknown
     Term:
     - Origin: caDSR
       Original Source: DSS
@@ -5146,6 +5147,7 @@ PropDefinitions:
   tumor_stage_clinical_t:
     Desc: Extent of the primary cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
     Enum:
+    - Not Reported
     - T0
     - T1
     - T1a
@@ -5174,14 +5176,14 @@ PropDefinitions:
     - T4c
     - T4d
     - T4e
-    - TX
+    - T5
     - Ta
     - Tis
     - Tis (DCIS)
     - Tis (LCIS)
     - Tis (Paget's)
+    - TX
     - Unknown
-    - Not Reported
     Term:
     - Origin: caDSR
       Original Source: TCGA
