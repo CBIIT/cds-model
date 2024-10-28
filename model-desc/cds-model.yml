@@ -132,7 +132,6 @@ Nodes:
     Props:
       - treatment_id
       - treatment_type
-      - treatment_outcome
       - days_to_treatment
       - therapeutic_agents
       - response

@@ -5930,14 +5930,6 @@ PropDefinitions:
       Version: '1.00'
   response:
     Desc: Text term that describes the patient's final outcome after the treatment was administered.
-    Type: string
-    Term:
-    - Origin: caDSR
-      Code: "13383448"
-      Value: Disease Response Assessment Outcome
-      Version: '1.00'
-  treatment_outcome:
-    Desc: Text term that describes the patient's final outcome after the treatment was administered
     Enum:
     - Complete Remission
     - Minor Response
@@ -5955,8 +5947,7 @@ PropDefinitions:
     - Very Good Partial Response
     Term:
     - Origin: caDSR
-      Original Source: TCGA
-      Code: '13383448'
+      Code: "13383448"
       Value: Disease Response Assessment Outcome
       Version: '1.00'
   treatment_type:
