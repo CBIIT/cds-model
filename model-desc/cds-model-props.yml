@@ -2913,6 +2913,25 @@ PropDefinitions:
   primary_diagnosis:
     Desc: Primary disease diagnosed for this diagnosis and subject
     Enum:
+    - Infiltrating ductular carcinoma
+    - Triple-Negative Breast Carcinoma 
+    - Infiltrating duct carcinoma, NOS
+    - Infiltrating lobular carcinoma, NOS
+    - Infiltrating duct and lobular carcinoma
+    - Mucinous Carcinoma
+    - Infiltrating duct and mucinous carcinoma
+    - Adenocarcinoma
+    - Lung Squamous Cell Carcinoma, NOS
+    - Lung Adenocarcinoma, NOS
+    - Endometrioid carcinoma, NOS
+    - Clear Cell Renal Cell Carcinoma
+    - Non-Clear Cell Renal Cell Carcinoma 
+    - Colon Adenocarcinoma
+    - High-grade serous carcinoma
+    - Pancreas-Adenocarcinoma Ductal Type
+    - Pancreas-Adenosquamous Carcinoma
+    - Pancreas-Undifferentiated Carcinoma
+    - Mucinous Non-Cystic Carcinoma
     - Papillary Intralymphatic Angioendothelioma
     - Atypical Smooth Muscle Neoplasm
     - Medulloblastoma, WHO Grade 4
@@ -11007,7 +11026,14 @@ PropDefinitions:
       Value: Specimen Aliquot Identifier
   analytical_fractions:
     Desc: The portion of a specimen that was isolated from the whole and collected via a fractionation process to be subjected to further analysis.
-    Type: string
+    Enum:
+    - Acetylome
+    - Glycoproteome
+    - Lipidome
+    - Metabolome
+    - Phosphoproteome
+    - Proteome
+    - Ubiquitylome
     Term:
     - Origin: caDSR
       Original Source: CRDC
