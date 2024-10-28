@@ -5931,20 +5931,17 @@ PropDefinitions:
   response:
     Desc: Text term that describes the patient's final outcome after the treatment was administered.
     Enum:
-    - Complete Remission
-    - Minor Response
-    - Mixed Response
+    - Complete Response
     - No Evidence of Disease
-    - Non-Response
+    - No Response
     - Not Applicable
-    - Not Done
     - Not Evaluable
     - Not Reported
     - Partial Response
+    - Persistent Disease
     - Progressive Disease
     - Stable Disease
     - Unknown
-    - Very Good Partial Response
     Term:
     - Origin: caDSR
       Code: "13383448"
