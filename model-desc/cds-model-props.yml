@@ -10870,7 +10870,7 @@ PropDefinitions:
       Version: '1.00'
   # proteomic
   aliquot_id:
-    Desc: Software that was used to de-identify the images (if used)
+    Desc: One or more characters used to identify a portion of a sample.
     Req: true
     Key: true
     Term:
@@ -10878,6 +10878,7 @@ PropDefinitions:
       Original Source: CRDC
       Code: "15105438"
       Value: Specimen Aliquot Identifier
+      Version: '1.00'
   analytical_fractions:
     Desc: The portion of a specimen that was isolated from the whole and collected via a fractionation process to be subjected to further analysis.
     Enum:
