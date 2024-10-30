@@ -221,15 +221,6 @@ PropDefinitions:
     Type: string
     Req: true
     Key: true
-  acquisition_method_type:
-    Desc: Records the method of acquisition or source for the specimen under consideration
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: MCL/HTAN
-      Code: '6626651'
-      Value: Biospecimen Acquisition Method Type
-      Version: '2.00'
   tumor_tissue_type:
     Desc: Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint (add rows to select multiple values along with timepoints)
     Type: string
