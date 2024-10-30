@@ -230,39 +230,6 @@ PropDefinitions:
       Code: '3288124'
       Value: Tumor Tissue Disease Description Type
       Version: '1.00'
-  tissue_fixative:
-    Desc: A compound that preserves tissues and cells for microscopic study.
-    Req: true
-    Enum:
-    - 95% Ethanol
-    - Acetone
-    - Alcohol
-    - Carbodiimide
-    - Carnoy's Solution
-    - CryoStor
-    - Diimidoester
-    - Dimethylacetamide
-    - Formalin
-    - Glutaraldehyde
-    - Methacarn
-    - Not applicable
-    - Not recorded
-    - NP40 Lysis Buffer
-    - OCT media
-    - Other
-    - Para-benzoquinone
-    - PAXgene Tissue
-    - Poloxamer
-    - RNAlater
-    - Saline
-    - TCL Lysis Buffer
-    - Unknown
-    Term:
-    - Origin: caDSR
-      Original Source: NCI Standard
-      Code: '65078'
-      Value: Specimen Fixative Type
-      Version: '4.00'
   embedding_medium:
     Desc: A material that infiltrates and supports a specimen and preserves its shape and structure for sectioning and microscopy.
     Req: true
