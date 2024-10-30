@@ -1142,15 +1142,6 @@ PropDefinitions:
       Code: '6626651'
       Value: Biospecimen Acquisition Method Type
       Version: '2.00'
-  tumor_tissue_type:
-    Desc: Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint (add rows to select multiple values along with timepoints)
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: HTAN
-      Code: '3288124'
-      Value: Tumor Tissue Disease Description Type
-      Version: '1.00'
   tissue_fixative:
     Desc: A compound that preserves tissues and cells for microscopic study.
     Req: true
