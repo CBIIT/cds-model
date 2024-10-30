@@ -10873,6 +10873,7 @@ PropDefinitions:
     Desc: One or more characters used to identify a portion of a sample.
     Req: true
     Key: true
+    Type: string
     Term:
     - Origin: caDSR
       Original Source: CRDC
