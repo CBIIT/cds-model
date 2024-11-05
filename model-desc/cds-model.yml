@@ -411,7 +411,7 @@ Nodes:
       Category: data_file
       Assignment: core
       Class: primary
-      Template: 'Yes'
+      Template: 'No'
     Desc: "version of the data being uploaded for release"
     Props:
       - data_version_id
