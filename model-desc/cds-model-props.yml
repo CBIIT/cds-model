@@ -5161,7 +5161,7 @@ PropDefinitions:
       Version: '2.00'
   title:
     Desc: The abbreviation that represents an affix occurring at or before the beginning of an individual's name.
-    Type: String
+    Type: string
     Term:
     - Origin: caDSR
       Original Source: NCI Std
@@ -10876,11 +10876,11 @@ PropDefinitions:
     Req: 'No'
   institution:
     Desc: TBD
-    Type: String
+    Type: string
     Req: Preferred
   program_short_name:
     Desc: An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. Example - CPTAC
-    Type: String
+    Type: string
     Term:
     - Origin: caDSR
       Original Source: DSS
