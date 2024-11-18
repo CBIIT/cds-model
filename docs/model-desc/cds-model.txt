@@ -1,6 +1,240 @@
 repo https://github.com/CBIIT/cds-model
-commit 267d53f
+commit 70f5e5e
 node	property	value_or_TYPE
+MultiplexMicroscopy	MultiplexMicroscopy_id	STRING
+MultiplexMicroscopy	acquisition_method_type	STRING
+MultiplexMicroscopy	antibody_name	STRING
+MultiplexMicroscopy	catalog_number	STRING
+MultiplexMicroscopy	channel_id	STRING
+MultiplexMicroscopy	channel_metadata_file_url_in_cds	STRING
+MultiplexMicroscopy	channel_metadata_filename	STRING
+MultiplexMicroscopy	channel_name	STRING
+MultiplexMicroscopy	clone	STRING
+MultiplexMicroscopy	concentration	STRING
+MultiplexMicroscopy	cycle_number	STRING
+MultiplexMicroscopy	dilution	STRING
+MultiplexMicroscopy	embedding_medium	Agar embedding
+MultiplexMicroscopy	embedding_medium	Carbowax
+MultiplexMicroscopy	embedding_medium	Celloidin media
+MultiplexMicroscopy	embedding_medium	Epoxy Resin (Araldite)
+MultiplexMicroscopy	embedding_medium	Gelatin
+MultiplexMicroscopy	embedding_medium	Methacrylate
+MultiplexMicroscopy	embedding_medium	None
+MultiplexMicroscopy	embedding_medium	Other
+MultiplexMicroscopy	embedding_medium	Paraffin wax
+MultiplexMicroscopy	embedding_medium	Unknown
+MultiplexMicroscopy	emission_bandwidth	STRING
+MultiplexMicroscopy	emission_wavelength	STRING
+MultiplexMicroscopy	excitation_bandwidth	STRING
+MultiplexMicroscopy	excitation_wavelength	STRING
+MultiplexMicroscopy	fluorophore	STRING
+MultiplexMicroscopy	imaging_assay_type	STRING
+MultiplexMicroscopy	immersion	STRING
+MultiplexMicroscopy	lens_numerical_aperture	STRING
+MultiplexMicroscopy	lot	STRING
+MultiplexMicroscopy	metal_isotope_element_abbreviation	STRING
+MultiplexMicroscopy	metal_isotope_element_mass	STRING
+MultiplexMicroscopy	nominal_magnification	STRING
+MultiplexMicroscopy	objective	STRING
+MultiplexMicroscopy	oligo_barcode_lower_strand	STRING
+MultiplexMicroscopy	oligo_barcode_upper_strand	STRING
+MultiplexMicroscopy	physical_size_x	STRING
+MultiplexMicroscopy	physical_size_y	STRING
+MultiplexMicroscopy	physical_size_z	STRING
+MultiplexMicroscopy	pyramid	STRING
+MultiplexMicroscopy	rrid_identifier	STRING
+MultiplexMicroscopy	size_c	STRING
+MultiplexMicroscopy	size_t	STRING
+MultiplexMicroscopy	size_x	STRING
+MultiplexMicroscopy	size_y	STRING
+MultiplexMicroscopy	size_z	STRING
+MultiplexMicroscopy	staining_method	CODEX
+MultiplexMicroscopy	staining_method	GeoMX-DSP
+MultiplexMicroscopy	staining_method	H&E
+MultiplexMicroscopy	staining_method	IHC
+MultiplexMicroscopy	staining_method	IMC
+MultiplexMicroscopy	staining_method	MIBI
+MultiplexMicroscopy	staining_method	MxIF
+MultiplexMicroscopy	staining_method	SABER
+MultiplexMicroscopy	staining_method	mIHC
+MultiplexMicroscopy	staining_method	t-CyCIF
+MultiplexMicroscopy	sub_cycle_number	STRING
+MultiplexMicroscopy	target_name	STRING
+MultiplexMicroscopy	tissue_fixative	95% Ethanol
+MultiplexMicroscopy	tissue_fixative	Acetone
+MultiplexMicroscopy	tissue_fixative	Alcohol
+MultiplexMicroscopy	tissue_fixative	Carbodiimide
+MultiplexMicroscopy	tissue_fixative	Carnoy's Solution
+MultiplexMicroscopy	tissue_fixative	CryoStor
+MultiplexMicroscopy	tissue_fixative	Diimidoester
+MultiplexMicroscopy	tissue_fixative	Dimethylacetamide
+MultiplexMicroscopy	tissue_fixative	Formalin
+MultiplexMicroscopy	tissue_fixative	Glutaraldehyde
+MultiplexMicroscopy	tissue_fixative	Methacarn
+MultiplexMicroscopy	tissue_fixative	NP40 Lysis Buffer
+MultiplexMicroscopy	tissue_fixative	Not applicable
+MultiplexMicroscopy	tissue_fixative	Not recorded
+MultiplexMicroscopy	tissue_fixative	OCT media
+MultiplexMicroscopy	tissue_fixative	Other
+MultiplexMicroscopy	tissue_fixative	PAXgene Tissue
+MultiplexMicroscopy	tissue_fixative	Para-benzoquinone
+MultiplexMicroscopy	tissue_fixative	Poloxamer
+MultiplexMicroscopy	tissue_fixative	RNAlater
+MultiplexMicroscopy	tissue_fixative	Saline
+MultiplexMicroscopy	tissue_fixative	TCL Lysis Buffer
+MultiplexMicroscopy	tissue_fixative	Unknown
+MultiplexMicroscopy	tumor_tissue_type	STRING
+MultiplexMicroscopy	working_distance	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_ctdiPhantomTypeCode	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_ctdiVol	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_exposureModulationType_Code	ANGULAR
+NonDICOMCTimages	CTAquisitionProtocolElement_exposureModulationType_Code	ECG-BASED
+NonDICOMCTimages	CTAquisitionProtocolElement_exposureModulationType_Code	LONGITUDINAL
+NonDICOMCTimages	CTAquisitionProtocolElement_exposureModulationType_Code	NONE
+NonDICOMCTimages	CTAquisitionProtocolElement_exposureModulationType_Code	ORGAN-BASED
+NonDICOMCTimages	CTAquisitionProtocolElement_gantryDetectorTilt	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_kVp	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_singleCollimationWidth	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_spiralPitchFactor	STRING
+NonDICOMCTimages	CTAquisitionProtocolElement_totalCollimationWidth	STRING
+NonDICOMCTimages	CTImageReconstructionProtocolElement_convolutionKernel	STRING
+NonDICOMCTimages	CTImageReconstructionProtocolElement_convolutionKernelGroupCode	STRING
+NonDICOMCTimages	NonDICOMCTimages_id	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	DIFFUSION
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	FLOW_ENCODED_Flow Encoded contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	FLUID_ATTENUATED_Fluid Attenuated T2 weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	PERFUSION_Perfusion weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	PROTON_DENSITY_Proton Density weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	STIR_Short Tau Inversion Recovery
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	T1_T1 weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	T2_STAR_T2* weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	T2_T2 weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	TAGGING_Superposition of thin saturation bands onto image
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_acquisitionContrastCode	TOF_Time Of Flight weighted contrast
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_diffusionBValue	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	BMATRIX
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	DIRECTIONAL
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	ISOTROPIC
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	NONE
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode	BOTH
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode	GRADIENT
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode	SPIN
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_inversionRecoveryIndicator	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_magneticFieldStrength	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_phaseContrastIndicator	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_pulseSequenceName	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	129XE
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	13C
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	19F
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	1H
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	23NA
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	31P
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	3HE
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_resonantNucleusCode	7LI
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_saturationRecoveryIndicator	STRING
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	FAT
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	FAT AND WATER
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	NONE
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	SILICON GEL
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	WATER
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	FREE PRECESSION
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	LONGITUDINAL
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	NONE
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	TIME REVERSED
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	TRANSVERSE
+NonDICOMMRimages	MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator	STRING
+NonDICOMMRimages	MRImageReconstructionProtocolElement_complexImageComponentCode	IMAGINARY
+NonDICOMMRimages	MRImageReconstructionProtocolElement_complexImageComponentCode	MAGNITUDE
+NonDICOMMRimages	MRImageReconstructionProtocolElement_complexImageComponentCode	PHASE
+NonDICOMMRimages	MRImageReconstructionProtocolElement_complexImageComponentCode	REAL
+NonDICOMMRimages	NonDICOMMRimages_id	STRING
+NonDICOMPETimages	NonDICOMPETimages_id	STRING
+NonDICOMPETimages	PETImagingAcquisitionProtocolElement_gantryDetectorTilt	STRING
+NonDICOMPETimages	Radiopharmaceutical_radionuclideCode	STRING
+NonDICOMpathologyImages	NonDICOMpathologyImages_id	STRING
+NonDICOMpathologyImages	acquisition_method_type	STRING
+NonDICOMpathologyImages	embedding_medium	Agar embedding
+NonDICOMpathologyImages	embedding_medium	Carbowax
+NonDICOMpathologyImages	embedding_medium	Celloidin media
+NonDICOMpathologyImages	embedding_medium	Epoxy Resin (Araldite)
+NonDICOMpathologyImages	embedding_medium	Gelatin
+NonDICOMpathologyImages	embedding_medium	Methacrylate
+NonDICOMpathologyImages	embedding_medium	None
+NonDICOMpathologyImages	embedding_medium	Other
+NonDICOMpathologyImages	embedding_medium	Paraffin wax
+NonDICOMpathologyImages	embedding_medium	Unknown
+NonDICOMpathologyImages	immersion	STRING
+NonDICOMpathologyImages	lens_numerical_aperture	STRING
+NonDICOMpathologyImages	nominal_magnification	STRING
+NonDICOMpathologyImages	objective	STRING
+NonDICOMpathologyImages	staining_method	CODEX
+NonDICOMpathologyImages	staining_method	GeoMX-DSP
+NonDICOMpathologyImages	staining_method	H&E
+NonDICOMpathologyImages	staining_method	IHC
+NonDICOMpathologyImages	staining_method	IMC
+NonDICOMpathologyImages	staining_method	MIBI
+NonDICOMpathologyImages	staining_method	MxIF
+NonDICOMpathologyImages	staining_method	SABER
+NonDICOMpathologyImages	staining_method	mIHC
+NonDICOMpathologyImages	staining_method	t-CyCIF
+NonDICOMpathologyImages	tissue_fixative	95% Ethanol
+NonDICOMpathologyImages	tissue_fixative	Acetone
+NonDICOMpathologyImages	tissue_fixative	Alcohol
+NonDICOMpathologyImages	tissue_fixative	Carbodiimide
+NonDICOMpathologyImages	tissue_fixative	Carnoy's Solution
+NonDICOMpathologyImages	tissue_fixative	CryoStor
+NonDICOMpathologyImages	tissue_fixative	Diimidoester
+NonDICOMpathologyImages	tissue_fixative	Dimethylacetamide
+NonDICOMpathologyImages	tissue_fixative	Formalin
+NonDICOMpathologyImages	tissue_fixative	Glutaraldehyde
+NonDICOMpathologyImages	tissue_fixative	Methacarn
+NonDICOMpathologyImages	tissue_fixative	NP40 Lysis Buffer
+NonDICOMpathologyImages	tissue_fixative	Not applicable
+NonDICOMpathologyImages	tissue_fixative	Not recorded
+NonDICOMpathologyImages	tissue_fixative	OCT media
+NonDICOMpathologyImages	tissue_fixative	Other
+NonDICOMpathologyImages	tissue_fixative	PAXgene Tissue
+NonDICOMpathologyImages	tissue_fixative	Para-benzoquinone
+NonDICOMpathologyImages	tissue_fixative	Poloxamer
+NonDICOMpathologyImages	tissue_fixative	RNAlater
+NonDICOMpathologyImages	tissue_fixative	Saline
+NonDICOMpathologyImages	tissue_fixative	TCL Lysis Buffer
+NonDICOMpathologyImages	tissue_fixative	Unknown
+NonDICOMpathologyImages	tumor_tissue_type	STRING
+NonDICOMradiologyAllModalities	NonDICOMradiologyAllModalities_id	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_acquisitionTypeCode	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_admittingDiagnosisCode	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_algorithmCode	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_bodyPositionCode	Standing
+NonDICOMradiologyAllModalities	performed_imaging_study_bodyPositionCode	Supine
+NonDICOMradiologyAllModalities	performed_imaging_study_bodyPositionCode	Trendelenburg
+NonDICOMradiologyAllModalities	performed_imaging_study_cardiacSynchronizationTechniqueCode	NONE
+NonDICOMradiologyAllModalities	performed_imaging_study_cardiacSynchronizationTechniqueCode	PACED
+NonDICOMradiologyAllModalities	performed_imaging_study_cardiacSynchronizationTechniqueCode	PROSPECTIVE
+NonDICOMradiologyAllModalities	performed_imaging_study_cardiacSynchronizationTechniqueCode	REALTIME
+NonDICOMradiologyAllModalities	performed_imaging_study_cardiacSynchronizationTechniqueCode	RETROSPECTIVE
+NonDICOMradiologyAllModalities	performed_imaging_study_dataCollectionDiameter	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_description	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_lossyImageCompressionIndicator	0
+NonDICOMradiologyAllModalities	performed_imaging_study_lossyImageCompressionIndicator	1
+NonDICOMradiologyAllModalities	performed_imaging_study_nonAcquisitionModalitiesInStudyCode	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_primaryAnatomicSiteCode	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_reconstructionDiameter	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_reconstructionFieldOfViewHeight	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_reconstructionFieldOfViewWidth	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_reconstructionInterval	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	BREATH-HOLD
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	CORRECTION
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	GATING
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	NONE
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	REALTIME
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	RETROSPECTIVE
+NonDICOMradiologyAllModalities	performed_imaging_study_respiratoryMotionTechniqueCode	TRACKING
+NonDICOMradiologyAllModalities	performed_imaging_study_sliceThickness	STRING
+NonDICOMradiologyAllModalities	performed_imaging_study_summary	STRING
 diagnosis	age_at_diagnosis	INTEGER
 diagnosis	crdc_id	STRING
 diagnosis	days_to_last_followup	INTEGER
@@ -1249,12 +1483,9 @@ diagnosis	primary_diagnosis	Acute Myeloid Leukemia, T(16;16)(P 13;Q 11)
 diagnosis	primary_diagnosis	Acute Myeloid Leukemia, T(8;21)(Q22;Q22)
 diagnosis	primary_diagnosis	Acute Myelomonocytic Leukemia
 diagnosis	primary_diagnosis	Acute Myelomonocytic Leukemia, NOS
-diagnosis	primary_diagnosis	Acute Promyelocytic Leukaemia, T(15;17)(Q22;Q11-12)
 diagnosis	primary_diagnosis	Acute Promyelocytic Leukemia, T(15;17)(Q22;Q11-12)
 diagnosis	primary_diagnosis	Adamantinomatous Craniopharyngioma
 diagnosis	primary_diagnosis	Adamantinomatous Craniopharyngioma (CNS WHO Grade 1)
-diagnosis	primary_diagnosis	Adamantinomatous Craniopharyngioma, CNS WHO Grade 1
-diagnosis	primary_diagnosis	Adamantinomatous Craniopharyngioma, WHO Grade 1
 diagnosis	primary_diagnosis	Adenocarcinoma
 diagnosis	primary_diagnosis	Adenocarcinoma Combined With Other Types Of Carcinoma
 diagnosis	primary_diagnosis	Adenocarcinoma In Adenomatous Polyposis Coli
@@ -1272,7 +1503,6 @@ diagnosis	primary_diagnosis	Adenocarcinoma, Pancreatobiliary Type
 diagnosis	primary_diagnosis	Adenocarcinoma, Pancreatobiliary Type, Pancreatobiliary-Type Carcinoma
 diagnosis	primary_diagnosis	Adenocarcinoma,NOS, Glioblastoma, NOS
 diagnosis	primary_diagnosis	Adenoid Cystic Carcinoma
-diagnosis	primary_diagnosis	Adenoma
 diagnosis	primary_diagnosis	Adenoma, NOS
 diagnosis	primary_diagnosis	Adenosarcoma
 diagnosis	primary_diagnosis	Adenosquamous Carcinoma
@@ -1302,13 +1532,10 @@ diagnosis	primary_diagnosis	Astroblastoma, MN1-Altered. Histologically High-Grad
 diagnosis	primary_diagnosis	Astroblastoma, Other, Other CNS Tumor, NOS Or NEC
 diagnosis	primary_diagnosis	Astrocytic Glioma, Histologically Low-Grade, Most Compatible With Pilocytic Astrocytoma
 diagnosis	primary_diagnosis	Astrocytoma
-diagnosis	primary_diagnosis	Astrocytoma, Anaplastic
-diagnosis	primary_diagnosis	Astrocytoma, Anaplastic, NOS
 diagnosis	primary_diagnosis	Astrocytoma, Benign
 diagnosis	primary_diagnosis	Astrocytoma, IDH-Mutant, CNS WHO Grade 3
 diagnosis	primary_diagnosis	Astrocytoma, IDH-Mutant, CNS WHO Grade 4
 diagnosis	primary_diagnosis	Astrocytoma, IDH-Mutant, WHO Grade 2
-diagnosis	primary_diagnosis	Astrocytoma, NOS
 diagnosis	primary_diagnosis	Astrocytoma, NOS, Angiocentric Glioma, Low-Grade Glioma
 diagnosis	primary_diagnosis	Astrocytoma, NOS, Astrocytoma, IDH-Mutant, Low-Grade Glioma
 diagnosis	primary_diagnosis	Astrocytoma, NOS, Diffuse Pediatric-Type High-Grade Glioma, H3-Wildtype And IDH-Wildtype, High-Grade Glioma
@@ -1325,8 +1552,6 @@ diagnosis	primary_diagnosis	Atypical Lymphoid Infiltrate
 diagnosis	primary_diagnosis	Atypical Meningioma
 diagnosis	primary_diagnosis	Atypical Smooth Muscle Neoplasm
 diagnosis	primary_diagnosis	Atypical Teratoid Rhabdoid Tumor, CNS WHO Grade 4
-diagnosis	primary_diagnosis	Atypical Teratoid-Rhabdoid Tumor, CNS WHO Grade 4
-diagnosis	primary_diagnosis	Atypical Teratoid-Rhabdoid Tumor, WHO Grade 4
 diagnosis	primary_diagnosis	Atypical Teratoid/Rhabdoid Tumor
 diagnosis	primary_diagnosis	Atypical Teratoid/Rhabdoid Tumor, ATRT, NOS Or NEC
 diagnosis	primary_diagnosis	Atypical Teratoid/Rhabdoid Tumor, ATRT-MYC
@@ -1356,7 +1581,6 @@ diagnosis	primary_diagnosis	CNS Embryonal Tumor, NOS, CNS Embryonal Tumor, NOS O
 diagnosis	primary_diagnosis	CNS Primative Neuroectodermal Tumor (PNET)
 diagnosis	primary_diagnosis	CPNET
 diagnosis	primary_diagnosis	Carcinoid Tumor
-diagnosis	primary_diagnosis	Carcinoid Tumor Of Uncertain Malignant Potential
 diagnosis	primary_diagnosis	Carcinoma In Situ, NOS
 diagnosis	primary_diagnosis	Carcinoma NOS
 diagnosis	primary_diagnosis	Carcinoma, Diffuse Type
@@ -1382,7 +1606,6 @@ diagnosis	primary_diagnosis	Chordoma, NOS, Ganglioneuroblastoma
 diagnosis	primary_diagnosis	Choriocarcinoma Combined With Other Germ Cell Elements
 diagnosis	primary_diagnosis	Choriocarcinoma, NOS
 diagnosis	primary_diagnosis	Choroid Plexus Carcinoma
-diagnosis	primary_diagnosis	Choroid Plexus Carcinoma WHO Grade 3
 diagnosis	primary_diagnosis	Choroid Plexus Carcinoma, Choroid Plexus Tumors
 diagnosis	primary_diagnosis	Choroid Plexus Carcinoma, WHO Grade 3
 diagnosis	primary_diagnosis	Choroid Plexus Neoplasm
@@ -1392,7 +1615,6 @@ diagnosis	primary_diagnosis	Choroid Plexus Papilloma, NOS, Choroid Plexus Tumors
 diagnosis	primary_diagnosis	Choroid Plexus Papilloma, NOS, Other CNS Embryonal Tumors, Pineoblastoma
 diagnosis	primary_diagnosis	Chronic Eosinophilic Leukemia
 diagnosis	primary_diagnosis	Chronic Myelogenous Leukemia
-diagnosis	primary_diagnosis	Chronic Myelogenous Leukemia, BCR-ABL Positive
 diagnosis	primary_diagnosis	Chronic Myelogenous Leukemia, BCR/ABL Positive
 diagnosis	primary_diagnosis	Chronic Myeloid Leukemia, BCR-ABL1-Positive
 diagnosis	primary_diagnosis	Chronic Myeloid Leukemia, NOS
@@ -1400,6 +1622,7 @@ diagnosis	primary_diagnosis	Classic Medulloblastoma, CNS WHO Grade 4
 diagnosis	primary_diagnosis	Clear Cell Adenocarcinoma, NOS
 diagnosis	primary_diagnosis	Clear Cell Meningioma
 diagnosis	primary_diagnosis	Clear Cell Meningioma, Meningioma, Other
+diagnosis	primary_diagnosis	Clear Cell Renal Cell Carcinoma
 diagnosis	primary_diagnosis	Clear Cell Sarcoma Of Kidney
 diagnosis	primary_diagnosis	Clear Cell Sarcoma, NOS
 diagnosis	primary_diagnosis	Colon Adenocarcinoma
@@ -1460,11 +1683,9 @@ diagnosis	primary_diagnosis	Embryonal Sarcoma
 diagnosis	primary_diagnosis	Embryonal Tumor
 diagnosis	primary_diagnosis	Embryonal Tumor With Multi-Layered Rosettes
 diagnosis	primary_diagnosis	Embryonal Tumor With Multilayered Rosettes C19MC-Altered
-diagnosis	primary_diagnosis	Embryonal Tumor With Multilayered Rosettes With C19MC Alteration
 diagnosis	primary_diagnosis	Endometrioid Adenocarcinoma, NOS
 diagnosis	primary_diagnosis	Endometrioid Carcinoma, NOS
-diagnosis	primary_diagnosis	Ependymoma (CNS WHO Grade 3)
-diagnosis	primary_diagnosis	Ependymoma (WHO Grade 2)
+diagnosis	primary_diagnosis	Endometrioid carcinoma, NOS
 diagnosis	primary_diagnosis	Ependymoma NOS
 diagnosis	primary_diagnosis	Ependymoma WHO Grade 2
 diagnosis	primary_diagnosis	Ependymoma WHO Grade 3
@@ -1574,6 +1795,7 @@ diagnosis	primary_diagnosis	Granulosa Cell Tumor, Malignant
 diagnosis	primary_diagnosis	HHV8 Positive Diffuse Large B-Cell Lymphoma
 diagnosis	primary_diagnosis	Hamartoma
 diagnosis	primary_diagnosis	Head & Neck Squamous Cell Carcinoma
+diagnosis	primary_diagnosis	Head and Neck Squamous Cell Carcinoma
 diagnosis	primary_diagnosis	Hemangioblastoma
 diagnosis	primary_diagnosis	Hemangioblastoma, CNS WHO Grade 1
 diagnosis	primary_diagnosis	Hemangioblastoma, Other
@@ -1596,6 +1818,7 @@ diagnosis	primary_diagnosis	High Grade Neuroepithelial Tumor
 diagnosis	primary_diagnosis	High Grade Spindle Cell Sarcoma
 diagnosis	primary_diagnosis	High-Grade Neuroepithelial Tumor
 diagnosis	primary_diagnosis	High-Grade Serous Carcinoma
+diagnosis	primary_diagnosis	High-grade serous carcinoma
 diagnosis	primary_diagnosis	Histologically Low-Grade Glioma
 diagnosis	primary_diagnosis	Hodgkin Lymphoma, NOS
 diagnosis	primary_diagnosis	Hodgkin Lymphoma, Nodular Sclerosis, NOS
@@ -1609,6 +1832,11 @@ diagnosis	primary_diagnosis	Infiltrating Duct Carcinoma NOS
 diagnosis	primary_diagnosis	Infiltrating Duct Mixed With Other Types Of Carcinoma
 diagnosis	primary_diagnosis	Infiltrating Ductal Carcinoma
 diagnosis	primary_diagnosis	Infiltrating Lobular Carcinoma, NOS
+diagnosis	primary_diagnosis	Infiltrating duct and lobular carcinoma
+diagnosis	primary_diagnosis	Infiltrating duct and mucinous carcinoma
+diagnosis	primary_diagnosis	Infiltrating duct carcinoma, NOS
+diagnosis	primary_diagnosis	Infiltrating ductular carcinoma
+diagnosis	primary_diagnosis	Infiltrating lobular carcinoma, NOS
 diagnosis	primary_diagnosis	Inflammatory Carcinoma
 diagnosis	primary_diagnosis	Inflammatory Myofibroblastic Tumor With An Associated Odontogenic Keratocyst
 diagnosis	primary_diagnosis	Intraductal Carcinoma NOS
@@ -1625,7 +1853,6 @@ diagnosis	primary_diagnosis	Kidney Clear Cell Renal Carcinoma
 diagnosis	primary_diagnosis	Lactotroph Adenoma
 diagnosis	primary_diagnosis	Langerhans Cell Histiocytosis
 diagnosis	primary_diagnosis	Langerhans Cell Histiocytosis, Disseminated
-diagnosis	primary_diagnosis	Langerhans Cell Histiocytosis, NOS
 diagnosis	primary_diagnosis	Large Cell Medulloblastoma
 diagnosis	primary_diagnosis	Large Cell Medulloblastoma, Embryonal Tumor With Multilayered Rosettes, NOS, Other CNS Embryonal Tumors
 diagnosis	primary_diagnosis	Large Cell Medulloblastoma, Medulloblastoma, Medulloblastoma, Non-WNT/Non-SHH
@@ -1677,14 +1904,13 @@ diagnosis	primary_diagnosis	Malignant Tumor, Small Cell Type
 diagnosis	primary_diagnosis	Malignant Tumor, Spindle Cell Type
 diagnosis	primary_diagnosis	Malignant Tumor, Spindle Cell Type, CNS Sarcoma, CNS Sarcoma, NOS Or NEC
 diagnosis	primary_diagnosis	Marginal Zone B-Cell Lymphoma, NOS
-diagnosis	primary_diagnosis	Mast Cell Leukaemia
+diagnosis	primary_diagnosis	Mast Cell Leukemia
 diagnosis	primary_diagnosis	Medullary Carcinoma
 diagnosis	primary_diagnosis	Medullary Carcinoma, NOS
 diagnosis	primary_diagnosis	Medulloblastoma
 diagnosis	primary_diagnosis	Medulloblastoma By Morphology, NON-WNT By Immunohistochemistry
 diagnosis	primary_diagnosis	Medulloblastoma WHO Grade 4
 diagnosis	primary_diagnosis	Medulloblastoma, Classic (Biphasic) Histologic Type, Non-SHH/Non-WNT Molecular Group, CNS WHO Grade 4
-diagnosis	primary_diagnosis	Medulloblastoma, Classic Histologic Type (CNS WHO Grade 4)
 diagnosis	primary_diagnosis	Medulloblastoma, Classic Histologic Type, CNS WHO Grade 4
 diagnosis	primary_diagnosis	Medulloblastoma, Classic Histology
 diagnosis	primary_diagnosis	Medulloblastoma, Classic Morphology, CNS WHO Grade 4, NON-WNT/NON-SHH, Group 4 Subtype By Methylation
@@ -1717,7 +1943,6 @@ diagnosis	primary_diagnosis	Meningioma, Atypical, CNS WHO Grade 2
 diagnosis	primary_diagnosis	Meningioma, Malignant
 diagnosis	primary_diagnosis	Meningioma, NOS
 diagnosis	primary_diagnosis	Meningioma, NOS, Embryonal Tumor With Multilayered Rosettes, NOS, Other CNS Embryonal Tumors
-diagnosis	primary_diagnosis	Meningioma, NOS, Other
 diagnosis	primary_diagnosis	Meningiomatosis, NOS
 diagnosis	primary_diagnosis	Meningothelial Meningioma
 diagnosis	primary_diagnosis	Meningothelial Meningioma, Grade 1
@@ -1747,12 +1972,11 @@ diagnosis	primary_diagnosis	Mixed Phenotype Acute Leukemia With T(V;11q23); MLL 
 diagnosis	primary_diagnosis	Mixed Phenotype Acute Leukemia, B/Myeloid, NOS
 diagnosis	primary_diagnosis	Mixed Phenotype Acute Leukemia, T/Myeloid, NOS
 diagnosis	primary_diagnosis	Mixed Type Rhabdomyosarcoma
-diagnosis	primary_diagnosis	Mixed-Phenotype Acute Leukemia, B/Myeloid, Not Otherwise Specified
-diagnosis	primary_diagnosis	Mixed-Phenotype Acute Leukemia, T/Myeloid, Not Otherwise Specified
 diagnosis	primary_diagnosis	Morphologically Consistent With Pilocytic Astrocytoma, WHO Grade 1
 diagnosis	primary_diagnosis	Mucinous Adenocarcinoma
 diagnosis	primary_diagnosis	Mucinous Adenocarcinoma, Endocervical Type
 diagnosis	primary_diagnosis	Mucinous Carcinoma
+diagnosis	primary_diagnosis	Mucinous Non-Cystic Carcinoma
 diagnosis	primary_diagnosis	Mucoepidermoid Carcinoma
 diagnosis	primary_diagnosis	Mucous Adenocarcinoma
 diagnosis	primary_diagnosis	Multiple Myeloma
@@ -1823,7 +2047,6 @@ diagnosis	primary_diagnosis	Neoplasm, Uncertain Whether Benign Or Malignant, Med
 diagnosis	primary_diagnosis	Neoplasm, Uncertain Whether Benign Or Malignant, Meningioma, Other
 diagnosis	primary_diagnosis	Nephroblastoma (Wilms Tumor)
 diagnosis	primary_diagnosis	Nephroblastoma, NOS
-diagnosis	primary_diagnosis	Neuroblastoma
 diagnosis	primary_diagnosis	Neuroblastoma, NOS
 diagnosis	primary_diagnosis	Neuroblastoma, Schwannian Stroma Poor, Poorly Differentiated, Low MKI, Favorable Histology
 diagnosis	primary_diagnosis	Neuroblastoma, Undifferentiated Type
@@ -1833,12 +2056,10 @@ diagnosis	primary_diagnosis	Neuroendocrine Tumor, NOS
 diagnosis	primary_diagnosis	Neuroepithelial Tumor
 diagnosis	primary_diagnosis	Neuroepithelial Tumor With Glioneuronal-Like Features
 diagnosis	primary_diagnosis	Neuroepithelioma, NOS
-diagnosis	primary_diagnosis	Neurofibroma
 diagnosis	primary_diagnosis	Neurofibroma, NOS
-diagnosis	primary_diagnosis	Neurofibroma, NOS, Other, Solitary Fibrous Tumor
-diagnosis	primary_diagnosis	Neurofibromatosis, NOS
 diagnosis	primary_diagnosis	Neuroma, NOS
 diagnosis	primary_diagnosis	Nodular Melanoma
+diagnosis	primary_diagnosis	Non-Clear Cell Renal Cell Carcinoma
 diagnosis	primary_diagnosis	Non-Germinomatous Germ Cell Tumor
 diagnosis	primary_diagnosis	Not Applicable
 diagnosis	primary_diagnosis	Not Reported
@@ -1851,7 +2072,6 @@ diagnosis	primary_diagnosis	Oligoastrocytoma, NOS, Glioneuronal And Neuronal Tum
 diagnosis	primary_diagnosis	Oligoastrocytoma, NOS, Glioneuronal And Neuronal Tumors, Papillary Glioneuronal Tumor
 diagnosis	primary_diagnosis	Oligoastrocytoma, NOS, Other, Other CNS Tumor, NOS Or NEC
 diagnosis	primary_diagnosis	Oligodendroglioma
-diagnosis	primary_diagnosis	Oligodendroglioma, Anaplastic
 diagnosis	primary_diagnosis	Oligodendroglioma, Anaplastic, NOS
 diagnosis	primary_diagnosis	Oligodendroglioma, NOS
 diagnosis	primary_diagnosis	Oligodendroglioma, NOS, High-Grade Glioma, Oligodendroglioma, IDH-Mutant, And 1p/19q-Codeleted
@@ -1860,7 +2080,6 @@ diagnosis	primary_diagnosis	Oligodendroglioma, NOS, Low-Grade Glioma, Oligodendr
 diagnosis	primary_diagnosis	Oligodendroglioma, NOS, Other, Other CNS Tumor, NOS Or NEC
 diagnosis	primary_diagnosis	Ossifying Fibroma
 diagnosis	primary_diagnosis	Ossifying Fibromyxoid Tumor, NOS
-diagnosis	primary_diagnosis	Osteoblastoma
 diagnosis	primary_diagnosis	Osteoblastoma, NOS
 diagnosis	primary_diagnosis	Osteosarcoma, NOS
 diagnosis	primary_diagnosis	Oxyphilic Adenocarcinoma
@@ -1871,7 +2090,6 @@ diagnosis	primary_diagnosis	Pancreatic Neuroendocrine Tumor, Nonfunctioning
 diagnosis	primary_diagnosis	Pancreatobiliary-Type Carcinoma
 diagnosis	primary_diagnosis	Pancreatoblastoma
 diagnosis	primary_diagnosis	Papillary Adenocarcinoma, NOS
-diagnosis	primary_diagnosis	Papillary Carcinoma
 diagnosis	primary_diagnosis	Papillary Carcinoma, Columnar Cell
 diagnosis	primary_diagnosis	Papillary Carcinoma, Follicular Variant
 diagnosis	primary_diagnosis	Papillary Carcinoma, NOS
@@ -1882,7 +2100,6 @@ diagnosis	primary_diagnosis	Papillary Lesion With Atypical/High Grade Features
 diagnosis	primary_diagnosis	Papillary Microcarcinoma
 diagnosis	primary_diagnosis	Papillary Serous Adenocarcinoma
 diagnosis	primary_diagnosis	Papillary Thyroid Carcinoma
-diagnosis	primary_diagnosis	Papillary Thyroid Carcinoma, Classic Type
 diagnosis	primary_diagnosis	Papillary Transitional Cell Carcinoma
 diagnosis	primary_diagnosis	Papillary Tumor Of Pineal Region
 diagnosis	primary_diagnosis	Papillary Urothelial Carcinoma, Non-Invasive
@@ -1892,12 +2109,9 @@ diagnosis	primary_diagnosis	Paratesticular Rhabdomyosarcoma With Diffuse Anaplas
 diagnosis	primary_diagnosis	Parosteal Osteosarcoma
 diagnosis	primary_diagnosis	Perineuroma
 diagnosis	primary_diagnosis	Periosteal Osteosarcoma
-diagnosis	primary_diagnosis	Pheochromocytoma
 diagnosis	primary_diagnosis	Pheochromocytoma, NOS
 diagnosis	primary_diagnosis	Pigmented Dermatofibrosarcoma Protuberans
 diagnosis	primary_diagnosis	Pilocytic Astrocytoma
-diagnosis	primary_diagnosis	Pilocytic Astrocytoma WHO Grade 1
-diagnosis	primary_diagnosis	Pilocytic Astrocytoma, CNS WHO Grade 1
 diagnosis	primary_diagnosis	Pilocytic Astrocytoma, Diffuse Leptomeningeal Glioneuronal Tumor, Glioneuronal And Neuronal Tumors
 diagnosis	primary_diagnosis	Pilocytic Astrocytoma, Glioneuronal And Neuronal Tumors, Glioneuronal And Neuronal Tumors, NOS Or NEC
 diagnosis	primary_diagnosis	Pilocytic Astrocytoma, Low-Grade Glioma
@@ -1909,9 +2123,6 @@ diagnosis	primary_diagnosis	Pilomyxoid Astrocytoma
 diagnosis	primary_diagnosis	Pinealoblastoma
 diagnosis	primary_diagnosis	Pinealoma
 diagnosis	primary_diagnosis	Pineoblastoma
-diagnosis	primary_diagnosis	Pineoblastoma, CNS Germ Cell Tumors, CNS Germinoma
-diagnosis	primary_diagnosis	Pineoblastoma, Other CNS Embryonal Tumors
-diagnosis	primary_diagnosis	Pineoblastoma, Other, Other CNS Tumor, NOS Or NEC
 diagnosis	primary_diagnosis	Pituitary Adenoma, NOS
 diagnosis	primary_diagnosis	Plasmacytoma, Extramedullary
 diagnosis	primary_diagnosis	Pleomorphic Liposarcoma
@@ -1926,14 +2137,12 @@ diagnosis	primary_diagnosis	Poorly Differentiated Chordoma
 diagnosis	primary_diagnosis	Poorly Differentiated Neuroblastoma
 diagnosis	primary_diagnosis	Poorly Differentiated Sertoli-Leydig Cell Tumor With Heterologous Rhabdomyosarcomatous Differentiation
 diagnosis	primary_diagnosis	Poorly Differentiated, Intermediate Mitotic-Karyorrhectic Index
-diagnosis	primary_diagnosis	Poorly-Differentiated Neuroblastoma
 diagnosis	primary_diagnosis	Posterior Fossa Ependymoma, CNS WHO Grade 2
 diagnosis	primary_diagnosis	Precursor B-Cell Acute Lymphoblastic Leukemia With Hyperdiploidy
 diagnosis	primary_diagnosis	Precursor B-Cell Lymphoblastic Leukemia
 diagnosis	primary_diagnosis	Precursor Cell Lymphoblastic Leukemia, NOS
 diagnosis	primary_diagnosis	Precursor Cell Lymphoblastic Lymphoma, NOS
 diagnosis	primary_diagnosis	Precursor T-Cell Lymphoblastic Leukemia
-diagnosis	primary_diagnosis	Precursor T-Cell Lymphoblastic Leukemia, Acute Myeloid Leukemia, NOS
 diagnosis	primary_diagnosis	Primary Cutaneous CD30 Positive T-Cell Lymphoproliferative Disorder
 diagnosis	primary_diagnosis	Primary Cutaneous Follicle Center Lymphoma
 diagnosis	primary_diagnosis	Primary Mediastinal (Thymic) Large B-Cell Lymphoma
@@ -1942,36 +2151,27 @@ diagnosis	primary_diagnosis	Prostate Cancer
 diagnosis	primary_diagnosis	Rasmussen Encephalitis
 diagnosis	primary_diagnosis	Reactive Connective Tissue
 diagnosis	primary_diagnosis	Renal Cell Adenocarcinoma
-diagnosis	primary_diagnosis	Renal Cell Carcinoma
 diagnosis	primary_diagnosis	Renal Cell Carcinoma, NOS
 diagnosis	primary_diagnosis	Residual Astrocytoma
 diagnosis	primary_diagnosis	Residual Low Grade Neuroendocrine Tumor (Typical Carcinoid)
-diagnosis	primary_diagnosis	Retinoblastoma
 diagnosis	primary_diagnosis	Retinoblastoma, Grade 3
 diagnosis	primary_diagnosis	Retinoblastoma, NOS
 diagnosis	primary_diagnosis	Rhabdoid Tumor, Malignant
 diagnosis	primary_diagnosis	Rhabdoid Tumor, NOS
 diagnosis	primary_diagnosis	Rhabdomyoma, NOS
-diagnosis	primary_diagnosis	Rhabdomyosarcoma
 diagnosis	primary_diagnosis	Rhabdomyosarcoma, Embryonal Subtype
-diagnosis	primary_diagnosis	Rhabdomyosarcoma, Embryonal Subtype Is Favored
 diagnosis	primary_diagnosis	Rhabdomyosarcoma, Favor Alveolar Type
 diagnosis	primary_diagnosis	Rhabdomyosarcoma, Most Likely An Embryonal Carcinoma
 diagnosis	primary_diagnosis	Rhabdomyosarcoma, NOS
-diagnosis	primary_diagnosis	Sarcoma
 diagnosis	primary_diagnosis	Sarcoma, NOS
-diagnosis	primary_diagnosis	Schawannoma
 diagnosis	primary_diagnosis	Schwannian Stroma Poor Peripheral Neuroblastic Tumor, Consistent With Neuroblastoma
-diagnosis	primary_diagnosis	Schwannoma
 diagnosis	primary_diagnosis	Schwannoma, NOS
 diagnosis	primary_diagnosis	Schwannoma, NOS, Low-Grade Glioma, Low-Grade Glioma, NOS Or NEC
-diagnosis	primary_diagnosis	Schwannoma, NOS, Other
 diagnosis	primary_diagnosis	Sclerosing Stromal Tumor
 diagnosis	primary_diagnosis	Secretory Carcinoma
 diagnosis	primary_diagnosis	Seminoma, NOS
 diagnosis	primary_diagnosis	Serous Adenocarcinoma, NOS
 diagnosis	primary_diagnosis	Serous Carcinoma, NOS
-diagnosis	primary_diagnosis	Serous Cystadenocarcinoma NOS
 diagnosis	primary_diagnosis	Serous Cystadenocarcinoma, NOS
 diagnosis	primary_diagnosis	Serous Surface Papillary Carcinoma
 diagnosis	primary_diagnosis	Sertoli Cell Tumor, NOS
@@ -1996,18 +2196,15 @@ diagnosis	primary_diagnosis	Soft Tissue Tumor, Benign
 diagnosis	primary_diagnosis	Solid Pseudopapillary Neoplasm Of Pancreas
 diagnosis	primary_diagnosis	Solid Pseudopapillary Tumor Of Ovary
 diagnosis	primary_diagnosis	Solitary Fibrous Tumor, NOS
-diagnosis	primary_diagnosis	Solitary Fibrous Tumor, NOS, Other
 diagnosis	primary_diagnosis	Spinal Ependymoma, Histologically Low Grade (CNS WHO Grade 2)
 diagnosis	primary_diagnosis	Spinal Ependymoma, WHO Grade 2
 diagnosis	primary_diagnosis	Spindle Cell Carcinoma, NOS
 diagnosis	primary_diagnosis	Spindle Cell Melanoma, NOS
 diagnosis	primary_diagnosis	Spindle Cell Melanoma, Type B
-diagnosis	primary_diagnosis	Spindle Cell Rhabdomyosarcoma
 diagnosis	primary_diagnosis	Spindle Cell Rhabdomyosaroma
 diagnosis	primary_diagnosis	Spindle Cell Sarcoma
 diagnosis	primary_diagnosis	Spindled And Epithelioid Tumor With Features Of Intracranial Mesenchymal Tumor
 diagnosis	primary_diagnosis	Squamous Cell Carcinoma In Situ, NOS
-diagnosis	primary_diagnosis	Squamous Cell Carcinoma NOS
 diagnosis	primary_diagnosis	Squamous Cell Carcinoma, Keratinizing, NOS
 diagnosis	primary_diagnosis	Squamous Cell Carcinoma, Large Cell, Nonkeratinizing, NOS
 diagnosis	primary_diagnosis	Squamous Cell Carcinoma, Metastatic, NOS
@@ -2022,7 +2219,6 @@ diagnosis	primary_diagnosis	Subependymoma, Ependymoma, Supratentorial Ependymoma
 diagnosis	primary_diagnosis	Supratentorial Ependymoma
 diagnosis	primary_diagnosis	Supratentorial Ependymoma CNS WHO Grade 3
 diagnosis	primary_diagnosis	Supratentorial Ependymoma, NOS
-diagnosis	primary_diagnosis	Synovial Sarcoma
 diagnosis	primary_diagnosis	Synovial Sarcoma, Biphasic
 diagnosis	primary_diagnosis	Synovial Sarcoma, NOS
 diagnosis	primary_diagnosis	Synovial Sarcoma, Spindle Cell
@@ -2033,16 +2229,13 @@ diagnosis	primary_diagnosis	T-Lymphoblastic Lymphoma
 diagnosis	primary_diagnosis	Telangiectatic Osteosarcoma
 diagnosis	primary_diagnosis	Tenosynovial Giant Cell Tumor, NOS
 diagnosis	primary_diagnosis	Teratocarcinoma
-diagnosis	primary_diagnosis	Teratoma
-diagnosis	primary_diagnosis	Teratoma, Malignant, NOS
 diagnosis	primary_diagnosis	Teratoma, NOS
 diagnosis	primary_diagnosis	Therapy Related Myeloid Neoplasm
-diagnosis	primary_diagnosis	Therapy-Related Myeloid Neoplasms
 diagnosis	primary_diagnosis	Thymic Carcinoma, NOS
 diagnosis	primary_diagnosis	Thymoma, NOS
 diagnosis	primary_diagnosis	Transient Abnormal Myelopoiesis
-diagnosis	primary_diagnosis	Transitional Cell Carcinoma
 diagnosis	primary_diagnosis	Transitional Cell Carcinoma, NOS
+diagnosis	primary_diagnosis	Triple-Negative Breast Carcinoma
 diagnosis	primary_diagnosis	Tubular Adenocarcinoma
 diagnosis	primary_diagnosis	Tumor Cells, Benign
 diagnosis	primary_diagnosis	Tumor Cells, Malignant
@@ -2050,17 +2243,13 @@ diagnosis	primary_diagnosis	Tumor Cells, Malignant, Diffuse Leptomeningeal Glion
 diagnosis	primary_diagnosis	Tumor Cells, Malignant, Medulloblastoma, Medulloblastoma, NOS Or NEC
 diagnosis	primary_diagnosis	Tumor Cells, Malignant, Other, Pineal Parenchymal Tumor Of Intermediate Differentiation
 diagnosis	primary_diagnosis	Tumor Cells, Uncertain Whether Benign Or Malignant
-diagnosis	primary_diagnosis	Tumor Cells, Uncertain Whether Benign Or Malignant, Other CNS Embryonal Tumors, Pineoblastoma
 diagnosis	primary_diagnosis	Unclassified Sarcoma With Round Cell Morphology
 diagnosis	primary_diagnosis	Undiagnosed Spindle Cell Tumor
-diagnosis	primary_diagnosis	Undifferentiated Leukaemia
+diagnosis	primary_diagnosis	Undifferentiated Leukemia
 diagnosis	primary_diagnosis	Undifferentiated Nasopharyngeal Carcinoma
 diagnosis	primary_diagnosis	Undifferentiated Sarcoma
 diagnosis	primary_diagnosis	Undifferentiated Small Round Cell Sarcoma
 diagnosis	primary_diagnosis	Unknown
-diagnosis	primary_diagnosis	Unknown, To Be Completed Later, Diffuse Midline Glioma, H3 K27-Altered, High-Grade Glioma
-diagnosis	primary_diagnosis	Unknown, To Be Completed Later, Glioneuronal And Neuronal Tumors, Papillary Glioneuronal Tumor
-diagnosis	primary_diagnosis	Unknown, To Be Completed Later, Medulloblastoma, Medulloblastoma, Non-WNT/Non-SHH
 diagnosis	primary_diagnosis	Vascular Lesion, Consistent With Hemangioma
 diagnosis	primary_diagnosis	Well Differentiated Neuroendocrince Tumor, Grade 1
 diagnosis	primary_diagnosis	Xanthogranuloma
@@ -3556,6 +3745,7 @@ diagnosis	tumor_grade	GX
 diagnosis	tumor_grade	High Grade
 diagnosis	tumor_grade	Intermediate Grade
 diagnosis	tumor_grade	Low Grade
+diagnosis	tumor_grade	Not Applicable
 diagnosis	tumor_grade	Not Reported
 diagnosis	tumor_grade	Unknown
 diagnosis	tumor_stage_clinical_m	M0
@@ -3622,6 +3812,7 @@ diagnosis	tumor_stage_clinical_t	T4b
 diagnosis	tumor_stage_clinical_t	T4c
 diagnosis	tumor_stage_clinical_t	T4d
 diagnosis	tumor_stage_clinical_t	T4e
+diagnosis	tumor_stage_clinical_t	T5
 diagnosis	tumor_stage_clinical_t	TX
 diagnosis	tumor_stage_clinical_t	Ta
 diagnosis	tumor_stage_clinical_t	Tis
@@ -3638,7 +3829,7 @@ file	checksum_value	STRING
 file	crdc_id	STRING
 file	file_description	STRING
 file	file_id	STRING
-file	file_mapping_level	Participiant
+file	file_mapping_level	Participant
 file	file_mapping_level	Sample
 file	file_mapping_level	Study
 file	file_name	STRING
@@ -3867,106 +4058,13 @@ genomic_info	reference_genome_assembly	GRCh38
 genomic_info	reference_genome_assembly	Not specified in data
 genomic_info	reporter_label	STRING
 genomic_info	sequence_alignment_software	STRING
-image	CTAquisitionProtocolElement_ctdiPhantomTypeCode	STRING
-image	CTAquisitionProtocolElement_ctdiVol	STRING
-image	CTAquisitionProtocolElement_exposureModulationType_Code	ANGULAR
-image	CTAquisitionProtocolElement_exposureModulationType_Code	ECG-BASED
-image	CTAquisitionProtocolElement_exposureModulationType_Code	LONGITUDINAL
-image	CTAquisitionProtocolElement_exposureModulationType_Code	NONE
-image	CTAquisitionProtocolElement_exposureModulationType_Code	ORGAN-BASED
-image	CTAquisitionProtocolElement_gantryDetectorTilt	STRING
-image	CTAquisitionProtocolElement_kVp	STRING
-image	CTAquisitionProtocolElement_singleCollimationWidth	STRING
-image	CTAquisitionProtocolElement_spiralPitchFactor	STRING
-image	CTAquisitionProtocolElement_totalCollimationWidth	STRING
-image	CTImageReconstructionProtocolElement_convolutionKernel	STRING
-image	CTImageReconstructionProtocolElement_convolutionKernelGroupCode	STRING
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	DIFFUSION
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	FLOW_ENCODED_Flow Encoded contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	FLUID_ATTENUATED_Fluid Attenuated T2 weighted contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	PERFUSION_Perfusion weighted contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	PROTON_DENSITY_Proton Density weighted contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	STIR_Short Tau Inversion Recovery
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	T1_T1 weighted contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	T2_STAR_T2* weighted contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	T2_T2 weighted contrast
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	TAGGING_Superposition of thin saturation bands onto image
-image	MRImageAcquisitionProtocolElement_acquisitionContrastCode	TOF_Time Of Flight weighted contrast
-image	MRImageAcquisitionProtocolElement_arterialSpinLabelingContrastCode	STRING
-image	MRImageAcquisitionProtocolElement_diffusionBValue	STRING
-image	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	BMATRIX
-image	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	DIRECTIONAL
-image	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	ISOTROPIC
-image	MRImageAcquisitionProtocolElement_diffusionDirectionalityCode	NONE
-image	MRImageAcquisitionProtocolElement_echoPlanarPulseSequenceIndicator	STRING
-image	MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode	BOTH
-image	MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode	GRADIENT
-image	MRImageAcquisitionProtocolElement_echoPulseSequenceCategoryCode	SPIN
-image	MRImageAcquisitionProtocolElement_inversionRecoveryIndicator	STRING
-image	MRImageAcquisitionProtocolElement_magneticFieldStrength	STRING
-image	MRImageAcquisitionProtocolElement_multipleSpinEchoIndicator	STRING
-image	MRImageAcquisitionProtocolElement_phaseContrastIndicator	STRING
-image	MRImageAcquisitionProtocolElement_pulseSequenceName	STRING
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	129XE
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	13C
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	19F
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	1H
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	23NA
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	31P
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	3HE
-image	MRImageAcquisitionProtocolElement_resonantNucleusCode	7LI
-image	MRImageAcquisitionProtocolElement_saturationRecoveryIndicator	STRING
-image	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	FAT
-image	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	FAT AND WATER
-image	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	NONE
-image	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	SILICON GEL
-image	MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	WATER
-image	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	FREE PRECESSION
-image	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	LONGITUDINAL
-image	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	NONE
-image	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	TIME REVERSED
-image	MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	TRANSVERSE
-image	MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator	STRING
-image	MRImageReconstructionProtocolElement_complexImageComponentCode	IMAGINARY
-image	MRImageReconstructionProtocolElement_complexImageComponentCode	MAGNITUDE
-image	MRImageReconstructionProtocolElement_complexImageComponentCode	PHASE
-image	MRImageReconstructionProtocolElement_complexImageComponentCode	REAL
-image	PETImagingAcquisitionProtocolElement_gantryDetectorTilt	STRING
-image	Radiopharmaceutical_radionuclideCode	STRING
-image	acquisition_method_type	STRING
-image	antibody_name	STRING
-image	catalog_number	STRING
-image	channel_id	STRING
-image	channel_metadata_file_url_in_cds	STRING
-image	channel_metadata_filename	STRING
-image	channel_name	STRING
 image	citation_or_DOI	STRING
-image	clone	STRING
-image	concentration	STRING
-image	crdc_id	STRING
-image	cycle_number	STRING
 image	de_identification_method_description	STRING
 image	de_identification_method_type	Automatic
 image	de_identification_method_type	Manual
 image	de_identification_method_type	Not applicable
 image	de_identification_method_type	Semiautomatic
 image	de_identification_software	STRING
-image	dilution	STRING
-image	embedding_medium	Agar embedding
-image	embedding_medium	Carbowax
-image	embedding_medium	Celloidin media
-image	embedding_medium	Epoxy Resin (Araldite)
-image	embedding_medium	Gelatin
-image	embedding_medium	Methacrylate
-image	embedding_medium	None
-image	embedding_medium	Other
-image	embedding_medium	Paraffin wax
-image	embedding_medium	Unknown
-image	emission_bandwidth	STRING
-image	emission_wavelength	STRING
-image	excitation_bandwidth	STRING
-image	excitation_wavelength	STRING
-image	fluorophore	STRING
 image	image_modality	AR
 image	image_modality	BDUS
 image	image_modality	BI
@@ -4019,13 +4117,10 @@ image	image_modality	US
 image	image_modality	VA
 image	image_modality	XA
 image	image_modality	XC
-image	imaging_assay_type	STRING
 image	imaging_equipment_manufacturer	STRING
 image	imaging_equipment_model	STRING
 image	imaging_protocol	STRING
-image	imaging_sofware	STRING
-image	immersion	STRING
-image	lens_numerical_aperture	STRING
+image	imaging_software	STRING
 image	license	CC BY 3.0    http://creativecommons.org/licenses/by/3.0/
 image	license	CC BY 4.0    https://creativecommons.org/licenses/by/4.0/
 image	license	CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
@@ -4033,94 +4128,10 @@ image	license	CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
 image	license	Other
 image	longitudinal_temporal_event_offset	NUMBER
 image	longitudinal_temporal_event_type	NUMBER
-image	lot	STRING
-image	metal_isotope_element_abbreviation	STRING
-image	metal_isotope_element_mass	STRING
-image	nominal_magnification	STRING
-image	objective	STRING
-image	oligo_barcode_lower_strand	STRING
-image	oligo_barcode_upper_strand	STRING
 image	organ_or_tissue	STRING
-image	performed_imaging_study_acquisitionTypeCode	STRING
-image	performed_imaging_study_admittingDiagnosisCode	STRING
-image	performed_imaging_study_algorithmCode	STRING
-image	performed_imaging_study_bodyPositionCode	Standing
-image	performed_imaging_study_bodyPositionCode	Supine
-image	performed_imaging_study_bodyPositionCode	Trendelenburg
-image	performed_imaging_study_cardiacSynchronizationTechniqueCode	NONE
-image	performed_imaging_study_cardiacSynchronizationTechniqueCode	PACED
-image	performed_imaging_study_cardiacSynchronizationTechniqueCode	PROSPECTIVE
-image	performed_imaging_study_cardiacSynchronizationTechniqueCode	REALTIME
-image	performed_imaging_study_cardiacSynchronizationTechniqueCode	RETROSPECTIVE
-image	performed_imaging_study_dataCollectionDiameter	STRING
-image	performed_imaging_study_description	STRING
-image	performed_imaging_study_lossyImageCompressionIndicator	0
-image	performed_imaging_study_lossyImageCompressionIndicator	1
-image	performed_imaging_study_nonAcquisitionModalitiesInStudyCode	STRING
-image	performed_imaging_study_primaryAnatomicSiteCode	STRING
-image	performed_imaging_study_reconstructionDiameter	STRING
-image	performed_imaging_study_reconstructionFieldOfViewHeight	STRING
-image	performed_imaging_study_reconstructionFieldOfViewWidth	STRING
-image	performed_imaging_study_reconstructionInterval	STRING
-image	performed_imaging_study_respiratoryMotionTechniqueCode	BREATH-HOLD
-image	performed_imaging_study_respiratoryMotionTechniqueCode	CORRECTION
-image	performed_imaging_study_respiratoryMotionTechniqueCode	GATING
-image	performed_imaging_study_respiratoryMotionTechniqueCode	NONE
-image	performed_imaging_study_respiratoryMotionTechniqueCode	REALTIME
-image	performed_imaging_study_respiratoryMotionTechniqueCode	RETROSPECTIVE
-image	performed_imaging_study_respiratoryMotionTechniqueCode	TRACKING
-image	performed_imaging_study_sliceThickness	STRING
-image	performed_imaging_study_summary	STRING
 image	performed_imaging_study_typeCode	STRING
-image	physical_size_x	STRING
-image	physical_size_y	STRING
-image	physical_size_z	STRING
-image	pyramid	STRING
-image	rrid_identifier	STRING
-image	size_c	STRING
-image	size_t	STRING
-image	size_x	STRING
-image	size_y	STRING
-image	size_z	STRING
 image	species	STRING
-image	staining_method	CODEX
-image	staining_method	GeoMX-DSP
-image	staining_method	H&E
-image	staining_method	IHC
-image	staining_method	IMC
-image	staining_method	MIBI
-image	staining_method	MxIF
-image	staining_method	SABER
-image	staining_method	mIHC
-image	staining_method	t-CyCIF
 image	study_link_id	STRING
-image	sub_cycle_number	STRING
-image	target_name	STRING
-image	tissue_fixative	95% Ethanol
-image	tissue_fixative	Acetone
-image	tissue_fixative	Alcohol
-image	tissue_fixative	Carbodiimide
-image	tissue_fixative	Carnoy's Solution
-image	tissue_fixative	CryoStor
-image	tissue_fixative	Diimidoester
-image	tissue_fixative	Dimethylacetamide
-image	tissue_fixative	Formalin
-image	tissue_fixative	Glutaraldehyde
-image	tissue_fixative	Methacarn
-image	tissue_fixative	NP40 Lysis Buffer
-image	tissue_fixative	Not applicable
-image	tissue_fixative	Not recorded
-image	tissue_fixative	OCT media
-image	tissue_fixative	Other
-image	tissue_fixative	PAXgene Tissue
-image	tissue_fixative	Para-benzoquinone
-image	tissue_fixative	Poloxamer
-image	tissue_fixative	RNAlater
-image	tissue_fixative	Saline
-image	tissue_fixative	TCL Lysis Buffer
-image	tissue_fixative	Unknown
-image	tumor_tissue_type	STRING
-image	working_distance	STRING
 participant	crdc_id	STRING
 participant	dbGaP_subject_id	STRING
 participant	ethnicity	Hispanic or Latino
@@ -4161,6 +4172,17 @@ program	program_name	STRING
 program	program_short_description	STRING
 program	program_short_name	STRING
 program	program_sort_order	INTEGER
+proteomic	aliquot_id	STRING
+proteomic	analytical_fractions	Acetylome
+proteomic	analytical_fractions	Glycoproteome
+proteomic	analytical_fractions	Lipidome
+proteomic	analytical_fractions	Metabolome
+proteomic	analytical_fractions	Phosphoproteome
+proteomic	analytical_fractions	Proteome
+proteomic	analytical_fractions	Ubiquitylome
+proteomic	instrument_make	STRING
+proteomic	proteomic_design_description	STRING
+proteomic	proteomic_instrument_model	STRING
 sample	biosample_accession	REGEXP /^SAMN[0-9]+$/
 sample	crdc_id	STRING
 sample	derived_from_specimen	STRING
@@ -4580,7 +4602,17 @@ study	suffix	STRING
 study	title	STRING
 treatment	crdc_id	STRING
 treatment	days_to_treatment	INTEGER
-treatment	response	STRING
+treatment	response	Complete Response
+treatment	response	No Evidence of Disease
+treatment	response	No Response
+treatment	response	Not Applicable
+treatment	response	Not Evaluable
+treatment	response	Not Reported
+treatment	response	Partial Response
+treatment	response	Persistent Disease
+treatment	response	Progressive Disease
+treatment	response	Stable Disease
+treatment	response	Unknown
 treatment	therapeutic_agents	10-Deacetyltaxol
 treatment	therapeutic_agents	11C Topotecan
 treatment	therapeutic_agents	11D10 AluGel Anti-Idiotype Monoclonal Antibody
@@ -9057,20 +9089,6 @@ treatment	therapeutic_agents	siG12D LODER
 treatment	therapeutic_agents	siRNA-transfected Peripheral Blood Mononuclear Cells APN401
 treatment	therapeutic_agents	ssRNA-based Immunomodulator CV8102
 treatment	treatment_id	STRING
-treatment	treatment_outcome	Complete Remission
-treatment	treatment_outcome	Minor Response
-treatment	treatment_outcome	Mixed Response
-treatment	treatment_outcome	No Evidence of Disease
-treatment	treatment_outcome	Non-Response
-treatment	treatment_outcome	Not Applicable
-treatment	treatment_outcome	Not Done
-treatment	treatment_outcome	Not Evaluable
-treatment	treatment_outcome	Not Reported
-treatment	treatment_outcome	Partial Response
-treatment	treatment_outcome	Progressive Disease
-treatment	treatment_outcome	Stable Disease
-treatment	treatment_outcome	Unknown
-treatment	treatment_outcome	Very Good Partial Response
 treatment	treatment_type	3-Dimensional Conformal Radiation Therapy
 treatment	treatment_type	Allogeneic Hematopoietic Stem Cell Transplantation
 treatment	treatment_type	Autologous Stem Cell Transplantation
@@ -9099,16 +9117,28 @@ treatment	treatment_type	Stereotactic Radiosurgery
 treatment	treatment_type	Surgical Procedure
 treatment	treatment_type	Targeted Molecular Therapy
 treatment	treatment_type	Unknown
+version	data_version	STRING
+version	data_version_id	STRING
+version	datetime	STRING
+version	description	STRING
+version	model_version	STRING
 
 relationship	source_node	destination_node	property	value_or_TYPE
 associated_with	file	file	NA	NA
 from_sample	file	sample	NA	NA
-of_file	genomic_info	file	NA	NA
 of_file	image	file	NA	NA
-of_participant	file	participant	NA	NA
-of_participant	diagnosis	participant	NA	NA
+of_file	genomic_info	file	NA	NA
+of_file	proteomic	file	NA	NA
+of_image	NonDICOMPETimages	image	NA	NA
+of_image	MultiplexMicroscopy	image	NA	NA
+of_image	NonDICOMCTimages	image	NA	NA
+of_image	NonDICOMradiologyAllModalities	image	NA	NA
+of_image	NonDICOMMRimages	image	NA	NA
+of_image	NonDICOMpathologyImages	image	NA	NA
 of_participant	treatment	participant	NA	NA
 of_participant	sample	participant	NA	NA
+of_participant	file	participant	NA	NA
+of_participant	diagnosis	participant	NA	NA
 of_program	study	program	NA	NA
 of_study	file	study	NA	NA
 of_study	participant	study	NA	NA
@@ -9117,11 +9147,11 @@ property	description
 CTAquisitionProtocolElement_ctdiPhantomTypeCode	The type of phantom to use for CTDI measurement according to IEC 60601-2-44
 CTAquisitionProtocolElement_ctdiVol	The average dose over the total volume scanned for the selected CT conditions of operation (calculated according to IEC 60601-2-44, Ed.2.1 (Clause 29.1.103.4)). The units are energy dose, e.g. mGy.
 CTAquisitionProtocolElement_exposureModulationType_Code	The manner in which tube current is varied in order to limit the dose.
-CTAquisitionProtocolElement_gantryDetectorTilt	Nominal angle of tilt in degrees of the scanning gantry. The units are of plane angle , e.g. degrees.  Zero degrees means the gantry is not tilted, negative degrees are when the top of the gantry is tilted away from where the table enters the gantry.
+CTAquisitionProtocolElement_gantryDetectorTilt	Nominal angle of tilt in degrees of the scanning gantry. The units are of plane angle , e.g. degrees. Zero degrees means the gantry is not tilted, negative degrees are when the top of the gantry is tilted away from where the table enters the gantry.
 CTAquisitionProtocolElement_kVp	Peak kilovoltage output of the x-ray generator. The units are of electrical potential.
-CTAquisitionProtocolElement_singleCollimationWidth	The width of a single row of acquired data. The units are of linear distince, e.g. mm.
+CTAquisitionProtocolElement_singleCollimationWidth	The width of a single row of acquired data. The units are of linear distance, e.g. mm.
 CTAquisitionProtocolElement_spiralPitchFactor	Ratio of the distance that the table moves during a complete revolution of the source around the gantry orbit, to the width of the total collimation over the area of active x-ray detection. The units are of unity.
-CTAquisitionProtocolElement_totalCollimationWidth	The width of the total collimation over the area of active x-ray detection. The units are of linear distince, e.g. mm.
+CTAquisitionProtocolElement_totalCollimationWidth	The width of the total collimation over the area of active x-ray detection. The units are of linear distance, e.g. mm.
 CTImageReconstructionProtocolElement_convolutionKernel	A label describing the mathematical operations used to reconstruct images from the acquired data. The values for this attribute are vendor specific and not coded.
 CTImageReconstructionProtocolElement_convolutionKernelGroupCode	A coded value specifying the family of mathematical operations to use to reconstruct images from the acquired data
 MRImageAcquisitionProtocolElement_acquisitionContrastCode	A coded value specifying the inherent (as opposed to exogenous) contrast in the acquisition.
@@ -9141,12 +9171,20 @@ MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode	A coded valu
 MRImageAcquisitionProtocolElement_steadyStatePulseSequenceCode	A coded value specifying how residual transverse magnetization is maintained during the acquisition.
 MRImageAcquisitionProtocolElement_timeOfFlightContrastIndicator	Specifies whether contrast is created by the inflow of blood in the saturated plane.
 MRImageReconstructionProtocolElement_complexImageComponentCode	A coded value specifying the channel of the quadrature detected data, or the combination derived from those channels, used to reconstruct the image
-PETImagingAcquisitionProtocolElement_gantryDetectorTilt	Nominal angle of tilt in degrees of the scanning gantry. The units are of plane angle , e.g. degrees.  Zero degrees means the gantry is not tilted, negative degrees are when the top of the gantry is tilted away from where the table enters the gantry.
+MultiplexMicroscopy_id	MultiplexMicroscopy identifier
+NonDICOMCTimages_id	NonDICOMCTimages identifier
+NonDICOMMRimages_id	NonDICOMMRimages identifier
+NonDICOMPETimages_id	NonDICOMPETimages identifier
+NonDICOMpathologyImages_id	NonDICOMpathologyImages identifier
+NonDICOMradiologyAllModalities_id	NonDICOMradiologyAllModalities identifier
+PETImagingAcquisitionProtocolElement_gantryDetectorTilt	Nominal angle of tilt in degrees of the scanning gantry. The units are of plane angle , e.g. degrees. Zero degrees means the gantry is not tilted, negative degrees are when the top of the gantry is tilted away from where the table enters the gantry.
 Radiopharmaceutical_radionuclideCode	A coded value that specifies the radioactive isotope in the radiophamaceutical.
 acl	open or restricted access to data
 acquisition_method_type	Records the method of acquisition or source for the specimen under consideration
 adult_or_childhood_study	Study participants are adult, pediatric, or other
 age_at_diagnosis	Participant age at relevant diagnosis
+aliquot_id	One or more characters used to identify a portion of a sample.
+analytical_fractions	The portion of a specimen that was isolated from the whole and collected via a fractionation process to be subjected to further analysis.
 antibody_name	short descriptive name for this antibody
 authz	multifactor authorization
 avg_read_length	Average sequence read length
@@ -9173,10 +9211,13 @@ co_investigator_email	Email of co-principal investigator
 co_investigator_name	Name of co-principal investigator
 concentration	Final concentration used in experiment
 coverage	Average depth of coverage on reference used
-crdc_id	The crdc_id is a unique identifier that is generated by Data Hub
+crdc_id	The crdc_id is a unique identifier that is generated by CRDC Submission Portal
 custom_assembly_fasta_file_for_alignment	File name of any custom assembly fasta file used during alignment
 cycle_number	the cycle # in which the co-listed reagent(s) was(were) used
 data_types	Data types for storage
+data_version	The version of the data that has been loaded. This should be similar to semantic versioning format (major.minor.patch).
+data_version_id	A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
+datetime	An ISO8601 formatted datetime that records when the dataset was last edited.
 days_to_last_followup	Days to last participant followup, relative to study index date
 days_to_last_known_disease_status	The number of days from the date of the initial cancer diagnosis to the date of last known disease status.
 days_to_last_known_status	Days to last known status of participant, relative to study index date
@@ -9187,6 +9228,7 @@ de_identification_method_description	Description of the process of removing pote
 de_identification_method_type	General description of the de-identification method
 de_identification_software	Software that was used to de-identify the images (if used)
 derived_from_specimen	Identier of the parent specimen of this sample
+description	Any additional information about the dataset that might be relevant formatted as a short sentence or paragraph
 design_description	Human-readable description of methods used to create sequencing library
 diagnosis_id	Internal identifier
 dilution	Final dilution ratio used in experiment
@@ -9194,7 +9236,7 @@ email	The string of characters that represents the electronic mail address of a 
 embedding_medium	A material that infiltrates and supports a specimen and preserves its shape and structure for sectioning and microscopy.
 emission_bandwidth	nominal width of emission spectrum (nm)
 emission_wavelength	center/peak of the emission spectrum (nm)
-ethnicity	OMB Ethinicity designator
+ethnicity	OMB Ethnicity designator
 excitation_bandwidth	nominal width of excitation spectrum (nm)
 excitation_wavelength	center/peak of the excitation spectrum (nm)
 file_access	File access
@@ -9219,11 +9261,12 @@ imaging_assay_type	Type of imaging assay
 imaging_equipment_manufacturer	Producer of the imaging equipment that was used to generate the digital image
 imaging_equipment_model	The words used to describe the specific model of the instrument used to carry out an imaging experiment.
 imaging_protocol	A rule which guides how an activity should be performed. Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration, lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the image was obtained or generated.
-imaging_sofware	The name of the software package that was used to capture, generate, and process the image.
+imaging_software	The name of the software package that was used to capture, generate, and process the image.
 immersion	Immersion medium
 incidence_type	For this diagnosis, disease incidence relative to prior status of subject
 index_date	Index date (Day 0) to which all dates are relative, for this study
 institution	TBD
+instrument_make	The words that describe an entity that produces finished goods used to perform a diagnostic, therapeutic or research activity.
 instrument_model	Instrument model
 last_known_disease_status	Last known disease incidence for this subject and diagnosis
 last_name	A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.
@@ -9244,12 +9287,13 @@ metal_isotope_element_abbreviation	Element abbreviation
 metal_isotope_element_mass	Element mass number
 methylation_platform	The equipment used to detect the presence and/or location of methyl groups during DNA or protein analysis.
 middle_name	A means of identifying an individual by using a word or group of words indicating a person's middle name.
+model_version	The version of the model used to load the data
 morphology	ICD-O-3 Morphology term associated with this diagnosis
 nominal_magnification	The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units)
 number_of_participants	How many participants in the study
 number_of_reads	Total number of reads performed
 number_of_samples	How many total samples in the study
-objective	An objective is an optical element that gathers light from an object being observed and focuses the light rays from it to produce a real image of the object.
+objective	An_objective_is an optical element that gathers light from an object being observed and_focuses_the_light rays_from it to produce a_real image_of the object.
 oligo_barcode_lower_strand	DNA barcode used for labeling
 oligo_barcode_upper_strand	DNA barcode used for labeling
 organ_or_tissue	Site where images are associated
@@ -9290,6 +9334,8 @@ program_short_description	An abbreviated, single sentence description of the pro
 program_short_name	An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. Example - CPTAC
 program_sort_order	An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
 progression_or_recurrence	Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
+proteomic_design_description	The description of the analysis of proteins using a combination of techniques to quantify and to characterize proteins.
+proteomic_instrument_model	The words that describe the style or design of an entity"s finished goods used to perform a diagnostic, therapeutic or research activity.
 pyramid	The data file contains an image pyramid
 race	OMB Race designator
 reference_genome_assembly	Accession or name of genome reference or assembly used for alignment
@@ -9336,7 +9382,6 @@ tissue_fixative	A compound that preserves tissues and cells for microscopic stud
 tissue_or_organ_of_origin	The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
 title	The abbreviation that represents an affix occurring at or before the beginning of an individual's name.
 treatment_id	Internal identifier
-treatment_outcome	Text term that describes the patient's final outcome after the treatment was administered
 treatment_type	Text term that describes the kind of treatment administered
 tumor_grade	Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
 tumor_stage_clinical_m	Extent of the distant metastasis for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
