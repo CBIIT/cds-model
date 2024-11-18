@@ -180,7 +180,7 @@ Nodes:
       #- file_access
 
   genomic_info:
-    Desc: "In CDS genomic info refers to the sequencing methodsm techniques and equipment."
+    Desc: "In CDS genomic info refers to the sequencing methods techniques and equipment."
     Tags:
       Category: data_file
       Assignment: core
@@ -227,7 +227,7 @@ Nodes:
       - image_modality
       - imaging_equipment_manufacturer
       - imaging_equipment_model
-      - imaging_sofware
+      - imaging_software
       - imaging_protocol
       - organ_or_tissue
       - performed_imaging_study_typeCode

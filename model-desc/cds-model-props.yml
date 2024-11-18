@@ -159,7 +159,7 @@ PropDefinitions:
       Code: '2413274'
       Value: Equipment Manufacturer Model Name Text
       Version: '2.10'
-  imaging_sofware:
+  imaging_software:
     Desc: The name of the software package that was used to capture, generate, and process the image.
     Type: string
     Term:
@@ -723,7 +723,7 @@ PropDefinitions:
     Req: true
     Key: true
   CTAquisitionProtocolElement_singleCollimationWidth:
-    Desc: The width of a single row of acquired data. The units are of linear distince, e.g. mm.
+    Desc: The width of a single row of acquired data. The units are of linear distance, e.g. mm.
     Type: string
     Term:
     - Origin: caDSR
@@ -731,7 +731,7 @@ PropDefinitions:
       Value: Image Single Collimation Width 8 Byte Millimeter Number
       Version: '1.00'
   CTAquisitionProtocolElement_totalCollimationWidth:
-    Desc: The width of the total collimation over the area of active x-ray detection. The units are of linear distince, e.g. mm.
+    Desc: The width of the total collimation over the area of active x-ray detection. The units are of linear distance, e.g. mm.
     Req: true
     Type: string
     Term:
@@ -1153,7 +1153,7 @@ PropDefinitions:
   file_mapping_level:
     Desc: Describes if the file belongs to a Participant, a Sample, or a Study
     Enum:
-    - Participiant
+    - Participant
     - Sample
     - Study
     Term:
@@ -1314,7 +1314,7 @@ PropDefinitions:
       Value: Person Sex at Birth Category
       Version: '1.00'
   ethnicity:
-    Desc: OMB Ethinicity designator
+    Desc: OMB Ethnicity designator
     Enum:
     - Hispanic or Latino
     - Not allowed to collect
@@ -2787,6 +2787,7 @@ PropDefinitions:
   primary_diagnosis:
     Desc: Primary disease diagnosed for this diagnosis and subject
     Enum:
+    - Head and Neck Squamous Cell Carcinoma
     - Astroblastoma, Other, Other CNS Tumor, NOS Or NEC
     - Medulloblastoma; Hypercellular Lesion With Marked Atypia
     - Ependymoma, NOS, Posterior Fossa Ependymoma, NOS Or NEC
