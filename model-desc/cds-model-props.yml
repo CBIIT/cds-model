@@ -5134,6 +5134,7 @@ PropDefinitions:
     Enum:
     - 'Yes'
     - 'No'
+    - Censored
     - Unknown
     - Not Reported
     - Not Allowed To Collect
