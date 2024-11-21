@@ -5143,7 +5143,7 @@ PropDefinitions:
       Original Source: DSS
       Code: "13529783"
       Value: Disease Progression Or Recurrence Indicator
-      Version: '1.00'
+      Version: '2.00'
   # study
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
