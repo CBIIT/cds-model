@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit 70f5e5e
+commit a5b570d
 node	property	value_or_TYPE
 MultiplexMicroscopy	MultiplexMicroscopy_id	STRING
 MultiplexMicroscopy	acquisition_method_type	STRING
@@ -2502,6 +2502,7 @@ diagnosis	primary_site	Vulva
 diagnosis	primary_site	Waldeyer's Ring
 diagnosis	primary_site	Wrist Joint
 diagnosis	primary_site	Zygomatic Bone
+diagnosis	progression_or_recurrence	Censored
 diagnosis	progression_or_recurrence	No
 diagnosis	progression_or_recurrence	Not Allowed To Collect
 diagnosis	progression_or_recurrence	Not Reported
@@ -9126,22 +9127,22 @@ version	model_version	STRING
 relationship	source_node	destination_node	property	value_or_TYPE
 associated_with	file	file	NA	NA
 from_sample	file	sample	NA	NA
-of_file	image	file	NA	NA
-of_file	genomic_info	file	NA	NA
 of_file	proteomic	file	NA	NA
-of_image	NonDICOMPETimages	image	NA	NA
+of_file	genomic_info	file	NA	NA
+of_file	image	file	NA	NA
 of_image	MultiplexMicroscopy	image	NA	NA
-of_image	NonDICOMCTimages	image	NA	NA
 of_image	NonDICOMradiologyAllModalities	image	NA	NA
 of_image	NonDICOMMRimages	image	NA	NA
 of_image	NonDICOMpathologyImages	image	NA	NA
-of_participant	treatment	participant	NA	NA
-of_participant	sample	participant	NA	NA
-of_participant	file	participant	NA	NA
+of_image	NonDICOMPETimages	image	NA	NA
+of_image	NonDICOMCTimages	image	NA	NA
 of_participant	diagnosis	participant	NA	NA
+of_participant	file	participant	NA	NA
+of_participant	sample	participant	NA	NA
+of_participant	treatment	participant	NA	NA
 of_program	study	program	NA	NA
-of_study	file	study	NA	NA
 of_study	participant	study	NA	NA
+of_study	file	study	NA	NA
 
 property	description
 CTAquisitionProtocolElement_ctdiPhantomTypeCode	The type of phantom to use for CTDI measurement according to IEC 60601-2-44
