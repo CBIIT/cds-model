@@ -5784,7 +5784,7 @@ PropDefinitions:
       Version: '1.00'
   # treatment
   treatment_id:
-    Desc: The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as separation, and the property therapeutic_agents.
+    Desc: The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as the connector, and the property therapeutic_agents.
     Type: string
     Key: true
   days_to_treatment:
