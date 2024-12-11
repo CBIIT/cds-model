@@ -10581,12 +10581,6 @@ PropDefinitions:
     - Other
     - Bulk Whole Cell
     - Single Cell
-    Term:
-    - Origin: caDSR
-      Original Source: NCI Std
-      Code: '6285979'
-      Value: Sequencing Library Specimen Source
-      Version: '1.00'
   library_source_molecule:
     Desc: Source Molecule
     Req: Preferred
@@ -10595,11 +10589,11 @@ PropDefinitions:
     - Metagenomic
     - Metatranscriptomic
     - Not Reported
-    - Transcriptomic
+    - Transcriptome
     - Viral RNA
     Term:
     - Origin: caDSR
-      Code: '14808232'
+      Code: '15235981'
       Value: Sequencing Library Molecule Source
       Version: '1.00'
   library_source_material:
@@ -10614,7 +10608,7 @@ PropDefinitions:
     - Single-nuclei
     Term:
     - Origin: caDSR
-      Code: '14808227'
+      Code: '15235975'
       Value: Sequencing Library Cellular Material Source
       Version: '1.00'
   library_selection:
