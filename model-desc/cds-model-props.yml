@@ -180,7 +180,47 @@ PropDefinitions:
   organ_or_tissue:
     Desc: Site where images are associated
     Req: true
-    Type: string
+    Enum:
+    - Adrenal Gland
+    - Appendix
+    - Ascending Colon
+    - Bone Marrow
+    - Breast
+    - Cecum
+    - Colon
+    - Connective Subcutaneous and other Soft Tissues of Head Face and Neck
+    - Descending Colon
+    - Jejunum
+    - Kidney
+    - Lower Lobe of the Lung
+    - Lower-Inner Quadrant of the Breast
+    - Lower-Outer Quadrant of the Breast
+    - Lung
+    - Mediastinum 
+    - Nasal Cavity
+    - Not Reported
+    - Not specified in data
+    - Overlapping Lesion of Breast
+    - Pancreas
+    - Paraspinal
+    - Rectosigmoid Junction
+    - Rectosigmoid Region
+    - Rectum
+    - Sigmoid Colon
+    - Skin of Lower Limb and Hip
+    - Skin of Scalp and Neck
+    - Skin of the Lower Limb and Hip
+    - Skin of the Scalp and Neck
+    - Skin of the Trunk
+    - Skin of the Upper Limb and Shoulder
+    - Skin of Trunk
+    - Skin of Upper Limb and Shoulder
+    - Tonsil
+    - Transverse Colon
+    - Unknown
+    - Upper Lobe of the Lung
+    - Upper-Inner Quadrant of the Breast
+    - Upper-Outer Quadrant of the Breast
     Term:
     - Origin: caDSR
       Original Source: CDS
