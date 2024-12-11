@@ -10585,7 +10585,7 @@ PropDefinitions:
     Desc: Source Molecule
     Req: Preferred
     Enum:
-    - Genomic
+    - Genomic DNA
     - Metagenomic
     - Metatranscriptomic
     - Not Reported
