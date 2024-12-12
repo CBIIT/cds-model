@@ -10383,7 +10383,7 @@ PropDefinitions:
     Desc: The equipment used to detect the presence and/or location of methyl groups during DNA or protein analysis.
     Type: string
   genomic_info_id:
-    Desc: Genomic info identifier, the ID property for the ndoe genomic_info.
+    Desc: Genomic info identifier, the ID property for the node genomic_info.
     Type: string
     Req: true
     Key: true
