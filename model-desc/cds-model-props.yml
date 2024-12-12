@@ -1316,7 +1316,6 @@ PropDefinitions:
     Req: 'Yes'
     Type:
       value_type: list
-      item_type: string
       Enum:
       - Archer Fusion
       - Bisulfite-Seq
@@ -10905,10 +10904,13 @@ PropDefinitions:
       Value: Program Short Name Text
       Version: '1.00'
   # proteomic
-  aliquot_id:
-    Desc: One or more characters used to identify a portion of a sample.
+  protemic_info_id:
+    Desc: Proteomic info identifier, the ID property for the node proteomic.
     Req: true
     Key: true
+    Type: string
+  aliquot_id:
+    Desc: One or more characters used to identify a portion of a sample.
     Type: string
     Term:
     - Origin: caDSR
