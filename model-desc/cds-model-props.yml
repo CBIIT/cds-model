@@ -10904,7 +10904,7 @@ PropDefinitions:
       Value: Program Short Name Text
       Version: '1.00'
   # proteomic
-  protemic_info_id:
+  proteomic_info_id:
     Desc: Proteomic info identifier, the ID property for the node proteomic.
     Req: true
     Key: true
