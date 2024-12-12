@@ -1328,6 +1328,7 @@ PropDefinitions:
       - scRNA-Seq
       - WGA
       - WXS
+      - LC-MS/MS
     Term:
     - Origin: caDSR
       Original Source: CRDC
@@ -10530,6 +10531,7 @@ PropDefinitions:
     - MGISEQ-2000RS
     - MinION
     - Not Reported
+    - Orbitrap
     - Other
     - PacBio RS
     - PacBio RS II
