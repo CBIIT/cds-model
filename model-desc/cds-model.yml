@@ -406,6 +406,7 @@ Nodes:
       - instrument_make
       - proteomic_instrument_model
       - proteomic_design_description
+      - manufacturer_model_name
 
   version:
     Tags:
