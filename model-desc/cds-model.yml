@@ -400,11 +400,13 @@ Nodes:
       Template: 'Yes'
     Desc: "proteo-genomic data submitted to CDS"
     Props:
+      - proteomic_info_id
       - aliquot_id
       - analytical_fractions
       - instrument_make
       - proteomic_instrument_model
       - proteomic_design_description
+      - manufacturer_model_name
 
   version:
     Tags:

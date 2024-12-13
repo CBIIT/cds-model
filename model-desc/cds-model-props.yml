@@ -1316,7 +1316,6 @@ PropDefinitions:
     Req: 'Yes'
     Type:
       value_type: list
-      item_type: string
       Enum:
       - Archer Fusion
       - Bisulfite-Seq
@@ -1329,6 +1328,7 @@ PropDefinitions:
       - scRNA-Seq
       - WGA
       - WXS
+      - LC-MS/MS
     Term:
     - Origin: caDSR
       Original Source: CRDC
@@ -10384,7 +10384,7 @@ PropDefinitions:
     Desc: The equipment used to detect the presence and/or location of methyl groups during DNA or protein analysis.
     Type: string
   genomic_info_id:
-    Desc: Genomic info identifier, the ID property for the ndoe genomic_info.
+    Desc: Genomic info identifier, the ID property for the node genomic_info.
     Type: string
     Req: true
     Key: true
@@ -10531,6 +10531,7 @@ PropDefinitions:
     - MGISEQ-2000RS
     - MinION
     - Not Reported
+    - Orbitrap
     - Other
     - PacBio RS
     - PacBio RS II
@@ -10905,10 +10906,13 @@ PropDefinitions:
       Value: Program Short Name Text
       Version: '1.00'
   # proteomic
-  aliquot_id:
-    Desc: One or more characters used to identify a portion of a sample.
+  proteomic_info_id:
+    Desc: Proteomic info identifier, the ID property for the node proteomic.
     Req: true
     Key: true
+    Type: string
+  aliquot_id:
+    Desc: One or more characters used to identify a portion of a sample.
     Type: string
     Term:
     - Origin: caDSR
@@ -10962,6 +10966,16 @@ PropDefinitions:
       Code: "15089939"
       Value: Research Activity Proteomics Study Design Description Text
       Version: '1.00'
+  manufacturer_model_name:
+    Desc: The words that describe the style or design of an entity's finished goods used to perform a diagnostic, therapeutic or research activity.
+    Enum:
+    - Orbitrap
+    Term:
+    - Origin: caDSR
+      Original Source: NCIP
+      Code: "2413274"
+      Value: Manufacturer's Model Name
+      Version: '2.10'
   # version
   data_version_id:
     Desc: A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
