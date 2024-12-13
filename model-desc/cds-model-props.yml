@@ -1335,11 +1335,6 @@ PropDefinitions:
       Code: "12373576"
       Value: Research Activity Experimental Method Type
       Version: '1.00'
-    - Origin: caDSR
-      Original Source: CRDC
-      Code: "15194011"
-      Value: Research Activity Molecular Analysis Experimental Method Type
-      Version: '1.00'
   # participant
   sex:
     Desc: A textual description of a person's sex at birth.
