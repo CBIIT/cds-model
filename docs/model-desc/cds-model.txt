@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/cds-model
-commit a5b570d
+commit 24bd4a2
 node	property	value_or_TYPE
 MultiplexMicroscopy	MultiplexMicroscopy_id	STRING
 MultiplexMicroscopy	acquisition_method_type	STRING
@@ -3930,6 +3930,7 @@ genomic_info	instrument_model	Ion Torrent S5 XL
 genomic_info	instrument_model	MGISEQ-2000RS
 genomic_info	instrument_model	MinION
 genomic_info	instrument_model	Not Reported
+genomic_info	instrument_model	Orbitrap
 genomic_info	instrument_model	Other
 genomic_info	instrument_model	PacBio RS
 genomic_info	instrument_model	PacBio RS II
@@ -3995,11 +3996,11 @@ genomic_info	library_source_material	Bulk Tissue
 genomic_info	library_source_material	Not Reported
 genomic_info	library_source_material	Single-cells
 genomic_info	library_source_material	Single-nuclei
-genomic_info	library_source_molecule	Genomic
+genomic_info	library_source_molecule	Genomic DNA
 genomic_info	library_source_molecule	Metagenomic
 genomic_info	library_source_molecule	Metatranscriptomic
 genomic_info	library_source_molecule	Not Reported
-genomic_info	library_source_molecule	Transcriptomic
+genomic_info	library_source_molecule	Transcriptome
 genomic_info	library_source_molecule	Viral RNA
 genomic_info	library_strategy	AMPLICON
 genomic_info	library_strategy	ATAC-Seq
@@ -4129,7 +4130,46 @@ image	license	CC BY-NC 4.0 https://creativecommons.org/licenses/by-nc/4.0/
 image	license	Other
 image	longitudinal_temporal_event_offset	NUMBER
 image	longitudinal_temporal_event_type	NUMBER
-image	organ_or_tissue	STRING
+image	organ_or_tissue	Adrenal Gland
+image	organ_or_tissue	Appendix
+image	organ_or_tissue	Ascending Colon
+image	organ_or_tissue	Bone Marrow
+image	organ_or_tissue	Breast
+image	organ_or_tissue	Cecum
+image	organ_or_tissue	Colon
+image	organ_or_tissue	Connective Subcutaneous and other Soft Tissues of Head Face and Neck
+image	organ_or_tissue	Descending Colon
+image	organ_or_tissue	Jejunum
+image	organ_or_tissue	Kidney
+image	organ_or_tissue	Lower Lobe of the Lung
+image	organ_or_tissue	Lower-Inner Quadrant of the Breast
+image	organ_or_tissue	Lower-Outer Quadrant of the Breast
+image	organ_or_tissue	Lung
+image	organ_or_tissue	Mediastinum
+image	organ_or_tissue	Nasal Cavity
+image	organ_or_tissue	Not Reported
+image	organ_or_tissue	Not specified in data
+image	organ_or_tissue	Overlapping Lesion of Breast
+image	organ_or_tissue	Pancreas
+image	organ_or_tissue	Paraspinal
+image	organ_or_tissue	Rectosigmoid Junction
+image	organ_or_tissue	Rectosigmoid Region
+image	organ_or_tissue	Rectum
+image	organ_or_tissue	Sigmoid Colon
+image	organ_or_tissue	Skin of Lower Limb and Hip
+image	organ_or_tissue	Skin of Scalp and Neck
+image	organ_or_tissue	Skin of Trunk
+image	organ_or_tissue	Skin of Upper Limb and Shoulder
+image	organ_or_tissue	Skin of the Lower Limb and Hip
+image	organ_or_tissue	Skin of the Scalp and Neck
+image	organ_or_tissue	Skin of the Trunk
+image	organ_or_tissue	Skin of the Upper Limb and Shoulder
+image	organ_or_tissue	Tonsil
+image	organ_or_tissue	Transverse Colon
+image	organ_or_tissue	Unknown
+image	organ_or_tissue	Upper Lobe of the Lung
+image	organ_or_tissue	Upper-Inner Quadrant of the Breast
+image	organ_or_tissue	Upper-Outer Quadrant of the Breast
 image	performed_imaging_study_typeCode	STRING
 image	species	STRING
 image	study_link_id	STRING
@@ -4182,7 +4222,9 @@ proteomic	analytical_fractions	Phosphoproteome
 proteomic	analytical_fractions	Proteome
 proteomic	analytical_fractions	Ubiquitylome
 proteomic	instrument_make	STRING
+proteomic	manufacturer_model_name	Orbitrap
 proteomic	proteomic_design_description	STRING
+proteomic	proteomic_info_id	STRING
 proteomic	proteomic_instrument_model	STRING
 sample	biosample_accession	REGEXP /^SAMN[0-9]+$/
 sample	crdc_id	STRING
@@ -9127,19 +9169,19 @@ version	model_version	STRING
 relationship	source_node	destination_node	property	value_or_TYPE
 associated_with	file	file	NA	NA
 from_sample	file	sample	NA	NA
-of_file	proteomic	file	NA	NA
 of_file	genomic_info	file	NA	NA
+of_file	proteomic	file	NA	NA
 of_file	image	file	NA	NA
-of_image	MultiplexMicroscopy	image	NA	NA
 of_image	NonDICOMradiologyAllModalities	image	NA	NA
-of_image	NonDICOMMRimages	image	NA	NA
+of_image	MultiplexMicroscopy	image	NA	NA
+of_image	NonDICOMCTimages	image	NA	NA
 of_image	NonDICOMpathologyImages	image	NA	NA
 of_image	NonDICOMPETimages	image	NA	NA
-of_image	NonDICOMCTimages	image	NA	NA
-of_participant	diagnosis	participant	NA	NA
-of_participant	file	participant	NA	NA
-of_participant	sample	participant	NA	NA
+of_image	NonDICOMMRimages	image	NA	NA
 of_participant	treatment	participant	NA	NA
+of_participant	file	participant	NA	NA
+of_participant	diagnosis	participant	NA	NA
+of_participant	sample	participant	NA	NA
 of_program	study	program	NA	NA
 of_study	participant	study	NA	NA
 of_study	file	study	NA	NA
@@ -9255,7 +9297,7 @@ fluorophore	Fluorescent dye label
 funding_agency	Funding agency of the requestor study
 funding_source_program_name	The funding source organization/sponsor
 gender	Biological gender at birth
-genomic_info_id	Genomic info identifier, the ID property for the ndoe genomic_info.
+genomic_info_id	Genomic info identifier, the ID property for the node genomic_info.
 grant_id	Grant or contract identifier
 image_modality	The method in which the images are generated.
 imaging_assay_type	Type of imaging assay
@@ -9283,6 +9325,7 @@ license	Official or legal permission to do or own a specified thing.
 longitudinal_temporal_event_offset	An offset in days from a particular event of significance. May be fractional. In the context of a clinical trial, this is often the days since enrollment, or the baseline imaging Study.
 longitudinal_temporal_event_type	The type of event to which Longitudinal Temporal Offset from Event is relative.
 lot	lot number from vendor
+manufacturer_model_name	The words that describe the style or design of an entity's finished goods used to perform a diagnostic, therapeutic or research activity.
 md5sum	MD5 hex digest for this file
 metal_isotope_element_abbreviation	Element abbreviation
 metal_isotope_element_mass	Element mass number
@@ -9336,6 +9379,7 @@ program_short_name	An acronym or abbreviated form of the title of a broad framew
 program_sort_order	An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
 progression_or_recurrence	Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
 proteomic_design_description	The description of the analysis of proteins using a combination of techniques to quantify and to characterize proteins.
+proteomic_info_id	Proteomic info identifier, the ID property for the node proteomic.
 proteomic_instrument_model	The words that describe the style or design of an entity"s finished goods used to perform a diagnostic, therapeutic or research activity.
 pyramid	The data file contains an image pyramid
 race	OMB Race designator
@@ -9382,7 +9426,7 @@ therapeutic_agents	Text identification of the individual agent(s) used as part o
 tissue_fixative	A compound that preserves tissues and cells for microscopic study.
 tissue_or_organ_of_origin	The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
 title	The abbreviation that represents an affix occurring at or before the beginning of an individual's name.
-treatment_id	Internal identifier
+treatment_id	The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as the connector, and the property therapeutic_agents.
 treatment_type	Text term that describes the kind of treatment administered
 tumor_grade	Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
 tumor_stage_clinical_m	Extent of the distant metastasis for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.

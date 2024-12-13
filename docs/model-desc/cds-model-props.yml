@@ -180,7 +180,47 @@ PropDefinitions:
   organ_or_tissue:
     Desc: Site where images are associated
     Req: true
-    Type: string
+    Enum:
+    - Adrenal Gland
+    - Appendix
+    - Ascending Colon
+    - Bone Marrow
+    - Breast
+    - Cecum
+    - Colon
+    - Connective Subcutaneous and other Soft Tissues of Head Face and Neck
+    - Descending Colon
+    - Jejunum
+    - Kidney
+    - Lower Lobe of the Lung
+    - Lower-Inner Quadrant of the Breast
+    - Lower-Outer Quadrant of the Breast
+    - Lung
+    - Mediastinum 
+    - Nasal Cavity
+    - Not Reported
+    - Not specified in data
+    - Overlapping Lesion of Breast
+    - Pancreas
+    - Paraspinal
+    - Rectosigmoid Junction
+    - Rectosigmoid Region
+    - Rectum
+    - Sigmoid Colon
+    - Skin of Lower Limb and Hip
+    - Skin of Scalp and Neck
+    - Skin of the Lower Limb and Hip
+    - Skin of the Scalp and Neck
+    - Skin of the Trunk
+    - Skin of the Upper Limb and Shoulder
+    - Skin of Trunk
+    - Skin of Upper Limb and Shoulder
+    - Tonsil
+    - Transverse Colon
+    - Unknown
+    - Upper Lobe of the Lung
+    - Upper-Inner Quadrant of the Breast
+    - Upper-Outer Quadrant of the Breast
     Term:
     - Origin: caDSR
       Original Source: CDS
@@ -1276,7 +1316,6 @@ PropDefinitions:
     Req: 'Yes'
     Type:
       value_type: list
-      item_type: string
       Enum:
       - Archer Fusion
       - Bisulfite-Seq
@@ -1289,6 +1328,7 @@ PropDefinitions:
       - scRNA-Seq
       - WGA
       - WXS
+      - LC-MS/MS
     Term:
     - Origin: caDSR
       Original Source: CRDC
@@ -5784,7 +5824,7 @@ PropDefinitions:
       Version: '1.00'
   # treatment
   treatment_id:
-    Desc: Internal identifier
+    Desc: The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as the connector, and the property therapeutic_agents.
     Type: string
     Key: true
   days_to_treatment:
@@ -10344,7 +10384,7 @@ PropDefinitions:
     Desc: The equipment used to detect the presence and/or location of methyl groups during DNA or protein analysis.
     Type: string
   genomic_info_id:
-    Desc: Genomic info identifier, the ID property for the ndoe genomic_info.
+    Desc: Genomic info identifier, the ID property for the node genomic_info.
     Type: string
     Req: true
     Key: true
@@ -10491,6 +10531,7 @@ PropDefinitions:
     - MGISEQ-2000RS
     - MinION
     - Not Reported
+    - Orbitrap
     - Other
     - PacBio RS
     - PacBio RS II
@@ -10541,25 +10582,19 @@ PropDefinitions:
     - Other
     - Bulk Whole Cell
     - Single Cell
-    Term:
-    - Origin: caDSR
-      Original Source: NCI Std
-      Code: '6285979'
-      Value: Sequencing Library Specimen Source
-      Version: '1.00'
   library_source_molecule:
     Desc: Source Molecule
     Req: Preferred
     Enum:
-    - Genomic
+    - Genomic DNA
     - Metagenomic
     - Metatranscriptomic
     - Not Reported
-    - Transcriptomic
+    - Transcriptome
     - Viral RNA
     Term:
     - Origin: caDSR
-      Code: '14808232'
+      Code: '15235981'
       Value: Sequencing Library Molecule Source
       Version: '1.00'
   library_source_material:
@@ -10574,7 +10609,7 @@ PropDefinitions:
     - Single-nuclei
     Term:
     - Origin: caDSR
-      Code: '14808227'
+      Code: '15235975'
       Value: Sequencing Library Cellular Material Source
       Version: '1.00'
   library_selection:
@@ -10871,10 +10906,13 @@ PropDefinitions:
       Value: Program Short Name Text
       Version: '1.00'
   # proteomic
-  aliquot_id:
-    Desc: One or more characters used to identify a portion of a sample.
+  proteomic_info_id:
+    Desc: Proteomic info identifier, the ID property for the node proteomic.
     Req: true
     Key: true
+    Type: string
+  aliquot_id:
+    Desc: One or more characters used to identify a portion of a sample.
     Type: string
     Term:
     - Origin: caDSR
@@ -10928,6 +10966,16 @@ PropDefinitions:
       Code: "15089939"
       Value: Research Activity Proteomics Study Design Description Text
       Version: '1.00'
+  manufacturer_model_name:
+    Desc: The words that describe the style or design of an entity's finished goods used to perform a diagnostic, therapeutic or research activity.
+    Enum:
+    - Orbitrap
+    Term:
+    - Origin: caDSR
+      Original Source: NCIP
+      Code: "2413274"
+      Value: Manufacturer's Model Name
+      Version: '2.10'
   # version
   data_version_id:
     Desc: A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
