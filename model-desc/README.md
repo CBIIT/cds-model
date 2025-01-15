@@ -52,3 +52,31 @@ In support of data submission, data loading templates can be downloaded, either 
 ### Controlled Vocabularies
 
 In the interests of data quality and consistency, the CDS data model makes extensive use of enumerated properties and controlled vocabularies of acceptable terms. All such controlled vocabularies can be viewed via Table View mode, and value sets are included in full in the appropriate PDF exports. Furthermore, in support of data submitters pre-validating their templated data, all controlled vocabularies can be exported in machine readable JSON and TSV formats, either in the form of a zip file containing copies of controlled vocabularies for all enumerated properties, invoked via the upper-level “Available Downloads” option, or from within the Table View, and invoked on a property-by-property basis. As more studies are added to the CDS, many of these controlled vocabularies will continue to evolve, and will be updated by the CDS Data Team during study on-boarding, in order to accommodate additional terms not yet encountered.
+
+### Key Properties
+
+The key property is the ID property for each different node. Each unique node will have one unique key property value as its ID. The following table shows the key properties for each node.
+
+|Node|Key Property|Description|
+|:---:|:---:|:---:|
+|program|program\_acronym|The name of the program under which related studies will be grouped, expressed in the form of the acronym by which it will identified within the UI. This property is used as the key via which study records can be associated with the appropriate program during data loading, and to identify the correct records during data updates.|
+|study|phs\_accession|PHS accession number (a.k.a dbGaP accession)|
+|participant|study\_participant\_id|The property study\_participant\_id is a compound property, combining the property participant\_id and the parent property study.phs\_accession. It is the ID property for the node participant.|
+|diagnosis|study\_diagnosis\_id|The property study\_diagnosis\_id is a compound property, combining the property diagnosis_id and the parent property participant.study_participant_id. It is the ID property for the node diagnosis.|
+|sample|sample\_id|Sample identifier as submitted by requestor|
+|treatment|treatment\_id|The property treatment\_id is a compound property, combining the parent property participant.study\_participant\_id, string character "\_" in the middle as the connector, and the property therapeutic\_agents.|
+|file|file\_id|File identifier|
+|genomic\_info|genomic\_info\_id|Genomic info identifier, the ID property for the node genomic\_info. If the value is missing, but the library\_id values are given, will replace the genomic\_info\_id value with the combination of the parent node id value file\_id and library\_id; if the library\_id is also missing, will replace the value with the parent id value file\_id.|
+|image|study\_link\_id|The study\_link\_id is ID property for the node image. It should consist of a string and a number.|
+|MultiplexMicroscopy|MultiplexMicroscopy\_id|MultiplexMicroscopy identifier|
+|NonDICOMCTimages|NonDICOMCTimages\_id|NonDICOMCTimages identifier|
+|NonDICOMpathologyImages|NonDICOMpathologyImages\_id|NonDICOMpathologyImages identifier|
+|NonDICOMPETimages|NonDICOMPETimages\_id|NonDICOMPETimages identifier|
+|NonDICOMradiologyAllModalities|NonDICOMradiologyAllModalities\_id|NonDICOMradiologyAllModalities identifier|
+|NonDICOMMRimages|NonDICOMMRimages\_id|NonDICOMMRimages identifier|
+|proteomic|proteomic\_info\_id|Proteomic info identifier, the ID property for the node proteomic.|
+|version|data\_version\_id|A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.|
+
+
+
+
