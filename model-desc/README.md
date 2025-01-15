@@ -76,7 +76,3 @@ The key property is the ID property for each different node. Each unique node wi
 |NonDICOMMRimages|NonDICOMMRimages\_id|NonDICOMMRimages identifier|
 |proteomic|proteomic\_info\_id|Proteomic info identifier, the ID property for the node proteomic.|
 |version|data\_version\_id|A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.|
-
-
-
-
