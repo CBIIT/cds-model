@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v5.0.4
+Version: v6.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -233,6 +233,7 @@ Nodes:
       - performed_imaging_study_typeCode
       - longitudinal_temporal_event_type
       - longitudinal_temporal_event_offset
+      - crdc_id
 
   MultiplexMicroscopy:
     Tags:
@@ -286,6 +287,7 @@ Nodes:
       - oligo_barcode_lower_strand
       - dilution
       - concentration
+      - crdc_id
 
   NonDICOMCTimages:
     Tags:
@@ -306,6 +308,7 @@ Nodes:
       - CTAquisitionProtocolElement_exposureModulationType_Code
       - CTImageReconstructionProtocolElement_convolutionKernel
       - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
+      - crdc_id
 
   NonDICOMMRimages:
     Tags:
@@ -333,6 +336,7 @@ Nodes:
       - MRImageAcquisitionProtocolElement_saturationRecoveryIndicator
       - MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode
       - MRImageReconstructionProtocolElement_complexImageComponentCode
+      - crdc_id
 
   NonDICOMpathologyImages:
     Tags:
@@ -352,6 +356,7 @@ Nodes:
       - nominal_magnification
       - immersion
       - lens_numerical_aperture
+      - crdc_id
 
   NonDICOMPETimages:
     Tags:
@@ -364,6 +369,7 @@ Nodes:
       - NonDICOMPETimages_id
       - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
       - Radiopharmaceutical_radionuclideCode
+      - crdc_id
 
   NonDICOMradiologyAllModalities:
     Tags:
@@ -391,6 +397,7 @@ Nodes:
       - performed_imaging_study_reconstructionDiameter
       - performed_imaging_study_sliceThickness
       - performed_imaging_study_reconstructionInterval
+      - crdc_id
 
   proteomic:
     Tags:
@@ -407,6 +414,7 @@ Nodes:
       - proteomic_instrument_model
       - proteomic_design_description
       - manufacturer_model_name
+      - crdc_id
 
   version:
     Tags:
@@ -421,6 +429,7 @@ Nodes:
       - datetime
       - model_version
       - description
+      - crdc_id
 
 Relationships:
   of_program:
