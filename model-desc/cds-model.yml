@@ -177,6 +177,8 @@ Nodes:
       - checksum_algorithm
       - crdc_id
       - file_mapping_level
+      - release_date
+      - is_supplementary_file
       #- file_access
 
   genomic_info:
