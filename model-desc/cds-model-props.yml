@@ -1747,8 +1747,8 @@ PropDefinitions:
       Version: '1.00'
 
   # file
-  release_date:
-    Desc: The release data of the file
+  release_datetime:
+    Desc: An ISO8601 formatted datetime that records the released datetime of the file
     Type: string
   is_supplementary_file:
     Desc: Whether or not the file is the supplementary file
