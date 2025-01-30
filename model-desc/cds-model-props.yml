@@ -1985,8 +1985,8 @@ PropDefinitions:
       Code: '2192217'
       Value: Ethnic Group Category Text
       Version: '2.00'
-  gender:
-    Desc: Biological gender at birth
+  sex:
+    Desc: Biological sex at birth
     Enum:
     - Female
     - Intersex
@@ -1999,7 +1999,7 @@ PropDefinitions:
     - Origin: caDSR
       Original Source: NCI Std
       Code: '2200604'
-      Value: Person Gender Text Type
+      Value: Person Sex Text Type
       Version: '3.00'
   race:
     Desc: OMB Race designator
@@ -6046,13 +6046,36 @@ PropDefinitions:
     Type:
       value_type: list
       Enum:
-      - Proteomics
+      - Archive
+      - Biospecimen
+      - Chromatin
+      - Clinical
+      - Clinical Measure Instrument
+      - Copy Number Variation
+      - Gene Expression Analysis
       - Genomics
+      - Image Annotation
       - Imaging
+      - Mass Spectrometry
+      - Methylation Analysis
+      - Microarray
+      - Not Reported
+      - Pathology Imaging
+      - Population Science
+      - Protein Expression
+      - Proteomic Profile
+      - Proteomics
+      - Publication
+      - Quality Control
+      - Radiology Imaging
+      - Sequence Data
+      - Genomic Structural Variation
+      - Supplemental
+      - Transcriptome Profiling
     Req: 'Yes'
     Term:
     - Origin: caDSR
-      Code: '12571096'
+      Code: '14824731'
       Value: Data Collection Scientific Data Type Category
       Version: '1.00'
   data_access_level:
@@ -11380,22 +11403,6 @@ PropDefinitions:
       Code: '11527735'
       Value: Sequencing Library Read Layout Type
       Version: '1.00'
-  library_source:
-    Desc: Source material used to create library
-    Req: Preferred
-    Enum:
-    - Genomic
-    - Transcriptomic
-    - Metagenomic
-    - Metatranscriptomic
-    - Synthetic
-    - Viral RNA
-    - Genomic Single Cell
-    - Single Nucleus
-    - Transcriptomic Single Cell
-    - Other
-    - Bulk Whole Cell
-    - Single Cell
   library_source_molecule:
     Desc: Source Molecule
     Req: Preferred
