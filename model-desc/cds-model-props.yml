@@ -1953,7 +1953,7 @@ PropDefinitions:
       Value: Research Activity Experimental Method Type
       Version: '1.00'
   # participant
-  sex:
+  sex_at_brith:
     Desc: A textual description of a person's sex at birth.
     Enum:
     - Decline to answer
