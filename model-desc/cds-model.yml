@@ -200,7 +200,6 @@ Nodes:
       - design_description
       - library_strategy
       - library_layout
-      - library_source
       - library_selection
       - platform
       - instrument_model
