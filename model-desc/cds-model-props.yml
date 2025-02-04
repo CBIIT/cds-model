@@ -1752,7 +1752,7 @@ PropDefinitions:
     Type: string
   is_supplementary_file:
     Desc: Whether or not the file is the supplementary file
-    type: boolean
+    Type: boolean
   checksum_value:
     Desc: checksum (hash) for file (using checksum_algorithm) - if you want to use a checksum other than md5
     Type: string
