@@ -84,11 +84,11 @@ Nodes:
       - study_participant_id
       - participant_id
       - race
-      - gender
+      - sex
       - ethnicity
       #  - vital_status
       - dbGaP_subject_id
-      - sex
+      - sex_at_birth
       - crdc_id
 
   diagnosis: # may have multiple dxs for multiple timepoints?

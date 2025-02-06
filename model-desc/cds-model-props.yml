@@ -1953,7 +1953,7 @@ PropDefinitions:
       Value: Research Activity Experimental Method Type
       Version: '1.00'
   # participant
-  sex:
+  sex_at_birth:
     Desc: A textual description of a person's sex at birth.
     Enum:
     - Decline to answer
@@ -1985,8 +1985,8 @@ PropDefinitions:
       Code: '2192217'
       Value: Ethnic Group Category Text
       Version: '2.00'
-  gender:
-    Desc: Biological gender at birth
+  sex:
+    Desc: Biological sex at birth
     Enum:
     - Female
     - Intersex
@@ -1999,7 +1999,7 @@ PropDefinitions:
     - Origin: caDSR
       Original Source: NCI Std
       Code: '2200604'
-      Value: Person Gender Text Type
+      Value: Person Sex Text Type
       Version: '3.00'
   race:
     Desc: OMB Race designator
