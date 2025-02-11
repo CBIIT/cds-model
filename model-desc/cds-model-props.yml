@@ -1166,7 +1166,6 @@ PropDefinitions:
     Desc: A coded value specifying spatial aspects of the mechanism of data collection.
     Enum:
     - 3D
-    Type: string
     Term:
     - Origin: caDSR
       Original Source: CDS
