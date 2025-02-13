@@ -1750,7 +1750,7 @@ PropDefinitions:
     Desc: An ISO8601 formatted datetime that records the released datetime of the file
     Type: string
   is_supplementary_file:
-    Desc: Whether or not the file is the supplementary file
+    Desc: Whether or not the file is the supplementary file, the value can only be "true" or "false" in string type.
     Type: boolean
   checksum_value:
     Desc: checksum (hash) for file (using checksum_algorithm) - if you want to use a checksum other than md5
