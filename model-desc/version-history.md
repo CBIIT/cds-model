@@ -1,4 +1,7 @@
-### 6.0.0 (Released 2/13/2025)
+### 6.0.2 (Released 2/13/2025)
+- Updated the version-history.md.
+
+### 6.0.1 (Released 2/13/2025)
 - Renaming the prop: "**_gender_**" to "**_sex_**".
 
 ### 6.0.0 (Released 1/2/2025)
