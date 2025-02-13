@@ -52,3 +52,25 @@ In support of data submission, data loading templates can be downloaded, either 
 ### Controlled Vocabularies
 
 In the interests of data quality and consistency, the CDS data model makes extensive use of enumerated properties and controlled vocabularies of acceptable terms. All such controlled vocabularies can be viewed via Table View mode, and value sets are included in full in the appropriate PDF exports. Furthermore, in support of data submitters pre-validating their templated data, all controlled vocabularies can be exported in machine readable JSON and TSV formats, either in the form of a zip file containing copies of controlled vocabularies for all enumerated properties, invoked via the upper-level “Available Downloads” option, or from within the Table View, and invoked on a property-by-property basis. As more studies are added to the CDS, many of these controlled vocabularies will continue to evolve, and will be updated by the CDS Data Team during study on-boarding, in order to accommodate additional terms not yet encountered.
+
+### Key Properties
+
+The key property is the ID property for each different node. Each unique node will have one unique key property value as its ID.
+
+- **_program\_acronym_** is the key property for the node **_program_**. It is the name of the program under which related studies will be grouped, expressed in the form of the acronym by which it will identified within the UI. This property is used as the key via which study records can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
+- **_phs\_accession_** is the key property for the node **_study_**. It is the PHS accession number (a.k.a dbGaP accession).
+- **_study\_participant\_id_** is the key property of the node **_participant_**. The property **_study\_participant\_id_** is a compound property, combining the property **_participant\_id_** and the parent property **_study.phs\_accession_**.
+- **_study\_diagnosis\_id_** is the key property for the node **_diagnosis_**. The property **_study\_diagnosis\_id_** is a compound property, combining the property **_diagnosis\_id_** and the parent property **_participant.study\_participant\_id_**.
+- **_sample\_id_** is the key property of the node **_sample_**. It is the sample identifier as submitted by requestor.
+- **_treatment\_id_** is the key property of the node **_treatment_**. The property **_treatment\_id_** is a compound property, combining the parent property **_participant.study\_participant\_id_**, string character "\_" in the middle as the connector, and the property **_therapeutic\_agents_**.
+- **_file\_id_** is the key property of the node **_file_**. It is the file identifier.
+- **_genomic\_info\_id_** is the key property of the node **_genomic\_info_**. It is the genomic info identifier. If the value is missing, but the **_library\_id_** values are given, will replace the **_genomic\_info\_id_** value with the combination of the parent node id value **_file\_id_** and **_library\_id_**; if the **_library\_id_** is also missing, will replace the value with the parent id value **_file\_id_**.
+- **_study\_link\_id_** is the key property of the node **_image_**. It should consist of a string and a number.
+- **_MultiplexMicroscopy\_id_** is the key property of the node **_MultiplexMicroscopy_**. It is the MultiplexMicroscopy identifier.
+- **_NonDICOMCTimages\_id_** is the key property of the node **_NonDICOMCTimages_**. It is the NonDICOMCTimages identifier.
+- **_NonDICOMpathologyImages\_id_** is the key property of the node **_NonDICOMpathologyImages_**. It is the NonDICOMpathologyImages identifier.
+- **_NonDICOMPETimages\_id_** is the key property for the node **_NonDICOMPETimages_**. It is the NonDICOMPETimages identifier.
+- **_NonDICOMradiologyAllModalities\_id_** is the key property of the node **_NonDICOMradiologyAllModalities_**. It is the NonDICOMradiologyAllModalities identifier.
+- **_NonDICOMMRimages\_id_** is the key property for the node **_NonDICOMMRimages_**. It is the NonDICOMMRimages identifier.
+- **_proteomic\_info\_id_** is the key property for the node **_proteomic_**. It is the proteomic info identifier.
+- **_data\_version\_id_** is the key property of the node **_version_**. It is the static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
