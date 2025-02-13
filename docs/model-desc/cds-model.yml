@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v5.0.4
+Version: v6.0.1
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -84,11 +84,11 @@ Nodes:
       - study_participant_id
       - participant_id
       - race
-      - gender
+      - sex
       - ethnicity
       #  - vital_status
       - dbGaP_subject_id
-      - sex
+      - sex_at_birth
       - crdc_id
 
   diagnosis: # may have multiple dxs for multiple timepoints?
@@ -177,6 +177,8 @@ Nodes:
       - checksum_algorithm
       - crdc_id
       - file_mapping_level
+      - release_datetime
+      - is_supplementary_file
       #- file_access
 
   genomic_info:
@@ -198,7 +200,6 @@ Nodes:
       - design_description
       - library_strategy
       - library_layout
-      - library_source
       - library_selection
       - platform
       - instrument_model
@@ -233,6 +234,7 @@ Nodes:
       - performed_imaging_study_typeCode
       - longitudinal_temporal_event_type
       - longitudinal_temporal_event_offset
+      - crdc_id
 
   MultiplexMicroscopy:
     Tags:
@@ -286,6 +288,7 @@ Nodes:
       - oligo_barcode_lower_strand
       - dilution
       - concentration
+      - crdc_id
 
   NonDICOMCTimages:
     Tags:
@@ -306,6 +309,7 @@ Nodes:
       - CTAquisitionProtocolElement_exposureModulationType_Code
       - CTImageReconstructionProtocolElement_convolutionKernel
       - CTImageReconstructionProtocolElement_convolutionKernelGroupCode
+      - crdc_id
 
   NonDICOMMRimages:
     Tags:
@@ -333,6 +337,7 @@ Nodes:
       - MRImageAcquisitionProtocolElement_saturationRecoveryIndicator
       - MRImageAcquisitionProtocolElement_spectrallySelectedSuppressionCode
       - MRImageReconstructionProtocolElement_complexImageComponentCode
+      - crdc_id
 
   NonDICOMpathologyImages:
     Tags:
@@ -352,6 +357,7 @@ Nodes:
       - nominal_magnification
       - immersion
       - lens_numerical_aperture
+      - crdc_id
 
   NonDICOMPETimages:
     Tags:
@@ -364,6 +370,7 @@ Nodes:
       - NonDICOMPETimages_id
       - PETImagingAcquisitionProtocolElement_gantryDetectorTilt
       - Radiopharmaceutical_radionuclideCode
+      - crdc_id
 
   NonDICOMradiologyAllModalities:
     Tags:
@@ -391,6 +398,7 @@ Nodes:
       - performed_imaging_study_reconstructionDiameter
       - performed_imaging_study_sliceThickness
       - performed_imaging_study_reconstructionInterval
+      - crdc_id
 
   proteomic:
     Tags:
@@ -407,6 +415,7 @@ Nodes:
       - proteomic_instrument_model
       - proteomic_design_description
       - manufacturer_model_name
+      - crdc_id
 
   version:
     Tags:
@@ -421,6 +430,7 @@ Nodes:
       - datetime
       - model_version
       - description
+      - crdc_id
 
 Relationships:
   of_program:
