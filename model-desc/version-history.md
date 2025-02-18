@@ -1,5 +1,6 @@
-### 6.0.2 (Released 2/13/2025)
+### 6.0.2 (Released 2/18/2025)
 - Updated the version-history.md.
+- Updated the relationship between the node: "**_proteomic_**" and the node: "**_file_**" to be many-to-one.
 
 ### 6.0.1 (Released 2/13/2025)
 - Renaming the prop: "**_gender_**" to "**_sex_**".
@@ -55,4 +56,3 @@
 - Updated the prop: "**_file\_types_**"'s type to list.
 - Updated the prop: "**_file\_types\_and\_format_**"'s type to list.
 - Updated the prop: "**_experimental\_strategy\_and\_data\_subtypes_**"'s type to list.
-
