@@ -477,7 +477,6 @@ Relationships:
         Mul: one_to_one
       - Src: proteomic
         Dst: file
-        Mul: one_to_one
   of_image:
     Props: null
     Mul: one_to_one
