@@ -751,7 +751,7 @@ PropDefinitions:
       Original Source: CDS
       Code: '11556141'
       Value: Electronic File Pathname Text
-      Version: '1.00'
+      Version: '2.00'
   channel_id:
     Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
     Req: true
@@ -1330,7 +1330,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '3882991'
       Value: Computed Tomography Dose Index Volume Quantity 8 Byte Number
-      Version: '1.00'
+      Version: '1.10'
   CTAquisitionProtocolElement_ctdiPhantomTypeCode:
     Desc: The type of phantom to use for CTDI measurement according to IEC 60601-2-44
     Req: true
@@ -1791,7 +1791,7 @@ PropDefinitions:
       Original Source: CDS
       Code: '11556141'
       Value: Electronic File Pathname Text
-      Version: '1.00'
+      Version: '2.00'
   file_description:
     Desc: Human-readable description of file
     Type: string
@@ -1810,7 +1810,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11284037'
       Value: Electronic Data File Name
-      Version: '1.00'
+      Version: '2.00'
   file_size:
     Desc: File size in bytes
     Type: integer
@@ -1927,7 +1927,7 @@ PropDefinitions:
       Original Source: CDS
       Code: '11556150'
       Value: Electronic Data File MD5 Checksum Text
-      Version: '1.00'
+      Version: '2.00'
   experimental_strategy_and_data_subtypes:
     Desc: 'What is the experimental strategy used for the study (or what
 
@@ -1950,7 +1950,7 @@ PropDefinitions:
       Original Source: CRDC
       Code: "12373576"
       Value: Research Activity Experimental Method Type
-      Version: '1.00'
+      Version: '2.00'
   # participant
   sex_at_birth:
     Desc: A textual description of a person's sex at birth.
@@ -3297,7 +3297,7 @@ PropDefinitions:
       Original Source: CDS
       Code: '12447170'
       Value: Subject Initial Cancer Diagnosis To Last Known Disease Status Day Count
-      Version: '1.00'
+      Version: '2.00'
   diagnosis_id:
     Desc: Internal identifier
     Type: string
@@ -3390,7 +3390,7 @@ PropDefinitions:
       Original Source: CDS
       Code: '12432576'
       Value: Subject First Treatment Date To Recurrence Day Count
-      Version: '1.00'
+      Version: '2.00'
   incidence_type:
     Desc: For this diagnosis, disease incidence relative to prior status of subject
     Enum:
@@ -5648,24 +5648,21 @@ PropDefinitions:
   tumor_grade:
     Desc: Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
     Enum:
-    - G1
-    - G2
-    - G3
-    - G4
-    - GB
-    - GX
-    - High Grade
-    - Intermediate Grade
-    - Low Grade
+    - GB Borderline
+    - GX Grade Cannot Be Assessed
     - Not Applicable
     - Not Reported
     - Unknown
+    - G3 High Grade
+    - G2 Intermediate Grade
+    - G1 Low Grade
+    - G4 Anaplastic
     Term:
     - Origin: caDSR
       Original Source: DSS
       Code: '11325685'
       Value: Diagnosis Tumor Grade
-      Version: '1.00'
+      Version: '2.00'
   tumor_stage_clinical_t:
     Desc: Extent of the primary cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
     Enum:
@@ -6074,7 +6071,7 @@ PropDefinitions:
     Req: true
     Key: true
     Type:
-      pattern: ^phs[0-9]+([.]v[0-9]+)*$
+      pattern: ^phs[0-9]+$
     Term:
     - Origin: caDSR
       Original Source: DSS CDE
@@ -6089,7 +6086,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11459812'
       Value: Study Short Name Text
-      Version: '1.00'
+      Version: '2.00'
   study_description:
     Desc: Human-readable study description
     Type: string
@@ -6123,7 +6120,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11459810'
       Value: Study Name
-      Version: '1.00'
+      Version: '2.00'
   primary_investigator_name:
     Desc: Name of principal investigator
     Type: string
@@ -6136,7 +6133,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11555664'
       Value: Electronic Data File Access Level Text
-      Version: '1.00'
+      Version: '2.00'
   primary_investigator_email:
     Desc: Email of principal investigator
     Type: string
@@ -6173,7 +6170,6 @@ PropDefinitions:
   sample_type_category:
     Desc: The kind of material that forms the sample.
     Enum:
-    - Analyte
     - Blood
     - Ascites
     - Bone Marrow
@@ -6217,7 +6213,7 @@ PropDefinitions:
       Original Source: CDS
       Code: '14473376'
       Value: Subject Age At Specimen Collection Day Count
-      Version: '1.00'
+      Version: '2.00'
   sample_anatomic_site:
     Desc: Anatomic site from which sample was collected
     Enum:
@@ -11204,7 +11200,7 @@ PropDefinitions:
       Original Source: NCI Std
       Code: '11529031'
       Value: Genome Assembly NCBI Genetic Reference Sequence Identifier
-      Version: '1.00'
+      Version: '2.00'
   avg_read_length:
     Desc: Average sequence read length
     Type: number
@@ -11455,7 +11451,7 @@ PropDefinitions:
       Original Source: NCI Std
       Code: '6347743'
       Value: Sequencing Library Creation Method Type
-      Version: '1.00'
+      Version: '2.00'
 
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
@@ -11503,7 +11499,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '6273393'
       Value: Sequencing Library Technique Type
-      Version: '1.00'
+      Version: '2.00'
   sequence_alignment_software:
     Desc: Name of software program used to align nucleotide sequence data
     Type: string
@@ -11512,7 +11508,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '11529072'
       Value: Nucleotide Sequence Alignment Software Name Text
-      Version: '1.00'
+      Version: '2.00'
   custom_assembly_fasta_file_for_alignment:
     Desc: File name of any custom assembly fasta file used during alignment
     Type: string
@@ -11545,7 +11541,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '11524545'
       Value: Funding Agency Organization Name Text
-      Version: '1.00'
+      Version: '2.00'
   funding_source_program_name:
     Desc: The funding source organization/sponsor
     Type: string
@@ -11554,7 +11550,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '11524546'
       Value: Funding Agency Program Name Text
-      Version: '1.00'
+      Version: '2.00'
   grant_id:
     Desc: Grant or contract identifier
     Type: string
@@ -11586,7 +11582,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '11524548'
       Value: Clinical Trial Treatment Arm Text
-      Version: '1.00'
+      Version: '2.00'
   organism_species:
     Desc: Species binomial of study participants
     Enum:
@@ -11680,7 +11676,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11444542'
       Value: Program Name Text
-      Version: '1.00'
+      Version: '2.00'
   program_short_description:
     Desc: An abbreviated, single sentence description of the program.
     Src: Internally-curated
@@ -11703,7 +11699,7 @@ PropDefinitions:
       Original Source: DSS
       Code: "11459801"
       Value: Program Short Name Text
-      Version: '1.00'
+      Version: '2.00'
   # proteomic
   proteomic_info_id:
     Desc: Proteomic info identifier, the ID property for the node proteomic.
