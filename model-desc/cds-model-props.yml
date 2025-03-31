@@ -1337,22 +1337,11 @@ PropDefinitions:
       Version: '1.00'
   # participant
   sex:
-    Desc: A textual description of a person's sex at birth.
+    Desc: Biological sex at birth
     Enum:
-    - Decline to answer
-    - Don't know
     - Female
-    - Intersex
     - Male
-    - None of these describe me
-    - Prefer not to answer
-    - Unknown
-    Term:
-    - Origin: caDSR
-      Original Source: CRDC Standard
-      Code: "7572817"
-      Value: Person Sex at Birth Category
-      Version: '1.00'
+    Req: true
   ethnicity:
     Desc: OMB Ethnicity designator
     Enum:
@@ -1368,22 +1357,6 @@ PropDefinitions:
       Code: '2192217'
       Value: Ethnic Group Category Text
       Version: '2.00'
-  gender:
-    Desc: Biological gender at birth
-    Enum:
-    - Female
-    - Intersex
-    - Male
-    - Not Reported
-    - Unknown
-    - Unspecified
-    Req: true
-    Term:
-    - Origin: caDSR
-      Original Source: NCI Std
-      Code: '2200604'
-      Value: Person Gender Text Type
-      Version: '3.00'
   race:
     Desc: OMB Race designator
     Enum:
