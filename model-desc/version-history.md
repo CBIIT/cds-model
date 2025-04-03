@@ -1,6 +1,7 @@
 ### 6.0.3 (Released 3/21/2025)
 - Updated the pattern of the prop: "**_phs_accession_**".
 - Updated the CDE version of some of the properties to the latest CDE version.
+- Updated the CDE information for the prop: "**_sex_**".
 
 ### 6.0.2 (Released 2/18/2025)
 - Updated the version-history.md.
