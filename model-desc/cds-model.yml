@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v6.0.2
+Version: v6.0.3
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -88,7 +88,6 @@ Nodes:
       - ethnicity
       #  - vital_status
       - dbGaP_subject_id
-      - sex_at_birth
       - crdc_id
 
   diagnosis: # may have multiple dxs for multiple timepoints?
