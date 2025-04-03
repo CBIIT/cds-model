@@ -1952,11 +1952,6 @@ PropDefinitions:
       Value: Research Activity Experimental Method Type
       Version: '2.00'
   # participant
-  sex_at_birth:
-    Desc: A textual description of a person's sex at birth.
-    Enum:
-    - Female
-    - Male
   ethnicity:
     Desc: OMB Ethnicity designator
     Enum:
@@ -1973,11 +1968,18 @@ PropDefinitions:
       Value: Ethnic Group Category Text
       Version: '2.00'
   sex:
-    Desc: Biological sex at birth
+    Desc: Person Sex at Birth Category
     Enum:
     - Female
     - Male
+    - Unknown
     Req: true
+    Term:
+    - Origin: caDSR
+      Original Source: NCI Std
+      Code: '7572817'
+      Value: Person Sex at Birth Category
+      Version: '1.00'
   race:
     Desc: OMB Race designator
     Enum:
