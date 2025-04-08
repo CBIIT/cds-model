@@ -1,3 +1,6 @@
+### 6.0.4 (Released 4/8/2025)
+- Rebranded the CDS model to the GC model.
+
 ### 6.0.3 (Released 3/21/2025)
 - Updated the pattern of the prop: "**_phs_accession_**".
 - Updated the CDE version of some of the properties to the latest CDE version.
