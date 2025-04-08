@@ -19,6 +19,7 @@ jobs:
       model_prefix: cds-model
       event_name: ${{ github.event_name }}
       nodes_only_graph: yes
+      no_docs: yes
     secrets:
       token: ${{ secrets.PAT }}
 
