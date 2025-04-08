@@ -744,7 +744,7 @@ PropDefinitions:
       Value: Channel Analysis Metadata Electronic File Name Text
       Version: '1.00'
   channel_metadata_file_url_in_cds:
-    Desc: ''
+    Desc: Electronic file pathname text
     Type: string
     Term:
     - Origin: caDSR
@@ -1771,7 +1771,7 @@ PropDefinitions:
       Value: Electronic File Relationship Type
       Version: '1.00'
   submission_version:
-    Desc: The version of the metadata file submitted to CDS
+    Desc: The version of the metadata file submitted to GC
     Type: string
     Req: Preferred
   file_id:
@@ -1782,7 +1782,7 @@ PropDefinitions:
     Tags:
       Template: 'No'
   file_url_in_cds:
-    Desc: Location of the file on the CDS cloud, using AWS S3 protocol
+    Desc: Location of the file on the GC cloud, using AWS S3 protocol
     Type: string
     Tags:
       Template: 'No'  
@@ -11523,7 +11523,7 @@ PropDefinitions:
       Version: '1.00'
   # cds_requestor
   cds_requestor:
-    Desc: Identifies the user requesting storage in CDS
+    Desc: Identifies the user requesting storage in GC
     Type: string
   data_types:
     Desc: Data types for storage
@@ -11635,15 +11635,14 @@ PropDefinitions:
       Value: Research Activity Sample Size Count
       Version: '1.00'
   file_types_and_format:
-    Desc: 'Specific kinds of files in the dataset that will be uploaded to CDS
-
+    Desc: 'Specific kinds of files in the dataset that will be uploaded to GC
       '
     Type:
       value_type: list
       item_type: string
     Req: 'Yes'
   size_of_data_being_uploaded:
-    Desc: Size of the data being uploaded to CDS
+    Desc: Size of the data being uploaded to GC
     Type:
       value_type: number
       units:
