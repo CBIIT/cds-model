@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v6.0.3
+Version: v6.0.4
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -181,7 +181,7 @@ Nodes:
       #- file_access
 
   genomic_info:
-    Desc: "In CDS genomic info refers to the sequencing methods techniques and equipment."
+    Desc: "In GC genomic info refers to the sequencing methods techniques and equipment."
     Tags:
       Category: data_file
       Assignment: core
@@ -215,7 +215,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: "The imaging data from DICOM and non-DICOM standards into CDS."
+    Desc: "The imaging data from DICOM and non-DICOM standards into GC."
     Props:
       - study_link_id
       - de_identification_method_type
@@ -405,7 +405,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    Desc: "proteo-genomic data submitted to CDS"
+    Desc: "proteo-genomic data submitted to GC"
     Props:
       - proteomic_info_id
       - aliquot_id
