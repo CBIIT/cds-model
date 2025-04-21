@@ -105,11 +105,7 @@ Nodes:
       - implantation_site
       - mouse_strain
       - sample_type_for_implantation
-      - is_tumor_from_untreated_patient
       - tumor_confirmed_not_to_be_mus_or_ebv_origin
-      - passage_number
-      - passages_tested
-      - validation_technique
 
   diagnosis: # may have multiple dxs for multiple timepoints?
     Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
