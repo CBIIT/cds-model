@@ -1,3 +1,7 @@
+### 7.0.0 (Released 4/21/2025)
+- Added the node: "**_pdx_**".
+- Updated the prop: "**_sample_tumor_status_**" to be optional.
+
 ### 6.0.4 (Released 4/8/2025)
 - Rebranded the CDS model to the GC model.
 
