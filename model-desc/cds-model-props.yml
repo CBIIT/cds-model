@@ -6584,7 +6584,6 @@ PropDefinitions:
     - Peritumoral
     - Tumor
     - Unknown
-    Req: 'Yes'
     Term:
     - Origin: caDSR
       Original Source: DSS
