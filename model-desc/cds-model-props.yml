@@ -6584,7 +6584,6 @@ PropDefinitions:
     - Peritumoral
     - Tumor
     - Unknown
-    Req: 'Yes'
     Term:
     - Origin: caDSR
       Original Source: DSS
@@ -11772,6 +11771,157 @@ PropDefinitions:
       Code: "2413274"
       Value: Manufacturer's Model Name
       Version: '2.10'
+  # pdx
+  pdx_id:
+    Desc: A unique sequence of characters used to identify, name, or characterize a mouse model for human cancer studies.
+    Term:
+      - Origin: caDSR
+        Code: '14596170'
+        Value: PDX Unique Identifier
+        Version: "1.00"
+    Type: string
+    Req: true
+
+  model_id:
+    Desc: A unique sequence of characters used to identify, name, or characterize a mouse model for human cancer studies.
+    Term:
+      - Origin: caDSR
+        Code: '14596191'
+        Value: PDX Model Unique Identifier
+        Version: "1.00"
+      - Origin: PubMedCentral
+        Code: 'PMC5738926'
+        Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+        Version: "1.00"
+    Type: string
+
+  implantation_type:
+    Desc: The type of surgical procedure that places a human-derived tumor sample into an immunodeficient mouse.
+    Term:
+      - Origin: caDSR
+        Code: '14596198'
+        Value: PDX Implantation Type
+        Version: "1.00"
+      - Origin: 'EMBL OLS OBI'
+        Code: 'OBI_0000426'
+        Value: Process which aims at introducing a compound or a mixture into a material entity (either biological entity or instrument) by relying on devices such as syringe or injector connection, attached or forced into a vascular system (veins of an organism or tubes of a machine) or in a tissue
+        Version: "1.00"
+    Enum:
+      - 'injection'
+      - 'intravenous'
+      - 'orthotopic'
+      - 'surgical'
+      - 'trocar'
+    Req: true
+
+  implantation_site:
+    Desc: The location within the body from which a specimen was originally obtained as captured in the Uberon name.
+    Term:
+      - Origin: caDSR
+        Code: '12299653'
+        Value: Specimen Original Anatomic Site Uberon Name
+        Version: "1.00"
+    Enum:
+      - 'brain stem'
+      - 'intraperitoneal cavity'
+      - 'left cerebrum'
+      - 'mammary fat pad'
+      - 'muscle'
+      - 'renal capsule'
+      - 'right cerebrum'
+      - 'subcutaneous'
+      - 'subrenal capsule'
+      - 'tail vein'
+    Req: true
+
+  mouse_strain: 
+    Desc: The words by which breeds of mice utilized for biological research are known.
+    Term:
+      - Origin: caDSR
+        Code: '14596205'
+        Value: PDX Host Mouse Strain Name
+        Version: "1.00"
+      - Origin: PubMedCentral
+        Code: 'PMC5738926'
+        Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+        Version: "1.00"
+    Type: string
+    Req: true
+
+  sample_type_for_implantation:
+    Desc: Description of the type of material grafted into the mouse. (e.g. tissue fragments, cell suspension)
+    Term:
+      - Origin: caDSR
+        Code: '14616474'
+        Value: PDX Tumor Preparation Text
+        Version: "1.00"
+    Type: string
+    Req: true
+
+  is_tumor_from_untreated_patient:
+      Desc: "Is tumor from untreated patient?"
+      Term:
+        - Origin: PubMedCentral
+          Code: 'PMC5738926'
+          Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+          Version: "1.00"
+      Enum:
+        - "Yes"
+        - "No"
+        - "Not Reported"
+      Req: true
+
+  tumor_confirmed_not_to_be_mus_or_ebv_origin:
+      Desc: "Tumor confirmed not to be of mouse/EBV origin"
+      Term:
+        - Origin: caDSR
+          Code: '14616759'
+          Value: PDX Tumor Origin Evaluated Type
+          Version: "1.00"
+        - Origin: PubMedCentral
+          Code: 'PMC5738926'
+          Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+          Version: "1.00"
+      Enum:
+        - 'No'
+        - 'Yes'
+        - 'Unknown'
+      Req: false
+
+  passage_number:
+    Desc: When different host strains, or PDX Engraftment Site or PDX Engraftment Type or PDX Engraftment Materia were used during the PDX line generation, please add passage.
+    Term:
+      - Origin: CancerModels.org
+        Code: https://www.cancermodels.org/validation/dictionary
+        Value: passage_number
+        Version: "1.00"
+    Type: string
+    Req: false
+
+  passages_tested:
+    Desc: Provide a list of all passages where validation was performed. Passage 0 correspond to first engraftment (if this is not the case please define how passages are numbered).
+    Term:
+      - Origin: CancerModels.org
+        Code: https://www.cancermodels.org/validation/dictionary
+        Value: passages_tested
+        Version: "1.00"
+      - Origin: PubMedCentral
+        Code: 'PMC5738926'
+        Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+        Version: "1.00"
+    Type: string
+    Req: false
+
+  validation_technique:
+    Desc: Any technique used to validate PDX against their original patient tumour, including fingerprinting, histology, immunohistochemistry.
+    Term:
+      - Origin: CancerModels.org
+        Code: https://www.cancermodels.org/validation/dictionary
+        Value: validation_technique
+        Version: "1.00"
+    Type: string
+    Req: false
+
   # version
   data_version_id:
     Desc: A static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
