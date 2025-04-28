@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v7.0.0
+Version: v6.0.4
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -89,27 +89,6 @@ Nodes:
       #  - vital_status
       - dbGaP_subject_id
       - crdc_id
-
-
-  pdx:
-    Desc: "The pathology file node is comprised of properties which describe file metadata about the pathology image files."
-    Tags:
-      Category: study
-      Assignment: core
-      Class: primary
-      Template: 'Yes'
-    Props:
-      - pdx_id
-      - model_id
-      - implantation_type
-      - implantation_site
-      - mouse_strain
-      - sample_type_for_implantation
-      - is_tumor_from_untreated_patient
-      - tumor_confirmed_not_to_be_mus_or_ebv_origin
-      - passage_number
-      - passages_tested
-      - validation_technique
 
   diagnosis: # may have multiple dxs for multiple timepoints?
     Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
@@ -465,16 +444,8 @@ Relationships:
     Ends:
       - Src: participant
         Dst: study
-      - Src: pdx
-        Dst: study
       - Src: file
         Dst: study
-  of_pdx:
-    Props: null
-    Mul: many_to_one
-    Ends:
-      - Src: sample
-        Dst: pdx
   of_participant:
     Props: null
     Mul: many_to_one
@@ -490,12 +461,9 @@ Relationships:
         Dst: participant
   from_sample:
     Props: null
-    Mul: many_to_one
+    Mul: many_to_many
     Ends:
       - Src: file
-        Dst: sample
-        Mul: many_to_many
-      - Src: pdx
         Dst: sample
   of_file:
     Props: null
