@@ -2013,7 +2013,7 @@ PropDefinitions:
       Value: Subject Data Origin Identifier
       Version: '1.00'
   study_participant_id:
-    Desc: 'The property study_participant_id is a compound property, combining the property participant_id and the parent property study.phs_accession.
+    Desc: 'The property study_participant_id is a compound property, combining the property participant_id, string character "_" in the middle as the connector, and the parent property study.phs_accession.
 
       It is the ID property for the node participant. The reason why we are doing that is because is some cases, there are same participant id in different studies repersent different participants.
 
@@ -3303,8 +3303,9 @@ PropDefinitions:
   diagnosis_id:
     Desc: Internal identifier
     Type: string
+    Req: true
   study_diagnosis_id:
-    Desc: The property study_diagnosis_id is a compound property, combining the property diagnosis_id and the parent property participant.study_participant_id. It is the ID property for the node diagnosis.
+    Desc: The property study_diagnosis_id is a compound property, combining the property diagnosis_id, string character "_" in the middle as the connector, and the parent property participant.study_participant_id. It is the ID property for the node diagnosis.
     Type: string
     Req: true
     Key: true
@@ -3425,6 +3426,7 @@ PropDefinitions:
   primary_diagnosis:
     Desc: Primary disease diagnosed for this diagnosis and subject
     Enum:
+    - Neurofibromatosis, NOS
     - Head and Neck Squamous Cell Carcinoma
     - Astroblastoma, Other, Other CNS Tumor, NOS Or NEC
     - Medulloblastoma; Hypercellular Lesion With Marked Atypia

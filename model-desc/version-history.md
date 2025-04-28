@@ -1,3 +1,7 @@
+### 6.0.5 (Released 4/29/2025)
+- Updated the description for the prop: "**_study_participant_id_**".
+- Updated the description for the prop: "**_study_diagnosis_id_**".
+
 ### 6.0.4 (Released 4/8/2025)
 - Rebranded the CDS model to the GC model.
 
