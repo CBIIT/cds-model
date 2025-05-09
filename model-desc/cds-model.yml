@@ -1,9 +1,10 @@
 Handle: CDS
-Version: v6.0.5
+Version: v7.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
     Tags:
+      nodeReq: true
       Category: study
       Assignment: core
       Class: primary
@@ -14,7 +15,6 @@ Nodes:
       - program_short_description
       - program_full_description
       - program_external_url
-      - program_sort_order
       - program_short_name
       - institution
       - crdc_id
@@ -22,6 +22,7 @@ Nodes:
   study:
     Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
     Tags:
+      nodeReq: true
       Category: study
       Assignment: core
       Class: primary
@@ -38,22 +39,12 @@ Nodes:
       - co_investigator_email
       - phs_accession
       - bioproject_accession
-      - index_date # what are relative dates relative to? dx date, collection date, etc.
-      - cds_requestor
       - funding_agency
       - funding_source_program_name
       - grant_id
-      - clinical_trial_system
-      - clinical_trial_identifier
-      - clinical_trial_arm
       - organism_species
       - adult_or_childhood_study # adult, pediatric
-      - data_types # list from enumerated values
-      - file_types # list from enumerated values
       - data_access_level
-      - cds_primary_bucket
-      - cds_secondary_bucket
-      - cds_tertiary_bucket
       - number_of_participants
       - number_of_samples
       - study_data_types
@@ -70,12 +61,12 @@ Nodes:
       - last_name
       - suffix
       - email
-      - clinical_trial_repository
       - crdc_id
 
   participant:
     Desc: "Individual who takes part in the study"
     Tags:
+      nodeReq: true
       Category: study
       Assignment: core
       Class: primary
@@ -93,6 +84,7 @@ Nodes:
   diagnosis: # may have multiple dxs for multiple timepoints?
     Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
     Tags:
+      nodeReq: true
       Category: case
       Assignment: core
       Class: primary
@@ -139,6 +131,7 @@ Nodes:
   sample: # aka subspecimen (CMB)
     Desc: "Specimen tissue type collected from the participant."
     Tags:
+      nodeReq: true
       Category: case
       Assignment: core
       Class: primary
@@ -158,6 +151,7 @@ Nodes:
   file:
     Desc: "A set of related records kept together provided by a submitter."
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -183,6 +177,7 @@ Nodes:
   genomic_info:
     Desc: "In GC genomic info refers to the sequencing methods techniques and equipment."
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -211,6 +206,7 @@ Nodes:
 
   image:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -237,6 +233,7 @@ Nodes:
 
   MultiplexMicroscopy:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -291,6 +288,7 @@ Nodes:
 
   NonDICOMCTimages:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -312,6 +310,7 @@ Nodes:
 
   NonDICOMMRimages:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -340,6 +339,7 @@ Nodes:
 
   NonDICOMpathologyImages:
     Tags:
+        nodeReq: true
         Category: data_file
         Assignment: core
         Class: primary
@@ -360,6 +360,7 @@ Nodes:
 
   NonDICOMPETimages:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -373,6 +374,7 @@ Nodes:
 
   NonDICOMradiologyAllModalities:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
@@ -401,6 +403,7 @@ Nodes:
 
   proteomic:
     Tags:
+      nodeReq: true
       Category: data_file
       Assignment: core
       Class: primary
