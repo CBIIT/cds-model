@@ -1911,12 +1911,6 @@ PropDefinitions:
       Code: '11416926'
       Value: Electronic Data File Format Type
       Version: '1.00'
-  file_access:
-    Desc: File access
-    Enum:
-    - Open
-    - Controlled
-    - Not specified in data
   md5sum:
     Desc: MD5 hex digest for this file
     Type:
@@ -2013,7 +2007,7 @@ PropDefinitions:
       Value: Subject Data Origin Identifier
       Version: '1.00'
   study_participant_id:
-    Desc: 'The property study_participant_id is a compound property, combining the property participant_id and the parent property study.phs_accession.
+    Desc: 'The property study_participant_id is a compound property, combining the property participant_id, string character "_" in the middle as the connector, and the parent property study.phs_accession.
 
       It is the ID property for the node participant. The reason why we are doing that is because is some cases, there are same participant id in different studies repersent different participants.
 
@@ -3303,8 +3297,9 @@ PropDefinitions:
   diagnosis_id:
     Desc: Internal identifier
     Type: string
+    Req: true
   study_diagnosis_id:
-    Desc: The property study_diagnosis_id is a compound property, combining the property diagnosis_id and the parent property participant.study_participant_id. It is the ID property for the node diagnosis.
+    Desc: The property study_diagnosis_id is a compound property, combining the property diagnosis_id, string character "_" in the middle as the connector, and the parent property participant.study_participant_id. It is the ID property for the node diagnosis.
     Type: string
     Req: true
     Key: true
@@ -3425,6 +3420,7 @@ PropDefinitions:
   primary_diagnosis:
     Desc: Primary disease diagnosed for this diagnosis and subject
     Enum:
+    - Neurofibromatosis, NOS
     - Head and Neck Squamous Cell Carcinoma
     - Astroblastoma, Other, Other CNS Tumor, NOS Or NEC
     - Medulloblastoma; Hypercellular Lesion With Marked Atypia
@@ -5783,6 +5779,7 @@ PropDefinitions:
   # study
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
+    Req: true
     Enum:
     - Radiation Oncologist
     - Project Coordinator
@@ -5955,6 +5952,7 @@ PropDefinitions:
   first_name:
     Desc: A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.
     Type: string
+    Req: true
     Term:
     - Origin: caDSR
       Original Source: NCI Std
@@ -6003,9 +6001,6 @@ PropDefinitions:
       Code: '2517550'
       Value: Person Email
       Version: '1.00'
-  clinical_trial_repository:
-    Desc: The name of the organization that provides the clinical trial identifier.
-    Type: string
   study_version:
     Desc: The version of the phs accession
     Type:
@@ -6061,13 +6056,6 @@ PropDefinitions:
     - controlled
     - mixed
     Req: Preferred
-  index_date:
-    Desc: Index date (Day 0) to which all dates are relative, for this study
-    Enum:
-    - date_of_diagnosis
-    - date_of_enrollment
-    - date_of_collection
-    - date_of_birth
   phs_accession:
     Desc: PHS accession number (a.k.a dbGaP accession)
     Req: true
@@ -6083,6 +6071,7 @@ PropDefinitions:
   study_acronym:
     Desc: Short acronym or other study desginator
     Type: string
+    Req: true
     Term:
     - Origin: caDSR
       Original Source: DSS
@@ -6092,13 +6081,12 @@ PropDefinitions:
   study_description:
     Desc: Human-readable study description
     Type: string
-    Req: Preferred
+    Req: true
   study_access:
     Desc: Study access
     Enum:
     - Open
     - Controlled
-    Req: true
   short_description:
     Desc: 'Short description that will identify the dataset on public pages
 
@@ -6108,11 +6096,11 @@ PropDefinitions:
 
       '
     Type: string
-    Req: Preferred
+    Req: true
   study_external_url:
     Desc: Website or other url relevant to study
     Type: url
-    Req: Preferred
+    Req: true
   study_name:
     Desc: Official name of study
     Type: string
@@ -6145,16 +6133,6 @@ PropDefinitions:
     Type: string
   co_investigator_email:
     Desc: Email of co-principal investigator
-    Type: string
-  cds_primary_bucket:
-    Desc: The primary bucket for depositing data
-    Type: string
-    Req: Preferred
-  cds_secondary_bucket:
-    Desc: Secondary bucket for depositing data (non-sequence files)
-    Type: string
-  cds_tertiary_bucket:
-    Desc: Secondary bucket for depositing data (non-sequence files)
     Type: string
   authz:
     Desc: multifactor authorization
@@ -11184,6 +11162,7 @@ PropDefinitions:
   methylation_platform:
     Desc: The equipment used to detect the presence and/or location of methyl groups during DNA or protein analysis.
     Type: string
+    Req: true
   genomic_info_id:
     Desc: Genomic info identifier, the ID property for the node genomic_info.
     Type: string
@@ -11262,7 +11241,7 @@ PropDefinitions:
       Version: '1.00'
   platform:
     Desc: Instrument platform or manufacturer
-    Req: Preferred
+    Req: true
     Enum:
     - ABI Solid
     - BGISEQ
@@ -11283,7 +11262,7 @@ PropDefinitions:
       Version: '1.00'
   instrument_model:
     Desc: Instrument model
-    Req: Preferred
+    Req: true
     Enum:
     - 454 GS Junior
     - 454 GS FLX Titanium
@@ -11368,7 +11347,7 @@ PropDefinitions:
       Version: '1.00'
   library_layout:
     Desc: Library layout as submitted by requestor
-    Req: Preferred
+    Req: true
     Enum:
     - Paired-End
     - Single-indexed
@@ -11410,7 +11389,7 @@ PropDefinitions:
       Version: '1.00'
   library_selection:
     Desc: Library selection method
-    Req: Preferred
+    Req: true
     Enum:
     - 5-methylcytidine antibody
     - Affinity Enrichment
@@ -11457,7 +11436,7 @@ PropDefinitions:
 
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
-    Req: Preferred
+    Req: true
     Enum:
     - Other
     - WXS
@@ -11522,19 +11501,6 @@ PropDefinitions:
       Value: Genome Assembly Custom FASTA File Name
       Version: '1.00'
   # cds_requestor
-  cds_requestor:
-    Desc: Identifies the user requesting storage in GC
-    Type: string
-  data_types:
-    Desc: Data types for storage
-    Type:
-      value_type: list
-      item_type: string
-  file_types:
-    Desc: File types for storage
-    Type:
-      value_type: list
-      item_type: string
   funding_agency:
     Desc: Funding agency of the requestor study
     Type: string
@@ -11562,29 +11528,6 @@ PropDefinitions:
       Code: '3434057'
       Value: Grant Funding Identifier Number
       Version: '2.00'
-  clinical_trial_system:
-    Desc: 'Organization that provides clinical trial identifier (if study
-
-      is a clinical trial)
-
-      '
-    Type: string
-  clinical_trial_identifier:
-    Desc: 'Study identifier in the given clinical trial system'
-    Type: string
-    Term:
-    - Origin: caDSR
-      Code: '14673514'
-      Value: Clinical Trial Study Protocol Unique Identifier
-      Version: '1.00'
-  clinical_trial_arm:
-    Desc: Arm of clinical trial, if appropriate
-    Type: string
-    Term:
-    - Origin: caDSR
-      Code: '11524548'
-      Value: Clinical Trial Treatment Arm Text
-      Version: '2.00'
   organism_species:
     Desc: Species binomial of study participants
     Enum:
@@ -11611,14 +11554,9 @@ PropDefinitions:
       Code: '11524549'
       Value: Study Subject Legal Adult Or Pediatric Participant Type
       Version: '1.00'
-  specimen_id:
-    Desc: Identifier for specimen (parent of sample) as provided by requestor
-    Type: string
-    Key: true
   number_of_participants:
     Desc: How many participants in the study
     Type: number
-    Req: 'Yes'
     Term:
     - Origin: caDSR
       Original Source: CDS
@@ -11628,7 +11566,6 @@ PropDefinitions:
   number_of_samples:
     Desc: How many total samples in the study
     Type: number
-    Req: 'Yes'
     Term:
     - Origin: caDSR
       Code: '11555663'
@@ -11661,12 +11598,12 @@ PropDefinitions:
     Desc: The external url to which users should be directed in order to learn more about the program.
     Src: Internally-curated
     Type: string
-    Req: Preferred
+    Req: true
   program_full_description:
     Desc: A more detailed, multiple sentence description of the program.
     Src: Internally-curated
     Type: string
-    Req: Preferred
+    Req: true
   program_name:
     Desc: The name of the program under which related studies will be grouped, in full text and unabbreviated form, exactly as it will be displayed within the UI.
     Src: Internally-curated
@@ -11682,19 +11619,15 @@ PropDefinitions:
     Desc: An abbreviated, single sentence description of the program.
     Src: Internally-curated
     Type: string
-    Req: Preferred
-  program_sort_order:
-    Desc: An arbitrarily-assigned value used to dictate the order in which programs are displayed within the application's UI.
-    Src: Internally-curated
-    Type: integer
-    Req: 'No'
+    Req: true
   institution:
     Desc: TBD
     Type: string
-    Req: Preferred
+    Req: true
   program_short_name:
     Desc: An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. Example - CPTAC
     Type: string
+    Req: true
     Term:
     - Origin: caDSR
       Original Source: DSS

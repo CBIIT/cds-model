@@ -1,8 +1,46 @@
+### 7.0.0 (Released 5/8/2025)
+- Added "**_nodeReq: true_**" to all nodes except the the node: "**_treatment_**" and the nodes: "**_version_**".
+- Updated the prop: "**_program\_short\_description_**" from the node: "**_program_**" to be required.
+- Updated the prop: "**_program\_full\_description_**" from the node: "**_program_**" to be required.
+- Updated the prop: "**_program\_external\_url_**" from the node: "**_program_**" to be required.
+- Updated the prop: "**_program\_short\_name_**" from the node: "**_program_**" to be required.
+- Updated the prop: "**_institution_**" from the node: "**_program_**" to be required.
+- Updated the prop: "**_study\_acronym_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_study\_description_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_short\_description_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_study\_external\_url_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_role\_or\_affiliation_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_first\_name_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_library\_strategy_**" from the node: "**_genomic\_info_**" to be required.
+- Updated the prop: "**_library\_layout_**" from the node: "**_genomic\_info_**" to be required.
+- Updated the prop: "**_library\_selection_**" from the node: "**_genomic\_info_**" to be required.
+- Updated the prop: "**_platform_**" from the node: "**_genomic\_info_**" to be required.
+- Updated the prop: "**_instrument\_model_**" from the node: "**_genomic\_info_**" to be required.
+- Updated the prop: "**_number\_of\_participants_**" from the node: "**_study_**" to be not required.
+- Updated the prop: "**_number\_of\_samples_**" from the node: "**_study_**" to be not required.
+- Updated the prop: "**_study\_access_**" from the node: "**_study_**" to be not required.
+- Removed the prop: "**_program\_sort\_order_**" from the node: "**_program_**"
+- Removed the prop: "**_index\_date_**" from the node: "**_study_**"
+- Removed the prop: "**_cds\_requestor_**" from the node: "**_study_**"
+- Removed the prop: "**_clinical\_trial\_system_**" from the node: "**_study_**"
+- Removed the prop: "**_clinical\_trial\_identifier_**" from the node: "**_study_**"
+- Removed the prop: "**_clinical\_trial\_arm_**" from the node: "**_study_**"
+- Removed the prop: "**_data\_types_**" from the node: "**_study_**"
+- Removed the prop: "**_file\_types_**" from the node: "**_study_**"
+- Removed the prop: "**_cds\_primary\_bucket_**" from the node: "**_study_**"
+- Removed the prop: "**_cds\_secondary\_bucket_**" from the node: "**_study_**"
+- Removed the prop: "**_cds\_tertiary\_bucket_**" from the node: "**_study_**"
+- Removed the prop: "**_clinical\_trial\_repository_**" from the node: "**_study_**"
+
+### 6.0.5 (Released 4/29/2025)
+- Updated the description for the prop: "**_study\_participant\_id_**".
+- Updated the description for the prop: "**_study\_diagnosis\_id_**".
+
 ### 6.0.4 (Released 4/8/2025)
 - Rebranded the CDS model to the GC model.
 
 ### 6.0.3 (Released 3/21/2025)
-- Updated the pattern of the prop: "**_phs_accession_**".
+- Updated the pattern of the prop: "**_phs\_accession_**".
 - Updated the CDE version of some of the properties to the latest CDE version.
 - Updated the CDE information for the prop: "**_sex_**".
 
@@ -16,7 +54,7 @@
 ### 6.0.0 (Released 2/1/2025)
 - Added the prop: "**_is\_supplementary\_file_**" to the node: "**_file_**".
 - Added the prop: "**_release\_datetime_**" to the node: "**_file_**".
-- Removed the prop: "**_library\_source_**" from the node: "**_genomic_info_**".
+- Removed the prop: "**_library\_source_**" from the node: "**_genomic\_info_**".
 - Updated the description for the prop: "**_file\_id_**".
 - Updated the prop: "**__study\_data\_types__**"'s type to list.
 
