@@ -5971,6 +5971,7 @@ PropDefinitions:
   last_name:
     Desc: A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.
     Type: string
+    Req: true
     Term:
     - Origin: caDSR
       Original Source: NCI Std
@@ -11170,6 +11171,7 @@ PropDefinitions:
     Key: true
   reference_genome_assembly:
     Desc: Accession or name of genome reference or assembly used for alignment
+    Req: true
     Enum:
     - GRCh37
     - GRCh37-lite
