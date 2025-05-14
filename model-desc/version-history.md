@@ -11,6 +11,8 @@
 - Updated the prop: "**_study\_external\_url_**" from the node: "**_study_**" to be required.
 - Updated the prop: "**_role\_or\_affiliation_**" from the node: "**_study_**" to be required.
 - Updated the prop: "**_first\_name_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_last\_name_**" from the node: "**_study_**" to be required.
+- Updated the prop: "**_reference\_genome\_assembly_**" from the node: "**_genomic\_info_**" to be required.
 - Updated the prop: "**_library\_strategy_**" from the node: "**_genomic\_info_**" to be required.
 - Updated the prop: "**_library\_layout_**" from the node: "**_genomic\_info_**" to be required.
 - Updated the prop: "**_library\_selection_**" from the node: "**_genomic\_info_**" to be required.
