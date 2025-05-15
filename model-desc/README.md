@@ -53,14 +53,14 @@ In support of data submission, data loading templates can be downloaded, either 
 
 In the interests of data quality and consistency, the GC data model makes extensive use of enumerated properties and controlled vocabularies of acceptable terms. All such controlled vocabularies can be viewed via Table View mode, and value sets are included in full in the appropriate PDF exports. Furthermore, in support of data submitters pre-validating their templated data, all controlled vocabularies can be exported in machine readable JSON and TSV formats, either in the form of a zip file containing copies of controlled vocabularies for all enumerated properties, invoked via the upper-level “Available Downloads” option, or from within the Table View, and invoked on a property-by-property basis. As more studies are added to the GC, many of these controlled vocabularies will continue to evolve, and will be updated by the GC Data Team during study on-boarding, in order to accommodate additional terms not yet encountered.
 
-### Key Properties
+### Key Properties for Each Node
 
 The key property is the ID property for each different node. Each unique node will have one unique key property value as its ID.
 
 - **_program\_acronym_** is the key property for the node **_program_**. It is the name of the program under which related studies will be grouped, expressed in the form of the acronym by which it will identified within the UI. This property is used as the key via which study records can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
 - **_phs\_accession_** is the key property for the node **_study_**. It is the PHS accession number (a.k.a dbGaP accession).
-- **_study\_participant\_id_** is the key property of the node **_participant_**. The property **_study\_participant\_id_** is a compound property, combining the property **_participant\_id_** and the parent property **_study.phs\_accession_**.
-- **_study\_diagnosis\_id_** is the key property for the node **_diagnosis_**. The property **_study\_diagnosis\_id_** is a compound property, combining the property **_diagnosis\_id_** and the parent property **_participant.study\_participant\_id_**.
+- **_study\_participant\_id_** is the key property of the node **_participant_**. The property **_study\_participant\_id_** is a compound property, combining the property **_participant\_id_**, string character "_" in the middle as the connector, and the parent property **_study.phs\_accession_**.
+- **_study\_diagnosis\_id_** is the key property for the node **_diagnosis_**. The property **_study\_diagnosis\_id_** is a compound property, combining the property **_diagnosis\_id_**, string character "_" in the middle as the connector, and the parent property **_participant.study\_participant\_id_**.
 - **_sample\_id_** is the key property of the node **_sample_**. It is the sample identifier as submitted by requestor.
 - **_treatment\_id_** is the key property of the node **_treatment_**. The property **_treatment\_id_** is a compound property, combining the parent property **_participant.study\_participant\_id_**, string character "\_" in the middle as the connector, and the property **_therapeutic\_agents_**.
 - **_file\_id_** is the key property of the node **_file_**. It is the file identifier.
@@ -74,3 +74,36 @@ The key property is the ID property for each different node. Each unique node wi
 - **_NonDICOMMRimages\_id_** is the key property for the node **_NonDICOMMRimages_**. It is the NonDICOMMRimages identifier.
 - **_proteomic\_info\_id_** is the key property for the node **_proteomic_**. It is the proteomic info identifier.
 - **_data\_version\_id_** is the key property of the node **_version_**. It is the static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
+
+### Submission Rules:
+
+If it is a recurring study being submitted meaning that data for that PHS accession exists in the General Commons (GC) no need to submit data under the program node.
+
+**_Genomics_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
+ 
+**_Imaging_** - For a new study, all required fields in the Program must be completed, then complete all required fields in the IMAGE section, File node, Diagnosis section.
+Depending on the IMAGE Types please follow the criteria below:
+If using Multiplex Microscopy, provide the relevant metadata in the MultiplexMicroscopy section.
+For Non-DICOM CT, provide all required metadata from the NonDicomCTImages node.
+For Non-DICOM MRI, provide all required metadata from the NonDicomMRimages node.
+For Non-DICOM Pathology, provide metadata in the NonDicomPathologyImages section.
+For Non-DICOM PET, provide all required metadata from the NonDicomPETImages node.
+For Non-DICOM Radiology, provide all required metadata from the NonDicomRadiologyAllModalities node.
+
+**_Proteomics_** - All required fields in program if new study, all required fields in Genomic Info (if applicable for a proteogenomic study), all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Proteomic Info node.
+
+**_Sequence Data_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
+
+**_Pathology Imaging_** - follow imaging data criteria for Non-DICOM Pathology images.
+
+**_Radiology Imaging_** - follow imaging data criteria for Radiology images.
+ 
+**_Transcriptome Profiling_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
+ 
+**_Gene Expression Analysis_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
+
+**_Mass Spectrometry_** - All required fields in program if new study, all required fields in Genomic Info (if applicable for proteogenomic data), all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Proteomic Info node.
+
+**_Methylation Analysis_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
+
+**_Genomic Structural Variation_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
