@@ -11177,7 +11177,6 @@ PropDefinitions:
     - GRCh37-lite
     - GRCh38
     - Not specified in data
-    Req: Preferred
     Term:
     - Origin: caDSR
       Original Source: NCI Std
