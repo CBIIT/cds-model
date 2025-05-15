@@ -11163,7 +11163,6 @@ PropDefinitions:
   methylation_platform:
     Desc: The equipment used to detect the presence and/or location of methyl groups during DNA or protein analysis.
     Type: string
-    Req: true
   genomic_info_id:
     Desc: Genomic info identifier, the ID property for the node genomic_info.
     Type: string
