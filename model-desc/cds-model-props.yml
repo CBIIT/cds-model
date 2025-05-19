@@ -11726,3 +11726,113 @@ PropDefinitions:
   description:
     Desc: Any additional information about the dataset that might be relevant formatted as a short sentence or paragraph
     Type: string
+  # pdx
+  pdx_id:
+    Desc: A unique sequence of characters used to identify the human-derived tumor sample that is transplanted into an immunodeficient mouse.
+    Term:
+      - Origin: caDSR
+        Code: '14596170'
+        Value: PDX Unique Identifier
+        Version: "1.00"
+    Type: string
+    Req: true
+    Private: false
+    Key: true
+  model_id:
+    Desc: A unique sequence of characters used to identify a collection of human-derived tumor samples that are grafted into an immunodeficient mouse.
+    Term:
+    - Origin: caDSR
+      Code: '14596191'
+      Value: Research Activity PDX Model Collection Unique Identifier
+      Version: "1.00"
+    - Origin: PubMedCentral
+      Code: 'PMC5738926'
+      Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+      Version: "1.00"
+    Type: string
+    Req: true
+    Private: false
+  implantation_type:
+    Desc: The type of surgical procedure that places a human-derived tumor sample into an immunodeficient mouse.
+    Term:
+    - Origin: caDSR
+      Code: '14596198'
+      Value: PDX Implantation Type
+      Version: "1.00"
+    - Origin: 'CCDI:Childhood Cancer Data Initiative'
+      Code: 'OBI_0000426'
+      Value: Research Activity PDX Implantation Method Type
+      Version: "1.00"
+    Enum:
+    - 'injection'
+    - 'intravenous'
+    - 'orthotopic'
+    - 'surgical'
+    - 'trocar'
+    Req: true
+    Strict: false
+    Private: false
+  implantation_site:
+    Desc: The location within the body from which a specimen was originally obtained as captured in the Uberon name.
+    Term:
+    - Origin: caDSR
+      Code: '12299653'
+      Value: Specimen Original Anatomic Site Uberon Name
+      Version: "1.00"
+    Enum:
+    - 'brain stem'
+    - 'intraperitoneal cavity'
+    - 'left cerebrum'
+    - 'mammary fat pad'
+    - 'muscle'
+    - 'renal capsule'
+    - 'right cerebrum'
+    - 'subcutaneous'
+    - 'subrenal capsule'
+    - 'tail vein'
+    Req: true
+    Strict: false
+    Private: false
+  mouse_strain:
+    Desc: The words by which breeds of mice utilized for biological research are known.
+    Term:
+    - Origin: caDSR
+      Code: '14596205'
+      Value: Research Activity PDX Host Mouse Strain Name
+      Version: "1.00"
+    - Origin: CCDI:Childhood Cancer Data Initiative
+      Code:
+      Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+      Version: "1.00"
+      Type: string
+    Req: true
+    Private: false
+  sample_type_for_implantation:
+    Desc: The words that describe the type of sample material that is transplanted into an immunodeficient mouse.
+    Term:
+    - Origin: caDSR
+      Code: '14616474'
+      Value: Research Activity PDX Specimen Preparation
+      Version: "1.00"
+    Type: string
+    Req: true
+    Private: false
+  tumor_confirmed_not_to_be_mus_or_ebv_origin:
+    Desc: A response that indicates tumor confirmed not to be of mouse or EBV origin.
+    Term:
+    - Origin: caDSR
+      Code: '14616759'
+      Value: Research Activity PDX Tumor Neither Mouse Nor EBV Origin
+      Version: "1.00"
+    - Origin: CCDI:Childhood Cancer Data Initiative
+      Code: 'PMC5738926'
+      Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
+      Version: "1.00"
+    Enum:
+    - 'No'
+    - 'Yes'
+    - 'Unknown'
+    - 'Not reported
+    Req: false
+    Strict: true
+    Private: false
