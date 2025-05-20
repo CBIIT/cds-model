@@ -11803,7 +11803,7 @@ PropDefinitions:
       Value: Research Activity PDX Host Mouse Strain Name
       Version: "1.00"
     - Origin: CCDI:Childhood Cancer Data Initiative
-      Code:
+      Code: 'PMC5738926'
       Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
       Version: "1.00"
       Type: string
