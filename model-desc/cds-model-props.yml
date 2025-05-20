@@ -11769,6 +11769,8 @@ PropDefinitions:
     - 'orthotopic'
     - 'surgical'
     - 'trocar'
+    - 'Not Reported'
+    - 'Unknown'
     Req: true
     Strict: false
     Private: false
@@ -11817,7 +11819,7 @@ PropDefinitions:
     Type: string
     Req: true
     Private: false
-  tumor_confirmed_not_to_be_mus_or_ebv_origin:
+  tumor_not_mus_or_ebv_origin:
     Desc: A response that indicates tumor confirmed not to be of mouse or EBV origin.
     Term:
     - Origin: caDSR
