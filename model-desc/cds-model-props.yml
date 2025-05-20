@@ -11806,7 +11806,7 @@ PropDefinitions:
       Code: 'PMC5738926'
       Value: PDX-MI Minimal Information for Patient-Derived Tumor Xenograft Models
       Version: "1.00"
-      Type: string
+    Type: string
     Req: true
     Private: false
   sample_type_for_implantation:
