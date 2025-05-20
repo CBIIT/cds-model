@@ -434,7 +434,7 @@ Nodes:
     - implantation_site
     - mouse_strain
     - sample_type_for_implantation
-    - tumor_confirmed_not_to_be_mus_or_ebv_origin
+    - tumor_not_mus_or_ebv_origin
 
   version:
     Tags:
