@@ -1,3 +1,5 @@
+### 8.0.0 (Released 5/20/2025)
+- Added the nodes: "**__pdx_**"
 ### 7.0.0 (Released 5/8/2025)
 - Added "**_nodeReq: true_**" to all nodes except the the node: "**_treatment_**" and the nodes: "**_version_**".
 - Updated the prop: "**_program\_short\_description_**" from the node: "**_program_**" to be required.
