@@ -11834,7 +11834,7 @@ PropDefinitions:
     - 'No'
     - 'Yes'
     - 'Unknown'
-    - 'Not reported
+    - 'Not reported'
     Req: false
     Strict: true
     Private: false
