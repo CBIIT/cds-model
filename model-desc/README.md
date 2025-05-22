@@ -74,6 +74,7 @@ The key property is the ID property for each different node. Each unique node wi
 - **_NonDICOMMRimages\_id_** is the key property for the node **_NonDICOMMRimages_**. It is the NonDICOMMRimages identifier.
 - **_proteomic\_info\_id_** is the key property for the node **_proteomic_**. It is the proteomic info identifier.
 - **_data\_version\_id_** is the key property of the node **_version_**. It is the static data version ID that is used primarily to assist in data loading. This ID will be used as a reference to update the existing data_version node instead of creating a new one with each version change.
+- **_pdx\_id_** is the key property for the node **_pdx_**. It is the unique sequence of characters used to identify the human-derived tumor sample that is transplanted into an immunodeficient mouse.
 
 ### Submission Rules:
 

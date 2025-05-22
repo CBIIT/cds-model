@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v7.0.0
+Version: v8.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -418,6 +418,23 @@ Nodes:
       - proteomic_design_description
       - manufacturer_model_name
       - crdc_id
+  
+  pdx:
+    Desc: "The PDX node represents a unique patient-derived xenograft model. Including a Unique identifier for the PDX model, Human-readable name, mouse strain used."
+    Tags:
+      nodeReq: true
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - pdx_id
+    - model_id
+    - implantation_type
+    - implantation_site
+    - mouse_strain
+    - sample_type_for_implantation
+    - tumor_not_mus_or_ebv_origin
 
   version:
     Tags:
@@ -449,6 +466,8 @@ Relationships:
         Dst: study
       - Src: file
         Dst: study
+      - Src: pdx
+        Dst: study
   of_participant:
     Props: null
     Mul: many_to_one
@@ -462,12 +481,21 @@ Relationships:
         Mul: many_to_many
       - Src: treatment
         Dst: participant
+  of_pdx:
+    Props: null
+    Mul: many_to_one
+    Ends:
+      - Src: sample
+        Dst: pdx
   from_sample:
     Props: null
     Mul: many_to_many
     Ends:
       - Src: file
         Dst: sample
+      - Src: pdx
+        Dst: sample
+        Mul: many_to_one
   of_file:
     Props: null
     Mul: many_to_one
