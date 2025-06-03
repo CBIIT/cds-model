@@ -65,7 +65,7 @@ Nodes:
 
   participant:
     Desc: "Individual who takes part in the study"
-    Key:
+    CompKey:
       - study.phs_accession
       - participant_id    
     Tags:
@@ -86,7 +86,7 @@ Nodes:
 
   diagnosis: # may have multiple dxs for multiple timepoints?
     Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
-    Key:
+    CompKey:
       - participant.study_participant_id
       - diagnosis_id
     Tags:
@@ -121,7 +121,7 @@ Nodes:
 
   treatment:
     Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
-    Key:
+    CompKey:
       - participant.study_participant_id
       - therapeutic_agents
     Tags:
