@@ -432,7 +432,7 @@ Nodes:
     Desc: "The PDX node represents a unique patient-derived xenograft model. Including a Unique identifier for the PDX model, Human-readable name, mouse strain used."
     Tags:
       nodeReq: true
-      Category: case
+      Category: biospecimen
       Assignment: core
       Class: primary
       Template: 'Yes'
