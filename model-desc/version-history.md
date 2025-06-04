@@ -1,5 +1,14 @@
+### 8.0.1 (Released 6/2/2025)
+- Added the relationship between the node: "**_diagnosis_**" and the node: "**_sample_**".
+- Updated the category of the node: "**__program__**" to "administrative".
+- Updated the category of the node: "**__participant__**" to "case".
+- Updated the category of the node:"**__sample__**" to "biospecimen".
+- Updated the category of the node:"**__diagnosis__**" to "clinical".
+- Updated the category of the node:"**__pdx__**" to "biospecimen".
+
 ### 8.0.0 (Released 5/20/2025)
-- Added the node: "**__pdx_**"
+- Added the node: "**_pdx_**"
+
 ### 7.0.0 (Released 5/8/2025)
 - Added "**_nodeReq: true_**" to all nodes except the the node: "**_treatment_**" and the nodes: "**_version_**".
 - Updated the prop: "**_program\_short\_description_**" from the node: "**_program_**" to be required.
