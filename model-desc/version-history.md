@@ -1,9 +1,10 @@
 ### 8.0.1 (Released 6/2/2025)
 - Added the relationship between the node: "**_diagnosis_**" and the node: "**_sample_**".
-- Updated the category of the node: "**__program__**" to "Administrative".
-- Updated the category of the node: "**__participant__**" to "Case".
-- Updated the category of the node:"**__sample__**" to "Biospecimen".
-- Updated the category of the node:"**__diagnosis__**" to "Clinical".
+- Updated the category of the node: "**__program__**" to "administrative".
+- Updated the category of the node: "**__participant__**" to "case".
+- Updated the category of the node:"**__sample__**" to "biospecimen".
+- Updated the category of the node:"**__diagnosis__**" to "clinical".
+- Updated the category of the node:"**__pdx__**" to "biospecimen".
 
 ### 8.0.0 (Released 5/20/2025)
 - Added the node: "**_pdx_**"
