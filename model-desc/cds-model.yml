@@ -5,7 +5,7 @@ Nodes:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
     Tags:
       nodeReq: true
-      Category: study
+      Category: administrative
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -65,9 +65,12 @@ Nodes:
 
   participant:
     Desc: "Individual who takes part in the study"
+    CompKey:
+      - study.phs_accession
+      - participant_id    
     Tags:
       nodeReq: true
-      Category: study
+      Category: case
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -83,9 +86,12 @@ Nodes:
 
   diagnosis: # may have multiple dxs for multiple timepoints?
     Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
+    CompKey:
+      - participant.study_participant_id
+      - diagnosis_id
     Tags:
       nodeReq: true
-      Category: case
+      Category: clinical
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -115,6 +121,9 @@ Nodes:
 
   treatment:
     Desc: "An action or administration of therapeutic agents to produce an effect that is intended to alter the course of a pathologic process."
+    CompKey:
+      - participant.study_participant_id
+      - therapeutic_agents
     Tags:
       Category: case
       Assignment: core
@@ -132,7 +141,7 @@ Nodes:
     Desc: "Specimen tissue type collected from the participant."
     Tags:
       nodeReq: true
-      Category: case
+      Category: biospecimen
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -423,7 +432,7 @@ Nodes:
     Desc: "The PDX node represents a unique patient-derived xenograft model. Including a Unique identifier for the PDX model, Human-readable name, mouse strain used."
     Tags:
       nodeReq: true
-      Category: study
+      Category: case
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -494,6 +503,9 @@ Relationships:
       - Src: file
         Dst: sample
       - Src: pdx
+        Dst: sample
+        Mul: many_to_one
+      - Src: diagnosis
         Dst: sample
         Mul: many_to_one
   of_file:
