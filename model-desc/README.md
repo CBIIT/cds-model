@@ -82,14 +82,7 @@ If it is a recurring study being submitted meaning that data for that PHS access
 
 **_Genomics_** - All required fields in program if new study, all required fields in Genomic Info, all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Genomic Info node.
  
-**_Imaging_** - For a new study, all required fields in the Program must be completed, then complete all required fields in the IMAGE section, File node, Diagnosis section.
-Depending on the IMAGE Types please follow the criteria below:
-If using Multiplex Microscopy, provide the relevant metadata in the MultiplexMicroscopy section.
-For Non-DICOM CT, provide all required metadata from the NonDicomCTImages node.
-For Non-DICOM MRI, provide all required metadata from the NonDicomMRimages node.
-For Non-DICOM Pathology, provide metadata in the NonDicomPathologyImages section.
-For Non-DICOM PET, provide all required metadata from the NonDicomPETImages node.
-For Non-DICOM Radiology, provide all required metadata from the NonDicomRadiologyAllModalities node.
+**_Imaging_** - For a new study, all required fields in the Program must be completed, then complete all required fields in the IMAGE section, File node,  Diagnosis node, and Sample node (Pathology and Multiplex microscopy) section. Depending on the IMAGE Types please follow the criteria below: If using Multiplex Microscopy, provide the relevant metadata in the MultiplexMicroscopy section. For Non-DICOM CT, provide all required metadata from the NonDicomCTImages node. For Non-DICOM MRI, provide all required metadata from the NonDicomMRimages node. For Non-DICOM Pathology, provide metadata in the NonDicomPathologyImages section. For Non-DICOM PET, provide all required metadata from the NonDicomPETImages node. For Non-DICOM Radiology, provide all required metadata from the NonDicomRadiologyAllModalities node.
 
 **_Proteomics_** - All required fields in program if new study, all required fields in Genomic Info (if applicable for a proteogenomic study), all required fields in Sample Node, All required fields in File node, all required fields in Diagnosis, all required fields in Proteomic Info node.
 

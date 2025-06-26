@@ -1,3 +1,6 @@
+### 8.0.2 (Released 6/2/2025)
+- Updated the README.md
+
 ### 8.0.1 (Released 6/2/2025)
 - Added the relationship between the node: "**_diagnosis_**" and the node: "**_sample_**".
 - Updated the category of the node: "**__program__**" to "administrative".
