@@ -6069,7 +6069,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '14824731'
       Value: Data Collection Scientific Data Type Category
-      Version: '1.00'
+      Version: '2.00'
   data_access_level:
     Desc: Is data open, controlled, or mixed?
     Enum:
