@@ -1668,8 +1668,8 @@ PropDefinitions:
     Desc: The term which describes the method used to maintain the specimen in a viable state.
     Req: true
     Enum:
-    -20 degrees C
-    -80 degrees C
+    - 20 degrees C
+    - 80 degrees C
     - Cryopreserved
     - EDTA 
     - FFPE
