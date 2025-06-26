@@ -1,4 +1,4 @@
-### 8.0.2 (Released 6/2/2025)
+### 8.0.2 (Released 6/26/2025)
 - Updated the README.md.
 - Updated the prop: "**_embedding\_medium_**"'s CDE code and the Enum values.
 
