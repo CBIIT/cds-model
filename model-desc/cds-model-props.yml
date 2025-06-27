@@ -1930,7 +1930,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11416926'
       Value: Electronic Data File Format Type
-      Version: '1.00'
+      Version: '2.00'
   md5sum:
     Desc: MD5 hex digest for this file
     Type:
