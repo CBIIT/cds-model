@@ -1,14 +1,18 @@
+### 8.0.3 (Released 7/8/2025)
+- Updated the prop: "**_implantation\_type_**"'s type to list.
+- Updated the prop: "**_sample\_anatomic\_site_**"'s type to list.
+
 ### 8.0.2 (Released 6/26/2025)
 - Updated the README.md.
 - Updated the prop: "**_embedding\_medium_**"'s CDE code and the Enum values.
 
 ### 8.0.1 (Released 6/2/2025)
 - Added the relationship between the node: "**_diagnosis_**" and the node: "**_sample_**".
-- Updated the category of the node: "**__program__**" to "administrative".
-- Updated the category of the node: "**__participant__**" to "case".
-- Updated the category of the node:"**__sample__**" to "biospecimen".
-- Updated the category of the node:"**__diagnosis__**" to "clinical".
-- Updated the category of the node:"**__pdx__**" to "biospecimen".
+- Updated the category of the node: "**_program_**" to "administrative".
+- Updated the category of the node: "**_participant_**" to "case".
+- Updated the category of the node:"**_sample_**" to "biospecimen".
+- Updated the category of the node:"**_diagnosis_**" to "clinical".
+- Updated the category of the node:"**_pdx_**" to "biospecimen".
 
 ### 8.0.0 (Released 5/20/2025)
 - Added the node: "**_pdx_**"
