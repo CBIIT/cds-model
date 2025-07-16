@@ -11891,6 +11891,6 @@ PropDefinitions:
         Code: '14534330'
         Value: Research Activity dbGaP Consent Group Number 
         Version: "1.00"
-    Type: string
+    Type: integer
     Req: true
     Private: false
