@@ -235,7 +235,6 @@ Nodes:
       - imaging_software
       - imaging_protocol
       - organ_or_tissue
-      - performed_imaging_study_typeCode
       - longitudinal_temporal_event_type
       - longitudinal_temporal_event_offset
       - crdc_id
@@ -408,6 +407,7 @@ Nodes:
       - performed_imaging_study_reconstructionDiameter
       - performed_imaging_study_sliceThickness
       - performed_imaging_study_reconstructionInterval
+      - performed_imaging_study_typeCode
       - crdc_id
 
   proteomic:
