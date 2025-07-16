@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v8.0.3
+Version: v9.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -235,7 +235,6 @@ Nodes:
       - imaging_software
       - imaging_protocol
       - organ_or_tissue
-      - performed_imaging_study_typeCode
       - longitudinal_temporal_event_type
       - longitudinal_temporal_event_offset
       - crdc_id
@@ -408,6 +407,7 @@ Nodes:
       - performed_imaging_study_reconstructionDiameter
       - performed_imaging_study_sliceThickness
       - performed_imaging_study_reconstructionInterval
+      - performed_imaging_study_typeCode
       - crdc_id
 
   proteomic:
@@ -460,6 +460,21 @@ Nodes:
       - description
       - crdc_id
 
+  consent_group:
+    Desc: "A set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository."
+    Tags:
+      nodeReq: true
+      Category: case
+      Assignment: extended
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - consent_group_id
+      - consent_group_name
+      - consent_group_number
+      - consent_group_suffix 
+      - crdc_id
+
 Relationships:
   of_program:
     Props: null
@@ -477,6 +492,14 @@ Relationships:
         Dst: study
       - Src: pdx
         Dst: study
+      - Src: consent_group
+        Dst: study
+  of_consent_group:
+    Props: null
+    Mul: many_to_one
+    Ends:
+      - Src: participant
+        Dst: consent_group
   of_participant:
     Props: null
     Mul: many_to_one

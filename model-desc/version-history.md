@@ -1,3 +1,7 @@
+### 9.0.0 (Released 7/17/2025)
+- Reassigned the prop: "**_performed\_imaging\_study\_typeCode_**" to the node: "**_NonDICOMradiologyAllModalities_**".
+- Added the node: "**_consent\_group_**".
+
 ### 8.0.3 (Released 7/8/2025)
 - Updated the prop: "**_implantation\_type_**"'s type to list.
 - Updated the prop: "**_sample\_anatomic\_site_**"'s type to list.
@@ -15,7 +19,7 @@
 - Updated the category of the node:"**_pdx_**" to "biospecimen".
 
 ### 8.0.0 (Released 5/20/2025)
-- Added the node: "**_pdx_**"
+- Added the node: "**_pdx_**".
 
 ### 7.0.0 (Released 5/8/2025)
 - Added "**_nodeReq: true_**" to all nodes except the the node: "**_treatment_**" and the nodes: "**_version_**".
