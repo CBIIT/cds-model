@@ -472,7 +472,6 @@ Nodes:
       - consent_group_id
       - consent_group_name
       - consent_group_number
-      - consent_group_suffix 
       - crdc_id
 
 Relationships:

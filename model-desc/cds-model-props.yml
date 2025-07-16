@@ -11894,13 +11894,3 @@ PropDefinitions:
     Type: string
     Req: true
     Private: false
-  consent_group_suffix:
-    Desc: Suffix applied to DCF indexing file record to note the appropriate participant's consent group. 
-    Term:
-      - Origin: caDSR
-        Code: 'TBD'
-        Value: DCF indexing consent group file suffix         
-        Version: "1.00"
-    Type: string
-    Req: true
-    Private: false
