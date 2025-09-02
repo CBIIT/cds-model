@@ -1968,12 +1968,14 @@ PropDefinitions:
   # participant
   ethnicity:
     Desc: OMB Ethnicity designator
-    Enum:
-    - Hispanic or Latino
-    - Not allowed to collect
-    - Not Hispanic or Latino
-    - Not reported
-    - Unknown
+    Type:
+      value_type: list
+      Enum:
+      - Hispanic or Latino
+      - Not allowed to collect
+      - Not Hispanic or Latino
+      - Not reported
+      - Unknown
     Req: Preferred
     Term:
     - Origin: caDSR
@@ -1996,15 +1998,17 @@ PropDefinitions:
       Version: '1.00'
   race:
     Desc: OMB Race designator
-    Enum:
-    - American Indian or Alaska Native
-    - Asian
-    - Black or African American
-    - Native Hawaiian or other Pacific Islander
-    - Not allowed to collect
-    - Not Reported
-    - Unknown
-    - White
+    Type:
+      value_type: list
+      Enum:
+      - American Indian or Alaska Native
+      - Asian
+      - Black or African American
+      - Native Hawaiian or other Pacific Islander
+      - Not allowed to collect
+      - Not Reported
+      - Unknown
+      - White
     Req: Preferred
     Term:
     - Origin: caDSR
@@ -5796,7 +5800,7 @@ PropDefinitions:
       Code: "13529783"
       Value: Disease Progression Or Recurrence Indicator
       Version: '2.00'
-  # study
+  # investigator
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
     Req: true
@@ -6022,6 +6026,21 @@ PropDefinitions:
       Code: '2517550'
       Value: Person Email
       Version: '1.00'
+  primary_investigator_name:
+    Desc: Name of principal investigator
+    Type: string
+    Req: Preferred
+  primary_investigator_email:
+    Desc: Email of principal investigator
+    Type: string
+    Req: Preferred
+  co_investigator_name:
+    Desc: Name of co-principal investigator
+    Type: string
+  co_investigator_email:
+    Desc: Email of co-principal investigator
+    Type: string
+  # study
   study_version:
     Desc: The version of the phs accession
     Type:
@@ -6132,10 +6151,6 @@ PropDefinitions:
       Code: '11459810'
       Value: Study Name
       Version: '2.00'
-  primary_investigator_name:
-    Desc: Name of principal investigator
-    Type: string
-    Req: Preferred
   acl:
     Desc: open or restricted access to data
     Type: string
@@ -6145,16 +6160,6 @@ PropDefinitions:
       Code: '11555664'
       Value: Electronic Data File Access Level Text
       Version: '2.00'
-  primary_investigator_email:
-    Desc: Email of principal investigator
-    Type: string
-    Req: Preferred
-  co_investigator_name:
-    Desc: Name of co-principal investigator
-    Type: string
-  co_investigator_email:
-    Desc: Email of co-principal investigator
-    Type: string
   authz:
     Desc: multifactor authorization
     Type: string
