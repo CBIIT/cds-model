@@ -82,6 +82,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - investigator_id
       - primary_investigator_name
       - primary_investigator_email
       - co_investigator_name
