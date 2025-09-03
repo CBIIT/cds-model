@@ -74,7 +74,7 @@ Nodes:
       - crdc_id
   
   investigator:
-    Desc: ""
+    Desc: "Comprehensive information about the investigators involved in the study, including their roles, affiliations, and contributions."
     Tags:
       nodeReq: true
       Category: case
