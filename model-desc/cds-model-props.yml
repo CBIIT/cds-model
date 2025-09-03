@@ -5799,6 +5799,10 @@ PropDefinitions:
       Value: Disease Progression Or Recurrence Indicator
       Version: '2.00'
   # investigator
+  investigator_id:
+    Desc: The property investigator_id is a compound property, combining the parent property study.phs_accession, string character "_" in the middle as the connector, and the property email.
+    Type: string
+    Key: true
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
     Req: true
@@ -6018,6 +6022,7 @@ PropDefinitions:
   email:
     Desc: The string of characters that represents the electronic mail address of a person.
     Type: string
+    Req: True
     Term:
     - Origin: caDSR
       Original Source: NCI Std
