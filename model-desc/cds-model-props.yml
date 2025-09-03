@@ -5802,6 +5802,7 @@ PropDefinitions:
   investigator_id:
     Desc: The property investigator_id is a compound property, combining the parent property study.phs_accession, string character "_" in the middle as the connector, and the property email.
     Type: string
+    Req: true
     Key: true
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
