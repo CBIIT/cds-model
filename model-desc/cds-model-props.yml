@@ -11183,6 +11183,14 @@ PropDefinitions:
       Code: '14913015'
       Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
       Version: '1.00'
+  tumor_classification:
+    Desc: The classification of a tumor based primarily on histopathological characteristics.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: '12922545'
+      Value: Tumor Classification Category
+      Version: '1.00'
   # genomic_info
   reporter_label:
     Desc: The text term used to describe the labeled methyl group used as a molecular tag.
