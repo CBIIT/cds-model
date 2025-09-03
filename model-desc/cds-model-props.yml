@@ -735,7 +735,6 @@ PropDefinitions:
       Version: '1.00'
   channel_metadata_filename:
     Desc: File name of uploaded companion CSV file containing channel-level metadata details
-    Req: true
     Type: string
     Term:
     - Origin: caDSR
@@ -754,7 +753,6 @@ PropDefinitions:
       Version: '2.00'
   channel_id:
     Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
-    Req: true
     Type: string
     Term:
     - Origin: caDSR
