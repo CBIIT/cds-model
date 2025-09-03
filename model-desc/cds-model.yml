@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v9.0.0
+Version: v10.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -33,10 +33,6 @@ Nodes:
       - study_description
       - short_description
       - study_external_url
-      - primary_investigator_name
-      - primary_investigator_email
-      - co_investigator_name
-      - co_investigator_email
       - phs_accession
       - bioproject_accession
       - funding_agency
@@ -54,13 +50,6 @@ Nodes:
       - study_access
       - authz
       - study_version
-      - role_or_affiliation
-      - title
-      - first_name
-      - middle_name
-      - last_name
-      - suffix
-      - email
       - crdc_id
 
   participant:
@@ -83,6 +72,28 @@ Nodes:
       #  - vital_status
       - dbGaP_subject_id
       - crdc_id
+  
+  investigator:
+    Desc: "Comprehensive information about the investigators involved in the study, including their roles, affiliations, and contributions."
+    Tags:
+      nodeReq: true
+      Category: case
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - primary_investigator_name
+      - primary_investigator_email
+      - co_investigator_name
+      - co_investigator_email
+      - role_or_affiliation
+      - title
+      - first_name
+      - middle_name
+      - last_name
+      - suffix
+      - email
+
 
   diagnosis: # may have multiple dxs for multiple timepoints?
     Desc: "Text term used to describe the patient's histologic diagnosis, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O)."
@@ -155,6 +166,7 @@ Nodes:
       - sample_age_at_collection
       - derived_from_specimen
       - biosample_accession
+      - tumor_classification
       - crdc_id
 
   file:
@@ -492,6 +504,8 @@ Relationships:
       - Src: pdx
         Dst: study
       - Src: consent_group
+        Dst: study
+      - Src: investigator
         Dst: study
   of_consent_group:
     Props: null
