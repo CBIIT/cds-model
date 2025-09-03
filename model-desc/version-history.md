@@ -1,3 +1,9 @@
+### 10.0.0 (Released 9/5/2025)
+- Updated the prop: "**_race_**"'s type to list.
+- Updated the prop: "**_ethnicity_**"'s type to list.
+- Added the node: "**_investigator_**".
+- Added the prop: "**_tumor\_classification_**" to the node : "**_sample_**".
+
 ### 9.0.0 (Released 7/17/2025)
 - Reassigned the prop: "**_performed\_imaging\_study\_typeCode_**" to the node: "**_NonDICOMradiologyAllModalities_**".
 - Added the node: "**_consent\_group_**".
