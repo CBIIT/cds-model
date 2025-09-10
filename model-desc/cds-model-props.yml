@@ -6100,10 +6100,14 @@ PropDefinitions:
     - controlled
     - mixed
     Req: Preferred
+  study_id:
+    Desc: The property study_id is a compound property, combining the property phs_accession, string character "_" in the middle as the connector, and the property study_acronym.
+    Type: string
+    Req: true
+    Key: true
   phs_accession:
     Desc: PHS accession number (a.k.a dbGaP accession)
     Req: true
-    Key: true
     Type:
       pattern: ^phs[0-9]+$
     Term:
