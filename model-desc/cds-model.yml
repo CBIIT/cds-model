@@ -28,6 +28,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - study_id
       - study_name
       - study_acronym
       - study_description
