@@ -735,7 +735,6 @@ PropDefinitions:
       Version: '1.00'
   channel_metadata_filename:
     Desc: File name of uploaded companion CSV file containing channel-level metadata details
-    Req: true
     Type: string
     Term:
     - Origin: caDSR
@@ -754,7 +753,6 @@ PropDefinitions:
       Version: '2.00'
   channel_id:
     Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
-    Req: true
     Type: string
     Term:
     - Origin: caDSR
@@ -1968,12 +1966,14 @@ PropDefinitions:
   # participant
   ethnicity:
     Desc: OMB Ethnicity designator
-    Enum:
-    - Hispanic or Latino
-    - Not allowed to collect
-    - Not Hispanic or Latino
-    - Not reported
-    - Unknown
+    Type:
+      value_type: list
+      Enum:
+      - Hispanic or Latino
+      - Not allowed to collect
+      - Not Hispanic or Latino
+      - Not reported
+      - Unknown
     Req: Preferred
     Term:
     - Origin: caDSR
@@ -1996,15 +1996,17 @@ PropDefinitions:
       Version: '1.00'
   race:
     Desc: OMB Race designator
-    Enum:
-    - American Indian or Alaska Native
-    - Asian
-    - Black or African American
-    - Native Hawaiian or other Pacific Islander
-    - Not allowed to collect
-    - Not Reported
-    - Unknown
-    - White
+    Type:
+      value_type: list
+      Enum:
+      - American Indian or Alaska Native
+      - Asian
+      - Black or African American
+      - Native Hawaiian or other Pacific Islander
+      - Not allowed to collect
+      - Not Reported
+      - Unknown
+      - White
     Req: Preferred
     Term:
     - Origin: caDSR
@@ -5796,7 +5798,12 @@ PropDefinitions:
       Code: "13529783"
       Value: Disease Progression Or Recurrence Indicator
       Version: '2.00'
-  # study
+  # investigator
+  investigator_id:
+    Desc: The property investigator_id is a compound property, combining the parent property study.phs_accession, string character "_" in the middle as the connector, and the property email.
+    Type: string
+    Req: true
+    Key: true
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
     Req: true
@@ -6016,12 +6023,28 @@ PropDefinitions:
   email:
     Desc: The string of characters that represents the electronic mail address of a person.
     Type: string
+    Req: True
     Term:
     - Origin: caDSR
       Original Source: NCI Std
       Code: '2517550'
       Value: Person Email
       Version: '1.00'
+  primary_investigator_name:
+    Desc: Name of principal investigator
+    Type: string
+    Req: Preferred
+  primary_investigator_email:
+    Desc: Email of principal investigator
+    Type: string
+    Req: Preferred
+  co_investigator_name:
+    Desc: Name of co-principal investigator
+    Type: string
+  co_investigator_email:
+    Desc: Email of co-principal investigator
+    Type: string
+  # study
   study_version:
     Desc: The version of the phs accession
     Type:
@@ -6077,10 +6100,14 @@ PropDefinitions:
     - controlled
     - mixed
     Req: Preferred
+  study_id:
+    Desc: The property study_id is a compound property, combining the property phs_accession, string character "_" in the middle as the connector, and the property study_acronym.
+    Type: string
+    Req: true
+    Key: true
   phs_accession:
     Desc: PHS accession number (a.k.a dbGaP accession)
     Req: true
-    Key: true
     Type:
       pattern: ^phs[0-9]+$
     Term:
@@ -6132,10 +6159,6 @@ PropDefinitions:
       Code: '11459810'
       Value: Study Name
       Version: '2.00'
-  primary_investigator_name:
-    Desc: Name of principal investigator
-    Type: string
-    Req: Preferred
   acl:
     Desc: open or restricted access to data
     Type: string
@@ -6145,16 +6168,6 @@ PropDefinitions:
       Code: '11555664'
       Value: Electronic Data File Access Level Text
       Version: '2.00'
-  primary_investigator_email:
-    Desc: Email of principal investigator
-    Type: string
-    Req: Preferred
-  co_investigator_name:
-    Desc: Name of co-principal investigator
-    Type: string
-  co_investigator_email:
-    Desc: Email of co-principal investigator
-    Type: string
   authz:
     Desc: multifactor authorization
     Type: string
@@ -11178,6 +11191,14 @@ PropDefinitions:
       Code: '14913015'
       Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
       Version: '1.00'
+  tumor_classification:
+    Desc: The classification of a tumor based primarily on histopathological characteristics.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: '12922545'
+      Value: Tumor Classification Category
+      Version: '1.00'
   # genomic_info
   reporter_label:
     Desc: The text term used to describe the labeled methyl group used as a molecular tag.
@@ -11889,7 +11910,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '14534330'
-        Value: Research Activity dbGaP Consent Group Number 
+        Value: Research Activity dbGaP Consent Group Number
         Version: "1.00"
     Type: integer
     Req: true
