@@ -1,3 +1,6 @@
+### 10.0.1 (Released 10/20/2025)
+- Updated the composite key rule for the prop: "**_study\_participant\_id_**".
+
 ### 10.0.0 (Released 9/5/2025)
 - Updated the prop: "**_race_**"'s type to list.
 - Updated the prop: "**_ethnicity_**"'s type to list.
