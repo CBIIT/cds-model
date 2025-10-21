@@ -2029,7 +2029,7 @@ PropDefinitions:
       Value: Subject Data Origin Identifier
       Version: '1.00'
   study_participant_id:
-    Desc: 'The property study_participant_id is a compound property, combining the parent property study.phs_accession, string character "_" in the middle as the connector, and the property participant_id.
+    Desc: 'The property study_participant_id is a compound property, combining the parent property study.study_id, string character "_" in the middle as the connector, and the property participant_id.
 
       It is the ID property for the node participant. The reason why it is a compound property is because in some cases, there are same participant id in different studies repersent different participants.
 
