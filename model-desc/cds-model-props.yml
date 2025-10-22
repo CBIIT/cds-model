@@ -5800,7 +5800,7 @@ PropDefinitions:
       Version: '2.00'
   # investigator
   investigator_id:
-    Desc: The property investigator_id is a compound property, combining the parent property study.phs_accession, string character "_" in the middle as the connector, and the property email.
+    Desc: The property investigator_id is a compound property, combining the parent property study.study_id, string character "_" in the middle as the connector, and the property email.
     Type: string
     Req: true
     Key: true
