@@ -184,6 +184,7 @@ Nodes:
     - Characterization_ID
     - Characterization_Assay_Type
     - Characterization_Name
+    - crdc_id
     
   Publication:
     Desc: TBD
@@ -198,6 +199,7 @@ Nodes:
     - Publication_Type
     - Publication_Status
     - Publication_Title
+    - crdc_id
 
   Protocol:
     Desc: TBD
@@ -212,6 +214,7 @@ Nodes:
     - protocol_name
     - protocol_type
     - doi
+    - crdc_id
 
   Composition:
     Desc: TBD
@@ -226,6 +229,7 @@ Nodes:
     - Nanomaterial_Entity_Type
     - Functionalizing_Entity_Type
     - Functionalizing_Entity_Inherent_Function_Type
+    - crdc_id
 
 
   file:
