@@ -204,6 +204,7 @@ PropDefinitions:
       Code: '2413278'
       Value: Equipment Software Version Text
       Version: '1.20'
+      useNullCDE: Yes
   imaging_protocol:
     Desc: A rule which guides how an activity should be performed. Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration, lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the image was obtained or generated.
     Type: string
@@ -6635,6 +6636,127 @@ PropDefinitions:
       Code: '5581201'
       Value: Parent Specimen Label Identifier
       Version: '1.00'
+  Organization_Name:
+    Desc: TBD
+    Type: string
+
+  # Protocol
+  protocol_pk_id:
+    Desc: TBD
+    Type: string
+    Req: true
+    Key: true
+  protocol_name:
+    Desc: A protocol provides clear and detailed documentation about the precise actions taken in any procedure that might be part of an experiment.
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '2179666'
+      Value: 	Protocol Name
+      Version: '1.00'
+  protocol_type:
+    Desc: A protocol provides clear and detailed documentation about the precise actions taken in any procedure that might be part of an experiment.
+    Type: string
+    Req: true
+    Enum:
+    - Endotoxin
+    - in vitro assay
+    - in vivo assay
+    - physico-chemical assay
+    - purification
+    - radio labeling
+    - safety
+    - sample preparation
+    - sterility
+    - synthesis
+  doi:
+    Desc: TBD
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '7787673'
+      Value: Parent Specimen Label Identifier
+      Version: '1.00'
+
+  # Composition
+  Composition_ID:
+    Desc: TBD #ID for Composition
+    Type: string
+    Req: true
+    Key: true
+  Nanomaterial_Entity_Type:
+    Desc: The component of a sample that is a nanoparticle.
+    Type: string
+    Req: true
+  Functionalizing_Entity_Type:
+    Desc: Any component of the sample that has been added to a nanoparticle and imparts a function on the sample.
+    Type: string
+    Req: true
+  Functionalizing_Entity_Inherent_Function_Type:
+    Desc: Functionalizing Entity composition describes the substance, physical or biological factor, etc. of the sample that produces a specific effect.
+    Type: string
+    Req: true
+
+  # Characterization
+  Characterization_ID:
+    Desc: TBD #ID for Characterization
+    Type: string
+    Req: true
+    Key: true
+  Characterization_Assay_Type:
+    Desc: Sample characterization describe distinctive characteristics or essential features of the sample determined through analytical methods and records information associated with sample synthesis and properties.
+    Type: string
+    Req: true
+  Characterization_Name:
+    Desc: Name of the characterization types.
+    Type: string
+    Req: true
+
+  # Publication
+  DOI_or_Pub_ID:
+    Desc: TBD
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '3443454'
+      Value: Study Publication Identification Digital Object Identifier Text
+      Version: '1.00'
+  Publication_Type:
+    Desc: TBD
+    Type: string
+    Req: true
+    Enum:
+    - Book
+    - Book Chapter
+    - Clinical trial
+    - Editorial
+    - Peer review article
+    - Perspective
+    - Proceeding
+    - Report
+    - Review
+  Publication_Status:
+    Desc: TBD
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '3443461'
+      Value: Study Publication Identification Publication Status Text
+      Version: '1.00'
+  Publication Title:
+    Desc: TBD
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '16078531'
+      Value: Study Administration Publication Identification Title Text
+      Version: '1.00'
+
   # treatment
   treatment_id:
     Desc: The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as the connector, and the property therapeutic_agents.
@@ -11400,6 +11522,7 @@ PropDefinitions:
       Code: '11527735'
       Value: Sequencing Library Read Layout Type
       Version: '1.00'
+      useNullCDE: Yes
   library_source_molecule:
     Desc: Source Molecule
     Req: Preferred
@@ -11476,6 +11599,7 @@ PropDefinitions:
       Code: '6347743'
       Value: Sequencing Library Creation Method Type
       Version: '2.00'
+      useNullCDE: Yes
 
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
