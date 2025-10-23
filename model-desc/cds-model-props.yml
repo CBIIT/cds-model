@@ -6653,7 +6653,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '2179666'
-      Value: 	Protocol Name
+      Value: Protocol Name
       Version: '1.00'
   protocol_type:
     Desc: A protocol provides clear and detailed documentation about the precise actions taken in any procedure that might be part of an experiment.
