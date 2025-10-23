@@ -224,7 +224,7 @@ Nodes:
       Assignment: core
       Class: primary
       Template: 'Yes'
-    props:
+    Props:
     - Composition_ID
     - Nanomaterial_Entity_Type
     - Functionalizing_Entity_Type
