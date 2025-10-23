@@ -204,6 +204,7 @@ PropDefinitions:
       Code: '2413278'
       Value: Equipment Software Version Text
       Version: '1.20'
+      useNullCDE: Yes
   imaging_protocol:
     Desc: A rule which guides how an activity should be performed. Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration, lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the image was obtained or generated.
     Type: string
