@@ -6725,7 +6725,6 @@ PropDefinitions:
       Version: '1.00'
   Publication_Type:
     Desc: TBD
-    Type: string
     Req: true
     Enum:
     - Book
