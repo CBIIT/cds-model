@@ -169,7 +169,68 @@ Nodes:
       - derived_from_specimen
       - biosample_accession
       - tumor_classification
+      - Organization_Name
       - crdc_id
+
+  Characterization:
+    Desc: TBD
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - Characterization_ID
+    - Characterization_Assay_Type
+    - Characterization_Name
+    - crdc_id
+    
+  Publication:
+    Desc: TBD
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - DOI_or_Pub_ID
+    - Publication_Type
+    - Publication_Status
+    - Publication_Title
+    - crdc_id
+
+  Protocol:
+    Desc: TBD
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - protocol_pk_id
+    - protocol_name
+    - protocol_type
+    - doi
+    - crdc_id
+
+  Composition:
+    Desc: TBD
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - Composition_ID
+    - Nanomaterial_Entity_Type
+    - Functionalizing_Entity_Type
+    - Functionalizing_Entity_Inherent_Function_Type
+    - crdc_id
+
 
   file:
     Desc: "A set of related records kept together provided by a submitter."
@@ -546,6 +607,22 @@ Relationships:
       - Src: diagnosis
         Dst: sample
         Mul: many_to_one
+      - Src: Characterization
+        Dst: sample
+        Mul: many_to_one
+      - Src: Composition
+        Dst: sample
+        Mul: many_to_one
+      - Src: Publication
+        Dst: sample
+      - Src: Protocol
+        Dst: sample
+  of_protocol:
+    Props: null
+    Mul: many_to_many
+    Ends:
+      - Src: Publication
+        Dst: Protocol
   of_file:
     Props: null
     Mul: many_to_one
