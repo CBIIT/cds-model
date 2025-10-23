@@ -6747,7 +6747,7 @@ PropDefinitions:
       Code: '3443461'
       Value: Study Publication Identification Publication Status Text
       Version: '1.00'
-  Publication Title:
+  Publication_Title:
     Desc: TBD
     Type: string
     Req: true
