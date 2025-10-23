@@ -1,3 +1,9 @@
+### 11.0.0 (Released 10/24/2025)
+- Added the node: "**_Protocol_**".
+- Added the node: "**_Composition_**".
+- Added the node: "**_Characterization_**".
+- Added the node: "**_Publication_**".
+
 ### 10.0.1 (Released 10/20/2025)
 - Updated the composite key rule for the prop: "**_study\_participant\_id_**".
 
