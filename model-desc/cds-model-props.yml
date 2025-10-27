@@ -6718,6 +6718,7 @@ PropDefinitions:
     Desc: TBD
     Type: string
     Req: true
+    Key: true
     Term:
     - Origin: caDSR
       Code: '3443454'
