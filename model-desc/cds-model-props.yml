@@ -6688,15 +6688,12 @@ PropDefinitions:
   Nanomaterial_Entity_Type:
     Desc: The component of a sample that is a nanoparticle.
     Type: string
-    Req: true
   Functionalizing_Entity_Type:
     Desc: Any component of the sample that has been added to a nanoparticle and imparts a function on the sample.
     Type: string
-    Req: true
   Functionalizing_Entity_Inherent_Function_Type:
     Desc: Functionalizing Entity composition describes the substance, physical or biological factor, etc. of the sample that produces a specific effect.
     Type: string
-    Req: true
 
   # Characterization
   Characterization_ID:
@@ -6707,11 +6704,9 @@ PropDefinitions:
   Characterization_Assay_Type:
     Desc: Sample characterization describe distinctive characteristics or essential features of the sample determined through analytical methods and records information associated with sample synthesis and properties.
     Type: string
-    Req: true
   Characterization_Name:
     Desc: Name of the characterization types.
     Type: string
-    Req: true
 
   # Publication
   DOI_or_Pub_ID:
@@ -6726,7 +6721,6 @@ PropDefinitions:
       Version: '1.00'
   Publication_Type:
     Desc: TBD
-    Req: true
     Enum:
     - Book
     - Book Chapter
@@ -6740,7 +6734,6 @@ PropDefinitions:
   Publication_Status:
     Desc: TBD
     Type: string
-    Req: true
     Term:
     - Origin: caDSR
       Code: '3443461'
@@ -6749,7 +6742,6 @@ PropDefinitions:
   Publication_Title:
     Desc: TBD
     Type: string
-    Req: true
     Term:
     - Origin: caDSR
       Code: '16078531'
