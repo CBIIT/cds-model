@@ -175,7 +175,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '12137353'
       Value: Imaging Technology DICOM Modality Type
-      Version: '1.00'
+      Version: '2.00'
   imaging_equipment_manufacturer:
     Desc: Producer of the imaging equipment that was used to generate the digital image
     Req: true
@@ -1129,7 +1129,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '12137353'
       Value: Imaging Technology DICOM Modality Type
-      Version: '1.00'
+      Version: '2.00'
   performed_imaging_study_lossyImageCompressionIndicator:
     Desc: Specifies whether any images in the study are irreversibly altered during encoding at any time during its life.
     Req: true
@@ -1693,7 +1693,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '8028962'
       Value: Specimen Preservation Method
-      Version: '2.00'
+      Version: '3.00'
   staining_method:
     Desc: Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.
     Req: true
@@ -1815,7 +1815,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11280338'
       Value: Electronic Data File Description Text
-      Version: '1.00'
+      Version: '2.00'
   file_name:
     Desc: Name of file
     Type: string
@@ -1825,7 +1825,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11284037'
       Value: Electronic Data File Name
-      Version: '2.00'
+      Version: '3.00'
   file_size:
     Desc: File size in bytes
     Type: integer
@@ -1835,7 +1835,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11479876'
       Value: Electronic Data File Size Integer
-      Version: '1.00'
+      Version: '2.00'
   file_type:
     Desc: File type from enumerated list
     Enum:
@@ -1963,7 +1963,7 @@ PropDefinitions:
       Original Source: CRDC
       Code: "12373576"
       Value: Research Activity Experimental Method Type
-      Version: '2.00'
+      Version: '3.00'
   # participant
   ethnicity:
     Desc: OMB Ethnicity designator
@@ -1994,7 +1994,7 @@ PropDefinitions:
       Original Source: NCI Std
       Code: '7572817'
       Value: Person Sex at Birth Category
-      Version: '1.00'
+      Version: '3.00'
   race:
     Desc: OMB Race designator
     Type:
@@ -6126,7 +6126,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11459812'
       Value: Study Short Name Text
-      Version: '2.00'
+      Version: '4.00'
   study_description:
     Desc: Human-readable study description
     Type: string
@@ -6159,7 +6159,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11459810'
       Value: Study Name
-      Version: '2.00'
+      Version: '4.00'
   acl:
     Desc: open or restricted access to data
     Type: string
@@ -6605,7 +6605,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '14688604'
       Value: Specimen Neoplasm Category
-      Version: '1.00'
+      Version: '2.00'
   sample_type:
     Desc: Tissue type of this sample
     Enum:
@@ -11366,7 +11366,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '11556322'
       Value: Genome Assembly Sequence Depth of Coverage Number
-      Version: '1.00'
+      Version: '2.00'
   bases:
     Desc: Total number of unique bases read
     Type: integer
@@ -11492,7 +11492,7 @@ PropDefinitions:
       Original Source: NCI Std
       Code: '6352164'
       Value: Sequencing Library Platform Model Name
-      Version: '1.00'
+      Version: '2.00'
   library_id:
     Desc: Library identifier as submitted by requestor
     Type: string
@@ -11711,7 +11711,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11524549'
       Value: Study Subject Legal Adult Or Pediatric Participant Type
-      Version: '1.00'
+      Version: '2.00'
   number_of_participants:
     Desc: How many participants in the study
     Type: number
@@ -11772,7 +11772,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11444542'
       Value: Program Name Text
-      Version: '2.00'
+      Version: '3.00'
   program_short_description:
     Desc: An abbreviated, single sentence description of the program.
     Src: Internally-curated
@@ -11791,7 +11791,7 @@ PropDefinitions:
       Original Source: DSS
       Code: "11459801"
       Value: Program Short Name Text
-      Version: '2.00'
+      Version: '3.00'
   # proteomic
   proteomic_info_id:
     Desc: Proteomic info identifier, the ID property for the node proteomic.
