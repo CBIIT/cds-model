@@ -6677,7 +6677,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16812466'
-      value: Specimen Nanoparticle Entity Type
+      Value: Specimen Nanoparticle Entity Type
       Version: '1.00'
   Functionalizing_Entity_Type:
     Desc: Any component of the sample that has been added to a nanoparticle and imparts a function on the sample.
@@ -6687,7 +6687,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16812467'
-      value: Specimen Nanoparticle Functionality Text
+      Value: Specimen Nanoparticle Functionality Text
       Version: '1.00'
   Functionalizing_Entity_Inherent_Function_Type:
     Desc: Functionalizing Entity composition describes the substance, physical or biological factor, etc. of the sample that produces a specific effect.
@@ -6709,7 +6709,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16812470'
-      value: Specimen Nanoparticle Characterization Assay Type
+      Value: Specimen Nanoparticle Characterization Assay Type
       Version: '1.00'
   Characterization_Name:
     Desc: Name of the characterization types.
@@ -6719,7 +6719,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16812471'
-      value: Specimen Nanoparticle Characterization Name
+      Value: Specimen Nanoparticle Characterization Name
 
   # Publication
   DOI_or_Pub_ID:
