@@ -21,6 +21,9 @@ Nodes:
 
   study:
     Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
+    CompKey:
+      - phs_accession
+      - study_acronym
     Tags:
       nodeReq: true
       Category: study
