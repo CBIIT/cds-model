@@ -21,6 +21,9 @@ Nodes:
 
   study:
     Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
+    CompKey:
+      - phs_accession
+      - study_acronym
     Tags:
       nodeReq: true
       Category: study
@@ -32,7 +35,6 @@ Nodes:
       - study_name
       - study_acronym
       - study_description
-      - short_description
       - study_external_url
       - phs_accession
       - bioproject_accession
@@ -121,7 +123,6 @@ Nodes:
       - tumor_stage_clinical_n
       - tumor_stage_clinical_t
       - morphology
-      - incidence_type # primary, metastatic, recurrence, progression
       - progression_or_recurrence
       - days_to_recurrence
       - days_to_last_followup
@@ -346,27 +347,6 @@ Nodes:
       - size_z
       - channel_metadata_filename
       - channel_metadata_file_url_in_cds
-      - channel_id
-      - channel_name
-      - cycle_number
-      - sub_cycle_number
-      - target_name
-      - antibody_name
-      - rrid_identifier
-      - fluorophore
-      - clone
-      - lot
-      - catalog_number
-      - excitation_wavelength
-      - emission_wavelength
-      - excitation_bandwidth
-      - emission_bandwidth
-      - metal_isotope_element_abbreviation
-      - metal_isotope_element_mass
-      - oligo_barcode_upper_strand
-      - oligo_barcode_lower_strand
-      - dilution
-      - concentration
       - crdc_id
 
   NonDICOMCTimages:
