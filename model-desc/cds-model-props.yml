@@ -6747,7 +6747,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16698383'
-      Value: 	Publication Document Type
+      Value: Publication Document Type
       Version: '1.00'
   Publication_Status:
     Desc: TBD
