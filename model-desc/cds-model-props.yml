@@ -6648,11 +6648,11 @@ PropDefinitions:
     - sample preparation
     - sterility
     - synthesis
-  Term:
-    - Origin: caDSR
-      Code: '16812452'
-      Value: Research Activity Study Protocol Type
-      Version: '1.00'
+    Term:
+      - Origin: caDSR
+        Code: '16812452'
+        Value: Research Activity Study Protocol Type
+        Version: '1.00'
   doi:
     Desc: TBD
     Type: string
