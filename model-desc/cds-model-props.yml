@@ -737,6 +737,7 @@ PropDefinitions:
   channel_metadata_filename:
     Desc: File name of uploaded companion CSV file containing channel-level metadata details
     Type: string
+    Req: true
     Term:
     - Origin: caDSR
       Original Source: HTAN
@@ -755,20 +756,10 @@ PropDefinitions:
   channel_id:
     Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: '14765171'
-      Value: OME Tagged Image File Format Channel Identifier
-      Version: '1.00'
   channel_name:
     Desc: Channel label for each channel in this image must match the corresponding field in the OME-TIFF header
     Req: true
     Type: string
-    Term:
-    - Origin: caDSR
-      Code: '14765172'
-      Value: OME Tagged Image File Format Channel Name
-      Version: '1.00'
   cycle_number:
     Desc: 'the cycle # in which the co-listed reagent(s) was(were) used'
     Type: string
@@ -3411,15 +3402,6 @@ PropDefinitions:
       Code: '12432576'
       Value: Subject First Treatment Date To Recurrence Day Count
       Version: '2.00'
-  incidence_type:
-    Desc: For this diagnosis, disease incidence relative to prior status of subject
-    Enum:
-    - primary
-    - progression
-    - recurrence
-    - metastasis
-    - remission
-    - no_disease
   last_known_disease_status:
     Desc: Last known disease incidence for this subject and diagnosis
     Enum:
@@ -6136,19 +6118,10 @@ PropDefinitions:
     Enum:
     - Open
     - Controlled
-  short_description:
-    Desc: 'Short description that will identify the dataset on public pages
-
-      A clear and concise formula for the title would be like:
-
-      {methodology} of {organism}: {sample info}
-
-      '
-    Type: string
-    Req: true
   study_external_url:
     Desc: Website or other url relevant to study
-    Type: url
+    Type:
+      pattern: ^https:\/\/
     Req: true
   study_name:
     Desc: Official name of study
@@ -6627,6 +6600,7 @@ PropDefinitions:
       Code: "11253427"
       Value: Specimen Material OBIB Source
       Version: '1.00'
+      useNullCDE: Yes
   derived_from_specimen:
     Desc: Identier of the parent specimen of this sample
     Type: string
@@ -6639,6 +6613,11 @@ PropDefinitions:
   Organization_Name:
     Desc: TBD
     Type: string
+    Term:
+    - Origin: caDSR
+      Code: '2179592'
+      Value: Organization Name
+      Version: '1.10'
 
   # Protocol
   protocol_pk_id:
@@ -6652,8 +6631,8 @@ PropDefinitions:
     Req: true
     Term:
     - Origin: caDSR
-      Code: '2179666'
-      Value: Protocol Name
+      Code: '16812463'
+      Value: Research Activity Study Protocol Name
       Version: '1.00'
   protocol_type:
     Desc: A protocol provides clear and detailed documentation about the precise actions taken in any procedure that might be part of an experiment.
@@ -6669,14 +6648,19 @@ PropDefinitions:
     - sample preparation
     - sterility
     - synthesis
+  Term:
+    - Origin: caDSR
+      Code: '16812452'
+      Value: Research Activity Study Protocol Type
+      Version: '1.00'
   doi:
     Desc: TBD
     Type: string
     Req: true
     Term:
     - Origin: caDSR
-      Code: '7787673'
-      Value: Parent Specimen Label Identifier
+      Code: '15915370'
+      Value: Publication Digital Object Identifier Text
       Version: '1.00'
 
   # Composition
@@ -6687,13 +6671,29 @@ PropDefinitions:
     Key: true
   Nanomaterial_Entity_Type:
     Desc: The component of a sample that is a nanoparticle.
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812466'
+      value: Specimen Nanoparticle Entity Type
+      Version: '1.00'
   Functionalizing_Entity_Type:
     Desc: Any component of the sample that has been added to a nanoparticle and imparts a function on the sample.
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812467'
+      value: Specimen Nanoparticle Functionality Text
+      Version: '1.00'
   Functionalizing_Entity_Inherent_Function_Type:
     Desc: Functionalizing Entity composition describes the substance, physical or biological factor, etc. of the sample that produces a specific effect.
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
 
   # Characterization
   Characterization_ID:
@@ -6703,10 +6703,23 @@ PropDefinitions:
     Key: true
   Characterization_Assay_Type:
     Desc: Sample characterization describe distinctive characteristics or essential features of the sample determined through analytical methods and records information associated with sample synthesis and properties.
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812470'
+      value: Specimen Nanoparticle Characterization Assay Type
+      Version: '1.00'
   Characterization_Name:
     Desc: Name of the characterization types.
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812471'
+      value: Specimen Nanoparticle Characterization Name
 
   # Publication
   DOI_or_Pub_ID:
@@ -6716,8 +6729,8 @@ PropDefinitions:
     Key: true
     Term:
     - Origin: caDSR
-      Code: '3443454'
-      Value: Study Publication Identification Digital Object Identifier Text
+      Code: '15915370'
+      Value: Publication Digital Object Identifier Text
       Version: '1.00'
   Publication_Type:
     Desc: TBD
@@ -6731,13 +6744,18 @@ PropDefinitions:
     - Proceeding
     - Report
     - Review
+    Term:
+    - Origin: caDSR
+      Code: '16698383'
+      Value: 	Publication Document Type
+      Version: '1.00'
   Publication_Status:
     Desc: TBD
     Type: string
     Term:
     - Origin: caDSR
-      Code: '3443461'
-      Value: Study Publication Identification Publication Status Text
+      Code: '16698384'
+      Value: Publication Document Status
       Version: '1.00'
   Publication_Title:
     Desc: TBD
@@ -11338,6 +11356,7 @@ PropDefinitions:
       Code: '11529031'
       Value: Genome Assembly NCBI Genetic Reference Sequence Identifier
       Version: '2.00'
+      useNullCDE: Yes
   avg_read_length:
     Desc: Average sequence read length
     Type: number
@@ -11416,6 +11435,7 @@ PropDefinitions:
       Code: '6347771'
       Value: Sequencing Library Platform Name
       Version: '1.00'
+      useNullCDE: Yes
   instrument_model:
     Desc: Instrument model
     Req: true
@@ -11493,6 +11513,7 @@ PropDefinitions:
       Code: '6352164'
       Value: Sequencing Library Platform Model Name
       Version: '2.00'
+      useNullCDE: Yes
   library_id:
     Desc: Library identifier as submitted by requestor
     Type: string
@@ -11529,6 +11550,7 @@ PropDefinitions:
       Code: '15235981'
       Value: Sequencing Library Molecule Source
       Version: '1.00'
+      useNullCDE: Yes
   library_source_material:
     Desc: Source Material
     Req: Preferred
@@ -11544,6 +11566,7 @@ PropDefinitions:
       Code: '15235975'
       Value: Sequencing Library Cellular Material Source
       Version: '1.00'
+      useNullCDE: Yes
   library_selection:
     Desc: Library selection method
     Req: true
@@ -11639,6 +11662,7 @@ PropDefinitions:
       Code: '6273393'
       Value: Sequencing Library Technique Type
       Version: '2.00'
+      useNullCDE: Yes
   sequence_alignment_software:
     Desc: Name of software program used to align nucleotide sequence data
     Type: string
@@ -11755,7 +11779,8 @@ PropDefinitions:
   program_external_url:
     Desc: The external url to which users should be directed in order to learn more about the program.
     Src: Internally-curated
-    Type: string
+    Type:
+      pattern: ^https:\/\/
     Req: true
   program_full_description:
     Desc: A more detailed, multiple sentence description of the program.
