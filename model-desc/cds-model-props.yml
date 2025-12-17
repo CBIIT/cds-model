@@ -1713,6 +1713,7 @@ PropDefinitions:
       Code: "12373576"
       Value: Research Activity Experimental Method Type
       Version: '3.00'
+      useNullCDE: Yes
   # participant
   ethnicity:
     Desc: OMB Ethnicity designator
@@ -5873,6 +5874,7 @@ PropDefinitions:
     Req: true
   study_access:
     Desc: Study access
+    Req: true
     Enum:
     - Open
     - Controlled
