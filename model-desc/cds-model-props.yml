@@ -175,7 +175,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '12137353'
       Value: Imaging Technology DICOM Modality Type
-      Version: '1.00'
+      Version: '2.00'
   imaging_equipment_manufacturer:
     Desc: Producer of the imaging equipment that was used to generate the digital image
     Req: true
@@ -204,6 +204,7 @@ PropDefinitions:
       Code: '2413278'
       Value: Equipment Software Version Text
       Version: '1.20'
+      useNullCDE: Yes
   imaging_protocol:
     Desc: A rule which guides how an activity should be performed. Protocols.io ID or DOI link to a free/open protocol resource describing in detail the assay protocol (e.g. surface markers used in Smart-seq, dissociation duration, lot/batch numbers for key reagents such as primers, sequencing reagent kits, etc.) or the protocol by which the image was obtained or generated.
     Type: string
@@ -736,6 +737,7 @@ PropDefinitions:
   channel_metadata_filename:
     Desc: File name of uploaded companion CSV file containing channel-level metadata details
     Type: string
+    Req: true
     Term:
     - Origin: caDSR
       Original Source: HTAN
@@ -751,259 +753,7 @@ PropDefinitions:
       Code: '11556141'
       Value: Electronic File Pathname Text
       Version: '2.00'
-  channel_id:
-    Desc: The unique channel identifier for each channel in this image must match the corresponding field in the OME-TIFF header
-    Type: string
-    Term:
-    - Origin: caDSR
-      Code: '14765171'
-      Value: OME Tagged Image File Format Channel Identifier
-      Version: '1.00'
-  channel_name:
-    Desc: Channel label for each channel in this image must match the corresponding field in the OME-TIFF header
-    Req: true
-    Type: string
-    Term:
-    - Origin: caDSR
-      Code: '14765172'
-      Value: OME Tagged Image File Format Channel Name
-      Version: '1.00'
-  cycle_number:
-    Desc: 'the cycle # in which the co-listed reagent(s) was(were) used'
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765176'
-      Value: Multiplex Imaging Reagent Cycle Number Integer
-      Version: '1.00'
-  sub_cycle_number:
-    Desc: 'sub-cycle #'
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765180'
-      Value: Multiplex Imaging Reagent Sub-Cycle Number Integer
-      Version: '1.00'
-  target_name:
-    Desc: short descriptive name (abbreviation) for this target (antigen)
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: "14765180"
-      Value: "Multiplex Imaging Reagent Sub-Cycle Number Integer"
-      Version: '1.00'
-  antibody_name:
-    Desc: short descriptive name for this antibody
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765184'
-      Value: Tissue Slide IHC Antibody Used Type
-      Version: '1.00'
-  rrid_identifier:
-    Desc: Research Resource Identifier
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14767247'
-      Value: Multiplex Imaging Research Resource Identifier Text
-      Version: '1.00'
-  fluorophore:
-    Desc: Fluorescent dye label
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14767255'
-      Value: Multiplex Imaging Fluorescent Dye Text
-      Version: '1.00'
-  clone:
-    Desc: Unique clone identifier
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14767258'
-      Value: Multiplex Imaging Clone Unique Identifier
-      Version: '1.00'
-  lot:
-    Desc: lot number from vendor
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14769695'
-      Value: Multiplex Imaging Vendor Lot Number Text
-      Version: '1.00'
-  catalog_number:
-    Desc: catalog number from vendor
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14767261'
-      Value: Multiplex Imaging Vendor Catalog Number Text
-      Version: '1.00'
-  excitation_wavelength:
-    Desc: center/peak of the excitation spectrum (nm)
-    Enum:
-    - '0'
-    - '10'
-    - '9'
-    - '8'
-    - '7'
-    - '6'
-    - '5'
-    - '4'
-    - '3'
-    - '2'
-    - '1'
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765187'
-      Value: Multiplex Imaging Excitation Wavelength Number
-      Version: '1.00'
-  emission_wavelength:
-    Desc: center/peak of the emission spectrum (nm)
-    Enum:
-    - '0'
-    - '10'
-    - '9'
-    - '8'
-    - '7'
-    - '6'
-    - '5'
-    - '4'
-    - '3'
-    - '2'
-    - '1'
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14767264'
-      Value: Multiplex Imaging Emission Wavelength Number
-      Version: '1.00'
-  excitation_bandwidth:
-    Desc: nominal width of excitation spectrum (nm)
-    Enum:
-    - '0'
-    - '10'
-    - '9'
-    - '8'
-    - '7'
-    - '6'
-    - '5'
-    - '4'
-    - '3'
-    - '2'
-    - '1'
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765190'
-      Value: Multiplex Imaging Excitation Bandwidth Number
-      Version: '1.00'
-  emission_bandwidth:
-    Desc: nominal width of emission spectrum (nm)
-    Enum:
-    - '0'
-    - '10'
-    - '9'
-    - '8'
-    - '7'
-    - '6'
-    - '5'
-    - '4'
-    - '3'
-    - '2'
-    - '1'
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765193'
-      Value: Multiplex Imaging Emission Bandwidth Number
-      Version: '1.00'
-  metal_isotope_element_abbreviation:
-    Desc: Element abbreviation
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765198'
-      Value: Multiplex Imaging Isotope Abbreviation Name
-      Version: '1.00'
-  metal_isotope_element_mass:
-    Desc: Element mass number
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765201'
-      Value: Multiplex Imaging Isotope Element Number Identifier
-      Version: '1.00'
-  oligo_barcode_upper_strand:
-    Desc: DNA barcode used for labeling
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765205'
-      Value: Multiplex Imaging Oligonucleotide Barcode Upper Strand Text
-      Version: '1.00'
-  oligo_barcode_lower_strand:
-    Desc: DNA barcode used for labeling
-    Type: string
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14765208'
-      Value: Multiplex Imaging Oligonucleotide Barcode Lower Strand Text
-      Version: '1.00'
-  dilution:
-    Desc: Final dilution ratio used in experiment
-    Enum:
-    - '0'
-    - '10'
-    - '9'
-    - '8'
-    - '7'
-    - '6'
-    - '5'
-    - '4'
-    - '3'
-    - '2'
-    - '1'
-    Term:
-    - Origin: caDSR
-      Code: '14767270'
-      Value: Multiplex Imaging Final Dilution Ratio Number
-      Version: '1.00'
-  concentration:
-    Desc: Final concentration used in experiment
-    Enum:
-    - '0'
-    - '10'
-    - '9'
-    - '8'
-    - '7'
-    - '6'
-    - '5'
-    - '4'
-    - '3'
-    - '2'
-    - '1'
-    Term:
-    - Origin: caDSR
-      Original Source: CDS
-      Code: '14768386'
-      Value: Multiplex Imaging Final Concentration Number
-      Version: '1.00'
+
   # NonDICOMradiologyAllModalities:
   NonDICOMradiologyAllModalities_id:
     Desc: NonDICOMradiologyAllModalities identifier
@@ -1128,7 +878,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '12137353'
       Value: Imaging Technology DICOM Modality Type
-      Version: '1.00'
+      Version: '2.00'
   performed_imaging_study_lossyImageCompressionIndicator:
     Desc: Specifies whether any images in the study are irreversibly altered during encoding at any time during its life.
     Req: true
@@ -1692,7 +1442,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '8028962'
       Value: Specimen Preservation Method
-      Version: '2.00'
+      Version: '3.00'
   staining_method:
     Desc: Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.
     Req: true
@@ -1814,7 +1564,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11280338'
       Value: Electronic Data File Description Text
-      Version: '1.00'
+      Version: '2.00'
   file_name:
     Desc: Name of file
     Type: string
@@ -1824,7 +1574,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11284037'
       Value: Electronic Data File Name
-      Version: '2.00'
+      Version: '3.00'
   file_size:
     Desc: File size in bytes
     Type: integer
@@ -1834,7 +1584,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11479876'
       Value: Electronic Data File Size Integer
-      Version: '1.00'
+      Version: '2.00'
   file_type:
     Desc: File type from enumerated list
     Enum:
@@ -1962,7 +1712,8 @@ PropDefinitions:
       Original Source: CRDC
       Code: "12373576"
       Value: Research Activity Experimental Method Type
-      Version: '2.00'
+      Version: '3.00'
+      useNullCDE: Yes
   # participant
   ethnicity:
     Desc: OMB Ethnicity designator
@@ -1993,7 +1744,7 @@ PropDefinitions:
       Original Source: NCI Std
       Code: '7572817'
       Value: Person Sex at Birth Category
-      Version: '1.00'
+      Version: '3.00'
   race:
     Desc: OMB Race designator
     Type:
@@ -3410,15 +3161,6 @@ PropDefinitions:
       Code: '12432576'
       Value: Subject First Treatment Date To Recurrence Day Count
       Version: '2.00'
-  incidence_type:
-    Desc: For this diagnosis, disease incidence relative to prior status of subject
-    Enum:
-    - primary
-    - progression
-    - recurrence
-    - metastasis
-    - remission
-    - no_disease
   last_known_disease_status:
     Desc: Last known disease incidence for this subject and diagnosis
     Enum:
@@ -6125,29 +5867,21 @@ PropDefinitions:
       Original Source: DSS
       Code: '11459812'
       Value: Study Short Name Text
-      Version: '2.00'
+      Version: '4.00'
   study_description:
     Desc: Human-readable study description
     Type: string
     Req: true
   study_access:
     Desc: Study access
+    Req: true
     Enum:
     - Open
     - Controlled
-  short_description:
-    Desc: 'Short description that will identify the dataset on public pages
-
-      A clear and concise formula for the title would be like:
-
-      {methodology} of {organism}: {sample info}
-
-      '
-    Type: string
-    Req: true
   study_external_url:
     Desc: Website or other url relevant to study
-    Type: url
+    Type:
+      pattern: ^https:\/\/
     Req: true
   study_name:
     Desc: Official name of study
@@ -6158,7 +5892,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11459810'
       Value: Study Name
-      Version: '2.00'
+      Version: '4.00'
   acl:
     Desc: open or restricted access to data
     Type: string
@@ -6604,7 +6338,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '14688604'
       Value: Specimen Neoplasm Category
-      Version: '1.00'
+      Version: '2.00'
   sample_type:
     Desc: Tissue type of this sample
     Enum:
@@ -6626,6 +6360,7 @@ PropDefinitions:
       Code: "11253427"
       Value: Specimen Material OBIB Source
       Version: '1.00'
+      useNullCDE: Yes
   derived_from_specimen:
     Desc: Identier of the parent specimen of this sample
     Type: string
@@ -6635,6 +6370,162 @@ PropDefinitions:
       Code: '5581201'
       Value: Parent Specimen Label Identifier
       Version: '1.00'
+  Organization_Name:
+    Desc: TBD
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: '2179592'
+      Value: Organization Name
+      Version: '1.10'
+
+  # Protocol
+  protocol_pk_id:
+    Desc: TBD
+    Type: string
+    Req: true
+    Key: true
+  protocol_name:
+    Desc: A protocol provides clear and detailed documentation about the precise actions taken in any procedure that might be part of an experiment.
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '16812463'
+      Value: Research Activity Study Protocol Name
+      Version: '1.00'
+  protocol_type:
+    Desc: A protocol provides clear and detailed documentation about the precise actions taken in any procedure that might be part of an experiment.
+    Req: true
+    Enum:
+    - Endotoxin
+    - in vitro assay
+    - in vivo assay
+    - physico-chemical assay
+    - purification
+    - radio labeling
+    - safety
+    - sample preparation
+    - sterility
+    - synthesis
+    Term:
+      - Origin: caDSR
+        Code: '16812452'
+        Value: Research Activity Study Protocol Type
+        Version: '1.00'
+  doi:
+    Desc: TBD
+    Type: string
+    Req: true
+    Term:
+    - Origin: caDSR
+      Code: '15915370'
+      Value: Publication Digital Object Identifier Text
+      Version: '1.00'
+
+  # Composition
+  Composition_ID:
+    Desc: TBD #ID for Composition
+    Type: string
+    Req: true
+    Key: true
+  Nanomaterial_Entity_Type:
+    Desc: The component of a sample that is a nanoparticle.
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812466'
+      Value: Specimen Nanoparticle Entity Type
+      Version: '1.00'
+  Functionalizing_Entity_Type:
+    Desc: Any component of the sample that has been added to a nanoparticle and imparts a function on the sample.
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812467'
+      Value: Specimen Nanoparticle Functionality Text
+      Version: '1.00'
+  Functionalizing_Entity_Inherent_Function_Type:
+    Desc: Functionalizing Entity composition describes the substance, physical or biological factor, etc. of the sample that produces a specific effect.
+    Type:
+      value_type: list
+      item_type: string
+
+  # Characterization
+  Characterization_ID:
+    Desc: TBD #ID for Characterization
+    Type: string
+    Req: true
+    Key: true
+  Characterization_Assay_Type:
+    Desc: Sample characterization describe distinctive characteristics or essential features of the sample determined through analytical methods and records information associated with sample synthesis and properties.
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812470'
+      Value: Specimen Nanoparticle Characterization Assay Type
+      Version: '1.00'
+  Characterization_Name:
+    Desc: Name of the characterization types.
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16812471'
+      Value: Specimen Nanoparticle Characterization Name
+
+  # Publication
+  DOI_or_Pub_ID:
+    Desc: TBD
+    Type: string
+    Req: true
+    Key: true
+    Term:
+    - Origin: caDSR
+      Code: '15915370'
+      Value: Publication Digital Object Identifier Text
+      Version: '1.00'
+  Publication_Type:
+    Desc: TBD
+    Enum:
+    - Book
+    - Book Chapter
+    - Clinical trial
+    - Editorial
+    - Peer review article
+    - Perspective
+    - Proceeding
+    - Report
+    - Review
+    Term:
+    - Origin: caDSR
+      Code: '16698383'
+      Value: Publication Document Type
+      Version: '1.00'
+  Publication_Status:
+    Desc: TBD
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: '16698384'
+      Value: Publication Document Status
+      Version: '1.00'
+  Publication_Title:
+    Desc: TBD
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: '16078531'
+      Value: Study Administration Publication Identification Title Text
+      Version: '1.00'
+
   # treatment
   treatment_id:
     Desc: The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as the connector, and the property therapeutic_agents.
@@ -11225,6 +11116,7 @@ PropDefinitions:
       Code: '11529031'
       Value: Genome Assembly NCBI Genetic Reference Sequence Identifier
       Version: '2.00'
+      useNullCDE: Yes
   avg_read_length:
     Desc: Average sequence read length
     Type: number
@@ -11253,7 +11145,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '11556322'
       Value: Genome Assembly Sequence Depth of Coverage Number
-      Version: '1.00'
+      Version: '2.00'
   bases:
     Desc: Total number of unique bases read
     Type: integer
@@ -11303,6 +11195,7 @@ PropDefinitions:
       Code: '6347771'
       Value: Sequencing Library Platform Name
       Version: '1.00'
+      useNullCDE: Yes
   instrument_model:
     Desc: Instrument model
     Req: true
@@ -11379,7 +11272,8 @@ PropDefinitions:
       Original Source: NCI Std
       Code: '6352164'
       Value: Sequencing Library Platform Model Name
-      Version: '1.00'
+      Version: '2.00'
+      useNullCDE: Yes
   library_id:
     Desc: Library identifier as submitted by requestor
     Type: string
@@ -11400,6 +11294,7 @@ PropDefinitions:
       Code: '11527735'
       Value: Sequencing Library Read Layout Type
       Version: '1.00'
+      useNullCDE: Yes
   library_source_molecule:
     Desc: Source Molecule
     Req: Preferred
@@ -11415,6 +11310,7 @@ PropDefinitions:
       Code: '15235981'
       Value: Sequencing Library Molecule Source
       Version: '1.00'
+      useNullCDE: Yes
   library_source_material:
     Desc: Source Material
     Req: Preferred
@@ -11430,6 +11326,7 @@ PropDefinitions:
       Code: '15235975'
       Value: Sequencing Library Cellular Material Source
       Version: '1.00'
+      useNullCDE: Yes
   library_selection:
     Desc: Library selection method
     Req: true
@@ -11476,6 +11373,7 @@ PropDefinitions:
       Code: '6347743'
       Value: Sequencing Library Creation Method Type
       Version: '2.00'
+      useNullCDE: Yes
 
   library_strategy:
     Desc: Nucleic acid capture or processing strategy for this library
@@ -11524,6 +11422,7 @@ PropDefinitions:
       Code: '6273393'
       Value: Sequencing Library Technique Type
       Version: '2.00'
+      useNullCDE: Yes
   sequence_alignment_software:
     Desc: Name of software program used to align nucleotide sequence data
     Type: string
@@ -11596,7 +11495,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11524549'
       Value: Study Subject Legal Adult Or Pediatric Participant Type
-      Version: '1.00'
+      Version: '2.00'
   number_of_participants:
     Desc: How many participants in the study
     Type: number
@@ -11640,7 +11539,8 @@ PropDefinitions:
   program_external_url:
     Desc: The external url to which users should be directed in order to learn more about the program.
     Src: Internally-curated
-    Type: string
+    Type:
+      pattern: ^https:\/\/
     Req: true
   program_full_description:
     Desc: A more detailed, multiple sentence description of the program.
@@ -11657,7 +11557,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11444542'
       Value: Program Name Text
-      Version: '2.00'
+      Version: '3.00'
   program_short_description:
     Desc: An abbreviated, single sentence description of the program.
     Src: Internally-curated
@@ -11676,7 +11576,7 @@ PropDefinitions:
       Original Source: DSS
       Code: "11459801"
       Value: Program Short Name Text
-      Version: '2.00'
+      Version: '3.00'
   # proteomic
   proteomic_info_id:
     Desc: Proteomic info identifier, the ID property for the node proteomic.

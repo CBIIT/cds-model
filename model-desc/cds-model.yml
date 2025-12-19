@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v10.0.1
+Version: v11.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -21,6 +21,9 @@ Nodes:
 
   study:
     Desc: "The narrative title used as a textual label for a research data collection. Example – University of Texas PDX Development and Trial Center Grant"
+    CompKey:
+      - phs_accession
+      - study_acronym
     Tags:
       nodeReq: true
       Category: study
@@ -32,7 +35,6 @@ Nodes:
       - study_name
       - study_acronym
       - study_description
-      - short_description
       - study_external_url
       - phs_accession
       - bioproject_accession
@@ -121,7 +123,6 @@ Nodes:
       - tumor_stage_clinical_n
       - tumor_stage_clinical_t
       - morphology
-      - incidence_type # primary, metastatic, recurrence, progression
       - progression_or_recurrence
       - days_to_recurrence
       - days_to_last_followup
@@ -169,7 +170,68 @@ Nodes:
       - derived_from_specimen
       - biosample_accession
       - tumor_classification
+      - Organization_Name
       - crdc_id
+
+  Characterization:
+    Desc: Captures measured physical, chemical, and biological properties of a nanomaterial, including size, shape, surface charge, structure, and functional performance.
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - Characterization_ID
+    - Characterization_Assay_Type
+    - Characterization_Name
+    - crdc_id
+    
+  Publication:
+    Desc: Represents a scientific output that reports or references nanotechnology data, including articles, reports, or preprints.
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - DOI_or_Pub_ID
+    - Publication_Type
+    - Publication_Status
+    - Publication_Title
+    - crdc_id
+
+  Protocol:
+    Desc: Describes a documented experimental or analytical procedure used to synthesize, modify, characterize, or evaluate nanomaterials, including methods, conditions, and parameters.
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - protocol_pk_id
+    - protocol_name
+    - protocol_type
+    - doi
+    - crdc_id
+
+  Composition:
+    Desc: Defines the constituent materials and their proportions within a nanomaterial, including core materials, coatings, surface modifications, and functional additives.
+    Tags:
+      nodeReq: true
+      Category: biospecimen
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+    - Composition_ID
+    - Nanomaterial_Entity_Type
+    - Functionalizing_Entity_Type
+    - Functionalizing_Entity_Inherent_Function_Type
+    - crdc_id
+
 
   file:
     Desc: "A set of related records kept together provided by a submitter."
@@ -285,27 +347,6 @@ Nodes:
       - size_z
       - channel_metadata_filename
       - channel_metadata_file_url_in_cds
-      - channel_id
-      - channel_name
-      - cycle_number
-      - sub_cycle_number
-      - target_name
-      - antibody_name
-      - rrid_identifier
-      - fluorophore
-      - clone
-      - lot
-      - catalog_number
-      - excitation_wavelength
-      - emission_wavelength
-      - excitation_bandwidth
-      - emission_bandwidth
-      - metal_isotope_element_abbreviation
-      - metal_isotope_element_mass
-      - oligo_barcode_upper_strand
-      - oligo_barcode_lower_strand
-      - dilution
-      - concentration
       - crdc_id
 
   NonDICOMCTimages:
@@ -546,6 +587,22 @@ Relationships:
       - Src: diagnosis
         Dst: sample
         Mul: many_to_one
+      - Src: Characterization
+        Dst: sample
+        Mul: many_to_one
+      - Src: Composition
+        Dst: sample
+        Mul: many_to_one
+      - Src: Publication
+        Dst: sample
+      - Src: Protocol
+        Dst: sample
+  of_protocol:
+    Props: null
+    Mul: many_to_many
+    Ends:
+      - Src: Publication
+        Dst: Protocol
   of_file:
     Props: null
     Mul: many_to_one
