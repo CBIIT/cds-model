@@ -174,7 +174,7 @@ Nodes:
       - crdc_id
 
   Characterization:
-    Desc: TBD
+    Desc: Captures measured physical, chemical, and biological properties of a nanomaterial, including size, shape, surface charge, structure, and functional performance.
     Tags:
       nodeReq: true
       Category: biospecimen
@@ -188,7 +188,7 @@ Nodes:
     - crdc_id
     
   Publication:
-    Desc: TBD
+    Desc: Represents a scientific output that reports or references nanotechnology data, including articles, reports, or preprints.
     Tags:
       nodeReq: true
       Category: biospecimen
@@ -203,7 +203,7 @@ Nodes:
     - crdc_id
 
   Protocol:
-    Desc: TBD
+    Desc: Describes a documented experimental or analytical procedure used to synthesize, modify, characterize, or evaluate nanomaterials, including methods, conditions, and parameters.
     Tags:
       nodeReq: true
       Category: biospecimen
@@ -218,7 +218,7 @@ Nodes:
     - crdc_id
 
   Composition:
-    Desc: TBD
+    Desc: Defines the constituent materials and their proportions within a nanomaterial, including core materials, coatings, surface modifications, and functional additives.
     Tags:
       nodeReq: true
       Category: biospecimen
