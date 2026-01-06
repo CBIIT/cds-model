@@ -1,3 +1,6 @@
+### 11.0.1 (Released 1/6/2026)
+- Removed the pattern for the prop: "**_phs\_accession_**".
+
 ### 11.0.0 (Released 10/24/2025)
 - Added the node: "**_Protocol_**".
 - Added the node: "**_Composition_**".
