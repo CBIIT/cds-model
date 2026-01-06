@@ -5850,8 +5850,7 @@ PropDefinitions:
   phs_accession:
     Desc: PHS accession number (a.k.a dbGaP accession)
     Req: true
-    Type:
-      pattern: ^phs[0-9]+$
+    Type: string
     Term:
     - Origin: caDSR
       Original Source: DSS CDE
