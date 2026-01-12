@@ -550,6 +550,8 @@ Relationships:
         Dst: study
       - Src: investigator
         Dst: study
+      - Src: sample
+        Dst: study
   of_consent_group:
     Props: null
     Mul: many_to_one
