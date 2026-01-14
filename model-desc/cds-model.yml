@@ -554,6 +554,8 @@ Relationships:
         Dst: study
       - Src: Protocol
         Dst: study
+      - Src: Publication
+        Dst: study
   of_consent_group:
     Props: null
     Mul: many_to_one
