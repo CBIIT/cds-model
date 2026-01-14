@@ -618,6 +618,8 @@ Relationships:
         Mul: one_to_one
       - Src: proteomic
         Dst: file
+      - Src: Protocol
+        Dst: file
   of_image:
     Props: null
     Mul: one_to_one
