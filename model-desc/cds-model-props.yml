@@ -6415,7 +6415,6 @@ PropDefinitions:
   doi:
     Desc: TBD
     Type: string
-    Req: true
     Term:
     - Origin: caDSR
       Code: '15915370'
