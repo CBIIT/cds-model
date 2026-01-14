@@ -1,3 +1,7 @@
+### 11.0.2 (Released 1/14/2026)
+- Added the relationship between the node: "**_Protocol_**" and the node: "**_study_**".
+- Added the relationship between the node: "**_Protocol_**" and the node: "**_file_**".
+
 ### 11.0.1 (Released 1/6/2026)
 - Removed the pattern for the prop: "**_phs\_accession_**".
 - Added the relationship between the node: "**_sample_**" and the node: "**_study_**".
