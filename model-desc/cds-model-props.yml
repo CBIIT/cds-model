@@ -5797,6 +5797,9 @@ PropDefinitions:
       Value: Disease Progression Or Recurrence Indicator
       Version: '2.00'
   # study
+  study_id:
+    Desc: The property study_id is a compound property, combining the property phs_accession, string character "_" in the middle as the connector, and the property study_acronym.
+    Type: string
   role_or_affiliation:
     Desc: The text that describes the distinguishable characteristics of the action or activity assigned to or required or expected of a person in a formal association with a group or organization.
     Req: true
