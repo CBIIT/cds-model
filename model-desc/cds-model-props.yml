@@ -6420,6 +6420,14 @@ PropDefinitions:
       Code: '15915370'
       Value: Publication Digital Object Identifier Text
       Version: '1.00'
+  doi_url:
+    Desc: The destination URL that a DOI resolves to when accessed, typically pointing to the authoritative online location of the referenced resource.
+    Type: string
+    Term:
+    - Origin: caDSR
+      Code: '16987483'
+      Value: Publication Digital Object Identifier URL Text
+      Version: '1.00'
 
   # Composition
   Composition_ID:

@@ -1,3 +1,6 @@
+### 11.0.3 (Released 1/28/2026)
+- Added the prop: "**_doi\_url_**" to the node: "**_Protocol_**".
+
 ### 11.0.2 (Released 1/14/2026)
 - Added the relationship between the node: "**_Protocol_**" and the node: "**_study_**".
 - Added the relationship between the node: "**_Protocol_**" and the node: "**_file_**".
