@@ -1,3 +1,7 @@
+### 11.0.4 (Released 2/18/2026)
+- Renamed the prop: "**_Characterization\_Assay\_Type_**" to the prop: "**_Characterization\_Type_**".
+- Added the CDE code "**_16861307_**" to the prop: "**_Functionalizing\_Entity\_Inherent\_Function\_Type_**".
+
 ### 11.0.3 (Released 1/28/2026)
 - Added the prop: "**_doi\_url_**" to the node: "**_Protocol_**".
 

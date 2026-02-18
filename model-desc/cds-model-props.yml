@@ -6460,6 +6460,11 @@ PropDefinitions:
     Type:
       value_type: list
       item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16861307'
+      Value: 	Specimen Nanoparticle Inherent Function Type
+      Version: '1.00'
 
   # Characterization
   Characterization_ID:
@@ -6467,7 +6472,7 @@ PropDefinitions:
     Type: string
     Req: true
     Key: true
-  Characterization_Assay_Type:
+  Characterization_Type:
     Desc: Sample characterization describe distinctive characteristics or essential features of the sample determined through analytical methods and records information associated with sample synthesis and properties.
     Type:
       value_type: list
