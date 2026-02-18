@@ -6463,7 +6463,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16861307'
-      Value: 	Specimen Nanoparticle Inherent Function Type
+      Value: Specimen Nanoparticle Inherent Function Type
       Version: '1.00'
 
   # Characterization
