@@ -6313,6 +6313,9 @@ PropDefinitions:
       Code: '12083894'
       Value: Specimen Original Anatomic Site Uberon Identifier
       Version: '1.00'
+  sample_name:
+    Desc: TBD
+    Type: string
   sample_id:
     Desc: Sample identifier as submitted by requestor
     Type: string
