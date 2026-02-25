@@ -161,6 +161,7 @@ Nodes:
       Template: 'Yes'
     Props:
       - sample_id
+      - sample_name
       - sample_type
       - sample_description
       - sample_type_category
