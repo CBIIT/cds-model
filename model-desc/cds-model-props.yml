@@ -6314,7 +6314,7 @@ PropDefinitions:
       Value: Specimen Original Anatomic Site Uberon Identifier
       Version: '1.00'
   sample_name:
-    Desc: TBD
+    Desc: Sample name as submitted by requestor, only for cananolab data.
     Type: string
   sample_id:
     Desc: Sample identifier as submitted by requestor
@@ -6483,7 +6483,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16812470'
-      Value: Specimen Nanoparticle Characterization Assay Type
+      Value: Specimen Nanoparticle Characterization Type
       Version: '1.00'
   Characterization_Name:
     Desc: Name of the characterization types.
