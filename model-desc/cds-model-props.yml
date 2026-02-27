@@ -6313,6 +6313,9 @@ PropDefinitions:
       Code: '12083894'
       Value: Specimen Original Anatomic Site Uberon Identifier
       Version: '1.00'
+  sample_name:
+    Desc: Sample name as submitted by requestor, only for cananolab data.
+    Type: string
   sample_id:
     Desc: Sample identifier as submitted by requestor
     Type: string
@@ -6460,6 +6463,11 @@ PropDefinitions:
     Type:
       value_type: list
       item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '16861307'
+      Value: Specimen Nanoparticle Inherent Function Type
+      Version: '1.00'
 
   # Characterization
   Characterization_ID:
@@ -6467,7 +6475,7 @@ PropDefinitions:
     Type: string
     Req: true
     Key: true
-  Characterization_Assay_Type:
+  Characterization_Type:
     Desc: Sample characterization describe distinctive characteristics or essential features of the sample determined through analytical methods and records information associated with sample synthesis and properties.
     Type:
       value_type: list
@@ -6475,7 +6483,7 @@ PropDefinitions:
     Term:
     - Origin: caDSR
       Code: '16812470'
-      Value: Specimen Nanoparticle Characterization Assay Type
+      Value: Specimen Nanoparticle Characterization Type
       Version: '1.00'
   Characterization_Name:
     Desc: Name of the characterization types.
