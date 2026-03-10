@@ -2,6 +2,7 @@
 - Renamed the prop: "**_Characterization\_Assay\_Type_**" to the prop: "**_Characterization\_Type_**". The name was changed because it was recommended by the caNano Data SME
 - Added the CDE code "**_16861307_**" to the prop: "**_Functionalizing\_Entity\_Inherent\_Function\_Type_**". It was a new CDE created by caDSR.
 - Added the prop: "**_sample\_name_**" to the node "**_sample_**". This property is only for the canolab data.
+- Removed the useNullCDE flag from the prop: "**_imaging\_software_**" becuase it does not have permissible values.
 
 ### 11.0.3 (Released 1/28/2026)
 - Added the prop: "**_doi\_url_**" to the node: "**_Protocol_**".
