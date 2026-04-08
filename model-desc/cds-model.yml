@@ -571,6 +571,7 @@ Relationships:
         Dst: participant
       - Src: sample
         Dst: participant
+        Mul: many_to_many
       - Src: file
         Dst: participant
         Mul: many_to_many
