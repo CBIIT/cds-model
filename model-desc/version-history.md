@@ -12,6 +12,14 @@
 - Updated the CDE version of the porp: "**_nominal\_magnification_**" to "**_2.00_**".
 - Updated the CDE version of the porp: "**_lens\_numerical\_aperture_**" to "**_2.00_**".
 - Updated the CDE version of the porp: "**_adult\_or\_childhood\_study_**" to "**_3.00_**".
+- Updated the relationship "file-(:of\_study)->study" to be required.
+- Updated the relationship "participant-(:of\_study)->study" to be required.
+- Updated the relationship "pdx-(:of\_study)->study" to be required.
+- Updated the relationship "consent\_group-(:of\_study)->study" to be required.
+- Updated the relationship "investigator-(:of\_study)->study" to be required.
+- Updated the relationship "Protocol-(:of\_study)->study" to be required.
+- Updated the relationship "image-(:of\_file)->file" to be required.
+- Updated all the relationships with the node: "**_image_**" as the direct parent to be required.
 
 ### 11.0.4 (Released 2/18/2026)
 - Renamed the prop: "**_Characterization\_Assay\_Type_**" to the prop: "**_Characterization\_Type_**". The name was changed because it was recommended by the caNano Data SME
