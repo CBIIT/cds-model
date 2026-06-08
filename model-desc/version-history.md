@@ -1,3 +1,18 @@
+### 12.0.0 (Released 6/8/2026)
+- Added the CDE code "**_11555664_**" the prop: "**_data\_access\_level:_**".
+- Updated the CDE code of the prop: "**_funding\_source\_program\_name_**" to "**_16002776_**".
+- Updated the CDE code of the prop: "**_staining\_method_**" to "**_16964049_**".
+- Updated the CDE version of the prop: "**_working\_distance_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_imaging\_assay\_type_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_pyramid_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_performed\_imaging\_study\_description_**" to "**_3.00_**".
+- Updated the CDE version of the porp: "**_performed\_imaging\_study\_sliceThickness_**" to "**_3.00_**".
+- Updated the CDE version of the porp: "**_CTAquisitionProtocolElement\_ctdiVol_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_objective_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_nominal\_magnification_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_lens\_numerical\_aperture_**" to "**_2.00_**".
+- Updated the CDE version of the porp: "**_adult\_or\_childhood\_study_**" to "**_3.00_**".
+
 ### 11.0.4 (Released 2/18/2026)
 - Renamed the prop: "**_Characterization\_Assay\_Type_**" to the prop: "**_Characterization\_Type_**". The name was changed because it was recommended by the caNano Data SME
 - Added the CDE code "**_16861307_**" to the prop: "**_Functionalizing\_Entity\_Inherent\_Function\_Type_**". It was a new CDE created by caDSR.
