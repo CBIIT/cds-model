@@ -630,7 +630,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '7788943'
       Value: Microscope Device Working Distance Float Value
-      Version: '1.00'
+      Version: '2.00'
   imaging_assay_type:
     Desc: Type of imaging assay
     Req: true
@@ -654,7 +654,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '7789196'
       Value: Imaging Assay Technology Type
-      Version: '1.00'
+      Version: '2.00'
   pyramid:
     Desc: The data file contains an image pyramid
     Enum:
@@ -665,7 +665,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '7788945'
       Value: Image Processing Pyramid Representation True False Indicator
-      Version: '1.00'
+      Version: '2.00'
   physical_size_x:
     Desc: Physical size (X-dimension) of a pixel. Floating point value > 0. Size needs to be specified in microns (um)
     Type: string
@@ -768,7 +768,7 @@ PropDefinitions:
       Original Source: DICOM
       Code: '2182389'
       Value: Image Study Description 64 Character Text
-      Version: '2.10'
+      Version: '3.00'
   performed_imaging_study_admittingDiagnosisCode:
     Desc: The identified disease(s) or illness(es) at the time of the admission during which imaging was performed.
     Req: true
@@ -1016,7 +1016,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '3113185'
       Value: Image Plane Slice Thickness Float or Fixed-point Millimeter Number
-      Version: '2.00'
+      Version: '3.00'
   performed_imaging_study_reconstructionInterval:
     Desc: The cross plane distance between the centers of adjacent, parallel reconstructed images.
     Req: true
@@ -1077,7 +1077,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '3882991'
       Value: Computed Tomography Dose Index Volume Quantity 8 Byte Number
-      Version: '1.10'
+      Version: '2.00'
   CTAquisitionProtocolElement_ctdiPhantomTypeCode:
     Desc: The type of phantom to use for CTDI measurement according to IEC 60601-2-44
     Req: true
@@ -1444,27 +1444,12 @@ PropDefinitions:
       Version: '3.00'
   staining_method:
     Desc: Any of the various methods that use a dye, reagent, or other material for producing coloration in tissues or microorganisms for microscopic examination.
+    Type: string
     Req: true
-    Enum:
-    - H&E
-    - SABER
-    - MxIF
-    - mIHC
-    - IHC
-    - t-CyCIF
-    - IMC
-    - GeoMX-DSP
-    - CODEX
-    - MIBI
-    - Not Applicable
-    - ExSeq
-    - MERFISH
-    - CyCIF
     Term:
     - Origin: caDSR
-      Original Source: HTAN
-      Code: '7789196'
-      Value: Imaging Assay Technology Type
+      Code: '16964049'
+      Value: Specimen Staining Method Type
       Version: '1.00'
   objective:
     Desc: "An_objective_is an optical element that gathers light from an object being observed and_focuses_the_light rays_from it to produce a_real image_of the object."
@@ -1473,7 +1458,7 @@ PropDefinitions:
     - Origin: caDSR
       Code: '7788935'
       Value: Microscope Device Objective Lens Text
-      Version: '1.00'
+      Version: '2.00'
   nominal_magnification:
     Desc: The magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens. floating point value > 1(no units)
     Type: string
@@ -1482,7 +1467,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '7788940'
       Value: Microscope Device Nominal Magnification Float Value
-      Version: '1.00'
+      Version: '2.00'
   immersion:
     Desc: Immersion medium
     Enum:
@@ -1497,7 +1482,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '8058286'
       Value: Microscope Device Immersion Medium Type
-      Version: '1.00'
+      Version: '2.00'
   lens_numerical_aperture:
     Desc: The numerical aperture of the lens. Floating point value > 0.
     Type: string
@@ -1506,7 +1491,7 @@ PropDefinitions:
       Original Source: HTAN
       Code: '7788942'
       Value: Microscope Device Lens Numerical Aperture Float Value
-      Version: '1.00'
+      Version: '2.00'
 
   # file
   release_datetime:
@@ -5841,6 +5826,11 @@ PropDefinitions:
     - controlled
     - mixed
     Req: Preferred
+    Term:
+      - Origin: caDSR
+        Code: '11555664'
+        Value: Data File Access Level Text
+        Version: '2.00'
   study_id:
     Desc: The property study_id is a compound property, combining the property phs_accession, string character "_" in the middle as the connector, and the property study_acronym.
     Type: string
@@ -11470,9 +11460,9 @@ PropDefinitions:
     Req: Preferred
     Term:
     - Origin: caDSR
-      Code: '11524546'
-      Value: Funding Agency Program Name Text
-      Version: '2.00'
+      Code: '16002776'
+      Value: Study Administration Funding Agency Program Name
+      Version: '1.00'
   grant_id:
     Desc: Grant or contract identifier
     Type: string
@@ -11507,7 +11497,7 @@ PropDefinitions:
       Original Source: DSS
       Code: '11524549'
       Value: Study Subject Legal Adult Or Pediatric Participant Type
-      Version: '2.00'
+      Version: '3.00'
   number_of_participants:
     Desc: How many participants in the study
     Type: number
