@@ -6533,6 +6533,7 @@ PropDefinitions:
   treatment_id:
     Desc: The property treatment_id is a compound property, combining the parent property participant.study_participant_id, string character "_" in the middle as the connector, and the property therapeutic_agents.
     Type: string
+    Req: true
     Key: true
   days_to_treatment:
     Desc: Days to start of treatment, relative to index date
