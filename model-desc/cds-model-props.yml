@@ -6604,7 +6604,6 @@ PropDefinitions:
       Version: '1.00'
   therapeutic_agents:
     Desc: Text identification of the individual agent(s) used as part of a treatment regimen.
-    Req: true
     Enum:
     - 10-Deacetyltaxol
     - 11C Topotecan
