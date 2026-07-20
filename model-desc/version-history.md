@@ -20,6 +20,7 @@
 - Updated the relationship "Protocol-(:of\_study)->study" to be required.
 - Updated the relationship "image-(:of\_file)->file" to be required.
 - Updated all the relationships with the node: "**_image_**" as the direct parent to be required.
+- Updated the prop: "**_treatment\_id_**" to be required.
 
 ### 11.0.4 (Released 2/18/2026)
 - Renamed the prop: "**_Characterization\_Assay\_Type_**" to the prop: "**_Characterization\_Type_**". The name was changed because it was recommended by the caNano Data SME
