@@ -5837,8 +5837,8 @@ PropDefinitions:
     Desc: The version of the phs accession
     Type:
       value_type: list
-      item_type: string
-      pattern: ^phs[0-9]+$
+      item_type:
+          pattern: ^phs[0-9]+$
     Req: true
   bioproject_accession:
     Desc: NCBI BioProject accession ID
