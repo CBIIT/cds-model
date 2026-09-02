@@ -1848,11 +1848,11 @@ PropDefinitions:
   # HPO_phenotyptic_abnormality:
   #  Desc: "HPO Phenotypic Abnormality: A standardized clinical feature or observable abnormality associated with an individual, represented using a Human Phenotype Ontology (HPO) term or HPO identifier. The field captures phenotypic characteristics that may be relevant to identifying or interpreting genetic disorders."
   #  Enum:
-  #  - congenital diaphragmatic hernia
-  #  - T-cell acute lymphoblastic leukemia
-  #  - Cognitive-social-behavioral disability
-  #  - Muscle weakness-hypotonia
-  #  - Malformation dysmorphism_Other
+  #  - "HP:0000776"
+  #  - "HP:0006727"
+  #  - "HP:0000708
+  #  - "HP:0001252"
+  #  - "HP:0000118"
   #  Term:
   #  - Origin: caDSR
   #    Code: ''

@@ -134,8 +134,8 @@ Nodes:
       - submitted_diagnosis
       - diagnosis_category
       - diagnosis_basis
-      - diagnosis_mondo
-      - HPO_phenotyptic_abnormality
+      #- diagnosis_mondo
+      #- HPO_phenotyptic_abnormality
       - crdc_id
 
   treatment:
