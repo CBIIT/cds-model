@@ -1,3 +1,10 @@
+### 13.0.0 (Released 9/2/2026)
+- Added the prop: "**_submitted\_diagnosis_**" to the node: "**_diagnosis_**".
+- Added the prop: "**_diagnosis\_category_**" to the node: "**_diagnosis_**".
+- Added the prop: "**_diagnosis\_basis_**" to the node: "**_diagnosis_**".
+- Added the prop: "**_diagnosis\_mondo_**" to the node: "**_diagnosis_**".
+- Added the prop: "**_HPO\_phenotyptic\_abnormality_**" to the node: "**_diagnosis_**".
+
 ### 12.0.0 (Released 6/8/2026)
 - Added the CDE code "**_11555664_**" the prop: "**_data\_access\_level:_**".
 - Updated the CDE code of the prop: "**_funding\_source\_program\_name_**" to "**_16002776_**".

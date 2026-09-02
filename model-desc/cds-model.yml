@@ -1,5 +1,5 @@
 Handle: CDS
-Version: v12.0.0
+Version: v13.0.0
 Nodes:
   program:
     Desc: "Program in the Cancer Data Service refer to a broad framework of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
@@ -131,6 +131,11 @@ Nodes:
       - tissue_or_organ_of_origin
       - site_of_resection_or_biopsy
       - days_to_last_known_disease_status
+      - submitted_diagnosis
+      - diagnosis_category
+      - diagnosis_basis
+      - diagnosis_mondo
+      - HPO_phenotyptic_abnormality
       - crdc_id
 
   treatment:

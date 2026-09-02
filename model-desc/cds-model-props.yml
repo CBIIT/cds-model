@@ -1796,6 +1796,67 @@ PropDefinitions:
       Value: Research Activity dbGaP Subject Identifier Text
       Version: '1.00'
   # diagnosis
+  submitted_diagnosis:
+    Type: string
+    Desc: The term which identifies normal and abnormal cells and tissues used to define the presence and nature of disease, as categorized by diagnosis_classification_system property.
+    Term:
+      - Origin: caDSR
+        Code: '14714127'
+        Value: Diagnosis Disease or Disorder Text
+        Version: "1.00"
+  diagnosis_category:
+    Desc: The classification of a tumor at a particular time based primarily on histopathological characteristics.
+    Enum:
+    - Metastatic
+    - Not Applicable
+    - Not Reported
+    - Premalignant    
+    - Primary
+    - Prior Primary
+    - Progression    
+    - Recurrent
+    - Synchronous Primary
+    - Unknown
+    - Xenograft
+    Term:
+    - Origin: caDSR
+      Code: '12922545'
+      Version: "1.00"
+  diagnosis_basis:
+    Desc: The underlying scientific foundation used to determine the diagnosis.
+    Enum:
+    - 'Clinical'
+    - 'Molecular'
+    - 'Pathology'
+    - 'Unknown'
+    - 'Not Reported'
+    Term:
+    - Origin: caDSR
+      Code: '14714146'
+      Value: Diagnosis Assessment Basis Source
+      Version: "1.00"
+  diagnosis_mondo:
+    Desc: A field used to represent a participant's diagnosis using a standardized MONDO disease ontology identifier.
+    Enum:
+    - 'MONDO:0004979'
+    Term:
+    - Origin: caDSR
+      Code: ''
+      Value: diagnosis_mondo
+      Version: "1.00"
+  HPO_phenotyptic_abnormality:
+    Desc: "HPO Phenotypic Abnormality: A standardized clinical feature or observable abnormality associated with an individual, represented using a Human Phenotype Ontology (HPO) term or HPO identifier. The field captures phenotypic characteristics that may be relevant to identifying or interpreting genetic disorders."
+    Enum:
+    - congenital diaphragmatic hernia
+    - T-cell acute lymphoblastic leukemia
+    - Cognitive-social-behavioral disability
+    - Muscle weakness-hypotonia
+    - Malformation dysmorphism_Other
+    Term:
+    - Origin: caDSR
+      Code: ''
+      Value: HPO_phenotyptic_abnormality
+      Version: "1.00"
   tissue_or_organ_of_origin:
     Desc: The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
     Enum:
@@ -3606,7 +3667,7 @@ PropDefinitions:
     - Medulloblastoma, WHO Grade 4
     - Craniopharyngioma, Adamantinomatous
     - High Grade Malignant Peripheral Nerve Sheath Tumor With Heterologous Rhabdomyoblastic Differentiation (Malignant Triton Tumor)
-    - Spindle Cell Rhabdomyosaroma
+    - Spindle Cell Rhabdomyosarcoma
     - Diffuse Midline Glioma, H3 K27M-Mutant
     - Epithelioid Sarcoma, NOS
     - Myoepithelial Carcinoma
@@ -5776,6 +5837,7 @@ PropDefinitions:
     Type:
       value_type: list
       item_type: string
+      pattern: ^phs[0-9]+$
     Req: true
   bioproject_accession:
     Desc: NCBI BioProject accession ID
@@ -6324,6 +6386,7 @@ PropDefinitions:
     - Tumor
     - Unknown
     Req: 'Yes'
+    useNullCDE: 'Yes'
     Term:
     - Origin: caDSR
       Original Source: DSS
