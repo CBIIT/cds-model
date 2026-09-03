@@ -2,6 +2,7 @@
 - Added the prop: "**_submitted\_diagnosis_**" to the node: "**_diagnosis_**".
 - Added the prop: "**_diagnosis\_category_**" to the node: "**_diagnosis_**".
 - Added the prop: "**_diagnosis\_basis_**" to the node: "**_diagnosis_**".
+- Reassigned the prop: "**_data\_access\_level_**" to the node "**_file_**".
 
 ### 12.0.0 (Released 6/8/2026)
 - Added the CDE code "**_11555664_**" the prop: "**_data\_access\_level:_**".

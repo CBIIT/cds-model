@@ -1494,6 +1494,18 @@ PropDefinitions:
       Version: '2.00'
 
   # file
+  data_access_level:
+    Desc: Is data open, controlled, or mixed?
+    Enum:
+    - open
+    - controlled
+    - mixed
+    Req: Preferred
+    Term:
+      - Origin: caDSR
+        Code: '11555664'
+        Value: Data File Access Level Text
+        Version: '2.00'
   release_datetime:
     Desc: An ISO8601 formatted datetime that records the released datetime of the file
     Type: string
@@ -5882,18 +5894,6 @@ PropDefinitions:
       Code: '14824731'
       Value: Data Collection Scientific Data Type Category
       Version: '2.00'
-  data_access_level:
-    Desc: Is data open, controlled, or mixed?
-    Enum:
-    - open
-    - controlled
-    - mixed
-    Req: Preferred
-    Term:
-      - Origin: caDSR
-        Code: '11555664'
-        Value: Data File Access Level Text
-        Version: '2.00'
   study_id:
     Desc: The property study_id is a compound property, combining the property phs_accession, string character "_" in the middle as the connector, and the property study_acronym.
     Type: string

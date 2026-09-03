@@ -43,7 +43,6 @@ Nodes:
       - grant_id
       - organism_species
       - adult_or_childhood_study # adult, pediatric
-      - data_access_level
       - number_of_participants
       - number_of_samples
       - study_data_types
@@ -264,6 +263,7 @@ Nodes:
       - file_mapping_level
       - release_datetime
       - is_supplementary_file
+      - data_access_level
       #- file_access
 
   genomic_info:
