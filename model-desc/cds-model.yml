@@ -47,7 +47,6 @@ Nodes:
       - number_of_samples
       - study_data_types
       - file_types_and_format
-      - size_of_data_being_uploaded
       - acl
       - study_access
       - authz
