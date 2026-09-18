@@ -1848,17 +1848,17 @@ PropDefinitions:
       Code: '14714146'
       Value: Diagnosis Assessment Basis Source
       Version: "1.00"
-  # diagnosis_mondo:
-  #  Desc: A field used to represent a participant's diagnosis using a standardized MONDO disease ontology identifier.
-  #  Enum:
-  #  - 'MONDO:0004979'
+  diagnosis_mondo:
+    Desc: A field used to represent a participant's diagnosis using a standardized MONDO disease ontology identifier.
+    Type: string
   #  Term:
   #  - Origin: caDSR
   #    Code: ''
   #    Value: diagnosis_mondo
   #    Version: "1.00"
-  # HPO_phenotyptic_abnormality:
-  #  Desc: "HPO Phenotypic Abnormality: A standardized clinical feature or observable abnormality associated with an individual, represented using a Human Phenotype Ontology (HPO) term or HPO identifier. The field captures phenotypic characteristics that may be relevant to identifying or interpreting genetic disorders."
+  HPO_phenotyptic_abnormality:
+    Desc: "HPO Phenotypic Abnormality: A standardized clinical feature or observable abnormality associated with an individual, represented using a Human Phenotype Ontology (HPO) term or HPO identifier. The field captures phenotypic characteristics that may be relevant to identifying or interpreting genetic disorders."
+    Type: string
   #  Enum:
   #  - "HP:0000776"
   #  - "HP:0006727"
@@ -6487,7 +6487,7 @@ PropDefinitions:
 
   # Composition
   Composition_ID:
-    Desc: TBD #ID for Composition
+    Desc: "A compound identifier consisting of the parent sample_id, followed by _comp and a sequential number assigned to each composition associated with the sample.example sample_id_comp1" #ID for Composition
     Type: string
     Req: true
     Key: true
@@ -6524,7 +6524,7 @@ PropDefinitions:
 
   # Characterization
   Characterization_ID:
-    Desc: TBD #ID for Characterization
+    Desc: "A compound identifier consisting of the parent sample_id, followed by _char and a sequential number assigned to each characterization associated with the sample. eg. sample_id_char1" #ID for Characterization
     Type: string
     Req: true
     Key: true
