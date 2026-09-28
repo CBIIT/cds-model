@@ -5957,6 +5957,16 @@ PropDefinitions:
     Desc: multifactor authorization
     Type: string
   # sample
+  submitted_anatomic_site:
+    Desc: The location within the body from which a specimen was originally obtained as captured in the Uberon name.
+    Type:
+      value_type: list
+      item_type: string
+    Term:
+    - Origin: caDSR
+      Code: '12299653'
+      Value: Specimen Original Anatomic Site Uberon Name
+      Version: '1.00'
   sample_description:
     Desc: Text description of a sample or specimen.
     Type: string

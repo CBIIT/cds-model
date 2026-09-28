@@ -175,6 +175,7 @@ Nodes:
       - biosample_accession
       - tumor_classification
       - Organization_Name
+      - submitted_anatomic_site
       - crdc_id
 
   Characterization:
@@ -634,6 +635,8 @@ Relationships:
       - Src: proteomic
         Dst: file
       - Src: Protocol
+        Dst: file
+      - Src: Characterization
         Dst: file
   of_image:
     Props: null

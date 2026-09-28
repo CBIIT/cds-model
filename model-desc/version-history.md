@@ -4,6 +4,8 @@
 - Added the prop: "**_diagnosis\_basis_**" to the node: "**_diagnosis_**".
 - Added the prop: "**_diagnosis\_mondo_**" to the node: "**_diagnosis_**".
 - Added the prop: "**_HPO\_phenotyptic\_abnormality_**" to the node: "**_diagnosis_**".
+- Added the prop" "**_submitted\_anatomic\_site_**" to the node: "**_sample_**".
+- Added the relationship "Characterization-(:of\_file)->file".
 - Reassigned the prop: "**_data\_access\_level_**" to the node: "**_file_**".
 - Removed the prop: "**_size\_of\_data\_being\_uploaded_**" from the node: "**_study_**".
 
