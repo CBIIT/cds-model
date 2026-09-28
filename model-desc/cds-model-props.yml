@@ -5847,10 +5847,7 @@ PropDefinitions:
   # study
   study_version:
     Desc: The version of the phs accession
-    Type:
-      value_type: list
-      item_type:
-          pattern: ^phs[0-9]+$
+    Type: string
     Req: true
   bioproject_accession:
     Desc: NCBI BioProject accession ID
@@ -5932,7 +5929,9 @@ PropDefinitions:
   study_external_url:
     Desc: Website or other url relevant to study
     Type:
-      pattern: ^https:\/\/
+      value_type: list
+      item_type:
+        pattern: ^https:\/\/
     Req: true
   study_name:
     Desc: Official name of study
