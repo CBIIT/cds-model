@@ -1,3 +1,7 @@
+### 13.0.1 (Released 10/6/2026)
+- Added the CDE information for the prop: "**_diagnosis\_mondo_**".
+- Added the CDE information for the prop: "**_HPO\_phenotyptic\_abnormality_**".
+
 ### 13.0.0 (Released 9/2/2026)
 - Added the prop: "**_submitted\_diagnosis_**" to the node: "**_diagnosis_**".
 - Added the prop: "**_diagnosis\_category_**" to the node: "**_diagnosis_**".
