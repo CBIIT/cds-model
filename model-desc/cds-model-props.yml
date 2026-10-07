@@ -1851,11 +1851,11 @@ PropDefinitions:
   diagnosis_mondo:
     Desc: A field used to represent a participant's diagnosis using a standardized MONDO disease ontology identifier.
     Type: string
-  #  Term:
-  #  - Origin: caDSR
-  #    Code: ''
-  #    Value: diagnosis_mondo
-  #    Version: "1.00"
+    Term:
+    - Origin: caDSR
+      Code: '17645428'
+      Value: diagnosis_mondo
+      Version: "1.00"
   HPO_phenotyptic_abnormality:
     Desc: "HPO Phenotypic Abnormality: A standardized clinical feature or observable abnormality associated with an individual, represented using a Human Phenotype Ontology (HPO) term or HPO identifier. The field captures phenotypic characteristics that may be relevant to identifying or interpreting genetic disorders."
     Type: string
@@ -1865,11 +1865,11 @@ PropDefinitions:
   #  - "HP:0000708
   #  - "HP:0001252"
   #  - "HP:0000118"
-  #  Term:
-  #  - Origin: caDSR
-  #    Code: ''
-  #    Value: HPO_phenotyptic_abnormality
-  #    Version: "1.00"
+    Term:
+    - Origin: caDSR
+      Code: '17645387'
+      Value: HPO_phenotyptic_abnormality
+      Version: "1.00"
   tissue_or_organ_of_origin:
     Desc: The text term used to describe the anatomic site of origin, of the patient's malignant disease, as described by the World Health Organization's (WHO) International Classification of Diseases for Oncology (ICD-O).
     Enum:
@@ -6496,7 +6496,7 @@ PropDefinitions:
 
   # Composition
   Composition_ID:
-    Desc: "A compound identifier consisting of the parent sample_id, followed by _comp and a sequential number assigned to each composition associated with the sample.example sample_id_comp1" #ID for Composition
+    Desc: "A compound identifier consisting of the parent sample_id, followed by _comp and a sequential number assigned to each composition associated with the sample. Example: sample_id_comp1" #ID for Composition
     Type: string
     Req: true
     Key: true
@@ -6533,7 +6533,7 @@ PropDefinitions:
 
   # Characterization
   Characterization_ID:
-    Desc: "A compound identifier consisting of the parent sample_id, followed by _char and a sequential number assigned to each characterization associated with the sample. eg. sample_id_char1" #ID for Characterization
+    Desc: "A compound identifier consisting of the parent sample_id, followed by _char and a sequential number assigned to each characterization associated with the sample. Example: sample_id_char1" #ID for Characterization
     Type: string
     Req: true
     Key: true
